@@ -435,21 +435,100 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-        const toggleButton = document.getElementById('navToggle');
-        const menu = document.getElementById('navMenu');
+    const toggleButton = document.getElementById('navToggle');
+    const menu = document.getElementById('navMenu');
 
-        toggleButton.addEventListener('click', () => {
-            menu.classList.toggle('active');
-        });
+    // Check if elements exist before adding event listeners
+    if (!toggleButton || !menu) {
+        console.error('navToggle or navMenu not found in the DOM');
+        return;
+    }
 
-        // Optional: Close menu when a link is clicked (improves UX on mobile)
-        const links = menu.querySelectorAll('a');
-        links.forEach(link => {
-            link.addEventListener('click', () => {
-                menu.classList.remove('active');
-            });
-        });
+    toggleButton.addEventListener('click', () => {
+        menu.classList.toggle('active');
     });
 
+    // Optional: Close menu when a link is clicked
+    const links = menu.querySelectorAll('a');
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            menu.classList.remove('active');
+        });
+    });
+});
 
-    
+
+// BLOG.JS //
+if (window.location.pathname.includes("/blog/index.html") || window.location.pathname === "/") {
+  fetch("../blog/posts.json")
+    .then((res) => res.json())
+    .then((posts) => {
+      const cardsContainer = document.querySelector(".blog-cards");
+      if (cardsContainer) {
+        cardsContainer.innerHTML = posts
+          .map((post) => {
+            const maxLength = 80;
+            const truncatedExcerpt =
+              post.excerpt.length > maxLength
+                ? post.excerpt.slice(0, maxLength) + "..."
+                : post.excerpt;
+            return `
+              <div class="blog-card">
+                <div class="card-wrapper">
+                  <figure>
+                    <img src="${post.image || "https://via.placeholder.com/300x300"}" alt="${post.title}" />
+                  </figure>
+                  <div class="card-body">
+                    <p class="meta">${post.date} | ${post.category}</p>
+                    <h2>${post.title}</h2>
+                    <p class="excerpt">${truncatedExcerpt}</p>
+                    <a href="post.html?id=${post.id}" class="read-more">
+                      Leia mais <span class="sr-only">sobre ${post.title}</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            `;
+          })
+          .join("");
+      }
+    })
+    .catch((err) => console.error("Erro ao carregar posts:", err));
+}
+
+
+// POST.JS //
+if (window.location.pathname.includes("/blog/post.html")) {
+  fetch("../blog/posts.json")
+    .then((res) => res.json())
+    .then((posts) => {
+      const params = new URLSearchParams(window.location.search);
+      const postId = params.get("id");
+      const post = posts.find((p) => p.id === postId);
+
+      if (post) {
+        // Título, data, categoria
+        document.getElementById("post-title").textContent = post.title;
+        document.getElementById("post-date").textContent = post.date;
+        document.getElementById("post-category").textContent = post.category;
+
+        // Imagem principal
+        const img = document.getElementById("post-image");
+        if (post.image) {
+          img.src = post.image;
+          img.alt = post.title;
+        } else {
+          img.style.display = "none"; // Se não tiver imagem
+        }
+
+        // Conteúdo
+        document.getElementById("post-content").innerHTML = post.content;
+      } else {
+        document.body.innerHTML = "<h1>Post não encontrado</h1>";
+      }
+    })
+    .catch((err) => console.error("Erro ao carregar post:", err));
+}
