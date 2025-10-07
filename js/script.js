@@ -482,7 +482,7 @@ if (window.location.pathname.includes("/blog/index.html") || window.location.pat
                     <p class="meta">${post.date} | ${post.category}</p>
                     <h2>${post.title}</h2>
                     <p class="excerpt">${truncatedExcerpt}</p>
-                    <a href="post.html?id=${post.id}" class="read-more">
+                    <a href="${post.id}/" class="read-more">
                       Leia mais <span class="sr-only">sobre ${post.title}</span>
                       <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
                         <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
@@ -509,26 +509,97 @@ if (window.location.pathname.includes("/blog/post.html")) {
       const postId = params.get("id");
       const post = posts.find((p) => p.id === postId);
 
-      if (post) {
-        // Título, data, categoria
-        document.getElementById("post-title").textContent = post.title;
-        document.getElementById("post-date").textContent = post.date;
-        document.getElementById("post-category").textContent = post.category;
-
-        // Imagem principal
-        const img = document.getElementById("post-image");
-        if (post.image) {
-          img.src = post.image;
-          img.alt = post.title;
-        } else {
-          img.style.display = "none"; // Se não tiver imagem
-        }
-
-        // Conteúdo
-        document.getElementById("post-content").innerHTML = post.content;
-      } else {
+      if (!post) {
         document.body.innerHTML = "<h1>Post não encontrado</h1>";
+        return;
       }
+
+      // --- Conteúdo principal ---
+      document.getElementById("post-title").textContent = post.title;
+      document.getElementById("post-date").textContent = post.date;
+      document.getElementById("post-category").textContent = post.category;
+
+      const img = document.getElementById("post-image");
+      if (post.image) {
+        img.src = post.image;
+        img.alt = post.title;
+      } else {
+        img.style.display = "none";
+      }
+
+      document.getElementById("post-content").innerHTML = post.content;
+
+      // --- Atualiza o título da aba ---
+      document.title = `${post.title} | JB Home Essence`;
+
+      // --- Meta tags de SEO dinâmicas ---
+      const metaTags = [
+        { name: "description", content: post.excerpt },
+        {
+          name: "keywords",
+          content: `${post.category.toLowerCase()}, aromas, essências, difusores, aromatizadores, casa perfumada`,
+        },
+        { property: "og:title", content: post.title },
+        { property: "og:description", content: post.excerpt },
+        {
+          property: "og:image",
+          content: `https://jbhomessence.com.br/${post.image.replace("../", "")}`,
+        },
+        { property: "og:type", content: "article" },
+        {
+          property: "og:url",
+          content: `https://jbhomessence.com.br/blog/post.html?id=${post.id}`,
+        },
+      ];
+
+      metaTags.forEach((tagData) => {
+        const tag = document.createElement("meta");
+        if (tagData.name) tag.setAttribute("name", tagData.name);
+        if (tagData.property) tag.setAttribute("property", tagData.property);
+        tag.setAttribute("content", tagData.content);
+        document.head.appendChild(tag);
+      });
+
+      // --- Canonical URL ---
+      const linkCanonical = document.createElement("link");
+      linkCanonical.setAttribute("rel", "canonical");
+      linkCanonical.setAttribute(
+        "href",
+        `https://jbhomessence.com.br/blog/post.html?id=${post.id}`
+      );
+      document.head.appendChild(linkCanonical);
+
+      // --- Dados estruturados (Schema.org) ---
+      const schema = {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        headline: post.title,
+        image: `https://jbhomessence.com.br/${post.image.replace("../", "")}`,
+        author: {
+          "@type": "Organization",
+          name: "JB Home Essence",
+        },
+        publisher: {
+          "@type": "Organization",
+          name: "JB Home Essence",
+          logo: {
+            "@type": "ImageObject",
+            url: "https://jbhomessence.com.br/img/JBHomeEssence_Verde.png",
+          },
+        },
+        datePublished: post.date,
+        description: post.excerpt,
+        mainEntityOfPage: {
+          "@type": "WebPage",
+          "@id": `https://jbhomessence.com.br/blog/post.html?id=${post.id}`,
+        },
+      };
+
+      const scriptSchema = document.createElement("script");
+      scriptSchema.type = "application/ld+json";
+      scriptSchema.textContent = JSON.stringify(schema);
+      document.head.appendChild(scriptSchema);
     })
     .catch((err) => console.error("Erro ao carregar post:", err));
 }
+
