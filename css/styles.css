@@ -1346,10 +1346,10 @@ section a:hover {
 
 /* Specific styling for consultoria grid */
 .consultoria .clientes-grid {
-    grid-template-columns: repeat(2, minmax(300px, 1fr)); /* 2-column grid for 4 cards */
-    max-width: 700px; /* Limit width to center the grid */
-    margin-left: auto;
-    margin-right: auto; /* Center horizontally */
+    grid-template-columns: repeat(3, minmax(300px, 1fr)); /* 2-column grid for 4 cards */
+    /*max-width: 700px; /* Limit width to center the grid */
+    margin-left: center;
+    margin-right: center; /* Center horizontally */
     counter-reset: card-counter;
 }
 
