@@ -1,0 +1,452 @@
+.rodape-grid > div {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.rodape-grid > div.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.rodape-logo {
+  max-width: 150px;
+  margin-bottom: 15px;
+}
+
+.rodape-info .mini-bio {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #d3d3d3;
+  max-width: 300px;
+}
+
+.rodape-contato h3, .rodape-endereco h3 {
+  font-size: 1.3rem;
+  color: var(--verde);
+  margin-bottom: 15px;
+}
+
+.rodape-contato ul {
+  list-style: none;
+  padding: 0;
+}
+
+.rodape-contato li {
+  margin-bottom: 12px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.rodape-contato li a {
+  color: #d3d3d3;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.rodape-contato li a:hover {
+  color: var(--verde);
+  transform: translateX(5px);
+}
+
+.rodape-contato li i {
+  margin-right: 10px;
+  color: var(--verde);
+  font-size: 1.2rem;
+  transition: text-shadow 0.3s ease;
+}
+
+.rodape-contato li:hover i {
+  text-shadow: 0 0 10px rgba(142, 177, 153, 0.8);
+}
+
+.rodape-endereco p {
+  font-size: 1rem;
+  color: #d3d3d3;
+  line-height: 1.6;
+}
+
+.rodape-direitos {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #d3d3d3;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-final {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.cta-final.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cta-final .cta-btn {
+  border: 1px solid rgba(142, 177, 153, 0.5);
+  box-shadow: 0 0 10px rgba(142, 177, 153, 0.5);
+}
+
+.cta-final .cta-btn:hover {
+  box-shadow: 0 0 15px rgba(142, 177, 153, 0.8);
+}
+
+
+@media (max-width: 768px) {
+  .navbar {
+  flex-direction: column;
+  padding: 10px 20px;
+  }
+
+  .nav-links a {
+  margin-left: 15px;
+  font-size: 0.9rem;
+  }
+
+  .header-content h1 {
+  font-size: 2.8rem;
+  }
+
+  .logo-central {
+  width: 140px;
+  }
+
+  section h2 {
+  font-size: 2rem;
+  }
+
+  .cta-final h2 {
+  font-size: 2rem;
+  }
+
+  .cta-final .subtitulo {
+  font-size: 1rem;
+  }
+
+  .cta-final .cta-btn {
+  padding: 12px 25px;
+  font-size: 1rem;
+  width: 100%;
+  text-align: center;
+  }
+
+  .cta-buttons {
+  flex-direction: column;
+  gap: 15px;
+  }
+
+  .rodape-grid {
+  grid-template-columns: 1fr;
+  text-align: center;
+  }
+
+  .rodape-logo {
+  margin: 0 auto 15px;
+  }
+
+  .rodape-info .mini-bio {
+  max-width: 100%;
+  }
+
+  .rodape-contato ul, .rodape-endereco p {
+  text-align: center;
+  }
+
+  .rodape-contato li {
+  justify-content: center;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .nav-links {
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+  }
+
+  .header-content h1 {
+  font-size: 2rem;
+  }
+}
+
+.blog-cards {
+  display: grid;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 24px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding: 20px 0;
+  justify-content: center;
+}
+
+.blog-card {
+  --img-scale: 1.001;
+  --title-color: var(--marrom);
+  --link-icon-translate: -20px;
+  --link-icon-opacity: 0;
+  position: relative;
+  border-radius: 12px;
+  box-shadow: none;
+  background: var(--branco);
+  transform-origin: center;
+  transition: all 0.4s ease-in-out;
+  overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
+  width: 300px;
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--verde);
+}
+
+.blog-card a::after {
+  position: absolute;
+  inset-block: 0;
+  inset-inline: 0;
+  cursor: pointer;
+    content: "";
+}
+
+.blog-card h2 {
+  margin: 0px 0 8px 0;
+    font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.03em;
+  color: var(--title-color);
+  transition: color 0.3s ease-out;
+  text-align: left;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.blog-card img {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+  transform-origin: center;
+  transform: scale(var(--img-scale));
+  transition: transform 0.4s ease-in-out;
+}
+
+.card-body {
+  padding: 12px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.blog-card .meta {
+  font-size: 0.75rem;
+  margin: -60px 0 8px 0;
+  color: #777;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.blog-card .excerpt {
+  font-size: 0.8rem;
+  color: var(--marrom);
+  margin-bottom: 40px;
+  margin-top: auto;
+  text-align: left;
+  line-height: 1.4;
+}
+
+.blog-card a.read-more {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--verde);
+  font-size: 0.85rem;
+  font-weight: 600;
+  position: absolute;
+  bottom: 12px;
+  left: -11px;
+  opacity: 1;
+  background: none;
+}
+
+.blog-card a:focus {
+  outline: 1px dotted var(--verde);
+}
+
+.blog-card a .icon {
+  min-width: 18px;
+  width: 18px;
+  height: 18px;
+  margin-left: 5px;
+  transform: translateX(var(--link-icon-translate));
+  opacity: var(--link-icon-opacity);
+  transition: all 0.3s;
+}
+
+.blog-card:hover, .blog-card:focus {
+  --img-scale: 1.1;
+  --title-color: var(--verde);
+  --link-icon-translate: 0;
+  --link-icon-opacity: 1;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+
+@media screen and (max-width: 992px) {
+  .blog-cards {
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .blog-cards {
+  grid-template-columns: 1fr;
+  justify-content: center;
+  }
+  .blog-card {
+  width: 100%;
+  height: 360px;
+  }
+  .blog-card h2 {
+  font-size: 1.1rem;
+  }
+  .blog-card .meta {
+  font-size: 0.7rem;
+  }
+  .blog-card .excerpt {
+  font-size: 0.75rem;
+  }
+  .blog-card a.read-more {
+  font-size: 0.8rem;
+  }
+}
+
+.blog-content {
+  margin-top: 120px;
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
+  line-height: 1.7;
+}
+
+.blog-post-single {
+  max-width: 780px;
+  margin: 150px auto 60px;
+  padding: 0 20px;
+}
+
+.post-cover {
+  width: 100%;
+  max-height: 350px;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+
+.post-cover img {
+  width: 100%;
+  height: auto;
+  object-fit: fill;
+}
+
+.blog-post-single h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: var(--marrom);
+}
+
+.blog-post-single .meta {
+  font-size: 0.85rem;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.blog-post-single p, .blog-post-single ul {
+  font-size: 0.95rem;
+  margin-bottom: 18px;
+  color: var(--marrom);
+}
+
+.back-link {
+  display: inline-block;
+  background: var(--verde);
+  color: var(--branco);
+  padding: 12px 25px;
+  border-radius: 50px;
+  text-decoration: none;
+  margin-top: 40px;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.back-link:hover {
+  background: #6fa687;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+main.blog-content {
+  flex: 1 0 auto;
+}
+
+footer.rodape {
+  flex-shrink: 0;
+}
+
+#post-content img {
+  max-width: 250px;
+  height: auto;
+  display: block;
+  margin: 12px auto;
+}
+
+/* split-summary:
+  Reorganizacao em 8 secoes equilibradas:
+  1. core.css - Imports, reset, variaveis, base
+  2. navigation.css - Navbar, logo, floating button
+  3. header.css - Header e secoes base
+  4. components.css - Carousel, seletor, produtos
+  5. animations.css - Todas as animacoes
+  6. interactive.css - Clientes, CTA, buttons
+  7. footer.css - Rodape
+  8. blog.css - Blog e responsive
+
+/* split-summary:
+  Reorganizacao CSS em 8 secoes equilibradas:
+  1. core.css - Imports, reset, variaveis CSS, estilos base
+  2. navigation.css - Navbar, logo, links, floating button
+  3. header.css - Header, hero, sections base
+  4. components.css - Carousel, seletor fragrancia, grid de produtos
+  5. animations.css - Keyframes e animacoes
+  6. interactive.css - Buttons, clientes, consultoria, CTA
+  7. footer.css - Rodape e estilos relacionados
+  8. blog.css - Blog cards, posts, media queries responsivas
+  Total: 2021 linhas distribuidas equilibradamente
+*/

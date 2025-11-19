@@ -1,0 +1,224 @@
+.cliente-card:hover .cliente-icone {
+
+  transform: scale(0.96);
+}
+
+.cliente-card h3 {
+    font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  color: var(--marrom);
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.cliente-card p {
+    font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.consultoria .cliente-card h3:before {
+    content: counter(card-counter) '. ';
+  counter-increment: card-counter;
+  color: var(--verde);
+  font-weight: bold;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background: linear-gradient(90deg, #bbae9b, #8eb199);
+  color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 30px;
+  border: 1px solid #ece3dd;
+  box-shadow: 0 2px 4px rgba(127, 100, 73, 0.1);
+  transition: all 0.5s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.cta-btn::before {
+    content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #8eb199, #bbae9b);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: -1;
+  border-radius: 30px;
+}
+
+.cta-btn:hover {
+  color: #7f6449;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(127, 100, 73, 0.2);
+}
+
+.cta-btn:hover::before {
+  opacity: 1;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+@media (max-width: 768px) {
+  .navbar {
+  padding: 15px 20px;
+  flex-wrap: wrap;
+  }
+
+  .logo img {
+  width: 40px;
+  }
+
+  .nome-empresa {
+  font-size: 1rem;
+  }
+
+  .nav-toggle {
+  display: block;
+  }
+
+  .nav-links {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 20px 0;
+  box-shadow: 0 4px 8px rgba(127, 100, 73, 0.1);
+  z-index: 999;
+  }
+
+  .nav-links.active {
+  display: flex;
+  }
+
+  .nav-links a {
+  font-size: 1rem;
+  padding: 10px 0;
+  width: 100%;
+  text-align: center;
+  }
+
+  .nav-links a::after {
+  display: none;
+  }
+
+  .clientes-alvo, .consultoria {
+  padding: 80px 0 40px;
+  }
+
+  .clientes-alvo h2, .consultoria h2 {
+  font-size: 2rem;
+  }
+
+  .clientes-alvo .subtitulo, .consultoria .subtitulo {
+  font-size: 1rem;
+  }
+
+  .clientes-grid {
+  grid-template-columns: 1fr;
+  }
+
+  .consultoria .clientes-grid {
+  grid-template-columns: 1fr !important;
+  max-width: 100%;
+  }
+
+  .cliente-card {
+  max-width: 100%;
+  }
+
+  .cta-btn {
+  padding: 10px 25px;
+  font-size: 1rem;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .navbar {
+  padding: 10px 15px;
+  }
+
+  .logo img {
+  width: 35px;
+  }
+
+  .nome-empresa {
+  font-size: 0.9rem;
+  }
+
+  .nav-toggle {
+  font-size: 20px;
+  }
+
+  .nav-links a {
+  font-size: 0.9rem;
+  }
+
+  .clientes-alvo h2, .consultoria h2 {
+  font-size: 1.5rem;
+  }
+
+  .clientes-alvo .subtitulo, .consultoria .subtitulo {
+  font-size: 0.9rem;
+  }
+}
+
+.rodape {
+  background: linear-gradient(135deg, #1a2520, #2a3b33);
+  color: #ffffff;
+  padding: 60px 0 20px;
+    font-family: 'Montserrat', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.rodape::before {
+    content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(142, 177, 153, 0.1), transparent);
+  opacity: 0.3;
+  animation: glow 4s ease-in-out infinite;
+}
+
+
+@keyframes glow {
+  0% { opacity: 0.3; }
+  50% { opacity: 0.5; }
+  100% { opacity: 0.3; }
+}
+
+.rodape-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 1;
+}

@@ -1,0 +1,235 @@
+@media (max-width: 768px) {
+  .cabecalho-essencia {
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  }
+
+  .imagem-essencia {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  margin: 0 auto 15px;
+  display: flex;
+  justify-content: center;
+  overflow: visible;
+  }
+
+  .imagem-essencia img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+  }
+
+  .info-basica {
+  width: 100%;
+  text-align: center;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .imagem-essencia img {
+  max-height: 250px;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .seletor-fragrancia .container-fragrancia {
+  padding: 20px;
+  overflow: visible;
+  }
+
+  .seletor-fragrancia button {
+  width: 100%;
+  font-size: 14px;
+  padding: 10px 20px;
+  }
+
+  .seletor-fragrancia h2 {
+  font-size: 24px;
+  }
+
+  .essencia-recomendada h3 {
+  font-size: 22px;
+  }
+
+  .imagem-essencia {
+  max-width: 220px;
+  height: auto !important;
+  object-fit: contain !important;
+  margin: 10px auto;
+  }
+}
+
+.produtos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.produto-card {
+  position: relative;
+  height: 380px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(127, 100, 73, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.produto-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease, opacity 0.3s ease;
+}
+
+.card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 25px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+  color: #ffffff;
+  transform: translateY(100px);
+  transition: transform 0.5s ease;
+  text-align: left;
+}
+
+.produto-card h3 {
+    font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+.produto-card p {
+    font-family: 'Montserrat', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 100;
+  margin-bottom: 60px;
+  opacity: 0;
+  transition: opacity 0.3s ease 0.2s;
+  text-align: left;
+  max-width: 100%;
+}
+
+.produto-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(127, 100, 73, 0.25);
+}
+
+.produto-card:hover .card-content {
+  transform: translateY(0);
+}
+
+.produto-card:hover p, .produto-card:hover .produto-btn {
+  opacity: 1;
+}
+
+.produto-card:hover img {
+  transform: scale(1.05);
+}
+
+.produto-btn:hover {
+  background-color: var(--verde);
+}
+
+.produto-btn:hover .material-symbols-outlined {
+  transform: translateX(3px);
+}
+
+section a {
+  display: inline-block;
+  background-color: var(--verde);
+  color: #ffffff;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+section a:hover {
+  background-color: var(--marrom);
+  color: #ffffff;
+}
+
+:root {
+  --verde: #8eb199;
+  --marrom: #7f6449;
+}
+
+.clientes-alvo, .consultoria {
+  background: linear-gradient(to bottom, #f8f9fa, #ffffff);
+  padding: 100px 0 60px;
+  text-align: center;
+}
+
+.clientes-alvo h2, .consultoria h2 {
+    font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  color: var(--marrom);
+  margin-bottom: 20px;
+}
+
+.clientes-alvo .subtitulo, .consultoria .subtitulo {
+    font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+
+.clientes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.consultoria .clientes-grid {
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
+  margin-left: center;
+  margin-right: center;
+  counter-reset: card-counter;
+}
+
+.cliente-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.3s ease;
+}
+
+.cliente-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cliente-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cliente-icone {
+  font-size: 2.5rem;
+  color: var(--verde);
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}

@@ -6,7 +6,14 @@
     <title>JB Home Essence</title>
     
     <!-- Folhas de estilo -->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/blog.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/core.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/interactive.css">
+    <link rel="stylesheet" href="css/navigation.css">
     
     <!-- Fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -52,7 +59,7 @@
             <i class="fas fa-bars"></i>
         </div>
         <nav class="nav-links" id="navMenu">
-            <a href="#quem-somos">Quem Somos</a>
+            <a href="#quem-somos">Quem somos</a>
             <a href="#seletor-fragrancia">Sua Essência</a>
             <a href="#produtos">Produtos</a>
             <a href="#clientes-alvo">Clientes</a>
@@ -389,6 +396,25 @@
         </div>
     </section>
 
+    <!-- Adicionar antes do footer -->
+    <section class="feedbacks-section">
+        <div class="container">
+            <h2 class="section-title">O que nossos clientes dizem</h2>
+
+            <!-- Container dos feedbacks -->
+            <div class="feedbacks-container">
+                <div class="feedback-carousel">
+                    <div class="feedback-cards" id="google-feedbacks">
+                        <!-- Cards do Google serão inseridos via JavaScript -->
+                    </div>
+                    <div class="feedback-cards hidden" id="whatsapp-feedbacks">
+                        <!-- Cards do WhatsApp serão inseridos via JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Rodapé -->
     <footer class="rodape">
         <div class="container">
@@ -428,7 +454,9 @@
         <img id="imagemAmpliada" src="" alt="Imagem ampliada">
     </div>
 
-    <script src="js/script.js"></script>
+    <script src="js/core.js"></script>
+    <script src="js/interaction.js"></script>
+    <script src="js/quiz-ui.js"></script>
+    <script src="js/feedback.js"></script>
 </body>
 </html>
-

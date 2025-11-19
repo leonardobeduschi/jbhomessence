@@ -1,0 +1,235 @@
+.float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, var(--verde), #6b9a76);
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  font-size: 2.25rem;
+  box-shadow: 0 4px 12px rgba(127, 100, 73, 0.2);
+  z-index: 1500;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.float:hover {
+  transform: scale(1.1);
+  box-shadow: #6b76;
+  background: linear-gradient(45deg, #6b9a76, var(--verde));
+}
+
+.float:active {
+  transform: scale(0.2);
+}
+
+.my-float {
+  line-height: 1;
+}
+
+.navbar {
+  width: 100%;
+  padding: 20px 40px;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo img {
+  width: 50px;
+  transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.08);
+}
+
+.logo a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  outline: none;
+}
+
+.nome-empresa {
+  font-weight: 500;
+  color: var(--verde) !important;
+  font-size: 1.2rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: var(--marrom);
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  transition: color 0.3s ease;
+  outline: none;
+}
+
+.nav-links a::after {
+    content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--verde);
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+  color: var(--verde);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-toggle {
+  display: none;
+  font-size: 24px;
+  color: var(--marrom);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav-toggle:hover {
+  color: var(--verde);
+}
+
+
+@media (max-width: 768px) {
+  .navbar {
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  }
+
+  .logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  justify-content: center;
+  }
+
+  .logo img {
+  width: 40px;
+  }
+
+  .nome-empresa {
+  font-size: 1rem;
+  }
+
+  .nav-toggle {
+  display: block;
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-top: 0;
+  line-height: 1;
+  }
+
+  .nav-links {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 20px 0;
+  box-shadow: 0 4px 8px rgba(127, 100, 73, 0.1);
+  z-index: 999;
+  }
+
+  .nav-links.active {
+  display: flex;
+  }
+
+  .nav-links a {
+  font-size: 1rem;
+  padding: 10px 0;
+  width: 100%;
+  text-align: center;
+  }
+
+  .nav-links a::after {
+  display: none;
+  }
+
+  section[id], header {
+  padding-top: 80px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .navbar {
+  padding: 8px 15px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  }
+
+  .logo img {
+  width: 35px;
+  }
+
+  .nome-empresa {
+  font-size: 0.9rem;
+  }
+
+  .nav-toggle {
+  font-size: 20px;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  }
+
+  .nav-links a {
+  font-size: 0.9rem;
+  }
+
+  section[id], header {
+  padding-top: 70px;
+  }
+}
