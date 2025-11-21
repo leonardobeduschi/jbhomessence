@@ -98,13 +98,8 @@ if (window.location.pathname.includes("/blog/index.html") || window.location.pat
       if (cardsContainer) {
         cardsContainer.innerHTML = posts
           .map((post) => {
-            const maxLength = 80;
-            const truncatedExcerpt =
-              post.excerpt.length > maxLength
-                ? post.excerpt.slice(0, maxLength) + "..."
-                : post.excerpt;
             return `
-              <div class="blog-card">
+              <div class="blog-card" data-post-link="post.html?id=${post.id}">
                 <div class="card-wrapper">
                   <figure>
                     <img src="${post.image || "https://via.placeholder.com/300x300"}" alt="${post.title}" />
@@ -112,7 +107,7 @@ if (window.location.pathname.includes("/blog/index.html") || window.location.pat
                   <div class="card-body">
                     <p class="meta">${post.date} | ${post.category}</p>
                     <h2>${post.title}</h2>
-                    <p class="excerpt">${truncatedExcerpt}</p>
+                    <p class="excerpt">${post.excerpt}</p>
                     <a href="post.html?id=${post.id}" class="read-more">
                       Leia mais <span class="sr-only">sobre ${post.title}</span>
                       <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
@@ -125,6 +120,17 @@ if (window.location.pathname.includes("/blog/index.html") || window.location.pat
             `;
           })
           .join("");
+        
+        // Adicionar event listeners para tornar o card inteiro clicável
+        document.querySelectorAll(".blog-card").forEach((card) => {
+          card.addEventListener("click", (e) => {
+            // Evita dupla navegação se clicou no link "Leia mais"
+            if (e.target.closest(".read-more")) return;
+            
+            const link = card.getAttribute("data-post-link");
+            if (link) window.location.href = link;
+          });
+        });
       }
     })
     .catch((err) => console.error("Erro ao carregar posts:", err));

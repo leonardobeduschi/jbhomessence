@@ -205,14 +205,7 @@
   display: flex;
   flex-direction: column;
   border: 1px solid var(--verde);
-}
-
-.blog-card a::after {
-  position: absolute;
-  inset-block: 0;
-  inset-inline: 0;
   cursor: pointer;
-    content: "";
 }
 
 .blog-card h2 {
@@ -262,24 +255,29 @@ figure {
 .blog-card .excerpt {
   font-size: 0.8rem;
   color: var(--marrom);
-  margin-bottom: 40px;
-  margin-top: auto;
+  margin-bottom: 8px;
   text-align: left;
   line-height: 1.4;
+  flex-grow: 1;
 }
 
 .blog-card a.read-more {
-  display: inline-flex;
+  display: flex;
   align-items: center;
+  justify-content: center;
   text-decoration: none;
   color: var(--verde);
   font-size: 0.85rem;
   font-weight: 600;
-  position: absolute;
-  bottom: 12px;
-  left: -11px;
+  position: relative;
+  bottom: auto;
+  left: auto;
   opacity: 1;
   background: none;
+  z-index: 1;
+  margin-top: auto;
+  flex-shrink: 0;
+  width: 100%;
 }
 
 .blog-card a:focus {
@@ -330,7 +328,8 @@ figure {
   }
   .blog-card {
   width: 100%;
-  height: 360px;
+  height: auto;
+  min-height: 360px;
   }
   .blog-card h2 {
   font-size: 1.1rem;
