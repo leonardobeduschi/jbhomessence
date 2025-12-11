@@ -1,0 +1,80 @@
+[
+  {
+    "id": "abbraccio",
+    "nome": "ABBRACCIO",
+    "slug": "abbraccio",
+    "descricao": "Cítrico - Floral"
+  },
+  {
+    "id": "aroma-do-bebe",
+    "nome": "AROMA DO BEBÊ",
+    "slug": "aroma-do-bebe",
+    "descricao": "Herbal - Musk"
+  },
+  {
+    "id": "bambu-garden",
+    "nome": "BAMBU GARDEN",
+    "slug": "bambu-garden",
+    "descricao": "Floral - Amadeirado"
+  },
+  {
+    "id": "capim-santo",
+    "nome": "CAPIM SANTO",
+    "slug": "capim-santo",
+    "descricao": "Herbal - Cítrico"
+  },
+  {
+    "id": "divina-vanilla",
+    "nome": "DIVINA VANILLA",
+    "slug": "divina-vanilla",
+    "descricao": "Oriental - Amadeirado"
+  },
+  {
+    "id": "encontro",
+    "nome": "ENCONTRO",
+    "slug": "encontro",
+    "descricao": "Envolvente e misteriosa"
+  },
+  {
+    "id": "garbo",
+    "nome": "GARBO",
+    "slug": "garbo",
+    "descricao": "Frutal - Oriental"
+  },
+  {
+    "id": "havana",
+    "nome": "HAVANA",
+    "slug": "havana",
+    "descricao": "Cítrico - Amadeirado"
+  },
+  {
+    "id": "hortensia",
+    "nome": "HORTÊNSIA",
+    "slug": "hortensia",
+    "descricao": "Floral - Doce"
+  },
+  {
+    "id": "jardins-da-franca",
+    "nome": "JARDINS DA FRANÇA",
+    "slug": "jardins-da-franca",
+    "descricao": "Floral - Agreste"
+  },
+  {
+    "id": "lilas",
+    "nome": "LILÁS",
+    "slug": "lilas",
+    "descricao": "Aromático - Fougère"
+  },
+  {
+    "id": "monte-carlo",
+    "nome": "MONTE CARLO",
+    "slug": "monte-carlo",
+    "descricao": "Chypre - Amadeirado"
+  },
+  {
+    "id": "patchouly",
+    "nome": "PATCHOULY",
+    "slug": "patchouly",
+    "descricao": "Amadeirado - Oriental"
+  }
+]

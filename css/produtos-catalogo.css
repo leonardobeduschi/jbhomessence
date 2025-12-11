@@ -1,0 +1,756 @@
+/* produtos-catalogo.css - Limpo e Corrigido */
+
+/* ==========================================
+   ESTILOS GERAIS
+   ========================================== */
+
+h1 { 
+    margin: 0; 
+    font-size: 2.8rem; 
+    color: var(--accent); 
+}
+
+.subtitle { 
+    margin: 0.5rem 0 0; 
+    color: #777; 
+}
+
+main { 
+    max-width: 1400px; 
+    margin: 0 auto; 
+    padding: 100px 1rem 3rem;
+    margin-top: 100px;
+}
+
+/* ==========================================
+   GRID DE PRODUTOS
+   ========================================== */
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+/* ==========================================
+   CARDS DE PRODUTOS
+   ========================================== */
+
+.card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 380px;
+    position: relative;
+}
+
+.card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card-img-container {
+    position: relative;
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    background: #f9f9f9;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.card-img.main {
+    opacity: 1;
+}
+
+.card-img.hover {
+    opacity: 0;
+}
+
+.card:hover .card-img.main {
+    opacity: 0;
+}
+
+.card:hover .card-img.hover {
+    opacity: 1;
+}
+
+.card-body {
+    padding: 1.2rem;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-top: 1px solid #f0f0f0;
+}
+
+.card-title {
+    margin: 0 0 0.5rem;
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.card-price {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin: 0;
+}
+
+/* ==========================================
+   BADGES DE FRAGRÂNCIA NOS CARDS
+   ========================================== */
+
+.fragrance-badge {
+    display: inline-block;
+    padding: 0.4rem 0.9rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: white;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    margin: 0.5rem 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    letter-spacing: 0.3px;
+    transition: all 0.3s ease;
+}
+
+.fragrance-badge:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* ==========================================
+   MODAL
+   ========================================== */
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 9999;
+    backdrop-filter: blur(5px);
+    padding: 2rem;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal {
+    background: white;
+    max-width: 1000px;
+    max-height: 90vh;
+    width: 90%;
+    border-radius: 20px;
+    overflow: hidden;
+    transform: translateY(30px) scale(0.95);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+    position: relative;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    z-index: 10000;
+}
+
+.modal-overlay.active .modal { 
+    transform: translateY(0) scale(1);
+}
+
+.modal-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #666;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.modal-close:hover {
+    background: #f8f8f8;
+    color: #333;
+    transform: rotate(90deg);
+}
+
+.modal-content {
+    display: flex;
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+    gap: 0;
+}
+
+/* ==========================================
+   COLUNA DE IMAGENS DO MODAL
+   ========================================== */
+
+.modal-images-column {
+    flex: 0 0 50%;
+    background: #f8f9fa;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    overflow-y: auto;
+    max-height: 100%;
+}
+
+.modal-main-image {
+    width: 100%;
+    height: 350px;
+    border-radius: 16px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.modal-main-image:hover img {
+    transform: scale(1.05);
+}
+
+.modal-thumbnails {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.modal-thumbnail {
+    width: 100%;
+    height: 80px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.modal-thumbnail:hover {
+    border-color: #ddd;
+    transform: translateY(-2px);
+}
+
+.modal-thumbnail.active {
+    border-color: var(--accent);
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.2);
+}
+
+.modal-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ==========================================
+   COLUNA DE INFORMAÇÕES DO MODAL
+   ========================================== */
+
+.modal-info-column {
+    flex: 0 0 50%;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    max-height: 100%;
+    background: white;
+}
+
+.modal-title {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.modal-price {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+}
+
+.modal-description {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    font-size: 1.05rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+/* ==========================================
+   SEÇÕES DO MODAL
+   ========================================== */
+
+.modal-section {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.modal-section:last-of-type {
+    border-bottom: none;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+}
+
+.modal-section h4 {
+    color: #2c3e50;
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.modal-section h4::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+/* ==========================================
+   BADGES E TAGS DO MODAL
+   ========================================== */
+
+.modal-fragrance-container {
+    margin-bottom: 1rem;
+}
+
+.modal-fragrance-badge {
+    display: inline-block;
+    padding: 0.7rem 1.5rem;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.modal-fragrance-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.modal-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.modal-tag {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);
+}
+
+.modal-info-item {
+    background: #f8f9fa;
+    padding: 1.2rem;
+    border-radius: 12px;
+    border-left: 4px solid var(--accent);
+    margin-top: 0.5rem;
+}
+
+.modal-info-item p {
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+.modal-info-item p + p {
+    margin-top: 0.8rem;
+}
+
+.modal-category {
+    margin-top: 0.5rem;
+}
+
+.modal-category-badge {
+    display: inline-block;
+    background: #e3f2fd;
+    color: #1976d2;
+    padding: 0.5rem 1.2rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: 1px solid #bbdefb;
+}
+
+/* ==========================================
+   BOTÃO WHATSAPP
+   ========================================== */
+
+.whatsapp-button {
+    margin-top: auto;
+    padding-top: 2rem;
+    border-top: 1px solid #eee;
+}
+
+.whatsapp-button a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    color: white;
+    text-decoration: none;
+    padding: 1.2rem 2rem;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
+}
+
+.whatsapp-button a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+}
+
+.whatsapp-button i {
+    font-size: 1.4rem;
+}
+
+.whatsapp-button span {
+    flex: 1;
+    text-align: center;
+}
+
+/* ==========================================
+   LIGHTBOX PARA IMAGENS
+   ========================================== */
+
+.lightbox-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    cursor: zoom-out;
+}
+
+.lightbox-overlay.active {
+    opacity: 1;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    cursor: default;
+    transition: opacity 0.2s ease;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #333;
+    z-index: 10001;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.lightbox-close:hover {
+    background: white;
+    transform: rotate(90deg) scale(1.1);
+}
+
+.lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333;
+    z-index: 10001;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.lightbox-nav:hover {
+    background: white;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.lightbox-prev {
+    left: 2rem;
+}
+
+.lightbox-next {
+    right: 2rem;
+}
+
+.lightbox-counter {
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* ==========================================
+   RESPONSIVO - TABLETS
+   ========================================== */
+
+@media (max-width: 1024px) {
+    .modal {
+        width: 95%;
+        max-height: 85vh;
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        padding-top: 60px;
+    }
+    
+    .products-grid { 
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); 
+        gap: 1.5rem;
+    }
+    
+    .card {
+        height: 340px;
+    }
+    
+    .card-img-container {
+        height: 240px;
+    }
+    
+    /* Modal responsivo */
+    .modal-overlay {
+        padding: 1rem;
+    }
+    
+    .modal {
+        max-height: 90vh;
+        width: 95%;
+    }
+    
+    .modal-content {
+        flex-direction: column;
+    }
+    
+    .modal-images-column,
+    .modal-info-column {
+        flex: none;
+        width: 100%;
+    }
+    
+    .modal-images-column {
+        padding: 1.5rem;
+        max-height: 40vh;
+    }
+    
+    .modal-main-image {
+        height: 200px;
+    }
+    
+    .modal-thumbnail {
+        height: 60px;
+    }
+    
+    .modal-info-column {
+        padding: 1.5rem;
+        max-height: 50vh;
+    }
+    
+    .modal-title {
+        font-size: 1.5rem;
+    }
+    
+    .modal-price {
+        font-size: 1.8rem;
+    }
+    
+    .modal-info-item {
+        padding: 1rem;
+    }
+    
+    .modal-section {
+        margin-bottom: 1.2rem;
+        padding-bottom: 1.2rem;
+    }
+    
+    /* Lightbox */
+    .lightbox-close {
+        top: 1rem;
+        right: 1rem;
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+    }
+    
+    .lightbox-nav {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+    
+    .lightbox-prev {
+        left: 1rem;
+    }
+    
+    .lightbox-next {
+        right: 1rem;
+    }
+    
+    .lightbox-content img {
+        max-height: 80vh;
+    }
+}
+
+/* ==========================================
+   RESPONSIVO - MOBILE
+   ========================================== */
+
+@media (max-width: 480px) {
+    .products-grid { 
+        grid-template-columns: 1fr;
+    }
+    
+    .card {
+        height: 320px;
+    }
+    
+    .card-img-container {
+        height: 220px;
+    }
+    
+    .modal-thumbnails {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .whatsapp-button a {
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    .modal-fragrance-badge {
+        font-size: 0.95rem;
+        padding: 0.6rem 1.2rem;
+    }
+    
+    .fragrance-badge {
+        font-size: 0.8rem;
+        padding: 0.35rem 0.8rem;
+    }
+    
+    /* Lightbox mobile */
+    .lightbox-close {
+        width: 35px;
+        height: 35px;
+        font-size: 1.3rem;
+        top: 0.5rem;
+        right: 0.5rem;
+    }
+    
+    .lightbox-nav {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+    
+    .lightbox-prev {
+        left: 0.5rem;
+    }
+    
+    .lightbox-next {
+        right: 0.5rem;
+    }
+}

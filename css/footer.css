@@ -77,106 +77,67 @@
 
 
 @media (max-width: 768px) {
-  .navbar {
-  padding: 15px 20px;
-  flex-wrap: wrap;
+  .rodape-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 30px 0; /* opcional: dá mais espaço entre as colunas empilhadas */
   }
 
-  .logo img {
-  width: 40px;
+  /* Força o bloco inteiro a ocupar 100% e centralizar tudo */
+  .rodape-info,
+  .rodape-contato,
+  .rodape-endereco {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;        /* <--- ESSENCIAL para centralizar filhos */
   }
 
-  .nome-empresa {
-  font-size: 1rem;
+  /* Logo centralizada */
+  .rodape-logo {
+    margin: 0 auto 20px auto;
+    display: block;
   }
 
-  .nav-toggle {
-  display: block;
+  /* Texto da bio - agora sim vai centralizar perfeitamente */
+  .rodape-info .mini-bio {
+    max-width: 90%;           /* ou 100% se quiser ocupar tudo */
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.6;
   }
 
-  .nav-links {
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(8px);
-  position: absolute;
-  top: 100%;
-  left: 0;
-  padding: 20px 0;
-  box-shadow: 0 4px 8px rgba(127, 100, 73, 0.1);
-  z-index: 999;
+  /* Lista de contatos centralizada */
+  .rodape-contato ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
   }
 
-  .nav-links.active {
-  display: flex;
+  .rodape-contato li {
+    justify-content: center;
+    width: fit-content;
   }
 
-  .nav-links a {
-  font-size: 1rem;
-  padding: 10px 0;
-  width: 100%;
-  text-align: center;
+  /* Endereço */
+  .rodape-endereco p {
+    max-width: 90%;
+    margin: 0 auto;
   }
 
-  .nav-links a::after {
-  display: none;
-  }
-
-  .clientes-alvo, .consultoria {
-  padding: 80px 0 40px;
-  }
-
-  .clientes-alvo h2, .consultoria h2 {
-  font-size: 2rem;
-  }
-
-  .clientes-alvo .subtitulo, .consultoria .subtitulo {
-  font-size: 1rem;
-  }
-
-  .clientes-grid {
-  grid-template-columns: 1fr;
-  }
-
-  .consultoria .clientes-grid {
-  grid-template-columns: 1fr !important;
-  max-width: 100%;
-  }
-
-  .cliente-card {
-  max-width: 100%;
-  }
-
-  .cta-btn {
-  padding: 10px 25px;
-  font-size: 1rem;
+  /* Direitos autorais já estão centralizados pelo container */
+  .rodape-direitos p {
+    text-align: center;
   }
 }
 
 
 @media (max-width: 480px) {
-  .navbar {
-  padding: 10px 15px;
-  }
-
-  .logo img {
-  width: 35px;
-  }
-
-  .nome-empresa {
-  font-size: 0.9rem;
-  }
-
-  .nav-toggle {
-  font-size: 20px;
-  }
-
-  .nav-links a {
-  font-size: 0.9rem;
-  }
-
   .clientes-alvo h2, .consultoria h2 {
   font-size: 1.5rem;
   }
@@ -221,4 +182,101 @@
   margin-bottom: 30px;
   position: relative;
   z-index: 1;
+}
+
+/* Footer-specific grid + contact rules moved from blog.css */
+.rodape-grid > div {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.rodape-grid > div.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.rodape-logo {
+  max-width: 150px;
+  margin-bottom: 15px;
+}
+
+.rodape-info .mini-bio {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #d3d3d3;
+  max-width: 300px;
+}
+
+.rodape-contato h3, .rodape-endereco h3 {
+  font-size: 1.3rem;
+  color: var(--verde);
+  margin-bottom: 15px;
+}
+
+.rodape-contato ul {
+  list-style: none;
+  padding: 0;
+}
+
+.rodape-contato li {
+  margin-bottom: 12px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.rodape-contato li a {
+  color: #d3d3d3;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.rodape-contato li a:hover {
+  color: var(--verde);
+  transform: translateX(5px);
+}
+
+.rodape-contato li i {
+  margin-right: 10px;
+  color: var(--verde);
+  font-size: 1.2rem;
+  transition: text-shadow 0.3s ease;
+}
+
+.rodape-contato li:hover i {
+  text-shadow: 0 0 10px rgba(142, 177, 153, 0.8);
+}
+
+.rodape-endereco p {
+  font-size: 1rem;
+  color: #d3d3d3;
+  line-height: 1.6;
+}
+
+.rodape-direitos {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #d3d3d3;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+footer.rodape {
+  flex-shrink: 0;
+}
+
+/* Product-section footer rules moved from products.css */
+.produtos-footer {
+    text-align: center;
+    padding-top: 80px;
+}
+
+.footer-texto {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 30px;
+    font-weight: 300;
 }

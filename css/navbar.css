@@ -1,0 +1,605 @@
+/* ============================================== */
+/* NAVBAR STYLES - Versão 2.0                    */
+/* Layout: Logo centralizado (desktop)           */
+/* Mobile: Menu lateral deslizante               */
+/* Transparência no topo com troca de cores      */
+/* ============================================== */
+
+:root {
+  --navbar-transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ============================================== */
+/* NAVBAR BASE - Estado transparente (topo)      */
+/* ============================================== */
+
+.navbar {
+  width: 100%;
+  padding: 20px 40px;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: var(--navbar-transition);
+}
+
+/* Estado scrolled - navbar branca */
+.navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* ============================================== */
+/* NAVBAR STATIC - Sempre branca (Blog, etc)     */
+/* Adicione classe "navbar-static" no HTML       */
+/* ============================================== */
+
+.navbar.navbar-static {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Logo sempre preta na versão static */
+.navbar.navbar-static .logo-white {
+  display: none;
+}
+
+.navbar.navbar-static .logo-black {
+  display: block;
+}
+
+/* Texto sempre escuro na versão static */
+.navbar.navbar-static .nome-empresa {
+  color: #8eb199 !important;
+}
+
+.navbar.navbar-static .nav-links > a,
+.navbar.navbar-static .dropdown-toggle {
+  color: #8eb199;
+}
+
+.navbar.navbar-static .nav-links > a::after,
+.navbar.navbar-static .dropdown-toggle::after {
+  background-color: #7F6449;
+}
+
+.navbar.navbar-static .nav-links > a:hover,
+.navbar.navbar-static .dropdown-toggle:hover {
+  color: #7F6449;
+}
+
+.navbar.navbar-static .nav-toggle {
+  color: #333333;
+}
+
+/* ============================================== */
+/* CONTAINER NAVBAR - Layout Desktop             */
+/* ============================================== */
+
+.navbar-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* ============================================== */
+/* LOGO - Centralizado no topo                   */
+/* ============================================== */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: var(--navbar-transition);
+}
+
+.logo-img {
+  width: 60px;
+  height: 60px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  object-fit: contain;
+}
+
+.logo-img:hover {
+  transform: scale(1.08);
+}
+
+/* Sistema de troca de logos */
+.logo-white {
+  display: block;
+}
+
+.logo-black {
+  display: none;
+}
+
+.navbar.scrolled .logo-white {
+  display: none;
+}
+
+.navbar.scrolled .logo-black {
+  display: block;
+}
+
+.logo a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  outline: none;
+}
+
+.nome-empresa {
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: #ffffff !important;
+  transition: var(--navbar-transition);
+  letter-spacing: 0.5px;
+}
+
+.navbar.scrolled .nome-empresa {
+  color: #8eb199 !important;
+}
+
+/* ============================================== */
+/* NAVEGAÇÃO - Links centralizados               */
+/* ============================================== */
+
+.nav-links {
+  display: flex;
+  gap: 35px;
+  align-items: center;
+}
+
+.nav-links > a,
+.dropdown-toggle {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  position: relative;
+  transition: var(--navbar-transition);
+  outline: none;
+  padding: 8px 0;
+}
+
+.navbar.scrolled .nav-links > a,
+.navbar.scrolled .dropdown-toggle {
+  color: #8eb199;
+}
+
+/* Efeito underline nos links */
+.nav-links > a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ffffff;
+  transition: width 0.3s ease-in-out;
+}
+
+.navbar.scrolled .nav-links > a::after {
+  background-color: #7F6449;
+}
+
+.nav-links > a:hover::after,
+.dropdown-toggle:hover::after {
+  width: 100%;
+}
+
+.nav-links > a:hover,
+.dropdown-toggle:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.navbar.scrolled .nav-links > a:hover,
+.navbar.scrolled .dropdown-toggle:hover {
+  color: #7F6449;
+}
+
+/* ============================================== */
+/* DROPDOWN DE FRAGRÂNCIAS                       */
+/* ============================================== */
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.dropdown-toggle::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ffffff;
+  transition: width 0.3s ease-in-out;
+}
+
+.navbar.scrolled .dropdown-toggle::after {
+  background-color: #7F6449;
+}
+
+.dropdown-arrow {
+  font-size: 0.65rem;
+  transition: transform 0.3s ease;
+  opacity: 0.8;
+}
+
+.dropdown.active .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 15px);
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(12px);
+  min-width: 220px;
+  max-height: 400px;
+  overflow-y: auto;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  padding: 12px 0;
+  z-index: 1001;
+}
+
+/* Scrollbar customizada para dropdown */
+.dropdown-menu::-webkit-scrollbar {
+  width: 6px;
+}
+
+.dropdown-menu::-webkit-scrollbar-track {
+  background: rgba(127, 100, 73, 0.05);
+  border-radius: 10px;
+}
+
+.dropdown-menu::-webkit-scrollbar-thumb {
+  background: #7F6449;
+  border-radius: 10px;
+}
+
+.dropdown.active .dropdown-menu {
+  display: block;
+  animation: fadeInDown 0.3s ease;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.dropdown-item {
+  display: block;
+  padding: 10px 20px;
+  color: #8eb199;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.dropdown-item:hover {
+  background-color: rgba(127, 100, 73, 0.08);
+  color: #7F6449;
+  padding-left: 28px;
+}
+
+/* ============================================== */
+/* TOGGLE MOBILE (escondido no desktop)          */
+/* ============================================== */
+
+.nav-toggle {
+  display: none;
+  font-size: 24px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: var(--navbar-transition);
+  padding: 8px;
+  z-index: 1002;
+}
+
+.navbar.scrolled .nav-toggle {
+  color: #8eb199;
+}
+
+.nav-toggle:hover {
+  opacity: 0.7;
+}
+
+/* ============================================== */
+/* RESPONSIVO - TABLET (768px - 1024px)          */
+/* ============================================== */
+
+@media (max-width: 1024px) {
+  .navbar-container {
+    gap: 15px;
+  }
+
+  .nav-links {
+    gap: 25px;
+  }
+
+  .nav-links > a,
+  .dropdown-toggle {
+    font-size: 0.95rem;
+  }
+
+  .nome-empresa {
+    font-size: 1.2rem;
+  }
+
+  .logo-img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* ============================================== */
+/* RESPONSIVO - MOBILE (≤ 768px)                 */
+/* Menu lateral deslizante                       */
+/* ============================================== */
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 20px 25px;
+    /* Transparente no topo, igual ao desktop */
+    background-color: transparent;
+  }
+
+  .navbar.scrolled {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  .navbar-container {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    position: relative;
+  }
+
+  /* Toggle à esquerda no mobile */
+  .nav-toggle {
+    display: block;
+    position: absolute;
+    left: 0;
+    color: #ffffff;
+    font-size: 26px;
+    padding: 10px;
+  }
+
+  .navbar.scrolled .nav-toggle {
+    color: #8eb199;
+  }
+
+  /* Logo centralizada no mobile */
+  .logo {
+    gap: 12px;
+    justify-content: center;
+  }
+
+  .logo-img {
+    width: 50px;
+    height: 50px;
+  }
+
+  /* Sistema de troca de logo no mobile também */
+  .logo-white {
+    display: block;
+  }
+
+  .logo-black {
+    display: none;
+  }
+
+  .navbar.scrolled .logo-white {
+    display: none;
+  }
+
+  .navbar.scrolled .logo-black {
+    display: block;
+  }
+
+  .nome-empresa {
+    font-size: 1.15rem;
+    color: #ffffff;
+  }
+
+  .navbar.scrolled .nome-empresa {
+    color: #7F6449;
+  }
+
+  /* Menu lateral deslizante */
+  .nav-links {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 280px;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(12px);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    padding: 100px 0 40px 0;
+    box-shadow: 2px 0 20px rgba(0, 0, 0, 0.1);
+    transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow-y: auto;
+    z-index: 999;
+  }
+
+  .nav-links.active {
+    left: 0;
+  }
+
+  /* Links no menu mobile */
+  .nav-links > a,
+  .dropdown-toggle {
+    color: #8eb199;
+    font-size: 1.1rem;
+    width: 100%;
+    padding: 18px 30px;
+    border-bottom: 1px solid rgba(127, 100, 73, 0.1);
+  }
+
+  .nav-links > a::after {
+    display: none;
+  }
+
+  .nav-links > a:hover {
+    background-color: rgba(127, 100, 73, 0.05);
+    color: #7F6449;
+  }
+
+  /* Dropdown no mobile */
+  .dropdown {
+    width: 100%;
+  }
+
+  .dropdown-toggle {
+    justify-content: space-between;
+    padding: 18px 30px;
+    border-bottom: 1px solid rgba(127, 100, 73, 0.1);
+  }
+
+  .dropdown-toggle::after {
+    display: none;
+  }
+
+  .dropdown-menu {
+    position: static;
+    transform: none;
+    box-shadow: none;
+    border-radius: 0;
+    background-color: rgba(127, 100, 73, 0.03);
+    max-height: 0;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    border-bottom: none;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+  }
+
+  .dropdown.active .dropdown-menu {
+    max-height: 400px;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(127, 100, 73, 0.1);
+    overflow-y: auto;
+  }
+
+  .dropdown-item {
+    padding: 14px 30px 14px 50px;
+    font-size: 0.95rem;
+    border-bottom: 1px solid rgba(127, 100, 73, 0.05);
+    color: #8eb199 !important;
+  }
+
+  .dropdown-item:last-child {
+    border-bottom: none;
+  }
+
+  .dropdown-item:hover {
+    padding-left: 55px;
+    color: #7F6449;
+  }
+
+  /* Overlay escuro quando menu está aberto */
+  .nav-links.active::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 280px;
+    width: calc(100vw - 280px);
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+  }
+}
+
+/* ============================================== */
+/* RESPONSIVO - MOBILE PEQUENO (≤ 480px)         */
+/* ============================================== */
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 12px 15px;
+  }
+
+  .logo-img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .nome-empresa {
+    font-size: 1rem;
+  }
+
+  .nav-toggle {
+    font-size: 22px;
+    left: -5px;
+  }
+
+  .nav-links {
+    width: 260px;
+  }
+
+  .nav-links > a,
+  .dropdown-toggle {
+    font-size: 1rem;
+    padding: 16px 25px;
+  }
+
+  .dropdown-item {
+    padding: 12px 25px 12px 45px;
+    font-size: 0.9rem;
+  }
+
+  .dropdown-item:hover {
+    padding-left: 50px;
+  }
+}
+
+/* ============================================== */
+/* AJUSTES DE ESPAÇAMENTO PARA CONTEÚDO          */
+/* ============================================== */
+
+section[id],
+header {
+  scroll-margin-top: 140px;
+}
+
+@media (max-width: 768px) {
+  section[id],
+  header {
+    scroll-margin-top: 80px;
+  }
+}

@@ -13,7 +13,9 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/interactive.css">
-    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="css/categorias-cards.css">
     
     <!-- Fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -49,95 +51,136 @@
 <body>
     <!-- Cabeçalho -->
     <div class="navbar">
-        <div class="logo">
-            <a href="#inicio">
-                <img src="img/JBHomeEssence_Verde.png" alt="Logo JB Home Essence">
-            </a>
-            <a href="#inicio" class="nome-empresa">JB HOME ESSENCE</a>
+        <div class="navbar-container">
+            <!-- Logo centralizado (desktop) / Esquerda (mobile) -->
+            <div class="logo">
+                <a href="#inicio">
+                    <!-- Logo branca (topo transparente) -->
+                    <img src="img/JBHomeEssence_Branco.png" alt="Logo JB Home Essence" class="logo-img logo-white">
+                    <!-- Logo verde/preta (navbar branca scrolled) -->
+                    <img src="img/JBHomeEssence_Verde.png" alt="Logo JB Home Essence" class="logo-img logo-black">
+                </a>
+                <a href="#inicio" class="nome-empresa">JB HOME ESSENCE</a>
+            </div>
+            
+            <!-- Toggle do menu mobile (visível apenas em telas pequenas) -->
+            <div class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <!-- Links de navegação -->
+            <nav class="nav-links" id="navMenu">
+                <a href="#produtos">Produtos</a>
+                
+                <!-- Dropdown de Fragrâncias -->
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle">
+                        Fragrâncias
+                        <span class="dropdown-arrow">▼</span>
+                    </a>
+                    <div class="dropdown-menu" id="fragranciasDropdown">
+                        <!-- Categorias serão carregadas aqui dinamicamente via JS -->
+                    </div>
+                </div>
+                
+                <a href="#seletor-fragrancia">Sua Essência</a>
+                <a href="#clientes-alvo">Clientes</a>
+                <a href="#quem-somos">Quem somos</a>
+                <a href="blog/index.html">Blog</a>
+            </nav>
         </div>
-        <div class="nav-toggle" id="navToggle">
-            <i class="fas fa-bars"></i>
-        </div>
-        <nav class="nav-links" id="navMenu">
-            <a href="#produtos">Produtos</a>
-            <a href="#seletor-fragrancia">Sua Essência</a>
-            <a href="#clientes-alvo">Clientes</a>
-            <a href="#quem-somos">Quem somos</a>
-            <a href="blog/index.html">Blog</a>
-        </nav>
     </div>
 
     <header id="inicio">
         <div class="header-content">
-            <div class="logo-central-container">
-                <img src="img/JBHomeEssence_Branco.png" alt="Logo JB Home Essence" class="logo-central">
+
+            <div class="header-buttons">
+                <a href="#produtos">Descubra a sua essência</a>
+                <a href="blog/index.html">Nosso Blog</a>
             </div>
-            <h1>Qual é a sua essência?</h1>
-            <h2>Perfumaria de ambientes em Balneário Camboriú (SC)</h2>
-            <a href="#produtos">Descubra a sua essência</a>
         </div>
     </header>
 
-    <!-- Seção Nossos Produtos -->
+    <!-- Seção Produtos -->
     <section class="produtos" id="produtos">
-        <h2>Nossos Produtos</h2>
-        <div class="produtos-grid">
-            <!-- Produto 1 -->
-            <div class="produto-card">
-                <img src="img/home-spray-havana.jpg" alt="Home Spray">
-                <div class="card-content">
-                    <h3>Home Spray</h3>
-                    <p>Perfume o seu ambiente com um toque de frescor e elegância.</p>
-                </div>
-            </div>
-            
-            <!-- Produto 2 -->
-            <div class="produto-card">
-                <img src="img/135_GG_Difusor-de-Varetas-Jardins-da-Frana--200ml--_55.jpg" alt="Difusor de Aromas">
-                <div class="card-content">
-                    <h3>Difusor de Varetas</h3>
-                    <p>Aroma contínuo para ambientar seus espaços com sofisticação.</p>
-                </div>
-            </div>
-            
-            <!-- Produto 3 -->
-            <div class="produto-card">
-                <img src="img/95_GG_Sabonete-Lquido-Perolado-Havana--350ml--Vidr_62.jpg" alt="Sabonete Líquido">
-                <div class="card-content">
-                    <h3>Sabonete Líquido</h3>
-                    <p>Higiene com fragrâncias perfumadas que transformam a sua experiência.</p>
-                </div>
-            </div>
-            
-            <!-- Produto 4 -->
-            <div class="produto-card">
-                <img src="img/176_GG_Essncia-Bambu-Garden-30ml_98.jpg" alt="Essências">
-                <div class="card-content">
-                    <h3>Essências</h3>
-                    <p>Concentrados aromáticos para perfumar seus ambientes com longa duração e praticidade.</p>
-                </div>
+        <div class="produtos-container">
+
+            <div class="produtos-header">
+                <h2>Nossos Produtos</h2>
+                <div class="header-divider"></div>
             </div>
 
-            <!-- Produto 5 -->
-            <div class="produto-card">
-                <img src="img/1_GG_Vela-Havana--Vidro-170g_57.png" alt="Velas Aromáticas">
-                <div class="card-content">
-                    <h3>Velas Aromáticas</h3>
-                    <p>Ilumine e perfume seu espaço com fragrâncias que criam uma atmosfera acolhedora e sofisticada.</p>
-                </div>
-            </div>
+            <div class="produtos-grid">
 
-            <!-- Produto 6 -->
-            <div class="produto-card">
-                <img src="img/179_GG_Aromatizador-para-carro--2-opes-de-aroma_21.png" alt="Aromatizador para Carro">
-                <div class="card-content">
-                    <h3>Aromatizador para carro</h3>
-                    <p>Transforme suas viagens com aromas exclusivos que trazem frescor e personalidade ao seu veículo.</p>
-                </div>
+                <article class="produto-card" data-produto="home-spray">
+                        <div class="produto-imagem">
+                            <img src="img/home-spray-pr.png" alt="Home Spray" loading="lazy">
+                        </div>
+                        <div class="produto-conteudo">
+                            <h3>Home Spray</h3>
+                        </div>
+                </article>
+
+                <article class="produto-card" data-produto="difusor-varetas">
+                    <div class="produto-imagem">
+                        <img src="img/difusor-varetas-pr.jpg" alt="Difusor de Varetas" loading="lazy">
+                    </div>
+                    <div class="produto-conteudo">
+                        <h3>Difusor de Varetas</h3>
+                    </div>
+                </article>
+
+                <article class="produto-card" data-produto="sabonete-liquido">
+                    <div class="produto-imagem">
+                        <img src="img/sabonete-liquido-pr.jpg" alt="Sabonete Líquido" loading="lazy">
+                    </div>
+                    <div class="produto-conteudo">
+                        <h3>Sabonete Líquido</h3>
+                    </div>
+                </article>
+
+                <article class="produto-card" data-produto="essencias">
+                    <div class="produto-imagem">
+                        <img src="img/essencia-pr.png" alt="Essências" loading="lazy">
+                    </div>
+                    <div class="produto-conteudo">
+                        <h3>Essências</h3>
+                    </div>
+                </article>
+
+                <article class="produto-card" data-produto="velas-aromaticas">
+                    <div class="produto-imagem">
+                        <img src="img/vela-aromatica-pr.jpg" alt="Velas Aromáticas" loading="lazy">
+                    </div>
+                    <div class="produto-conteudo">
+                        <h3>Velas Aromáticas</h3>
+                    </div>
+                </article>
+
+                <article class="produto-card" data-produto="aromatizador-carro">
+                    <div class="produto-imagem">
+                        <img src="img/kit-carro-pr.png" alt="Aromatizador para Carro" loading="lazy">
+                    </div>
+                    <div class="produto-conteudo">
+                        <h3>Aromatizador para Carro</h3>
+                    </div>
+                </article>
+
+                <!-- Produto em destaque com badge -->
+                <article class="produto-card" data-produto="kit-premium">
+                    <span class="produto-badge">Novidade</span>
+                    <div class="produto-imagem">
+                        <img src="img/kits-pr-1.jpg" alt="Kits Personalizados" loading="lazy" class="desktop-img">
+                        <img src="img/kits-mobile-pr.jpg" alt="Kits Personalizados" loading="lazy" class="mobile-img">
+                    </div>
+                    <div class="produto-conteudo">
+                        <h3>Kits Personalizados</h3>
+                    </div>
+                </article>
+
             </div>
         </div>
     </section>
-
 
     <!-- Seção Sua Essência -->
     <section class="seletor-fragrancia" id="seletor-fragrancia">
@@ -457,8 +500,11 @@
     </div>
 
     <script src="js/core.js"></script>
+    <script src="js/navbar.js"></script>
     <script src="js/interaction.js"></script>
     <script src="js/quiz-ui.js"></script>
     <script src="js/feedback.js"></script>
+    <script src="js/produtos-catalogo.js"></script>
+    <script src="js/categoria.js"></script>
 </body>
 </html>

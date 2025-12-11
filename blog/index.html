@@ -6,14 +6,11 @@
     <title>JB Home Essence</title>
     
     <!-- Folhas de estilo -->
-    <link rel="stylesheet" href="../css/animations.css">
+
     <link rel="stylesheet" href="../css/blog.css">
-    <link rel="stylesheet" href="../css/components.css">
     <link rel="stylesheet" href="../css/core.css">
     <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/interactive.css">
-    <link rel="stylesheet" href="../css/navigation.css">
+    <link rel="stylesheet" href="../css/navbar.css">
     
     <!-- Fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -58,22 +55,42 @@
       </nav>
     </div>  -->
 
-    <div class="navbar">
-        <div class="logo">
-            <a href="#inicio">
-                <img src="../img/JBHomeEssence_Verde.png" alt="Logo JB Home Essence">
-            </a>
-            <a href="../index.html" class="nome-empresa">JB HOME ESSENCE</a>
-        </div>
-        <div class="nav-toggle" id="navToggle">
-            <i class="fas fa-bars"></i>
-        </div>
-        <nav class="nav-links" id="navMenu">
-            <a href="../index.html">Home</a>
-            <a href="index.html">Blog</a>
-            <a href="#rodape">Contato</a>
-        </nav>
-    </div>
+    <div class="navbar navbar-static">
+      <div class="navbar-container">
+          <!-- Logo centralizado (desktop) / Centralizada (mobile) -->
+          <div class="logo">
+              <a href="../index.html#inicio">
+                  <!-- Logo verde/preta (sempre visível na versão static) -->
+                  <img src="../img/JBHomeEssence_Verde.png" alt="Logo JB Home Essence" class="logo-img logo-black">
+              </a>
+              <a href="../index.html#inicio" class="nome-empresa">JB HOME ESSENCE</a>
+          </div>
+          
+          <!-- Toggle do menu mobile (visível apenas em telas pequenas) -->
+          <div class="nav-toggle" id="navToggle">
+              <i class="fas fa-bars"></i>
+          </div>
+          
+          <!-- Links de navegação -->
+          <nav class="nav-links" id="navMenu">
+
+              <a href="../index.html">Home</a>
+              <!-- Dropdown de Fragrâncias -->
+              <div class="dropdown">
+                  <a href="#" class="dropdown-toggle">
+                      Fragrâncias
+                      <span class="dropdown-arrow">▼</span>
+                  </a>
+                  <div class="dropdown-menu" id="fragranciasDropdown">
+                      <!-- Categorias serão carregadas aqui dinamicamente via JS -->
+                  </div>
+              </div>
+              
+              <a href="../blog/index.html">Blog</a>
+              <a href="#rodape">Contato</a>
+          </nav>
+      </div>
+  </div>
   </header>
 
   <main class="blog-content">
@@ -117,7 +134,9 @@
 
     <!-- Scripts -->
   <script src="../js/core.js"></script>
+  <script src="../js/navbar.js"></script>
   <script src="../js/interaction.js"></script>
+  <script src="blog.js"></script>
   <script src="../js/quiz-ui.js"></script>
   <script src="../js/feedback.js"></script>
 </body>

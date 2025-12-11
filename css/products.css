@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
+
+.produtos {
+    padding: 120px 20px;
+    background-color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.produtos-container {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/* GRID – agora aparecem 4 cards em desktop, 3 em tablet, 2 em mobile grande */
+.produtos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px 40px;
+    margin-bottom: 100px;
+}
+
+
+
+/* PRODUTO 7 EM DESTAQUE - APENAS PARA DESKTOP */
+@media (min-width: 769px) {
+    .produto-card[data-produto="kit-premium"] {
+        grid-column: 1 / -1; /* Ocupa todas as colunas */
+        max-width: 100%;
+        height: 350px; /* Mantém altura similar */
+    }
+    
+    .produto-card[data-produto="kit-premium"] .produto-imagem img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+/* CARD MENOR E MAIS ELEGANTE */
+.produto-card {
+    position: relative;
+    height: 460px;
+    overflow: hidden;
+    cursor: default;
+    transition: transform 6.5s cubic-bezier(0.12, 0.8, 0.32, 1);
+}
+
+.produto-card:hover {
+    transform: scale(1.04);
+}
+
+/* IMAGEM – zoom extremamente lento e suave */
+.produto-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 7.2s cubic-bezier(0.12, 0.8, 0.32, 1);
+}
+
+.produto-card:hover .produto-imagem img {
+    transform: scale(1.18);
+}
+
+/* Botão fixo – não faz zoom */
+.produto-conteudo {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    pointer-events: none;
+}
+
+.produto-conteudo h3 {
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 2.8px;
+    text-transform: uppercase;
+    color: #000;
+    background: rgba(255,255,255,0.97);
+    border: 1.4px solid #000;
+    padding: 11px 26px;
+    backdrop-filter: blur(10px);
+    transition: all 0.6s ease;
+    pointer-events: auto;
+    white-space: nowrap;
+}
+
+.produto-conteudo h3:hover {
+    background: transparent;
+    color: #fff;
+    border-color: #fff;
+}
+
+/* Badge */
+.produto-badge {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    font-size: 0.7rem;
+    padding: 7px 14px;
+    letter-spacing: 1.6px;
+    background: #000;
+    color: #fff;
+    z-index: 10;
+}
+
+/* Footer moved to footer.css */
+
+/* BOTÃO ELEGANTE ATUALIZADO */
+.btn-catalogo {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 42px;
+    border: 1.5px solid #000;
+    background: transparent;
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-catalogo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.6s ease;
+}
+
+.btn-catalogo:hover::before {
+    left: 100%;
+}
+
+.btn-catalogo:hover {
+    background: #1fbc39;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.btn-catalogo:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Seta animada */
+.btn-catalogo::after {
+    content: '→';
+    font-size: 1.1rem;
+    transition: transform 0.3s ease;
+}
+
+.btn-catalogo:hover::after {
+    transform: translateX(4px);
+}
+
+.mobile-img {
+    display: none;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .produto-card {
+        height: 480px;
+    }
+    
+    .produto-card:hover {
+        transform: scale(1.03);
+    }
+    
+    .produto-card:hover .produto-imagem img {
+        transform: scale(1.10);
+    }
+    
+    .produto-conteudo h3 {
+        padding: 12px 26px;
+        font-size: 0.9rem;
+    }
+
+    .desktop-img {
+        display: none;
+    }
+
+    .mobile-img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+    
+    /* Mobile: produto 7 volta ao tamanho normal */
+    .produto-card[data-produto="kit-premium"] {
+        grid-column: auto;
+        height: 480px;
+    }
+    
+    .btn-catalogo {
+        padding: 16px 36px;
+        font-size: 0.85rem;
+    }
+}

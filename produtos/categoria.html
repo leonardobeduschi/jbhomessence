@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categoria - JB Home Essence</title>
+    
+    <!-- Folhas de estilo -->
+    <link rel="stylesheet" href="../css/core.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/produtos-catalogo.css">
+
+    
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+    
+    <!-- Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/47997152830?text=Olá!%20Gostaria%20de%20conhecer%20as%20fragrâncias" class="float" target="_blank">
+        <i class="fa fa-whatsapp my-float"></i>
+    </a>
+
+    <!-- Navbar -->
+    <div class="navbar navbar-static">
+      <div class="navbar-container">
+          <!-- Logo centralizado (desktop) / Centralizada (mobile) -->
+          <div class="logo">
+              <a href="../index.html#inicio">
+                  <!-- Logo verde/preta (sempre visível na versão static) -->
+                  <img src="../img/JBHomeEssence_Verde.png" alt="Logo JB Home Essence" class="logo-img logo-black">
+              </a>
+              <a href="../index.html#inicio" class="nome-empresa">JB HOME ESSENCE</a>
+          </div>
+          
+          <!-- Toggle do menu mobile (visível apenas em telas pequenas) -->
+          <div class="nav-toggle" id="navToggle">
+              <i class="fas fa-bars"></i>
+          </div>
+          
+          <!-- Links de navegação -->
+          <nav class="nav-links" id="navMenu">
+
+              <a href="../index.html">Home</a>
+              <!-- Dropdown de Fragrâncias -->
+              <div class="dropdown">
+                  <a href="#" class="dropdown-toggle">
+                      Fragrâncias
+                      <span class="dropdown-arrow">▼</span>
+                  </a>
+                  <div class="dropdown-menu" id="fragranciasDropdown">
+                      <!-- Categorias serão carregadas aqui dinamicamente via JS -->
+                  </div>
+              </div>
+              
+              <a href="../blog/index.html">Blog</a>
+              <a href="../index.html#rodape">Contato</a>
+          </nav>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <div class="category-header">
+            <h1 id="category-title">Carregando...</h1>
+            <p id="category-description" class="subtitle"></p>
+            <p id="results-count" class="results-info">Carregando produtos...</p>
+        </div>
+
+        <div id="products-grid" class="products-grid"></div>
+    </main>
+
+    <!-- Modal do Produto -->
+    <div id="modal-overlay" class="modal-overlay">
+        <div class="modal">                     <!-- ← ESSA DIV ESTAVA FALTANDO -->
+            <button class="modal-close" aria-label="Fechar">&times;</button>
+            <div id="modal-content" class="modal-content"></div>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="rodape" id="rodape">
+        <div class="container">
+            <div class="rodape-grid">
+                <!-- Logo e Sobre -->
+                <div class="rodape-info">
+                    <img src="../img/JBHomeEssence_Verde.png" alt="Logo JB Home Essence" class="rodape-logo">
+                    <p class="mini-bio">Na JB Home Essence, transformamos espaços com fragrâncias que criam memórias e elevam o bem-estar. Nossa paixão é conectar pessoas a ambientes através de aromas únicos.</p>
+                </div>
+                
+                <!-- Contatos -->
+                <div class="rodape-contato">
+                    <h3>Entre em Contato</h3>
+                    <ul>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/47997152830" target="_blank">WhatsApp</a></li>
+                        <li><i class="fab fa-instagram"></i> <a href="https://instagram.com/jbhomessence" target="_blank">@jbhomessence</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:jbhomessence@gmail.com" target="_blank">jbhomessence@gmail.com</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Endereço -->
+                <div class="rodape-endereco">
+                    <h3>Onde Estamos</h3>
+                    <p>Rua 3130, 112, Sala 04, Balneário Camboriú - SC, 88330-293</p>
+                </div>
+            </div>
+            
+            <div class="rodape-direitos">
+                <p>© 2025 JB Home Essence. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/core.js"></script>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/interaction.js"></script>
+    <script src="../js/produtos-catalogo.js"></script>
+    <script src="../js/categoria.js"></script>
+</body>
+</html>
