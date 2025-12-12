@@ -602,4 +602,60 @@ header {
   header {
     scroll-margin-top: 80px;
   }
+} 
+
+/* Logo Slogan - responsivo */
+.logo-slogan {
+    font-size: clamp(0.65rem, 2vw, 0.75rem);  /* escala suavemente */
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 2px 0 0 0;
+    line-height: 1.2;
+    letter-spacing: 0.2px;
+    transition: var(--navbar-transition);
+    text-align: center;
+}
+
+.navbar.scrolled .logo-slogan {
+    color: rgba(142, 177, 153, 0.9);
+}
+
+/* Nome da empresa - responsivo e compacto */
+.nome-empresa {
+    font-weight: 400;
+    font-size: clamp(1.1rem, 4vw, 1.3rem);   /* de ~17px até 20-21px no máximo */
+    color: #ffffff !important;
+    transition: var(--navbar-transition);
+    letter-spacing: 0.5px;
+    margin: 0;
+    line-height: 1.1;
+}
+
+.navbar.navbar-static .logo-slogan {
+  color:#8eb199;
+}
+
+/* Ajustes extras para mobile (opcional mas muito recomendado) */
+@media (max-width: 768px) {
+    .nome-empresa {
+        font-size: clamp(1rem, 4.5vw, 1.2rem);
+        letter-spacing: 0.3px;
+    }
+    
+    .logo-slogan {
+        font-size: clamp(0.6rem, 2.2vw, 0.7rem);
+        margin-top: 1px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nome-empresa {
+        font-size: 1.05rem;     /* fixa um tamanho legível em celulares pequenos */
+        letter-spacing: 0.2px;
+    }
+    
+    .logo-slogan {
+        font-size: 0.55rem;
+        margin-top: 0;
+    }
 }
