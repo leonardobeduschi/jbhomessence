@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    {{META_TAGS}}
+    
+    <!-- Folhas de estilo -->
+    <link rel="stylesheet" href="../../css/blog.css">
+    <link rel="stylesheet" href="../../css/core.css">
+    <link rel="stylesheet" href="../../css/footer.css">
+    <link rel="stylesheet" href="../../css/navbar.css">
+
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    
+    <!-- Ícones -->
+    <link rel="icon" href="../../img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    
+    {{JSON_LD}}
+    
+    <a href="https://wa.me/47997152830?text=Olá!%20Gostaria%20de%20conhecer%20as%20fragrâncias" class="float" target="_blank">
+        <i class="fa fa-whatsapp my-float"></i>
+    </a>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="blog-header">
+    <div class="navbar navbar-static">
+      <div class="navbar-container">
+          <!-- Logo centralizado (desktop) / Centralizada (mobile) -->
+          <div class="logo">
+              <a href="../../index.html#inicio">
+                  <!-- Logo verde/preta (sempre visível na versão static) -->
+                  <img src="../../img/JBHomeEssence_Verde.png" alt="Logo JB Home Essence" class="logo-img logo-black">
+              </a>
+              <a href="../../index.html#inicio" class="nome-empresa">JB HOME ESSENCE</a>
+          </div>
+          
+          <!-- Toggle do menu mobile (visível apenas em telas pequenas) -->
+          <div class="nav-toggle" id="navToggle">
+              <i class="fas fa-bars"></i>
+          </div>
+          
+          <!-- Links de navegação -->
+          <nav class="nav-links" id="navMenu">
+
+              <a href="../../index.html">Home</a>
+              <!-- Dropdown de Fragrâncias -->
+              <div class="dropdown">
+                  <a href="#" class="dropdown-toggle">
+                      Fragrâncias
+                      <span class="dropdown-arrow">▼</span>
+                  </a>
+                  <div class="dropdown-menu" id="fragranciasDropdown">
+                      <!-- Categorias serão carregadas aqui dinamicamente via JS -->
+                  </div>
+              </div>
+              
+              <a href="../index.html">Blog</a>
+              <a href="#rodape">Contato</a>
+          </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Conteúdo do Post -->
+  <main class="blog-post-single">
+    <article class="post">
+      <!-- Título e Meta Informações -->
+      <div class="post-header">
+        <h1 class="post-title">{{POST_TITLE}}</h1>
+        <div class="post-meta">
+          <span class="post-date">{{POST_DATE}}</span>
+          <span class="separator">|</span>
+          <span class="post-category">{{POST_CATEGORY}}</span>
+        </div>
+      </div>
+      
+      <!-- Imagem principal -->
+      <div class="post-cover">
+        <img src="{{POST_IMAGE}}" alt="{{POST_IMAGE_ALT}}" loading="lazy">
+      </div>
+
+      <!-- Conteúdo dinâmico -->
+      <div class="post-content-wrapper">
+        <div class="post-content">
+          {{POST_CONTENT}}
+        </div>
+      </div>
+
+      <!-- Tags do Post -->
+      <div class="post-footer">
+        <div class="post-tags">
+          {{POST_TAGS}}
+        </div>
+      </div>
+      
+      <!-- Posts relacionados -->
+      <section class="related-posts">
+        <h2>Posts Relacionados</h2>
+        <div class="blog-cards" id="related-posts-container">
+          {{RELATED_POSTS}}
+        </div>
+      </section>
+
+      <!-- Voltar -->
+      <a href="../index.html" class="back-link">← Voltar para o blog</a>
+    </article>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="rodape" id="rodape">
+    <div class="container">
+      <div class="rodape-grid">
+        <!-- Logo e Sobre -->
+        <div class="rodape-info">
+          <img src="../../img/JBHomeEssence_Verde.png" alt="Logo JB Home Essence" class="rodape-logo">
+          <p class="mini-bio">Na JB Home Essence, transformamos espaços com fragrâncias que criam memórias e elevam o bem-estar. Nossa paixão é conectar pessoas a ambientes através de aromas únicos.</p>
+        </div>
+        
+        <!-- Contatos -->
+        <div class="rodape-contato">
+          <h3>Entre em Contato</h3>
+          <ul>
+            <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/47997152830" target="_blank">WhatsApp</a></li>
+            <li><i class="fab fa-instagram"></i> <a href="https://instagram.com/jbhomessence" target="_blank">@jbhomessence</a></li>
+            <li><i class="fas fa-envelope"></i> <a href="mailto:jbhomessence@gmail.com" target="_blank">jbhomessence@gmail.com</a></li>
+          </ul>
+        </div>
+        
+        <!-- Endereço -->
+        <div class="rodape-endereco">
+          <h3>Onde Estamos</h3>
+          <p>Rua 3130, 112, Sala 04, Balneário Camboriú - SC, 88330-293</p>
+        </div>
+      </div>
+      
+      <div class="rodape-direitos">
+        <p>© 2025 JB Home Essence. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../../js/core.js"></script>
+  <script src="../../js/navbar.js"></script>
+  <script src="../../js/interaction.js"></script>
+
+  <!-- CSS para Tags -->
+  <style>
+    /* Estilos para as tags */
+    .post-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 30px 0;
+      padding: 20px 0;
+      border-top: 1px solid #eee;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .post-tags .tag {
+      background: #f8f8f8;
+      color: #555;
+      padding: 6px 15px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    .post-tags .tag:hover {
+      background: #e0e0e0;
+      transform: translateY(-2px);
+      text-decoration: none;
+    }
+    
+    /* Ajuste dos posts relacionados */
+    .related-posts {
+      margin-top: 50px;
+      padding-top: 30px;
+      border-top: 1px solid #eee;
+    }
+    
+    .related-posts h2 {
+      margin-bottom: 30px;
+      color: #333;
+    }
+    
+    /* Ajuste para cards de posts relacionados */
+    #related-posts-container .blog-card {
+      margin-bottom: 20px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    
+    #related-posts-container .blog-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    /* Responsividade */
+    @media (min-width: 768px) {
+      #related-posts-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 30px;
+      }
+      
+      #related-posts-container .blog-card {
+        margin-bottom: 0;
+      }
+    }
+  </style>
+</body>
+</html>

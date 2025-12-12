@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jbhomessence.com.br/sitemap.xml
