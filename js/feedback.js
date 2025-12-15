@@ -5,42 +5,42 @@ const feedbacksData = [
             date: "12/09/2025",
             rating: 5,
             comment: "Um ótimo atendimento, do início ao fim, a equipe da JB foi muito atenciosa e prestaram um ótimo serviço. Usei os seus aromas no meu escritório, que por sinal fez muito sucesso com meus clientes.",
-            avatar: "img/rogerio-quinto.png"
+            avatar: "img/testimonials/cliente-rogerio-quinto-depoimento.png"
         },
         {
             name: "Lucas Henrique",
             date: "29/09/2025",
             rating: 5,
             comment: "Simplesmente maravilhoso! Me ajudaram na escolha do presente e também comprei um kit com difusor de aromas e sabonete liquido muito cheiroso aqui pra casa",
-            avatar: "img/lucas-henrique.png"
+            avatar: "img/testimonials/cliente-lucas-henrique-depoimento.png"
         },
         {
             name: "Betina Pezzini da Veiga",
             date: "02/10/2025",
             rating: 5,
             comment: "Estava procurando aromatizadores e essências para usar aqui para casa e encontrei a JB. Os cheirinhos são maravilhosos e fixam bastante. Super indico!",
-            avatar: "img/betina-pezzini.png"
+            avatar: "img/testimonials/cliente-betina-pezzini-depoimento.png"
         },
         {
             name: "Eduarda Schnaider",
             date: "10/06/2025",
             rating: 5,
             comment: "Qualidade dos produtos são de outro mundo, a fixação é perfeita e o atendimento incrível, fui muito bem atendida, já comprei duas vezes e continuarei comprando!!!",
-            avatar: "img/eduarda-schnaider.png"
+            avatar: "img/testimonials/cliente-eduarda-schnaider-depoimento.png"
         },
 	    {
             name: "GIO",
             date: "25/06/2025",
             rating: 5,
             comment: "Viajei de São Paulo até balneário e uma das maiores surpresas foi este loja, com um atendimento tão atencioso e delicado como os aromas que eles nos trazem. Nunca imaginei o tamanho da importância olfativa para diferentes ambientes até então.",
-            avatar: "img/GIO.png"
+            avatar: "img/testimonials/cliente-GIO-depoimento.png"
         },
 	    {
             name: "Emília wetter",
             date: "10/06/2024",
             rating: 5,
             comment: "Produtos de qualidade impecável e atendimento excelente!",
-            avatar: "img/emilia-wetter.png"
+            avatar: "img/testimonials/cliente-emilia-wetter-depoimento.png"
         }
 ];
 
@@ -86,7 +86,7 @@ class FeedbackCarousel {
         this.track.innerHTML = feedbacksData.map((f, i) => `
             <div class="feedback-card" data-index="${i}">
                 <div class="feedback-icon">
-                    <img src="img/google-logo.png" alt="Google" class="google-icon">
+                    <img src="img/testimonials/google-reviews-logo.png" alt="Google" class="google-icon">
                 </div>
                 <div class="feedback-header">
                     <img src="${f.avatar || 'img/avatar-anonimo.png'}" alt="Foto de ${f.name}" class="client-avatar" onerror="this.src='img/avatar-anonimo.png'">

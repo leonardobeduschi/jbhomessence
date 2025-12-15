@@ -1,7 +1,7 @@
 header {
   background: 
     linear-gradient(-45deg, rgba(107, 124, 110, 0.7), rgba(95, 75, 59, 0.7), rgba(142, 177, 153, 0.7), rgba(127, 100, 73, 0.7)),
-    url('../img/banner-natal.png') center/cover no-repeat;
+    url('../img/ui/banner-natal-jb-home-essence-homepage.png') center/cover no-repeat;
   background-size: 400% 400%, cover;
   background-blend-mode: overlay;
   animation: gradient 40s ease infinite;

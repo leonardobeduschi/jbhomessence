@@ -107,7 +107,7 @@ function generateJsonLd(post) {
       "name": CONFIG.siteName,
       "logo": {
         "@type": "ImageObject",
-        "url": `${CONFIG.siteUrl}/img/JBHomeEssence_Verde.png`
+        "url": `${CONFIG.siteUrl}/img/brand/jb-home-essence-logo-green.png`
       }
     },
     "url": `${CONFIG.blogBaseUrl}/posts/${post.id}.html`,
