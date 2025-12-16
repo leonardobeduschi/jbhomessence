@@ -1,0 +1,44 @@
+[
+  {
+    "id": "home-spray",
+    "nome": "Home Spray",
+    "slug": "home-spray",
+    "descricao": "Aromatizadores de ambiente em spray"
+  },
+  {
+    "id": "difusor-varetas",
+    "nome": "Difusor de Varetas",
+    "slug": "difusor-varetas",
+    "descricao": "Difusores com varetas para ambientes"
+  },
+  {
+    "id": "sabonete-liquido",
+    "nome": "Sabonete Líquido",
+    "slug": "sabonete-liquido",
+    "descricao": "Sabonetes líquidos perfumados"
+  },
+  {
+    "id": "essencias",
+    "nome": "Essências",
+    "slug": "essencias",
+    "descricao": "Essências concentradas para difusores"
+  },
+  {
+    "id": "velas-aromaticas",
+    "nome": "Velas Aromáticas",
+    "slug": "velas-aromaticas",
+    "descricao": "Velas perfumadas artesanais"
+  },
+  {
+    "id": "aromatizador-carro",
+    "nome": "Kit Carro",
+    "slug": "aromatizador-carro",
+    "descricao": "Aromatizadores para automóveis"
+  },
+  {
+    "id": "agua-perfumada",
+    "nome": "Água Perfumada",
+    "slug": "agua-perfumada",
+    "descricao": "Água perfumada para roupas"
+  }
+]

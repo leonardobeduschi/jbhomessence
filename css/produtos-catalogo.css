@@ -583,6 +583,21 @@ main {
     font-weight: 500;
 }
 
+.delivery-info {
+  margin-top: 12px;
+  padding: 8px 12px;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  border-left: 3px solid #25D366;
+  font-size: 14px;
+  color: #555;
+  text-align: center;
+}
+
+.delivery-info p {
+  margin: 0;
+}
+
 /* ==========================================
    RESPONSIVO - TABLETS
    ========================================== */
@@ -754,3 +769,4 @@ main {
         right: 0.5rem;
     }
 }
+

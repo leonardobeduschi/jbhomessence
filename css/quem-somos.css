@@ -1,0 +1,202 @@
+/* Seção Quem Somos - Minimalista com Imagem */
+#quem-somos {
+    padding: 60px 20px;
+    background: white;
+}
+
+.quem-somos-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.quem-somos-image {
+    width: 100%;
+    height: 500px;
+    background: linear-gradient(135deg, var(--verde) 0%, #a8c9b5 100%);
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.quem-somos-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.9;
+}
+
+.quem-somos-content {
+    padding: 20px;
+}
+
+.story-item {
+    margin-bottom: 35px;
+    padding-left: 25px;
+    border-left: 2px solid var(--verde);
+    transition: all 0.3s ease;
+}
+
+.story-item:hover {
+    border-left-width: 4px;
+    padding-left: 30px;
+}
+
+.story-item h3, .story-item h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--verde);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.story-item p {
+    font-size: 1rem;
+    text-align: left;
+    line-height: 1.7;
+    color: var(--marrom);
+    opacity: 0.85;
+}
+
+/* Seção Serviços - Minimalista com Números */
+#servicos {
+    padding: 60px 20px;
+    background: var(--bege-claro);
+}
+
+.servicos-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.servicos-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.servicos-header h2, .servicos-header h3 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--marrom);
+    margin-bottom: 15px;
+}
+
+.servicos-header p {
+    font-size: 1.1rem;
+    color: var(--marrom);
+    opacity: 0.7;
+}
+
+.servicos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+
+.servico-item {
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.servico-item:hover {
+    transform: translateY(-5px);
+}
+
+.servico-numero {
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--verde);
+    opacity: 0.2;
+    line-height: 1;
+    margin-bottom: 15px;
+}
+
+.servico-item h3, .servico-item h4 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--marrom);
+    margin-bottom: 12px;
+}
+
+.servico-item p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--marrom);
+    opacity: 0.75;
+}
+
+.servico-linha {
+    width: 40px;
+    height: 2px;
+    background: var(--verde);
+    margin: 0 auto 20px;
+}
+
+/* Responsivo */
+@media (max-width: 968px) {
+    .quem-somos-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .quem-somos-image {
+        height: 400px;
+        order: -1;
+    }
+
+    .servicos-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .quem-somos-content h2, .quem-somos-content h3,
+    .servicos-header h2, .servicos-header h3 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #quem-somos,
+    #servicos {
+        padding: 40px 20px;
+    }
+
+    .quem-somos-image {
+        height: 300px;
+    }
+
+    .quem-somos-content h2, .quem-somos-content h3,
+    .servicos-header h2, .servicos-header h3 {
+        font-size: 1.8rem;
+    }
+
+    .story-item {
+        margin-bottom: 25px;
+    }
+
+    .servico-numero {
+        font-size: 3rem;
+    }
+}
+
+/* Unified visual for the six primary section titles */
+.titulo-secao {
+  color: var(--marrom);
+  margin-bottom: 20px;
+  font-weight: 400;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+@media (max-width: 968px) {
+  .titulo-secao { font-size: 2rem; }
+}
+
+@media (max-width: 768px) {
+  .titulo-secao { font-size: 1.8rem; }
+}

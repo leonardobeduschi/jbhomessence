@@ -3,7 +3,7 @@
   transform: scale(0.96);
 }
 
-.cliente-card h3 {
+.cliente-card h3, .cliente-card h4 {
     font-family: 'Montserrat', sans-serif;
   font-size: 1.5rem;
   color: var(--marrom);
@@ -19,7 +19,7 @@
   text-align: left;
 }
 
-.consultoria .cliente-card h3:before {
+.consultoria .cliente-card h3:before, .consultoria .cliente-card h4:before {
     content: counter(card-counter) '. ';
   counter-increment: card-counter;
   color: var(--verde);
@@ -208,7 +208,7 @@
   max-width: 300px;
 }
 
-.rodape-contato h3, .rodape-endereco h3 {
+.rodape-contato h3, .rodape-contato h4, .rodape-endereco h3, .rodape-endereco h4 {
   font-size: 1.3rem;
   color: var(--verde);
   margin-bottom: 15px;

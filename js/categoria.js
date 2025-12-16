@@ -1,11 +1,16 @@
 /**
- * categoria.js - Script para carregar categorias dinamicamente via URL
- * Uso: /produtos/categoria.html?categoria=abbraccio
+ * categoria.js - Script para carregar categorias e tipos de produtos via URL
+ * Uso: 
+ * - /produtos/categoria.html?categoria=abbraccio (fragrância)
+ * - /produtos/categoria.html?tipo=home-spray (tipo de produto)
  */
 
-// Use nomes únicos para evitar conflito
 let categoryPageProducts = [];
 let categoryList = [];
+let tiposList = [];
+let currentProducts = []; // Produtos filtrados atuais
+let displayedCount = 0; // Contador de produtos exibidos
+const PRODUCTS_PER_LOAD = 8; // Quantidade de produtos por carregamento
 
 // ========== CAPTURA DE PARÂMETROS URL ==========
 
@@ -27,6 +32,17 @@ async function fetchCategories() {
   }
 }
 
+async function fetchTipos() {
+  try {
+    const response = await fetch('../produtos/tipos-produtos.json');
+    if (!response.ok) throw new Error('Erro ao carregar tipos');
+    return await response.json();
+  } catch (error) {
+    console.error('Erro ao carregar tipos:', error);
+    return [];
+  }
+}
+
 async function fetchProducts() {
   try {
     const response = await fetch('../produtos/produtos.json');
@@ -44,11 +60,34 @@ function getCategoryBySlug(slug) {
   return categoryList.find(cat => cat.slug === slug.toLowerCase());
 }
 
+function getTipoBySlug(slug) {
+  return tiposList.find(tipo => tipo.slug === slug.toLowerCase());
+}
+
 function getProductsByCategory(categoryName) {
   return categoryPageProducts.filter(prod => prod.categoria === categoryName);
 }
 
-// ========== RENDERIZAÇÃO ==========
+function getProductsByTipo(tipoSlug) {
+  const tipoNomeMap = {
+    'home-spray': 'Home Spray',
+    'difusor-varetas': 'Difusor de Varetas',
+    'sabonete-liquido': 'Sabonete Líquido',
+    'essencias': 'Essência',
+    'velas-aromaticas': 'Velas Aromáticas',
+    'aromatizador-carro': 'Kit Carro',
+    'agua-perfumada': 'Água Perfumada'
+  };
+  
+  const nomeBusca = tipoNomeMap[tipoSlug];
+  if (!nomeBusca) return [];
+  
+  return categoryPageProducts.filter(prod => 
+    prod.nome.toLowerCase().includes(nomeBusca.toLowerCase())
+  );
+}
+
+// ========== RENDERIZAÇÃO COM LAZY LOADING ==========
 
 function formatPrice(price) {
   return `R$ ${Number(price).toFixed(2).replace('.', ',')}`;
@@ -74,7 +113,6 @@ function createCard(product) {
     </div>
   `;
 
-  // Verifique se a função openModal existe antes de chamar
   card.addEventListener('click', () => {
     if (typeof window.openModal === 'function') {
       window.openModal(product);
@@ -87,29 +125,97 @@ function createCard(product) {
   return card;
 }
 
-function renderCategory(categoryName) {
+function loadMoreProducts() {
+  const grid = document.getElementById('products-grid');
+  if (!grid) return;
+
+  const remainingProducts = currentProducts.slice(displayedCount, displayedCount + PRODUCTS_PER_LOAD);
+  
+  remainingProducts.forEach(product => {
+    grid.appendChild(createCard(product));
+  });
+
+  displayedCount += remainingProducts.length;
+
+  // Atualiza contador
+  updateResultsCount();
+
+  // Remove observer se todos produtos foram carregados
+  if (displayedCount >= currentProducts.length) {
+    const sentinel = document.getElementById('sentinel');
+    if (sentinel && infiniteScrollObserver) {
+      infiniteScrollObserver.unobserve(sentinel);
+      sentinel.remove();
+    }
+  }
+}
+
+function updateResultsCount() {
+  const resultsCount = document.getElementById('results-count');
+  if (resultsCount) {
+    const total = currentProducts.length;
+    const showing = Math.min(displayedCount, total);
+    
+    if (showing < total) {
+      resultsCount.textContent = `Mostrando ${showing} de ${total} produtos`;
+    } else {
+      resultsCount.textContent = `${total} produto${total !== 1 ? 's' : ''} encontrado${total !== 1 ? 's' : ''}`;
+    }
+  }
+}
+
+function renderProducts(products) {
   const grid = document.getElementById('products-grid');
   const resultsCount = document.getElementById('results-count');
-  const products = getProductsByCategory(categoryName);
 
   if (!grid) return;
 
   grid.innerHTML = '';
+  currentProducts = products;
+  displayedCount = 0;
 
   if (products.length === 0) {
-    grid.innerHTML = '<p class="no-products">Nenhum produto encontrado nesta categoria.</p>';
+    grid.innerHTML = '<p class="no-products">Nenhum produto encontrado.</p>';
     if (resultsCount) resultsCount.textContent = '0 produtos encontrados';
     return;
   }
 
-  products.forEach(product => {
-    grid.appendChild(createCard(product));
-  });
+  // Carrega primeiros produtos
+  loadMoreProducts();
 
-  if (resultsCount) {
-    const count = products.length;
-    resultsCount.textContent = `${count} produto${count !== 1 ? 's' : ''} encontrado${count !== 1 ? 's' : ''}`;
+  // Adiciona sentinel para infinite scroll
+  if (currentProducts.length > PRODUCTS_PER_LOAD) {
+    const sentinel = document.createElement('div');
+    sentinel.id = 'sentinel';
+    sentinel.style.height = '20px';
+    grid.appendChild(sentinel);
+    setupInfiniteScroll();
   }
+}
+
+// ========== INFINITE SCROLL ==========
+
+let infiniteScrollObserver = null;
+
+function setupInfiniteScroll() {
+  const sentinel = document.getElementById('sentinel');
+  if (!sentinel) return;
+
+  const options = {
+    root: null,
+    rootMargin: '100px',
+    threshold: 0.1
+  };
+
+  infiniteScrollObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && displayedCount < currentProducts.length) {
+        loadMoreProducts();
+      }
+    });
+  }, options);
+
+  infiniteScrollObserver.observe(sentinel);
 }
 
 // ========== MODAL ==========
@@ -125,53 +231,78 @@ function closeCategoryModal() {
 // ========== INICIALIZAÇÃO ==========
 
 async function initCategoryPage() {
-  // Lê slug da URL
-  const slug = getQueryParam('categoria');
+  // Lê parâmetros da URL
+  const categoriaSlug = getQueryParam('categoria');
+  const tipoSlug = getQueryParam('tipo');
 
-  if (!slug) {
-    const titleElement = document.getElementById('category-title');
-    const descriptionElement = document.getElementById('category-description');
-    const grid = document.getElementById('products-grid');
-    
-    if (titleElement) titleElement.textContent = 'Erro';
-    if (descriptionElement) descriptionElement.textContent = '';
-    if (grid) grid.innerHTML =
-      '<p class="error-message">Parâmetro "categoria" não encontrado na URL. Use: categoria.html?categoria=abbraccio</p>';
+  if (!categoriaSlug && !tipoSlug) {
+    showError('Parâmetro "categoria" ou "tipo" não encontrado na URL.');
     return;
   }
 
   // Carrega dados
   categoryList = await fetchCategories();
+  tiposList = await fetchTipos();
   categoryPageProducts = await fetchProducts();
 
-  // Busca categoria
-  const category = getCategoryBySlug(slug);
+  let title = '';
+  let description = '';
+  let products = [];
 
-  if (!category) {
-    const titleElement = document.getElementById('category-title');
-    const descriptionElement = document.getElementById('category-description');
-    const grid = document.getElementById('products-grid');
+  // Busca por categoria (fragrância)
+  if (categoriaSlug) {
+    const category = getCategoryBySlug(categoriaSlug);
     
-    if (titleElement) titleElement.textContent = 'Categoria não encontrada';
-    if (descriptionElement) descriptionElement.textContent = '';
-    if (grid) grid.innerHTML =
-      `<p class="error-message">A categoria "${slug}" não existe.</p>`;
-    return;
+    if (!category) {
+      showError(`A categoria "${categoriaSlug}" não existe.`);
+      return;
+    }
+
+    title = category.nome;
+    description = category.descricao;
+    products = getProductsByCategory(category.nome);
+  }
+  // Busca por tipo de produto
+  else if (tipoSlug) {
+    const tipo = getTipoBySlug(tipoSlug);
+    
+    if (!tipo) {
+      showError(`O tipo "${tipoSlug}" não existe.`);
+      return;
+    }
+
+    title = tipo.nome;
+    description = tipo.descricao;
+    products = getProductsByTipo(tipoSlug);
   }
 
-  // Atualiza título e descrição
-  document.title = `${category.nome} - JB Home Essence`;
+  // Atualiza página
+  document.title = `${title} - JB Home Essence`;
   
   const titleElement = document.getElementById('category-title');
   const descriptionElement = document.getElementById('category-description');
   
-  if (titleElement) titleElement.textContent = category.nome;
-  if (descriptionElement) descriptionElement.textContent = category.descricao;
+  if (titleElement) titleElement.textContent = title;
+  if (descriptionElement) descriptionElement.textContent = description;
 
-  // Renderiza produtos
-  renderCategory(category.nome);
+  // Renderiza produtos com lazy loading
+  renderProducts(products);
 
-  // Configura modal (se existir nesta página)
+  // Configura modal
+  setupModal();
+}
+
+function showError(message) {
+  const titleElement = document.getElementById('category-title');
+  const descriptionElement = document.getElementById('category-description');
+  const grid = document.getElementById('products-grid');
+  
+  if (titleElement) titleElement.textContent = 'Erro';
+  if (descriptionElement) descriptionElement.textContent = '';
+  if (grid) grid.innerHTML = `<p class="error-message">${message}</p>`;
+}
+
+function setupModal() {
   const modalClose = document.querySelector('.modal-close');
   if (modalClose) {
     modalClose.addEventListener('click', closeCategoryModal);
@@ -191,6 +322,3 @@ if (document.readyState === 'loading') {
 } else {
   initCategoryPage();
 }
-
-// Dropdown and navbar logic moved to js/navbar.js
-// Do not add dropdown-related code here

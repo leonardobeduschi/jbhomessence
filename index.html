@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>JB Home Essence</title>
+    <meta name="description" content="Perfumaria de ambientes em Balneário Camboriú. Difusor de varetas, aromatizadores, essências, e fragrâncias de alta fixação para seu ambiente.">
     
     <!-- Folhas de estilo -->
     <link rel="stylesheet" href="css/animations.css">
@@ -12,6 +13,7 @@
     <link rel="stylesheet" href="css/core.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/quem-somos.css"> 
     <link rel="stylesheet" href="css/interactive.css">
     <link rel="stylesheet" href="css/seletor-fragrancia.css">
     <link rel="stylesheet" href="css/navbar.css">
@@ -74,7 +76,13 @@
             
             <!-- Links de navegação -->
             <nav class="nav-links" id="navMenu">
-                <a href="#produtos">Produtos</a>
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle">
+                        Produtos
+                        <span class="dropdown-arrow">▼</span>
+                    </a>
+                    <div class="dropdown-menu" id="produtosDropdown"></div>
+                </div>
                 
                 <!-- Dropdown de Fragrâncias -->
                 <div class="dropdown">
@@ -110,7 +118,7 @@
         <div class="produtos-container">
 
             <div class="produtos-header">
-                <h2>Nossos Produtos</h2>
+                <h3 class="titulo-secao">Nossos Produtos</h3>
                 <div class="header-divider"></div>
             </div>
 
@@ -121,7 +129,7 @@
                             <img src="img/produtos/destaques/aromatizador-destaque.jpg" alt="Home Spray" loading="lazy">
                         </div>
                         <div class="produto-conteudo">
-                            <h3>Home Spray</h3>
+                            <h2>Home Spray</h2>
                         </div>
                 </article>
 
@@ -130,7 +138,7 @@
                         <img src="img/produtos/destaques/difusor-varetas-destaque.jpg" alt="Difusor de Varetas" loading="lazy">
                     </div>
                     <div class="produto-conteudo">
-                        <h3>Difusor de Varetas</h3>
+                        <h2>Difusor de Varetas</h2>
                     </div>
                 </article>
 
@@ -139,7 +147,7 @@
                         <img src="img/produtos/destaques/sabonete-liquido-destaque.jpg" alt="Sabonete Líquido" loading="lazy">
                     </div>
                     <div class="produto-conteudo">
-                        <h3>Sabonete Líquido</h3>
+                        <h2>Sabonete Líquido</h2>
                     </div>
                 </article>
 
@@ -148,7 +156,7 @@
                         <img src="img/produtos/destaques/essencia-destaque.png" alt="Essências" loading="lazy">
                     </div>
                     <div class="produto-conteudo">
-                        <h3>Essências</h3>
+                        <h2>Essências</h2>
                     </div>
                 </article>
 
@@ -157,7 +165,7 @@
                         <img src="img/produtos/destaques/vela-aromatica-destaque.jpg" alt="Velas Aromáticas" loading="lazy">
                     </div>
                     <div class="produto-conteudo">
-                        <h3>Velas Aromáticas</h3>
+                        <h2>Velas Aromáticas</h2>
                     </div>
                 </article>
 
@@ -166,7 +174,7 @@
                         <img src="img/produtos/destaques/kit-carro-destaque.png" alt="Aromatizador para Carro" loading="lazy">
                     </div>
                     <div class="produto-conteudo">
-                        <h3>Aromatizador para Carro</h3>
+                        <h2>Aromatizador para Carro</h2>
                     </div>
                 </article>
 
@@ -178,7 +186,7 @@
                         <img src="img/produtos/destaques/kits-mobile-destaque.jpg" alt="Kits Personalizados" loading="lazy" class="mobile-img">
                     </div>
                     <div class="produto-conteudo">
-                        <h3>Kits Personalizados</h3>
+                        <h2>Kits Personalizados</h2>
                     </div>
                 </article>
 
@@ -186,77 +194,215 @@
         </div>
     </section>
 
-    <!-- Seção Sua Essência -->
+   <!-- Seção Sua Essência - REDESENHADA E CORRIGIDA -->
     <section class="seletor-fragrancia" id="seletor-fragrancia">
         <div class="container-fragrancia">
+            <!-- Barra de Progresso -->
+            <div class="progress-container" style="display: none;">
+                <div class="progress-bar" id="progressBar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <div class="progress-steps">
+                    <span class="step active" data-step="1">1</span>
+                    <span class="step" data-step="2">2</span>
+                    <span class="step" data-step="3">3</span>
+                    <span class="step" data-step="4">4</span>
+                    <span class="step" data-step="5">5</span>
+                </div>
+            </div>
+
             <div id="etapas">
                 <!-- Tela Inicial -->
-                <div class="etapa" id="inicio-quiz">
-                    <h2>Descubra qual é a sua essência</h2>
-                    <p>Responda algumas perguntas simples e vamos recomendar a fragrância perfeita para você!</p>
-                    <button onclick="iniciarQuiz()">Iniciar</button>
+                <div class="etapa active" id="inicio-quiz">
+                    <div class="hero-content">
+                        <div class="icon-container">
+                            <i class="fas fa-spa"></i>
+                        </div>
+                        <h3 class="titulo-secao">Descubra Sua Essência Perfeita</h3>
+                        <p class="subtitulo">Responda 5 perguntas simples e encontre a fragrância ideal para você</p>
+                        <button onclick="iniciarQuiz()" class="btn-primary">
+                            <span>Começar Jornada</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
                 </div>
 
-                <!-- Pergunta 1 -->
+                <!-- Pergunta 1: Momento do Dia -->
                 <div class="etapa" id="etapa1">
-                    <h2>Qual seu tipo de aroma preferido?</h2>
-                    <div class="opcoes">
-                        <button onclick="responder('aroma', 'Floral')">Floral</button>
-                        <button onclick="responder('aroma', 'Frutal')">Frutal</button>
-                        <button onclick="responder('aroma', 'Oriental')">Oriental</button>
-                        <button onclick="responder('aroma', 'Herbal')">Herbal</button>
-                        <button onclick="responder('aroma', 'Amadeirado')">Amadeirado</button>
-                        <button onclick="responder('aroma', 'Cítrico')">Cítrico</button>
+                    <h4 class="pergunta-titulo">Em qual momento você mais usa fragrâncias?</h4>
+                    <p class="pergunta-subtitulo">Isso ajuda a determinar a intensidade ideal</p>
+                    <div class="opcoes-grid">
+                        <button onclick="responder('momento', 'Manhã', 'fas fa-sun')" class="opcao-card">
+                            <i class="fas fa-sun"></i>
+                            <span>Manhã</span>
+                            <small>Energizante e fresco</small>
+                        </button>
+                        <button onclick="responder('momento', 'Tarde', 'fas fa-cloud-sun')" class="opcao-card">
+                            <i class="fas fa-cloud-sun"></i>
+                            <span>Tarde</span>
+                            <small>Equilibrado e versátil</small>
+                        </button>
+                        <button onclick="responder('momento', 'Noite', 'fas fa-moon')" class="opcao-card">
+                            <i class="fas fa-moon"></i>
+                            <span>Noite</span>
+                            <small>Marcante e envolvente</small>
+                        </button>
+                        <button onclick="responder('momento', 'Todo Dia', 'fas fa-clock')" class="opcao-card">
+                            <i class="fas fa-clock"></i>
+                            <span>Todo o Dia</span>
+                            <small>Duradouro e consistente</small>
+                        </button>
                     </div>
                 </div>
 
-                <!-- Pergunta 2 -->
+                <!-- Pergunta 2: Tipo de Aroma -->
                 <div class="etapa" id="etapa2">
-                    <h2>Prefere fragrâncias mais suaves ou marcantes?</h2>
-                    <div class="opcoes">
-                        <button onclick="responder('intensidade', 'Suave')">Suave</button>
-                        <button onclick="responder('intensidade', 'Intensa')">Intensa</button>
+                    <h4 class="pergunta-titulo">Qual família olfativa te atrai?</h4>
+                    <p class="pergunta-subtitulo">Escolha o perfil que mais te representa</p>
+                    <div class="opcoes-grid">
+                        <button onclick="responder('aroma', 'Floral', 'fas fa-leaf')" class="opcao-card">
+                            <i class="fas fa-leaf"></i>
+                            <span>Floral</span>
+                            <small>Delicado e romântico</small>
+                        </button>
+                        <button onclick="responder('aroma', 'Frutal', 'fas fa-apple-alt')" class="opcao-card">
+                            <i class="fas fa-apple-alt"></i>
+                            <span>Frutal</span>
+                            <small>Doce e vibrante</small>
+                        </button>
+                        <button onclick="responder('aroma', 'Oriental', 'fas fa-fire')" class="opcao-card">
+                            <i class="fas fa-fire"></i>
+                            <span>Oriental</span>
+                            <small>Quente e envolvente</small>
+                        </button>
+                        <button onclick="responder('aroma', 'Herbal', 'fas fa-seedling')" class="opcao-card">
+                            <i class="fas fa-seedling"></i>
+                            <span>Herbal</span>
+                            <small>Fresco e natural</small>
+                        </button>
+                        <button onclick="responder('aroma', 'Amadeirado', 'fas fa-tree')" class="opcao-card">
+                            <i class="fas fa-tree"></i>
+                            <span>Amadeirado</span>
+                            <small>Sofisticado e terroso</small>
+                        </button>
+                        <button onclick="responder('aroma', 'Cítrico', 'fas fa-lemon')" class="opcao-card">
+                            <i class="fas fa-lemon"></i>
+                            <span>Cítrico</span>
+                            <small>Energizante e refrescante</small>
+                        </button>
                     </div>
                 </div>
 
-                <!-- Pergunta 3 -->
+                <!-- Pergunta 3: Sensação Desejada -->
                 <div class="etapa" id="etapa3">
-                    <h2>Para qual local?</h2>
-                    <div class="opcoes">
-                        <button onclick="responder('local', 'Casa')">Casa</button>
-                        <button onclick="responder('local', 'Escritório')">Escritório</button>
-                        <button onclick="responder('local', 'Clínica')">Clínica</button>
-                        <button onclick="responder('local', 'Condomínios')">Condomínios</button>
-                        <button onclick="responder('local', 'Lojas')">Lojas</button>
-
+                    <h4 class="pergunta-titulo">Que sensação você busca?</h4>
+                    <p class="pergunta-subtitulo">Como você quer se sentir ao usar a fragrância?</p>
+                    <div class="opcoes-grid">
+                        <button onclick="responder('sensacao', 'Relaxamento', 'fas fa-spa')" class="opcao-card">
+                            <i class="fas fa-spa"></i>
+                            <span>Relaxamento</span>
+                            <small>Calma e tranquilidade</small>
+                        </button>
+                        <button onclick="responder('sensacao', 'Energia', 'fas fa-bolt')" class="opcao-card">
+                            <i class="fas fa-bolt"></i>
+                            <span>Energia</span>
+                            <small>Vitalidade e disposição</small>
+                        </button>
+                        <button onclick="responder('sensacao', 'Sofisticação', 'fas fa-crown')" class="opcao-card">
+                            <i class="fas fa-crown"></i>
+                            <span>Sofisticação</span>
+                            <small>Elegância e requinte</small>
+                        </button>
+                        <button onclick="responder('sensacao', 'Aconchego', 'fas fa-heart')" class="opcao-card">
+                            <i class="fas fa-heart"></i>
+                            <span>Aconchego</span>
+                            <small>Conforto e bem-estar</small>
+                        </button>
                     </div>
                 </div>
 
-                <!-- Pergunta 4 -->
+                <!-- Pergunta 4: Local de Uso -->
                 <div class="etapa" id="etapa4">
-                    <h2>Qual produto você mais gosta?</h2>
-                    <div class="opcoes">
-                        <button onclick="responder('produto', 'Home Spray')">Home Spray</button>
-                        <button onclick="responder('produto', 'Difusor de varetas')">Difusor de varetas</button>
-                        <button onclick="responder('produto', 'Sabonete líquido')">Sabonete líquido</button>
-                        <button onclick="responder('produto', 'Essências')">Essências</button>
+                    <h4 class="pergunta-titulo">Onde você vai usar?</h4>
+                    <p class="pergunta-subtitulo">O ambiente influencia na escolha ideal</p>
+                    <div class="opcoes-grid">
+                        <button onclick="responder('local', 'Casa', 'fas fa-home')" class="opcao-card">
+                            <i class="fas fa-home"></i>
+                            <span>Casa</span>
+                            <small>Lar doce lar</small>
+                        </button>
+                        <button onclick="responder('local', 'Escritório', 'fas fa-briefcase')" class="opcao-card">
+                            <i class="fas fa-briefcase"></i>
+                            <span>Escritório</span>
+                            <small>Ambiente profissional</small>
+                        </button>
+                        <button onclick="responder('local', 'Clínica', 'fas fa-hospital')" class="opcao-card">
+                            <i class="fas fa-hospital"></i>
+                            <span>Clínica</span>
+                            <small>Saúde e bem-estar</small>
+                        </button>
+                        <button onclick="responder('local', 'Condomínios', 'fas fa-building')" class="opcao-card">
+                            <i class="fas fa-building"></i>
+                            <span>Condomínios</span>
+                            <small>Áreas comuns</small>
+                        </button>
+                        <button onclick="responder('local', 'Lojas', 'fas fa-store')" class="opcao-card">
+                            <i class="fas fa-store"></i>
+                            <span>Lojas</span>
+                            <small>Comércio e varejo</small>
+                        </button>
                     </div>
                 </div>
 
-                <!-- Carregando -->
-                <div class="etapa" id="carregando">
-                    <h2>Analisando suas preferências...</h2>
-                    <div class="loader"></div>
-                    <p>Estamos encontrando a combinação perfeita para você!</p>
+                <!-- Pergunta 5: Intensidade -->
+                <div class="etapa" id="etapa5">
+                    <h4 class="pergunta-titulo">Qual intensidade você prefere?</h4>
+                    <p class="pergunta-subtitulo">De sutil a marcante</p>
+                    <div class="opcoes-grid opcoes-intensidade">
+                        <button onclick="responder('intensidade', 'Suave', 'fas fa-feather')" class="opcao-card">
+                            <i class="fas fa-feather"></i>
+                            <span>Suave</span>
+                            <small>Discreta e delicada</small>
+                        </button>
+                        <button onclick="responder('intensidade', 'Intensa', 'fas fa-fire-alt')" class="opcao-card">
+                            <i class="fas fa-fire-alt"></i>
+                            <span>Intensa</span>
+                            <small>Marcante e duradoura</small>
+                        </button>
+                    </div>
                 </div>
 
-                <!-- Resultado -->
+                <!-- Carregando - REDESENHADO -->
+                <div class="etapa" id="carregando">
+                    <div class="loading-container">
+                        <div class="loading-animation">
+                            <div class="loading-circle">
+                                <div class="spinner"></div>
+                                <div class="bottle-icon">
+                                    <i class="fas fa-wine-bottle"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <h4 class="loading-title">Analisando suas preferências...</h4>
+                        <div class="loading-steps">
+                            <p class="loading-step active" data-step="1">
+                                <i class="fas fa-check-circle"></i> Identificando perfil olfativo
+                            </p>
+                            <p class="loading-step" data-step="2">
+                                <i class="fas fa-spinner"></i> Combinando notas aromáticas
+                            </p>
+                            <p class="loading-step" data-step="3">
+                                <i class="fas fa-spinner"></i> Selecionando fragrância ideal
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Resultado - REDESENHADO -->
                 <div class="etapa" id="resultado">
-                    <h2>Sua fragrância ideal é:</h2>
                     <div id="fragrancia" class="resultado-fragrancia">
                         <!-- O conteúdo será gerado pelo JavaScript -->
                     </div>
-                    <button onclick="reiniciarQuiz()" class="btn-reiniciar">Tentar novamente</button>
                 </div>
             </div>
         </div>
@@ -265,7 +411,7 @@
     <!-- Seção Clientes Alvo -->
     <section class="clientes-alvo" id="clientes-alvo">
         <div class="container">
-            <h2>Experiências Olfativas Para Todos Os Ambientes</h2>
+            <h3 class="titulo-secao">Experiências Olfativas Para Todos Os Ambientes</h3>
             <p class="subtitulo">Transformamos ambientes com fragrâncias que conectam, acolhem e inspiram.</p>
             
             <div class="clientes-grid">
@@ -274,7 +420,7 @@
                     <div class="cliente-icone">
                         <i class="fas fa-home"></i>
                     </div>
-                    <h3>Uso Pessoal</h3>
+                    <h4>Uso Pessoal</h4>
                     <p>Leve mais conforto, bem-estar e elegância para o seu lar com fragrâncias que marcam presença e criam memórias inesquecíveis.</p>
                 </div>
                 
@@ -283,7 +429,7 @@
                     <div class="cliente-icone">
                         <i class="fas fa-building"></i>
                     </div>
-                    <h3>Condomínios Residenciais</h3>
+                    <h4>Condomínios Residenciais</h4>
                     <p>Aromatização de halls, áreas comuns e recepções, causando uma ótima primeira impressão e um sentimento de conforto para os moradores.</p>
                 </div>
                 
@@ -292,7 +438,7 @@
                     <div class="cliente-icone">
                         <i class="fas fa-briefcase"></i>
                     </div>
-                    <h3>Escritórios</h3>
+                    <h4>Escritórios</h4>
                     <p>Ambientes mais agradáveis e produtivos com aromas que estimulam a concentração e o acolhimento.</p>
                 </div>
                 
@@ -301,7 +447,7 @@
                     <div class="cliente-icone">
                         <i class="fas fa-stethoscope"></i>
                     </div>
-                    <h3>Clínicas e Consultórios</h3>
+                    <h4>Clínicas e Consultórios</h4>
                     <p>Crie uma atmosfera mais tranquila para seus pacientes com fragrâncias que acalmam e transmitem confiança e bem-estar.</p>
                 </div>
                 
@@ -310,7 +456,7 @@
                     <div class="cliente-icone">
                         <i class="fas fa-key"></i>
                     </div>
-                    <h3>Imobiliárias e Corretores</h3>
+                    <h4>Imobiliárias e Corretores</h4>
                     <p>O aroma certo pode fazer o cliente se sentir acolhido, confortável e conectado com o ambiente, criando uma conexão de confiança entre o produto e os clientes.</p>
                 </div>
                 
@@ -319,45 +465,8 @@
                     <div class="cliente-icone">
                         <i class="fas fa-shopping-bag"></i>
                     </div>
-                    <h3>Lojas</h3>
+                    <h4>Lojas</h4>
                     <p>Atraia e encante clientes com fragrâncias que reforçam sua marca e criam uma experiência de compra memorável. Transforme sua loja em um ambiente acolhedor e diferenciado.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Seção Consultoria -->
-    <section class="consultoria" id="consultoria">
-        <div class="container">
-            <h2>Aromas que Transformam Momentos</h2>
-            <p class="subtitulo">Cada fragrância carrega uma história. Deixe o seu espaço transmitir conforto, leveza e boas lembranças com a essência ideal.</p>
-            
-            <div class="clientes-grid">
-                <!-- Etapa 1 -->
-                <div class="cliente-card">
-                    <div class="cliente-icone">
-                        <i class="fas fa-calendar-alt"></i>
-                    </div>
-                    <h3>Entre em Contato</h3>
-                    <p>Fale conosco pelo WhatsApp ou Instagram.</p>
-                </div>
-                
-                <!-- Etapa 2 -->
-                <div class="cliente-card">
-                    <div class="cliente-icone">
-                        <i class="fas fa-vial"></i>
-                    </div>
-                    <h3>Tire Suas Dúvidas e Escolha Suas Fragrâncias</h3>
-                    <p>Nossa equipe ajuda você a escolher as fragrâncias ideais, envia orçamentos e orienta em cada detalhe.</p>
-                </div>
-                
-                <!-- Etapa 3 -->
-                <div class="cliente-card">
-                    <div class="cliente-icone">
-                        <i class="fas fa-handshake"></i>
-                    </div>
-                    <h3>Receba e Aproveite</h3>
-                    <p>Entregamos seus produtos com todo cuidado para que você sinta o prazer de um ambiente perfumado e elegante.</p>
                 </div>
             </div>
         </div>
@@ -365,82 +474,62 @@
 
     <!-- Seção Quem Somos -->
     <section id="quem-somos">
-        <h2>Quem Somos Nós</h2>
-        <div class="carrossel-container">
-            <button class="carrossel-seta carrossel-seta-esquerda"><i class="fas fa-chevron-left"></i></button>
-            
-            <div class="carrossel-cards">
-                <!-- Card 1 -->
-                <div class="carousel-item-card active">
-                    <div class="carousel-card-content">
-                        <h5>Onde tudo começa</h5>
-                        <p>Entendemos que morar bem, trabalhar em um local agradável, visitar uma loja, uma clínica ou um escritório cria conexões com todas as informações desses ambientes. E, sempre, o que mais importa é a nossa essência.</p>
-                    </div>
-                </div>
-                
-                <!-- Card 2 -->
-                <div class="carousel-item-card">
-                    <div class="carousel-card-content">
-                        <h5>Deixar florescer o que há de melhor em nós</h5>
-                        <p>É deixar aflorar nossa melhor versão. E, para que isso aconteça, as fragrâncias são o modo mais genuíno e simples de nos trazer lembranças e criar memórias.</p>
-                    </div>
-                </div>
-                
-                <!-- Card 3 -->
-                <div class="carousel-item-card">
-                    <div class="carousel-card-content">
-                        <h5>Assinatura do ambiente</h5>
-                        <p>É nisso que acreditamos... na assinatura de um ambiente, onde um aroma especial conecta e traz uma mensagem de acolhimento, bem-estar, sofisticação... Um ambiente com personalidade, que se integra à sua essência.</p>
-                    </div>
-                </div>
+        <div class="quem-somos-wrapper">
+            <div class="quem-somos-image">
+                <!-- Substitua o src pela URL da sua imagem -->
+                <img src="img/brand/jb-home-essence-logo-strong-green.png" alt="Fragrâncias">
             </div>
             
-            <button class="carrossel-seta carrossel-seta-direita"><i class="fas fa-chevron-right"></i></button>
-            <div class="carrossel-indicadores">
-                <span class="indicador active"></span>
-                <span class="indicador"></span>
-                <span class="indicador"></span>
+            <div class="quem-somos-content">
+                <h3 class="titulo-secao">Quem Somos Nós</h3>
+                
+                <div class="story-item">
+                    <h4>Onde tudo começa</h4>
+                    <p>Entendemos que morar bem, trabalhar em um local agradável, visitar uma loja ou escritório cria conexões. E sempre o que mais importa é a nossa essência.</p>
+                </div>
+                
+                <div class="story-item">
+                    <h4>O que há de melhor em nós</h4>
+                    <p>É deixar aflorar nossa melhor versão. As fragrâncias são o modo mais genuíno e simples de nos trazer lembranças e criar memórias.</p>
+                </div>
+                
+                <div class="story-item">
+                    <h4>Assinatura do ambiente</h4>
+                    <p>Acreditamos na assinatura de um ambiente, onde um aroma especial conecta e traz acolhimento, bem-estar e sofisticação.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Seção Nossos Serviços -->
     <section id="servicos">
-        <h2>Qual é a sua essência?</h2>
-        <div class="carrossel-container">
-            <button class="carrossel-seta carrossel-seta-esquerda"><i class="fas fa-chevron-left"></i></button>
-            
-            <div class="carrossel-cards">
-                <!-- Card 1 -->
-                <div class="carousel-item-card active">
-                    <div class="carousel-card-content">
-                        <h5>Escolha e Inspire-se</h5>
-                        <p>Descubra fragrâncias que traduzem conforto, bem-estar e sofisticação.</p>
-                    </div>
-                </div>
-                
-                <!-- Card 2 -->
-                <div class="carousel-item-card">
-                    <div class="carousel-card-content">
-                        <h5>Conte Conosco</h5>
-                        <p>Nós ajudamos você a escolher e cuidamos de todos os detalhes.</p>
-                    </div>
-                </div>
-                
-                <!-- Card 3 -->
-                <div class="carousel-item-card">
-                    <div class="carousel-card-content">
-                        <h5>Sinta a Transformação</h5>
-                        <p>Receba seus produtos e viva a experiência de um ambiente perfumado e acolhedor.</p>
-                    </div>
-                </div>
+        <div class="servicos-wrapper">
+            <div class="servicos-header">
+                <h3 class="titulo-secao">Uma Experiência Olfativa</h3>
+                <p>Três passos simples para transformar seu ambiente</p>
             </div>
             
-            <button class="carrossel-seta carrossel-seta-direita"><i class="fas fa-chevron-right"></i></button>
-            <div class="carrossel-indicadores">
-                <span class="indicador active" data-slide="0"></span>
-                <span class="indicador" data-slide="1"></span>
-                <span class="indicador" data-slide="2"></span>
+            <div class="servicos-grid">
+                <div class="servico-item">
+                    <div class="servico-numero">01</div>
+                    <div class="servico-linha"></div>
+                    <h4>Escolha e Inspire-se</h4>
+                    <p>Descubra fragrâncias que traduzem conforto, bem-estar e sofisticação.</p>
+                </div>
+                
+                <div class="servico-item">
+                    <div class="servico-numero">02</div>
+                    <div class="servico-linha"></div>
+                    <h4>Conte Conosco</h4>
+                    <p>Nós ajudamos você a escolher e cuidamos de todos os detalhes.</p>
+                </div>
+                
+                <div class="servico-item">
+                    <div class="servico-numero">03</div>
+                    <div class="servico-linha"></div>
+                    <h4>Sinta a Transformação</h4>
+                    <p>Receba seus produtos e viva a experiência de um ambiente perfumado.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -448,7 +537,7 @@
     <!-- Adicionar antes do footer -->
     <section class="feedbacks-section" id="feedbacks">
         <div class="container">
-            <h2 class="section-title">O que dizem sobre nós</h2>
+            <h3 class="section-title titulo-secao">O que dizem sobre nós</h3>
 
             <!-- Container dos feedbacks -->
             <div class="feedbacks-container">
@@ -476,7 +565,7 @@
                 
                 <!-- Contatos -->
                 <div class="rodape-contato">
-                    <h3>Entre em Contato</h3>
+                    <h4>Entre em Contato</h4>
                     <ul>
                         <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/47997152830" target="_blank">WhatsApp</a></li>
                         <li><i class="fab fa-instagram"></i> <a href="https://instagram.com/jbhomessence" target="_blank">@jbhomessence</a></li>
@@ -486,7 +575,7 @@
                 
                 <!-- Endereço -->
                 <div class="rodape-endereco">
-                    <h3>Onde Estamos</h3>
+                    <h4>Onde Estamos</h4>
                     <p>Rua 3130, 112, Sala 04, Balneário Camboriú - SC, 88330-293</p>
                 </div>
             </div>
@@ -497,17 +586,15 @@
         </div>
     </footer>
 
-    <!-- Modal para Imagem Ampliada -->
-    <div id="modalImagem" class="modal-imagem">
-        <span class="fechar-modal" onclick="fecharModal()">×</span>
-        <img id="imagemAmpliada" src="" alt="Imagem ampliada">
-    </div>
+
 
     <script src="js/seletor-fragrancia.js"></script>
     <script src="js/navbar.js"></script>
+    <script src="js/quem-somos.js"></script>
     <script src="js/interaction.js"></script>
     <script src="js/feedback.js"></script>
     <script src="js/produtos-catalogo.js"></script>
     <script src="js/categoria.js"></script>
+    <script src="js/produtos-navigation.js"></script>
 </body>
 </html>

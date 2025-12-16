@@ -1,9 +1,10 @@
 // ==============================================
-// NAVBAR.JS - Versão 2.0
+// NAVBAR.JS - Versão 3.0
 // ==============================================
 // Funcionalidades:
 // - Menu mobile lateral deslizante
 // - Dropdown de Fragrâncias
+// - Dropdown de Produtos (NOVO)
 // - Mudança de cor/transparência no scroll
 // - Troca de logo (branca/preta)
 // ==============================================
@@ -33,6 +34,34 @@ async function loadFragranciasDropdown() {
         initDropdownItems();
     } catch (error) {
         console.error('Erro ao carregar categorias do dropdown:', error);
+    }
+}
+
+/**
+ * Carrega os tipos de produtos no dropdown de Produtos
+ * Busca do arquivo produtos/tipos-produtos.json
+ */
+async function loadProdutosDropdown() {
+    try {
+        const response = await fetch('/produtos/tipos-produtos.json');
+        const tipos = await response.json();
+        const dropdown = document.getElementById('produtosDropdown');
+        
+        if (!dropdown) {
+            console.warn('Elemento produtosDropdown não encontrado');
+            return;
+        }
+        
+        dropdown.innerHTML = tipos.map(tipo => `
+            <a href="/produtos/categoria.html?tipo=${tipo.slug}" class="dropdown-item">
+                ${tipo.nome}
+            </a>
+        `).join('');
+        
+        // Após carregar, reaplica os event listeners nos itens
+        initDropdownItems();
+    } catch (error) {
+        console.error('Erro ao carregar tipos de produtos do dropdown:', error);
     }
 }
 
@@ -124,11 +153,11 @@ function initMobileMenu() {
             menu.classList.remove('active');
             document.body.style.overflow = '';
             
-            // Também fecha o dropdown se estiver aberto
-            const dropdown = document.querySelector('.dropdown');
-            if (dropdown) {
+            // Também fecha todos os dropdowns se estiverem abertos
+            const dropdowns = document.querySelectorAll('.dropdown');
+            dropdowns.forEach(dropdown => {
                 dropdown.classList.remove('active');
-            }
+            });
         }
     });
 
@@ -138,11 +167,11 @@ function initMobileMenu() {
             menu.classList.remove('active');
             document.body.style.overflow = '';
             
-            // Também fecha o dropdown se estiver aberto
-            const dropdown = document.querySelector('.dropdown');
-            if (dropdown) {
+            // Também fecha todos os dropdowns se estiverem abertos
+            const dropdowns = document.querySelectorAll('.dropdown');
+            dropdowns.forEach(dropdown => {
                 dropdown.classList.remove('active');
-            }
+            });
         }
     });
 }
@@ -154,14 +183,14 @@ function initMobileMenu() {
 function initDropdownItems() {
     const dropdownItems = document.querySelectorAll('.dropdown-item');
     const navMenu = document.getElementById('navMenu');
-    const dropdown = document.querySelector('.dropdown');
+    const dropdowns = document.querySelectorAll('.dropdown');
 
     dropdownItems.forEach(item => {
         item.addEventListener('click', function() {
-            // Fecha o dropdown
-            if (dropdown) {
+            // Fecha todos os dropdowns
+            dropdowns.forEach(dropdown => {
                 dropdown.classList.remove('active');
-            }
+            });
             
             // No mobile, também fecha o menu principal
             if (window.innerWidth <= 768 && navMenu) {
@@ -173,38 +202,59 @@ function initDropdownItems() {
 }
 
 /**
- * Inicializa o dropdown de Fragrâncias
+ * Inicializa todos os dropdowns (Fragrâncias e Produtos)
  * Comportamento diferente para desktop e mobile
  */
-function initFragranciasDropdown() {
-    const dropdownToggle = document.querySelector('.dropdown-toggle');
-    const dropdown = document.querySelector('.dropdown');
+function initDropdowns() {
+    const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+    const dropdowns = document.querySelectorAll('.dropdown');
 
-    if (!dropdownToggle || !dropdown) {
-        console.warn('Elementos de dropdown não encontrados no DOM');
+    if (dropdownToggles.length === 0) {
+        console.warn('Nenhum dropdown-toggle encontrado no DOM');
         return;
     }
 
-    // Clique no toggle do dropdown - apenas abre/fecha o dropdown
-    dropdownToggle.addEventListener('click', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        
-        // Toggle do dropdown sem fechar o menu mobile
-        dropdown.classList.toggle('active');
+    // Clique em cada toggle do dropdown
+    dropdownToggles.forEach(toggle => {
+        toggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            const parentDropdown = this.closest('.dropdown');
+            
+            // Fecha outros dropdowns
+            dropdowns.forEach(dropdown => {
+                if (dropdown !== parentDropdown) {
+                    dropdown.classList.remove('active');
+                }
+            });
+            
+            // Toggle do dropdown atual
+            parentDropdown.classList.toggle('active');
+        });
     });
 
-    // Fecha dropdown ao clicar fora (apenas desktop)
+    // Fecha dropdowns ao clicar fora (apenas desktop)
     document.addEventListener('click', function(e) {
-        if (window.innerWidth > 768 && !dropdown.contains(e.target)) {
-            dropdown.classList.remove('active');
+        if (window.innerWidth > 768) {
+            const isClickInsideDropdown = Array.from(dropdowns).some(dropdown => 
+                dropdown.contains(e.target)
+            );
+            
+            if (!isClickInsideDropdown) {
+                dropdowns.forEach(dropdown => {
+                    dropdown.classList.remove('active');
+                });
+            }
         }
     });
 
-    // Fecha dropdown ao pressionar ESC (sem fechar o menu mobile)
+    // Fecha dropdowns ao pressionar ESC
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && dropdown.classList.contains('active')) {
-            dropdown.classList.remove('active');
+        if (e.key === 'Escape') {
+            dropdowns.forEach(dropdown => {
+                dropdown.classList.remove('active');
+            });
         }
     });
 }
@@ -214,8 +264,9 @@ function initFragranciasDropdown() {
  * Chamada quando o DOM está carregado
  */
 function initNavbar() {
-    // Aguarda o carregamento das categorias
+    // Aguarda o carregamento das categorias e produtos
     loadFragranciasDropdown();
+    loadProdutosDropdown();
     
     // Inicializa detecção de scroll
     initScrollDetection();
@@ -223,8 +274,8 @@ function initNavbar() {
     // Inicializa menu mobile
     initMobileMenu();
     
-    // Inicializa dropdown de fragrâncias
-    initFragranciasDropdown();
+    // Inicializa todos os dropdowns
+    initDropdowns();
     
     console.log('✓ Navbar inicializada com sucesso');
 }
@@ -242,8 +293,8 @@ if (typeof module !== 'undefined' && module.exports) {
         initNavbar,
         initScrollDetection,
         initMobileMenu,
-        initFragranciasDropdown,
-        loadFragranciasDropdown
+        initDropdowns,
+        loadFragranciasDropdown,
+        loadProdutosDropdown
     };
 }
-

@@ -73,7 +73,7 @@
     pointer-events: none;
 }
 
-.produto-conteudo h3 {
+.produto-conteudo h2, .produto-conteudo h3 {
     font-size: 0.85rem;
     font-weight: 500;
     letter-spacing: 2.8px;
@@ -88,7 +88,7 @@
     white-space: nowrap;
 }
 
-.produto-conteudo h3:hover {
+.produto-conteudo h2:hover, .produto-conteudo h3:hover {
     background: transparent;
     color: #fff;
     border-color: #fff;
@@ -110,61 +110,7 @@
 /* Footer moved to footer.css */
 
 /* BOTÃO ELEGANTE ATUALIZADO */
-.btn-catalogo {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    padding: 18px 42px;
-    border: 1.5px solid #000;
-    background: transparent;
-    color: #000;
-    text-decoration: none;
-    font-weight: 500;
-    letter-spacing: 2.5px;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    position: relative;
-    overflow: hidden;
-}
 
-.btn-catalogo::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-    transition: left 0.6s ease;
-}
-
-.btn-catalogo:hover::before {
-    left: 100%;
-}
-
-.btn-catalogo:hover {
-    background: #1fbc39;
-    color: #fff;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-}
-
-.btn-catalogo:active {
-    transform: translateY(0);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-/* Seta animada */
-.btn-catalogo::after {
-    content: '→';
-    font-size: 1.1rem;
-    transition: transform 0.3s ease;
-}
-
-.btn-catalogo:hover::after {
-    transform: translateX(4px);
-}
 
 .mobile-img {
     display: none;
@@ -184,7 +130,7 @@
         transform: scale(1.10);
     }
     
-    .produto-conteudo h3 {
+    .produto-conteudo h2, .produto-conteudo h3 {
         padding: 12px 26px;
         font-size: 0.9rem;
     }
@@ -207,8 +153,4 @@
         height: 480px;
     }
     
-    .btn-catalogo {
-        padding: 16px 36px;
-        font-size: 0.85rem;
-    }
 }

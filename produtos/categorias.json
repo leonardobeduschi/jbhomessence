@@ -1,79 +1,79 @@
 [
   {
     "id": "abbraccio",
-    "nome": "ABBRACCIO",
+    "nome": "Abbraccio",
     "slug": "abbraccio",
     "descricao": "Cítrico - Floral"
   },
   {
     "id": "aroma-do-bebe",
-    "nome": "AROMA DO BEBÊ",
+    "nome": "Aroma do Bebê",
     "slug": "aroma-do-bebe",
     "descricao": "Herbal - Musk"
   },
   {
     "id": "bambu-garden",
-    "nome": "BAMBU GARDEN",
+    "nome": "Bambu Garden",
     "slug": "bambu-garden",
     "descricao": "Floral - Amadeirado"
   },
   {
     "id": "capim-santo",
-    "nome": "CAPIM SANTO",
+    "nome": "Capim Santo",
     "slug": "capim-santo",
     "descricao": "Herbal - Cítrico"
   },
   {
     "id": "divina-vanilla",
-    "nome": "DIVINA VANILLA",
+    "nome": "Divina Vanilla",
     "slug": "divina-vanilla",
     "descricao": "Oriental - Amadeirado"
   },
   {
     "id": "encontro",
-    "nome": "ENCONTRO",
+    "nome": "Encontro",
     "slug": "encontro",
     "descricao": "Envolvente e misteriosa"
   },
   {
     "id": "garbo",
-    "nome": "GARBO",
+    "nome": "Garbo",
     "slug": "garbo",
     "descricao": "Frutal - Oriental"
   },
   {
     "id": "havana",
-    "nome": "HAVANA",
+    "nome": "Havana",
     "slug": "havana",
     "descricao": "Cítrico - Amadeirado"
   },
   {
     "id": "hortensia",
-    "nome": "HORTÊNSIA",
+    "nome": "Hortênsia",
     "slug": "hortensia",
     "descricao": "Floral - Doce"
   },
   {
     "id": "jardins-da-franca",
-    "nome": "JARDINS DA FRANÇA",
+    "nome": "Jardins da França",
     "slug": "jardins-da-franca",
     "descricao": "Floral - Agreste"
   },
   {
     "id": "lilas",
-    "nome": "LILÁS",
+    "nome": "Lilás",
     "slug": "lilas",
     "descricao": "Aromático - Fougère"
   },
   {
     "id": "monte-carlo",
-    "nome": "MONTE CARLO",
+    "nome": "Monte Carlo",
     "slug": "monte-carlo",
     "descricao": "Chypre - Amadeirado"
   },
   {
     "id": "patchouly",
-    "nome": "PATCHOULY",
+    "nome": "Patchouly",
     "slug": "patchouly",
     "descricao": "Amadeirado - Oriental"
   }

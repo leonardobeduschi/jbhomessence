@@ -169,6 +169,10 @@ function openModal(product) {
           <span>Fazer pedido pelo WhatsApp</span>
         </a>
       </div>
+      
+      <div class="delivery-info">
+        <p>Entregamos apenas para Balneário Camboriú (SC) e região no momento.</p>
+      </div>
     </div>
   `;
 
@@ -176,7 +180,6 @@ function openModal(product) {
   document.body.style.overflow = 'hidden';
   modalClose.focus();
 }
-
 /**
  * Troca a imagem principal do modal
  */
