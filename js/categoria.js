@@ -108,7 +108,7 @@ function createCard(product) {
       <img src="${hoverImage}" alt="${product.nome}" class="card-img hover" loading="lazy">
     </div>
     <div class="card-body">
-      <h3 class="card-title">${product.nome}</h3>
+      <h3 class="card-title">${product.nome} - ${product.categoria}</h3>
       <p class="card-price">${price}</p>
     </div>
   `;

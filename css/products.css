@@ -11,7 +11,7 @@
     margin: 0 auto;
 }
 
-/* GRID – agora aparecem 4 cards em desktop, 3 em tablet, 2 em mobile grande */
+/* GRID PRINCIPAL – Desktop e tablet */
 .produtos-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -19,14 +19,12 @@
     margin-bottom: 100px;
 }
 
-
-
-/* PRODUTO 7 EM DESTAQUE - APENAS PARA DESKTOP */
+/* PRODUTO EM DESTAQUE NO DESKTOP (inalterado) */
 @media (min-width: 769px) {
     .produto-card[data-produto="kit-premium"] {
-        grid-column: 1 / -1; /* Ocupa todas as colunas */
+        grid-column: 1 / -1;
         max-width: 100%;
-        height: 350px; /* Mantém altura similar */
+        height: 350px;
     }
     
     .produto-card[data-produto="kit-premium"] .produto-imagem img {
@@ -36,8 +34,7 @@
     }
 }
 
-
-/* CARD MENOR E MAIS ELEGANTE */
+/* CARD PADRÃO */
 .produto-card {
     position: relative;
     height: 460px;
@@ -50,7 +47,6 @@
     transform: scale(1.04);
 }
 
-/* IMAGEM – zoom extremamente lento e suave */
 .produto-imagem img {
     width: 100%;
     height: 100%;
@@ -63,7 +59,6 @@
     transform: scale(1.18);
 }
 
-/* Botão fixo – não faz zoom */
 .produto-conteudo {
     position: absolute;
     bottom: 32px;
@@ -94,7 +89,6 @@
     border-color: #fff;
 }
 
-/* Badge */
 .produto-badge {
     position: absolute;
     top: 24px;
@@ -107,21 +101,35 @@
     z-index: 10;
 }
 
-/* Footer moved to footer.css */
-
-/* BOTÃO ELEGANTE ATUALIZADO */
-
-
 .mobile-img {
     display: none;
 }
 
-/* Responsivo */
+
+
+/* ==================== APENAS MOBILE (≤768px) ==================== */
 @media (max-width: 768px) {
-    .produto-card {
-        height: 480px;
-    }
     
+    /* Grid fixo com exatamente 2 colunas usando flexbox */
+    .produtos-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px 10px;
+        justify-content: space-between;
+    }
+
+    /* Altura compacta para todos os cards normais */
+    .produto-card {
+        height: 260px;
+        width: calc(50% - 5px); /* 2 colunas com espaço entre */
+    }
+
+    /* Remove a propriedade order do kit-premium para que fique na posição original */
+    .produto-card[data-produto="kit-premium"] {
+        order: unset;
+    }
+
+    /* Hover sutil */
     .produto-card:hover {
         transform: scale(1.03);
     }
@@ -129,16 +137,12 @@
     .produto-card:hover .produto-imagem img {
         transform: scale(1.10);
     }
-    
-    .produto-conteudo h2, .produto-conteudo h3 {
-        padding: 12px 26px;
-        font-size: 0.9rem;
-    }
 
+    /* Imagens mobile para os cards normais */
     .desktop-img {
         display: none;
     }
-
+    
     .mobile-img {
         display: block;
         width: 100%;
@@ -146,11 +150,71 @@
         object-fit: cover;
         object-position: center;
     }
-    
-    /* Mobile: produto 7 volta ao tamanho normal */
+
+    /* Kit Personalizados no mobile: ocupa largura total (100%) - ÚLTIMO CARD */
     .produto-card[data-produto="kit-premium"] {
-        grid-column: auto;
-        height: 480px;
+        width: 100% !important; /* Força 100% de largura */
+        height: 180px; /* Reduzida para quase 50% (era 260px, agora 180px) */
+        margin: 12px 0 0 0 !important; /* Margem apenas no topo */
+        /* Não precisa de order, ficará na posição natural (último) */
+    }
+
+    /* Usa a imagem grande (desktop) no kit-premium no mobile */
+    .produto-card[data-produto="kit-premium"] .desktop-img {
+        display: none;
     }
     
+    .produto-card[data-produto="kit-premium"] .mobile-img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    /* Ajusta o badge para ficar mais visível no card menor */
+    .produto-card[data-produto="kit-premium"] .produto-badge {
+        top: 12px;
+        left: 12px;
+        font-size: 0.6rem;
+        padding: 5px 10px;
+    }
+
+    /* Botão com nome do produto – centralizado e bem formatado */
+    .produto-conteudo {
+        bottom: 12px; /* Ajustado para card mais baixo */
+        width: 100%;
+        text-align: center;
+    }
+
+    .produto-conteudo h2, .produto-conteudo h3 {
+        display: inline-block;
+        font-size: 0.68rem;
+        font-weight: 500;
+        letter-spacing: 1.8px;
+        line-height: 1.4;
+        padding: 8px 14px;
+        margin: 0 auto;
+        white-space: normal;
+        text-align: center;
+        max-width: 88%;
+        border: 1.4px solid #000;
+        background: rgba(255,255,255,0.97);
+        backdrop-filter: blur(10px);
+        box-sizing: border-box;
+    }
+
+    .produto-conteudo h2:hover, .produto-conteudo h3:hover {
+        background: transparent;
+        color: #fff;
+        border-color: #fff;
+    }
+
+    /* Ajuste específico para o título do kit-premium */
+    .produto-card[data-produto="kit-premium"] .produto-conteudo h2 {
+        font-size: 0.7rem; /* Um pouco menor para caber melhor */
+        letter-spacing: 1.8px;
+        padding: 6px 14px;
+        bottom: 10px;
+    }
 }

@@ -1,30 +1,4 @@
-.cliente-card:hover .cliente-icone {
 
-  transform: scale(0.96);
-}
-
-.cliente-card h3, .cliente-card h4 {
-    font-family: 'Montserrat', sans-serif;
-  font-size: 1.5rem;
-  color: var(--marrom);
-  margin-bottom: 10px;
-  text-align: left;
-}
-
-.cliente-card p {
-    font-family: 'Montserrat', sans-serif;
-  font-size: 1rem;
-  color: #555;
-  line-height: 1.6;
-  text-align: left;
-}
-
-.consultoria .cliente-card h3:before, .consultoria .cliente-card h4:before {
-    content: counter(card-counter) '. ';
-  counter-increment: card-counter;
-  color: var(--verde);
-  font-weight: bold;
-}
 
 .cta-btn {
   display: inline-block;
