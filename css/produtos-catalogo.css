@@ -114,6 +114,42 @@ main {
 }
 
 /* ==========================================
+   AJUSTES APENAS PARA DISPOSITIVOS MÓVEIS (até 600px)
+   ========================================== */
+
+@media screen and (max-width: 600px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr) !important; /* Força exatamente 2 colunas */
+        gap: 1rem; /* Gap menor para caber melhor na tela pequena */
+        margin-top: 1rem;
+    }
+
+    .card {
+        height: auto; /* Altura flexível */
+        min-height: 280px; /* Altura mínima para manter proporção */
+        border-radius: 10px;
+    }
+
+    .card-img-container {
+        height: 180px; /* Imagem menor no mobile */
+    }
+
+    .card-body {
+        padding: 0.9rem;
+    }
+
+    .card-title {
+        font-size: 0.95rem; /* Título menor */
+        margin-bottom: 0.4rem;
+        line-height: 1.2;
+    }
+
+    .card-price {
+        font-size: 1.15rem; /* Preço um pouco menor, mas ainda destacado */
+    }
+}
+
+/* ==========================================
    BADGES DE FRAGRÂNCIA NOS CARDS
    ========================================== */
 

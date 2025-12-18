@@ -1,256 +1,178 @@
-
-
-.cta-btn {
-  display: inline-block;
-  padding: 12px 30px;
-  background: linear-gradient(90deg, #bbae9b, #8eb199);
-  color: #ffffff;
-    font-family: 'Montserrat', sans-serif;
-  font-size: 1.1rem;
-  font-weight: 600;
-  text-decoration: none;
-  border-radius: 30px;
-  border: 1px solid #ece3dd;
-  box-shadow: 0 2px 4px rgba(127, 100, 73, 0.1);
-  transition: all 0.5s ease;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-  cursor: pointer;
-}
-
-.cta-btn::before {
-    content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, #8eb199, #bbae9b);
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  z-index: -1;
-  border-radius: 30px;
-}
-
-.cta-btn:hover {
-  color: #7f6449;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(127, 100, 73, 0.2);
-}
-
-.cta-btn:hover::before {
-  opacity: 1;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-
-@media (max-width: 768px) {
-  .rodape-grid {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: 30px 0; /* opcional: dá mais espaço entre as colunas empilhadas */
-  }
-
-  /* Força o bloco inteiro a ocupar 100% e centralizar tudo */
-  .rodape-info,
-  .rodape-contato,
-  .rodape-endereco {
-    width: 100%;
-    max-width: 100%;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;        /* <--- ESSENCIAL para centralizar filhos */
-  }
-
-  /* Logo centralizada */
-  .rodape-logo {
-    margin: 0 auto 20px auto;
-    display: block;
-  }
-
-  /* Texto da bio - agora sim vai centralizar perfeitamente */
-  .rodape-info .mini-bio {
-    max-width: 90%;           /* ou 100% se quiser ocupar tudo */
-    margin: 0 auto;
-    text-align: center;
-    line-height: 1.6;
-  }
-
-  /* Lista de contatos centralizada */
-  .rodape-contato ul {
-    padding: 0;
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-  }
-
-  .rodape-contato li {
-    justify-content: center;
-    width: fit-content;
-  }
-
-  /* Endereço */
-  .rodape-endereco p {
-    max-width: 90%;
-    margin: 0 auto;
-  }
-
-  /* Direitos autorais já estão centralizados pelo container */
-  .rodape-direitos p {
-    text-align: center;
-  }
-}
-
-
-@media (max-width: 480px) {
-  .clientes-alvo h2, .consultoria h2 {
-  font-size: 1.5rem;
-  }
-
-  .clientes-alvo .subtitulo, .consultoria .subtitulo {
-  font-size: 0.9rem;
-  }
-}
-
 .rodape {
-  background: linear-gradient(135deg, #1a2520, #2a3b33);
-  color: #ffffff;
-  padding: 60px 0 20px;
+    background: #1a2520;
+    color: #ffffff;
+    padding: 30px 5% 12px; /* Adicionado padding lateral de 5% para espaço nas bordas */
     font-family: 'Montserrat', sans-serif;
-  position: relative;
-  overflow: hidden;
-}
-
-.rodape::before {
-    content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle, rgba(142, 177, 153, 0.1), transparent);
-  opacity: 0.3;
-  animation: glow 4s ease-in-out infinite;
-}
-
-
-@keyframes glow {
-  0% { opacity: 0.3; }
-  50% { opacity: 0.5; }
-  100% { opacity: 0.3; }
 }
 
 .rodape-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  margin-bottom: 30px;
-  position: relative;
-  z-index: 1;
-}
-
-/* Footer-specific grid + contact rules moved from blog.css */
-.rodape-grid > div {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.rodape-grid > div.visible {
-  opacity: 1;
-  transform: translateY(0);
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 25px;
+    margin-bottom: 18px;
+    max-width: 1200px; /* Limita a largura máxima do conteúdo */
+    margin-left: auto; /* Centraliza o grid */
+    margin-right: auto;
+    padding-left: 20px; /* Espaço extra interno se necessário */
+    padding-right: 20px;
 }
 
 .rodape-logo {
-  max-width: 150px;
-  margin-bottom: 15px;
+    max-width: 100px;
+    margin-bottom: 10px;
 }
 
 .rodape-info .mini-bio {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #d3d3d3;
-  max-width: 300px;
+    font-size: 0.82rem;
+    line-height: 1.4;
+    color: #b8b8b8;
+    margin-bottom: 8px;
 }
 
-.rodape-contato h3, .rodape-contato h4, .rodape-endereco h3, .rodape-endereco h4 {
-  font-size: 1.3rem;
-  color: var(--verde);
-  margin-bottom: 15px;
+.rodape-cnpj {
+    font-size: 0.72rem;
+    color: #888;
+    margin-top: 6px;
 }
 
-.rodape-contato ul {
-  list-style: none;
-  padding: 0;
+.rodape-secao h4 {
+    font-size: 0.9rem;
+    color: var(--verde);
+    margin-bottom: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
-.rodape-contato li {
-  margin-bottom: 12px;
-  font-size: 1rem;
-  display: flex;
-  align-items: center;
+.rodape-secao ul {
+    list-style: none;
+    padding: 0;
 }
 
-.rodape-contato li a {
-  color: #d3d3d3;
-  text-decoration: none;
-  transition: color 0.3s ease, transform 0.3s ease;
+.rodape-secao li {
+    margin-bottom: 8px;
 }
 
-.rodape-contato li a:hover {
-  color: var(--verde);
-  transform: translateX(5px);
+.rodape-secao a {
+    color: #d3d3d3;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
 }
 
-.rodape-contato li i {
-  margin-right: 10px;
-  color: var(--verde);
-  font-size: 1.2rem;
-  transition: text-shadow 0.3s ease;
+.rodape-secao a:hover {
+    color: var(--verde);
+    transform: translateX(3px);
 }
 
-.rodape-contato li:hover i {
-  text-shadow: 0 0 10px rgba(142, 177, 153, 0.8);
+.rodape-secao i {
+    font-size: 1rem;
+    color: var(--verde);
+    min-width: 18px;
 }
 
 .rodape-endereco p {
-  font-size: 1rem;
-  color: #d3d3d3;
-  line-height: 1.6;
+    font-size: 0.85rem;
+    color: #d3d3d3;
+    line-height: 1.5;
+}
+
+/* Rodapé inferior */
+.rodape-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 15px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    max-width: 1200px; /* Alinha com o grid acima */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .rodape-direitos {
-  text-align: center;
-  font-size: 0.9rem;
-  color: #d3d3d3;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: 20px;
-  position: relative;
-  z-index: 1;
+    font-size: 0.8rem;
+    color: #999;
 }
 
-footer.rodape {
-  flex-shrink: 0;
+.rodape-links-legais {
+    display: flex;
+    gap: 18px;
 }
 
-/* Product-section footer rules moved from products.css */
-.produtos-footer {
-    text-align: center;
-    padding-top: 80px;
+.rodape-links-legais a {
+    color: #999;
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: color 0.3s ease;
 }
 
-.footer-texto {
-    font-size: 1.1rem;
-    color: #666;
-    margin-bottom: 30px;
-    font-weight: 300;
+.rodape-links-legais a:hover {
+    color: var(--verde);
+}
+
+/* RESPONSIVO */
+@media (max-width: 968px) {
+    .rodape-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .rodape {
+        padding: 25px 5% 12px; /* Mantém o padding lateral no mobile */
+    }
+
+    .rodape-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 20px;
+        padding-left: 10px; /* Ajuste menor no mobile */
+        padding-right: 10px;
+    }
+
+    .rodape-info,
+    .rodape-secao {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .rodape-logo {
+        margin: 0 auto 12px;
+    }
+
+    .rodape-info .mini-bio {
+        max-width: 100%;
+    }
+
+    .rodape-secao ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .rodape-secao a {
+        justify-content: center;
+    }
+
+    .rodape-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .rodape-links-legais {
+        flex-direction: column;
+        gap: 8px;
+    }
 }
