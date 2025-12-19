@@ -24,10 +24,10 @@
     "descricao": "Essências concentradas para difusores"
   },
   {
-    "id": "velas-aromaticas",
-    "nome": "Velas Aromáticas",
-    "slug": "velas-aromaticas",
-    "descricao": "Velas perfumadas artesanais"
+    "id": "vela-aromatica",
+    "nome": "Vela Aromática",
+    "slug": "vela-aromatica",
+    "descricao": "Velas perfumadas para ambientes"
   },
   {
     "id": "aromatizador-carro",

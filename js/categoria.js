@@ -74,7 +74,7 @@ function getProductsByTipo(tipoSlug) {
     'difusor-varetas': 'Difusor de Varetas',
     'sabonete-liquido': 'Sabonete Líquido',
     'essencias': 'Essência',
-    'velas-aromaticas': 'Velas Aromáticas',
+    'vela-aromatica': 'Vela Aromática',
     'aromatizador-carro': 'Kit Carro',
     'agua-perfumada': 'Água Perfumada'
   };

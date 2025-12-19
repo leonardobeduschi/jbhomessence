@@ -177,7 +177,7 @@
   },
   {
     "id": "ENC06",
-    "nome": "Velas Aromáticas",
+    "nome": "Vela Aromática",
     "categoria": "Encontro",
     "preco": 140.00,
     "descricao": "Vela Aromática Encontro 170g. Feita com óleo de coco",
@@ -276,7 +276,7 @@
   },
   {
     "id": "HAV06",
-    "nome": "Velas Aromáticas",
+    "nome": "Vela Aromática",
     "categoria": "Havana",
     "preco": 140.00,
     "descricao": "Vela aromática Havana 170g",
@@ -386,7 +386,7 @@
   },
   {
     "id": "JDF06",
-    "nome": "Velas Aromáticas",
+    "nome": "Vela Aromática",
     "categoria": "Jardins da França",
     "preco": 140.00,
     "descricao": "Vela aromática Jardins da França 170g",
