@@ -12,7 +12,7 @@
   },
   {
     "id": "ADB02",
-    "nome": "Home Spray",
+    "nome": "Aromatizador",
     "categoria": "Aroma do Bebê",
     "preco": 106.00,
     "descricao": "Água Perfumada para Roupas Aroma do Bebê 300ml - frasco PET",
@@ -34,7 +34,7 @@
   },
   {
     "id": "BAG02",
-    "nome": "Home Spray",
+    "nome": "Aromatizador",
     "categoria": "Bambu Garden",
     "preco": 106.00,
     "descricao": "Perfume de Ambiente / Home Spray Bambu Garden 300ml - frasco PET",
@@ -78,7 +78,7 @@
   },
   {
     "id": "CAS02",
-    "nome": "Home Spray",
+    "nome": "Aromatizador",
     "categoria": "Capim Santo",
     "preco": 106.00,
     "descricao": "Home Spray Capim Santo 300ml",
@@ -122,7 +122,7 @@
   },
   {
     "id": "DIV02",
-    "nome": "Home Spray 300ml",
+    "nome": "Aromatizador",
     "categoria": "Divina Vanilla",
     "preco": 112.00,
     "descricao": "Perfume de Ambiente / Home Spray Divina Vanilla 300ml - frasco PET",
@@ -144,7 +144,7 @@
   },
   {
     "id": "ENC02",
-    "nome": "Home Spray 300ml",
+    "nome": "Aromatizador",
     "categoria": "Encontro",
     "preco": 112.00,
     "descricao": "Perfume de Ambiente / Home Spray Encontro 300ml - frasco PET",
@@ -188,7 +188,7 @@
   },
   {
     "id": "GAR02",
-    "nome": "Home Spray 300ml",
+    "nome": "Aromatizador",
     "categoria": "Garbo",
     "preco": 112.00,
     "descricao": "Perfume de Ambiente / Home Spray Garbo 300ml - frasco PET",
@@ -232,7 +232,7 @@
   },
   {
     "id": "HAV02",
-    "nome": "Home Spray 300ml",
+    "nome": "Aromatizador",
     "categoria": "Havana",
     "preco": 120.00,
     "descricao": "Perfume de Ambiente / Home Spray Havana 300ml - frasco PET",
@@ -298,7 +298,7 @@
   },
   {
   "id": "HOR02",
-  "nome": "Home Spray 300ml",
+  "nome": "Aromatizador",
   "categoria": "Hortênsia",
   "preco": 106.00,
   "descricao": "Perfume de Ambiente / Home Spray Hortênsia 300ml - frasco PET",
@@ -342,7 +342,7 @@
   },
   {
     "id": "JDF02",
-    "nome": "Home Spray 300ml",
+    "nome": "Aromatizador",
     "categoria": "Jardins da França",
     "preco": 120.00,
     "descricao": "Perfume de Ambiente / Home Spray Jardins da França 300ml - frasco PET",
@@ -397,7 +397,7 @@
   },
   {
     "id": "LIL02",
-    "nome": "Home Spray 300ml",
+    "nome": "Aromatizador",
     "categoria": "Lilás",
     "preco": 120.00,
     "descricao": "Perfume de Ambiente / Home Spray Lilás 300ml - frasco PET",
@@ -441,7 +441,7 @@
   },
   {
     "id": "MCA02",
-    "nome": "Home Spray 300ml",
+    "nome": "Aromatizador",
     "categoria": "Monte Carlo",
     "preco": 120.00,
     "descricao": "Perfume de Ambiente / Home Spray Monte Carlo 300ml - frasco PET",
@@ -485,7 +485,7 @@
   },
   {
     "id": "PAT02",
-    "nome": "Home Spray 300ml",
+    "nome": "Aromatizador",
     "categoria": "Patchouly",
     "preco": 106.00,
     "descricao": "Perfume de Ambiente / Home Spray Patchouly 300ml - frasco PET",

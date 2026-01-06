@@ -70,7 +70,7 @@ function getProductsByCategory(categoryName) {
 
 function getProductsByTipo(tipoSlug) {
   const tipoNomeMap = {
-    'home-spray': 'Home Spray',
+    'aromatizador': 'Aromatizador',
     'difusor-varetas': 'Difusor de Varetas',
     'sabonete-liquido': 'Sabonete Líquido',
     'essencias': 'Essência',
