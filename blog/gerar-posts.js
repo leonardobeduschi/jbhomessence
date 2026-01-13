@@ -7,22 +7,21 @@ const path = require('path');
 const CONFIG = {
   postsJsonPath: './posts.json',
   templatePath: './post-template.html',
+  indexTemplatePath: './index-template.html', // NOVO
   outputDir: './posts',
+  indexOutputPath: './index.html', // NOVO
   blogBaseUrl: 'https://jbhomessence.com.br/blog',
   siteBaseUrl: 'https://jbhomessence.com.br',
   siteName: 'JB Home Essence',
   siteUrl: 'https://jbhomessence.com.br',
-  sitemapOutputPath: '../sitemap.xml', // UM NÍVEL ACIMA (raiz)
-  robotsOutputPath: '../robots.txt'    // UM NÍVEL ACIMA (raiz)
+  sitemapOutputPath: '../sitemap.xml',
+  robotsOutputPath: '../robots.txt'
 };
 
 // ============================================
 // FUNÇÕES AUXILIARES
 // ============================================
 
-/**
- * Cria diretório se não existir
- */
 function ensureDirectoryExists(dirPath) {
   const absolutePath = path.resolve(dirPath);
   if (!fs.existsSync(absolutePath)) {
@@ -31,9 +30,6 @@ function ensureDirectoryExists(dirPath) {
   }
 }
 
-/**
- * Salva arquivo em caminho absoluto
- */
 function saveFile(filePath, content) {
   const absolutePath = path.resolve(filePath);
   fs.writeFileSync(absolutePath, content, 'utf8');
@@ -41,9 +37,6 @@ function saveFile(filePath, content) {
   return absolutePath;
 }
 
-/**
- * Converte data DD-MM-YYYY para ISO (YYYY-MM-DD)
- */
 function convertDateToISO(dateStr) {
   const parts = dateStr.split('-');
   if (parts.length === 3) {
@@ -52,9 +45,6 @@ function convertDateToISO(dateStr) {
   return dateStr;
 }
 
-/**
- * Gera meta tags OG e Twitter Card
- */
 function generateMetaTags(post) {
   const title = post.seoTitle || post.title;
   const description = post.metaDescription || post.excerpt || '';
@@ -84,9 +74,6 @@ function generateMetaTags(post) {
   `;
 }
 
-/**
- * Gera JSON-LD Schema
- */
 function generateJsonLd(post) {
   const imageUrl = post.image ? `${CONFIG.siteUrl}${post.image}` : undefined;
   const isoDate = convertDateToISO(post.date);
@@ -130,20 +117,13 @@ ${JSON.stringify(schema, null, 2)}
 </script>`;
 }
 
-/**
- * Gera HTML das tags
- */
 function generateTagsHtml(tags) {
   if (!tags || !Array.isArray(tags) || tags.length === 0) {
     return '';
   }
-  
   return tags.map(tag => `<span class="tag">${tag}</span>`).join('\n          ');
 }
 
-/**
- * Gera HTML dos posts relacionados
- */
 function generateRelatedPostsHtml(allPosts, currentPost) {
   const relatedPosts = allPosts
     .filter(p => p.id !== currentPost.id && p.category === currentPost.category)
@@ -175,9 +155,6 @@ function generateRelatedPostsHtml(allPosts, currentPost) {
   `).join('\n');
 }
 
-/**
- * Gera página HTML do post
- */
 function generatePostHtml(post, allPosts, template) {
   const metaTags = generateMetaTags(post);
   const jsonLd = generateJsonLd(post);
@@ -199,40 +176,54 @@ function generatePostHtml(post, allPosts, template) {
   return html;
 }
 
-/**
- * Gera sitemap.xml incluindo páginas principais do site
- */
+// ============================================
+// NOVA FUNÇÃO: GERAR INDEX.HTML COM LINKS ESTÁTICOS
+// ============================================
+function generateStaticPostCards(posts) {
+  // Ordenar por data (mais recentes primeiro)
+  const sortedPosts = [...posts].sort((a, b) => {
+    const dateA = new Date(a.date.split('-').reverse().join('-'));
+    const dateB = new Date(b.date.split('-').reverse().join('-'));
+    return dateB - dateA;
+  });
+
+  return sortedPosts.map(post => `
+        <div class="blog-card">
+          <a href="posts/${post.id}.html" style="text-decoration: none; color: inherit;">
+            <div class="card-wrapper">
+              <figure>
+                <img src="${post.image || 'https://via.placeholder.com/300x300'}" alt="${post.title}" loading="lazy" />
+              </figure>
+              <div class="card-body">
+                <p class="meta">${post.date} | ${post.category}</p>
+                <h2>${post.title}</h2>
+                <p class="excerpt">${post.excerpt}</p>
+              </div>
+            </div>
+          </a>
+        </div>`).join('\n');
+}
+
+function generateIndexHtml(posts, template) {
+  const staticCards = generateStaticPostCards(posts);
+  
+  let html = template.replace('{{STATIC_POST_CARDS}}', staticCards);
+  
+  return html;
+}
+
+// ============================================
+// SITEMAP E ROBOTS
+// ============================================
 function generateSitemap(posts) {
-  // Páginas principais do site
   const mainPages = [
-    {
-      url: `${CONFIG.siteBaseUrl}/`,
-      priority: '1.0',
-      changefreq: 'weekly'
-    },
-    {
-      url: `${CONFIG.siteBaseUrl}/sobre`,
-      priority: '0.8',
-      changefreq: 'monthly'
-    },
-    {
-      url: `${CONFIG.siteBaseUrl}/servicos`,
-      priority: '0.8',
-      changefreq: 'monthly'
-    },
-    {
-      url: `${CONFIG.siteBaseUrl}/contato`,
-      priority: '0.7',
-      changefreq: 'monthly'
-    },
-    {
-      url: `${CONFIG.blogBaseUrl}/`,
-      priority: '0.9',
-      changefreq: 'weekly'
-    }
+    { url: `${CONFIG.siteBaseUrl}/`, priority: '1.0', changefreq: 'weekly' },
+    { url: `${CONFIG.siteBaseUrl}/sobre`, priority: '0.8', changefreq: 'monthly' },
+    { url: `${CONFIG.siteBaseUrl}/servicos`, priority: '0.8', changefreq: 'monthly' },
+    { url: `${CONFIG.siteBaseUrl}/contato`, priority: '0.7', changefreq: 'monthly' },
+    { url: `${CONFIG.blogBaseUrl}/`, priority: '0.9', changefreq: 'weekly' }
   ];
 
-  // Gerar URLs das páginas principais
   const mainUrls = mainPages.map(page => {
     return `  <url>
     <loc>${page.url}</loc>
@@ -242,7 +233,6 @@ function generateSitemap(posts) {
   </url>`;
   }).join('\n');
 
-  // Gerar URLs dos posts do blog
   const postUrls = posts.map(post => {
     const isoDate = convertDateToISO(post.date);
     return `  <url>
@@ -260,9 +250,6 @@ ${postUrls}
 </urlset>`;
 }
 
-/**
- * Gera robots.txt apontando para sitemap na raiz
- */
 function generateRobotsTxt() {
   return `User-agent: *
 Allow: /
@@ -273,7 +260,6 @@ Sitemap: ${CONFIG.siteBaseUrl}/sitemap.xml`;
 // ============================================
 // FUNÇÃO PRINCIPAL
 // ============================================
-
 function generateBlog() {
   console.log('🚀 Iniciando geração do blog estático...\n');
   console.log(`📂 Diretório atual: ${process.cwd()}\n`);
@@ -284,12 +270,20 @@ function generateBlog() {
   const posts = JSON.parse(postsData);
   console.log(`✓ ${posts.length} posts encontrados\n`);
 
-  // 2. Ler template
-  console.log('📄 Lendo template...');
-  const template = fs.readFileSync(CONFIG.templatePath, 'utf8');
-  console.log('✓ Template carregado\n');
+  // 2. Ler templates
+  console.log('📄 Lendo templates...');
+  const postTemplate = fs.readFileSync(CONFIG.templatePath, 'utf8');
+  console.log('✓ Template de posts carregado');
+  
+  let indexTemplate;
+  try {
+    indexTemplate = fs.readFileSync(CONFIG.indexTemplatePath, 'utf8');
+    console.log('✓ Template de index carregado\n');
+  } catch (error) {
+    console.log('⚠️  index-template.html não encontrado, pulando geração do index\n');
+  }
 
-  // 3. Criar diretório de saída para os posts
+  // 3. Criar diretório de posts
   console.log('📁 Criando diretório de posts...');
   ensureDirectoryExists(CONFIG.outputDir);
   console.log('');
@@ -297,43 +291,52 @@ function generateBlog() {
   // 4. Gerar páginas HTML dos posts
   console.log('⚙️  Gerando páginas HTML dos posts...');
   posts.forEach((post, index) => {
-    const html = generatePostHtml(post, posts, template);
+    const html = generatePostHtml(post, posts, postTemplate);
     const outputPath = path.join(CONFIG.outputDir, `${post.id}.html`);
-    const absoluteOutputPath = saveFile(outputPath, html);
-    console.log(`  ${index + 1}. ${post.id}.html (${absoluteOutputPath})`);
+    saveFile(outputPath, html);
+    console.log(`  ${index + 1}. ${post.id}.html`);
   });
   console.log('✓ Todas as páginas dos posts geradas\n');
 
-  // 5. Gerar sitemap.xml na raiz do projeto
-  console.log('🗺️  Gerando sitemap.xml na raiz do projeto...');
+  // 5. Gerar index.html (NOVO)
+  if (indexTemplate) {
+    console.log('📝 Gerando index.html com links estáticos...');
+    const indexHtml = generateIndexHtml(posts, indexTemplate);
+    saveFile(CONFIG.indexOutputPath, indexHtml);
+    console.log('✓ index.html gerado\n');
+  }
+
+  // 6. Gerar sitemap.xml
+  console.log('🗺️  Gerando sitemap.xml...');
   const sitemap = generateSitemap(posts);
   const sitemapPath = saveFile(CONFIG.sitemapOutputPath, sitemap);
   console.log('');
 
-  // 6. Gerar robots.txt na raiz do projeto
-  console.log('🤖 Gerando robots.txt na raiz do projeto...');
+  // 7. Gerar robots.txt
+  console.log('🤖 Gerando robots.txt...');
   const robotsTxt = generateRobotsTxt();
   const robotsPath = saveFile(CONFIG.robotsOutputPath, robotsTxt);
   console.log('');
 
-  // 7. Resumo final
-  console.log('═══════════════════════════════════════');
+  // 8. Resumo final
+  console.log('╔═══════════════════════════════════════╗');
   console.log('✅ GERAÇÃO CONCLUÍDA COM SUCESSO!');
-  console.log('═══════════════════════════════════════');
+  console.log('╚═══════════════════════════════════════╝');
   console.log(`📊 Total de posts gerados: ${posts.length}`);
   console.log(`📂 Pasta dos posts: ${path.resolve(CONFIG.outputDir)}/`);
-  console.log(`🗺️  Sitemap (raiz): ${sitemapPath}`);
-  console.log(`🤖 Robots.txt (raiz): ${robotsPath}`);
+  console.log(`📝 Index gerado: ${path.resolve(CONFIG.indexOutputPath)}`);
+  console.log(`🗺️  Sitemap: ${sitemapPath}`);
+  console.log(`🤖 Robots.txt: ${robotsPath}`);
   console.log(`🌐 URLs públicas:`);
+  console.log(`   - Blog: ${CONFIG.blogBaseUrl}/`);
   console.log(`   - Sitemap: ${CONFIG.siteBaseUrl}/sitemap.xml`);
   console.log(`   - Robots: ${CONFIG.siteBaseUrl}/robots.txt`);
-  console.log('═══════════════════════════════════════\n');
+  console.log('╚═══════════════════════════════════════╝\n');
 }
 
 // ============================================
 // EXECUTAR
 // ============================================
-
 try {
   generateBlog();
 } catch (error) {
