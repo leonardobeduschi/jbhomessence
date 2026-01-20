@@ -806,3 +806,409 @@ main {
     }
 }
 
+/* ==========================================
+   BOTÃO "SOBRE ESTA FRAGRÂNCIA"
+   ========================================== */
+
+.btn-sobre-fragrancia {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  background: linear-gradient(135deg, #80a48d 0%, #305037 100%);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 1.5rem 0;
+  box-shadow: 0 4px 15px rgba(48, 80, 55, 0.3);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  letter-spacing: 0.3px;
+}
+
+.btn-sobre-fragrancia:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(48, 80, 55, 0.4);
+}
+
+.btn-sobre-fragrancia:active {
+  transform: translateY(-1px);
+}
+
+.btn-sobre-fragrancia i {
+  font-size: 1.2rem;
+}
+
+/* ==========================================
+   MODAL "SOBRE A FRAGRÂNCIA"
+   ========================================== */
+
+.modal-sobre-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.modal-sobre-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-sobre-container {
+  background: white;
+  max-width: 800px;
+  width: 100%;
+  border-radius: 24px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
+  position: relative;
+  max-height: 90vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(30px) scale(0.95);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+}
+
+.modal-sobre-overlay.active .modal-sobre-container {
+  transform: translateY(0) scale(1);
+}
+
+/* Botão Fechar */
+.modal-sobre-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: white;
+  border: 2px solid #e0e0e0;
+  font-size: 1.8rem;
+  color: #666;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.modal-sobre-close:hover {
+  background: #f5f5f5;
+  color: #333;
+  transform: rotate(90deg);
+  border-color: #ccc;
+}
+
+/* Header do Modal - Imagem de Capa */
+.modal-sobre-header {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+}
+
+.modal-sobre-header img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Título no Body */
+.modal-sobre-titulo {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin: 0 0 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  padding-bottom: 1rem;
+  border-bottom: 3px solid #80a48d;
+}
+
+/* Body do Modal */
+.modal-sobre-content {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.modal-sobre-body {
+  padding: 2.5rem;
+  overflow-y: auto;
+  max-height: calc(90vh - 200px);
+  flex: 1;
+}
+
+/* Seções */
+.modal-sobre-section {
+  margin-bottom: 2rem;
+  animation: fadeInUp 0.5s ease backwards;
+}
+
+.modal-sobre-section:first-child {
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.modal-sobre-section:nth-child(1) { animation-delay: 0.1s; }
+.modal-sobre-section:nth-child(2) { animation-delay: 0.2s; }
+.modal-sobre-section:nth-child(3) { animation-delay: 0.3s; }
+.modal-sobre-section:nth-child(4) { animation-delay: 0.4s; }
+.modal-sobre-section:nth-child(5) { animation-delay: 0.5s; }
+.modal-sobre-section:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-sobre-descricao {
+  color: #2c3e50;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  margin: 0;
+  font-weight: 400;
+}
+
+.modal-sobre-section h3 {
+  color: #2c3e50;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.modal-sobre-section h3 i {
+  color: #80a48d;
+  font-size: 1.2rem;
+}
+
+.modal-sobre-info-text {
+  color: #555;
+  line-height: 1.8;
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+/* Lista de Benefícios */
+.modal-sobre-beneficios {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.modal-sobre-beneficios li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 12px;
+  font-size: 1rem;
+  color: #2c3e50;
+  transition: all 0.3s ease;
+  border-left: 4px solid #667eea;
+}
+
+.modal-sobre-beneficios li:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+}
+
+.modal-sobre-beneficios li i {
+  color: #80a48d;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+/* Tags de Palavras-chave */
+.modal-sobre-palavras-chave {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.palavra-chave-tag {
+  background: linear-gradient(135deg, #80a48d 0%, #305037 100%);
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border-radius: 25px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: default;
+  box-shadow: 0 4px 12px rgba(48, 80, 55, 0.2);
+}
+
+.palavra-chave-tag:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(48, 80, 55, 0.3);
+}
+
+/* ==========================================
+   RESPONSIVO - TABLET
+   ========================================== */
+
+@media (max-width: 768px) {
+  .modal-sobre-overlay {
+    padding: 1rem;
+  }
+
+  .modal-sobre-container {
+    max-height: 95vh;
+    border-radius: 20px;
+  }
+
+  .modal-sobre-header {
+    height: 250px;
+  }
+
+  .modal-sobre-titulo {
+    font-size: 2rem;
+  }
+
+  .modal-sobre-body {
+    padding: 2rem;
+    max-height: calc(95vh - 250px);
+  }
+
+  .modal-sobre-section h3 {
+    font-size: 1.2rem;
+  }
+
+  .btn-sobre-fragrancia {
+    padding: 0.9rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* ==========================================
+   RESPONSIVO - MOBILE
+   ========================================== */
+
+@media (max-width: 480px) {
+  .modal-sobre-overlay {
+    padding: 0.5rem;
+    align-items: flex-start;
+    padding-top: 1rem;
+  }
+
+  .modal-sobre-container {
+    border-radius: 16px;
+    max-height: 96vh;
+  }
+
+  .modal-sobre-close {
+    width: 40px;
+    height: 40px;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .modal-sobre-header {
+    height: 200px;
+  }
+
+  .modal-sobre-titulo {
+    font-size: 1.7rem;
+  }
+
+  .modal-sobre-body {
+    padding: 1.5rem;
+    max-height: calc(96vh - 200px);
+  }
+
+  .modal-sobre-section {
+    margin-bottom: 1.5rem;
+  }
+
+  .modal-sobre-section h3 {
+    font-size: 1.1rem;
+    gap: 0.5rem;
+  }
+
+  .modal-sobre-section h3 i {
+    font-size: 1rem;
+  }
+
+  .modal-sobre-descricao,
+  .modal-sobre-info-text {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .modal-sobre-beneficios li {
+    padding: 0.8rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .modal-sobre-beneficios li i {
+    font-size: 1rem;
+  }
+
+  .palavra-chave-tag {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.85rem;
+  }
+
+  .btn-sobre-fragrancia {
+    width: 100%;
+    justify-content: center;
+    padding: 0.85rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .btn-sobre-fragrancia i {
+    font-size: 1rem;
+  }
+}
+
+/* ==========================================
+   SCROLLBAR CUSTOMIZADA PARA O MODAL
+   ========================================== */
+
+.modal-sobre-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-sobre-body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.modal-sobre-body::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #80a48d 0%, #305037 100%);
+  border-radius: 10px;
+}
+
+.modal-sobre-body::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #6b8f7a 0%, #273d2a 100%);
+}
