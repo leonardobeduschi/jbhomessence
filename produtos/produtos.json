@@ -5,10 +5,16 @@
     "categoria": "Abbraccio",
     "preco": 97.00,
     "descricao": "Água Perfumada Abbraccio 500ml",
-    "descricaoOlfativa": ["cítrico", "floral"],
+    "descricaoOlfativa": [
+      "cítrico",
+      "floral"
+    ],
     "notas": "bergamota, pomelo, capim limão, gengibre, violeta, fresia, musk e sândalo.",
     "modoUso": "Mova a trava até a posição OPEN e aplique a uma distância aproximada de 20cm. borrife em roupas no varal, em peças retiradas recentemente da secadora ou em roupas secas antes de serem guardadas. Aplique na hora de passar ou em peças dentro de gavetas/armários.",
-    "imagens": ["../img/imagens-catalogo/aguaperfumada-abbraccio-1.jpg", "../img/imagens-catalogo/aguaperfumada-abbraccio-2.jpg"]
+    "imagens": [
+      "../img/imagens-catalogo/aguaperfumada-abbraccio-1.jpg",
+      "../img/imagens-catalogo/aguaperfumada-abbraccio-2.jpg"
+    ]
   },
   {
     "id": "ADB02",
@@ -16,21 +22,33 @@
     "categoria": "Aroma do Bebê",
     "preco": 106.00,
     "descricao": "Água Perfumada para Roupas Aroma do Bebê 300ml - frasco PET",
-    "descricaoOlfativa": ["herbal", "musk"],
+    "descricaoOlfativa": [
+      "herbal",
+      "musk"
+    ],
     "notas": "lavandin, gerânio, rosas, eucalipto, baunilha e musk",
     "modoUso": "Aplicar sobre tecidos em geral (evitando couro e sintéticos), aproximadamente 30cm de distância, sem encharcar. Especialmente para roupas de cama e toalhas de banho.",
-    "imagens": ["../img/imagens-catalogo/home-spray-300ml-aroma-do-bebe-1.jpg", "../img/imagens-catalogo/home-spray-300ml-aroma-do-bebe-2.jpg"]
+    "imagens": [
+      "../img/imagens-catalogo/home-spray-300ml-aroma-do-bebe-1.jpg",
+      "../img/imagens-catalogo/home-spray-300ml-aroma-do-bebe-2.jpg"
+    ]
   },
   {
     "id": "ADB03",
     "nome": "Difusor de Varetas",
     "categoria": "Aroma do Bebê",
-    "preco": 142.00,
+    "preco": 152.00,
     "descricao": "Difusor de aromas com varetas Aroma do Bebê 200ml - frasco VIDRO",
-    "descricaoOlfativa": ["herbal", "musk"],
+    "descricaoOlfativa": [
+      "herbal",
+      "musk"
+    ],
     "notas": "lavandin, gerânio, rosas, eucalipto, baunilha e musk",
     "modoUso": "Retirar o vedante da tampa, encaixar novamente a tampa no frasco e colocar todas as varetas. Evite derramar o líquido nas superfícies, poderá manchar. Caso isso ocorra, limpe imediatamente.",
-    "imagens": ["../img/imagens-catalogo/difusor-de-varetas-aroma-do-bebe-1.jpg", "../img/imagens-catalogo/difusor-de-varetas-aroma-do-bebe-2.jpg"]
+    "imagens": [
+      "../img/imagens-catalogo/difusor-de-varetas-aroma-do-bebe-1.jpg",
+      "../img/imagens-catalogo/difusor-de-varetas-aroma-do-bebe-2.jpg"
+    ]
   },
   {
     "id": "BAG02",
@@ -38,21 +56,33 @@
     "categoria": "Bambu Garden",
     "preco": 106.00,
     "descricao": "Perfume de Ambiente / Home Spray Bambu Garden 300ml - frasco PET",
-    "descricaoOlfativa": ["floral", "amadeirado"],
+    "descricaoOlfativa": [
+      "floral",
+      "amadeirado"
+    ],
     "notas": "bergamota, pomelo, jasmim, cedro, gerânio, musk, vetiver e âmbar",
     "modoUso": "Aplicar sobre tecidos em geral (evitando couro e sintéticos), aproximadamente 30cm de distância, sem encharcar.",
-    "imagens": ["../img/imagens-catalogo/home-spray-bambu-garden-1.jpg", "../img/imagens-catalogo/home-spray-bambu-garden-2.jpg"]
+    "imagens": [
+      "../img/imagens-catalogo/home-spray-bambu-garden-1.jpg",
+      "../img/imagens-catalogo/home-spray-bambu-garden-2.jpg"
+    ]
   },
   {
     "id": "BAG03",
     "nome": "Difusor de Varetas",
     "categoria": "Bambu Garden",
-    "preco": 156.00,
+    "preco": 166.00,
     "descricao": "Difusor de aromas com varetas Bambu Garden 200ml - frasco VIDRO",
-    "descricaoOlfativa": ["floral", "amadeirado"],
+    "descricaoOlfativa": [
+      "floral",
+      "amadeirado"
+    ],
     "notas": "bergamota, pomelo, jasmim, cedro, gerânio, musk, vetiver e âmbar",
     "modoUso": "Retirar o vedante da tampa, encaixar novamente a tampa no frasco e colocar todas as varetas. Evite derramar o líquido nas superfícies, poderá manchar. Caso isso ocorra, limpe imediatamente.",
-    "imagens": ["../img/imagens-catalogo/difusor-de-varetas-bambu-garden-1.jpg", "../img/imagens-catalogo/difusor-de-varetas-bambu-garden-2.jpg"]
+    "imagens": [
+      "../img/imagens-catalogo/difusor-de-varetas-bambu-garden-1.jpg",
+      "../img/imagens-catalogo/difusor-de-varetas-bambu-garden-2.jpg"
+    ]
   },
   {
     "id": "BAG05",
@@ -60,10 +90,16 @@
     "categoria": "Bambu Garden",
     "preco": 96.00,
     "descricao": "Sabonete Líquido Transparente Bambu Garden 200ml",
-    "descricaoOlfativa": ["floral", "amadeirado"],
+    "descricaoOlfativa": [
+      "floral",
+      "amadeirado"
+    ],
     "notas": "bergamota, pomelo, jasmim, cedro, gerânio, musk, vetiver e âmbar",
     "modoUso": "Aplicar o sabonete sobre a pele, massagear até fazer espuma cremosa. Pode ser usado no banho e/ou para lavar mãos e rosto. Limpa e mantém o PH natural da pele.",
-    "imagens": ["../img/imagens-catalogo/sabonete-liquido-bambu-garden-1.jpg", "../img/imagens-catalogo/sabonete-liquido-bambu-garden-2.jpg"]
+    "imagens": [
+      "../img/imagens-catalogo/sabonete-liquido-bambu-garden-1.jpg",
+      "../img/imagens-catalogo/sabonete-liquido-bambu-garden-2.jpg"
+    ]
   },
   {
     "id": "BAG04",
@@ -71,10 +107,16 @@
     "categoria": "Bambu Garden",
     "preco": 92.00,
     "descricao": "Essência Concentrada Bambu Garden 30ml – frasco VIDRO com gotejador",
-    "descricaoOlfativa": ["floral", "amadeirado"],
+    "descricaoOlfativa": [
+      "floral",
+      "amadeirado"
+    ],
     "notas": "bergamota, pomelo, jasmim, cedro, gerânio, musk, vetiver e âmbar",
     "modoUso": "Acrescente água em seu difusor elétrico e/ou ultrassônico (conforme indicação do fabricante), pingue de 8 a 12 gotas e ligue. Não é necessário agitar. Para difusores de varetas, pingue de 10 a 15 gotas diretamente no frasco e insira as varetas. Vire as varetas a cada 2 dias para potencializar a fragrância. Não é óleo essencial.",
-    "imagens": ["../img/imagens-catalogo/essencia-bambu-garden-1.jpg", "../img/imagens-catalogo/essencia-catalogo-2.jpg"]
+    "imagens": [
+      "../img/imagens-catalogo/essencia-bambu-garden-1.jpg",
+      "../img/imagens-catalogo/essencia-catalogo-2.jpg"
+    ]
   },
   {
     "id": "CAS02",
@@ -82,21 +124,33 @@
     "categoria": "Capim Santo",
     "preco": 106.00,
     "descricao": "Home Spray Capim Santo 300ml",
-    "descricaoOlfativa": ["herbal", "cítrico"],
+    "descricaoOlfativa": [
+      "herbal",
+      "cítrico"
+    ],
     "notas": "capim-limão, gengibre, hortelã",
     "modoUso": "Aplicar sobre tecidos em geral",
-    "imagens": ["../img/imagens-catalogo/home-spray-capim-santo-1.jpg", "../img/imagens-catalogo/home-spray-capim-santo-2.jpg"]
+    "imagens": [
+      "../img/imagens-catalogo/home-spray-capim-santo-1.jpg",
+      "../img/imagens-catalogo/home-spray-capim-santo-2.jpg"
+    ]
   },
   {
     "id": "CAS03",
     "nome": "Difusor de Varetas",
     "categoria": "Capim Santo",
-    "preco": 149.00,
+    "preco": 159.00,
     "descricao": "Difusor de Varetas Capim Santo 200ml",
-    "descricaoOlfativa": ["herbal", "cítrico"],
+    "descricaoOlfativa": [
+      "herbal",
+      "cítrico"
+    ],
     "notas": "capim-limão, gengibre, hortelã",
     "modoUso": "Retirar o vedante e colocar as varetas",
-    "imagens": ["../img/imagens-catalogo/difusor-de-varetas-capim-santo-1.jpg", "../img/imagens-catalogo/difusor-de-varetas-capim-santo-2.jpg"]
+    "imagens": [
+      "../img/imagens-catalogo/difusor-de-varetas-capim-santo-1.jpg",
+      "../img/imagens-catalogo/difusor-de-varetas-capim-santo-2.jpg"
+    ]
   },
   {
     "id": "CAS05",
@@ -104,10 +158,16 @@
     "categoria": "Capim Santo",
     "preco": 96.00,
     "descricao": "Sabonete Líquido Capim Santo 200ml",
-    "descricaoOlfativa": ["herbal", "cítrico"],
+    "descricaoOlfativa": [
+      "herbal",
+      "cítrico"
+    ],
     "notas": "capim-limão, gengibre, hortelã",
     "modoUso": "Aplicar nas mãos e corpo",
-    "imagens": ["../img/imagens-catalogo/sabonete-liquido-capim-santo-1.jpg", "../img/imagens-catalogo/sabonete-liquido-capim-santo-2.jpg"]
+    "imagens": [
+      "../img/imagens-catalogo/sabonete-liquido-capim-santo-1.jpg",
+      "../img/imagens-catalogo/sabonete-liquido-capim-santo-2.jpg"
+    ]
   },
   {
     "id": "CAS04",
@@ -115,10 +175,16 @@
     "categoria": "Capim Santo",
     "preco": 92.00,
     "descricao": "Essência Concentrada Capim Santo 30ml – frasco VIDRO com gotejador",
-    "descricaoOlfativa": ["herbal", "cítrico"],
+    "descricaoOlfativa": [
+      "herbal",
+      "cítrico"
+    ],
     "notas": "capim-limão, gengibre, hortelã",
     "modoUso": "Acrescente água em seu difusor elétrico e/ou ultrassônico (conforme indicação do fabricante), pingue de 8 a 12 gotas e ligue. Não é óleo essencial.",
-    "imagens": ["../img/imagens-catalogo/essencia-capim-santo-1.jpg", "../img/imagens-catalogo/essencia-catalogo-2.jpg"]
+    "imagens": [
+      "../img/imagens-catalogo/essencia-capim-santo-1.jpg",
+      "../img/imagens-catalogo/essencia-catalogo-2.jpg"
+    ]
   },
   {
     "id": "DIV02",
@@ -126,21 +192,33 @@
     "categoria": "Divina Vanilla",
     "preco": 112.00,
     "descricao": "Perfume de Ambiente / Home Spray Divina Vanilla 300ml - frasco PET",
-    "descricaoOlfativa": ["oriental", "amadeirado"],
+    "descricaoOlfativa": [
+      "oriental",
+      "amadeirado"
+    ],
     "notas": "baunilha, musk e âmbar",
     "modoUso": "Aplicar sobre tecidos em geral (evitando couro e sintéticos), aproximadamente 30cm de distância, sem encharcar. ",
-    "imagens": ["../img/imagens-catalogo/home-spray-divina-vanilla-1.jpg", "../img/imagens-catalogo/home-spray-divina-vanilla-2.jpg"]
+    "imagens": [
+      "../img/imagens-catalogo/home-spray-divina-vanilla-1.jpg",
+      "../img/imagens-catalogo/home-spray-divina-vanilla-2.jpg"
+    ]
   },
   {
     "id": "DIV03",
     "nome": "Difusor de Varetas",
     "categoria": "Divina Vanilla",
-    "preco": 148.00,
+    "preco": 158.00,
     "descricao": "Difusor de Varetas Divina Vanilla",
-    "descricaoOlfativa": ["oriental", "amadeirado"],
+    "descricaoOlfativa": [
+      "oriental",
+      "amadeirado"
+    ],
     "notas": "baunilha, musk e âmbar",
     "modoUso": "Retirar o vedante da tampa, encaixar novamente a tampa no frasco e colocar todas as varetas. Evite derramar o líquido nas superfícies, poderá manchar. Caso isso ocorra, limpe imediatamente.",
-    "imagens": ["../img/imagens-catalogo/difusor-de-varetas-divina-vanilla-1.jpg", "../img/imagens-catalogo/difusor-de-varetas-divina-vanilla-2.jpg"]
+    "imagens": [
+      "../img/imagens-catalogo/difusor-de-varetas-divina-vanilla-1.jpg",
+      "../img/imagens-catalogo/difusor-de-varetas-divina-vanilla-2.jpg"
+    ]
   },
   {
     "id": "ENC02",
@@ -148,21 +226,33 @@
     "categoria": "Encontro",
     "preco": 112.00,
     "descricao": "Perfume de Ambiente / Home Spray Encontro 300ml - frasco PET",
-    "descricaoOlfativa": ["frutal", "oriental"],
+    "descricaoOlfativa": [
+      "frutal",
+      "oriental"
+    ],
     "notas": "maçã, canela, laranja, cravo, pêssego, baunilha e musk",
     "modoUso": "Aplicar sobre tecidos em geral (evitando couro e sintéticos), aproximadamente 30cm de distância, sem encharcar. ",
-    "imagens": ["../img/imagens-catalogo/home-spray-encontro-1.jpg", "../img/imagens-catalogo/home-spray-encontro-2.jpg"]
+    "imagens": [
+      "../img/imagens-catalogo/home-spray-encontro-1.jpg",
+      "../img/imagens-catalogo/home-spray-encontro-2.jpg"
+    ]
   },
   {
     "id": "ENC03",
     "nome": "Difusor de Varetas",
     "categoria": "Encontro",
-    "preco": 178.00,
+    "preco": 188.00,
     "descricao": "Difusor de Varetas Encontro",
-    "descricaoOlfativa": ["frutal", "oriental"],
+    "descricaoOlfativa": [
+      "frutal",
+      "oriental"
+    ],
     "notas": "maçã, canela, laranja, cravo, pêssego, baunilha e musk",
     "modoUso": "Retirar o vedante da tampa, encaixar novamente a tampa no frasco e colocar todas as varetas. Evite derramar o líquido nas superfícies, poderá manchar. Caso isso ocorra, limpe imediatamente.",
-    "imagens": ["../img/imagens-catalogo/difusor-de-varetas-encontro-1.jpg", "../img/imagens-catalogo/difusor-de-varetas-encontro-2.jpg"]
+    "imagens": [
+      "../img/imagens-catalogo/difusor-de-varetas-encontro-1.jpg",
+      "../img/imagens-catalogo/difusor-de-varetas-encontro-2.jpg"
+    ]
   },
   {
     "id": "ENC04",
@@ -170,10 +260,16 @@
     "categoria": "Encontro",
     "preco": 92.00,
     "descricao": "Essência Concentrada Encontro 30ml – frasco VIDRO com gotejador",
-    "descricaoOlfativa": ["frutal", "oriental"],
+    "descricaoOlfativa": [
+      "frutal",
+      "oriental"
+    ],
     "notas": "maçã, canela, laranja, cravo, pêssego, baunilha e musk",
     "modoUso": "Modo de uso: acrescente água em seu difusor elétrico e/ou ultrassônico (conforme indicação do fabricante), pingue de 8 a 12 gotas e ligue. Não é óleo essencial.",
-    "imagens": ["../img/imagens-catalogo/essencia-encontro-1.jpg", "../img/imagens-catalogo/essencia-catalogo-2.jpg"]
+    "imagens": [
+      "../img/imagens-catalogo/essencia-encontro-1.jpg",
+      "../img/imagens-catalogo/essencia-catalogo-2.jpg"
+    ]
   },
   {
     "id": "ENC06",
@@ -181,10 +277,16 @@
     "categoria": "Encontro",
     "preco": 140.00,
     "descricao": "Vela Aromática Encontro 170g. Feita com óleo de coco",
-    "descricaoOlfativa": ["frutal", "oriental"],
+    "descricaoOlfativa": [
+      "frutal",
+      "oriental"
+    ],
     "notas": "maçã, canela, laranja, cravo, pêssego, baunilha e musk",
     "modoUso": "Retire a tampa e acenda o pavio para que o perfume se dissipe pelo ambiente.",
-    "imagens": ["../img/imagens-catalogo/velas-aromaticas-encontro-1.jpg", "../img/imagens-catalogo/velas-aromaticas-encontro-2.jpg"]
+    "imagens": [
+      "../img/imagens-catalogo/velas-aromaticas-encontro-1.jpg",
+      "../img/imagens-catalogo/velas-aromaticas-encontro-2.jpg"
+    ]
   },
   {
     "id": "GAR02",
@@ -192,21 +294,33 @@
     "categoria": "Garbo",
     "preco": 112.00,
     "descricao": "Perfume de Ambiente / Home Spray Garbo 300ml - frasco PET",
-    "descricaoOlfativa": ["floral", "frutal"],
+    "descricaoOlfativa": [
+      "floral",
+      "frutal"
+    ],
     "notas": "cassis, pera, maçã, violeta, ameixa, muguet, musk e pêssego branco",
     "modoUso": "Aplicar sobre tecidos em geral (evitando couro e sintéticos), aproximadamente 30cm de distância, sem encharcar. ",
-    "imagens": ["../img/imagens-catalogo/home-spray-garbo-1.jpg", "../img/imagens-catalogo/home-spray-garbo-2.jpg"]
+    "imagens": [
+      "../img/imagens-catalogo/home-spray-garbo-1.jpg",
+      "../img/imagens-catalogo/home-spray-garbo-2.jpg"
+    ]
   },
   {
     "id": "GAR03",
     "nome": "Difusor de Varetas",
     "categoria": "Garbo",
-    "preco": 178.00,
+    "preco": 188.00,
     "descricao": "Difusor de aromas com varetas Garbo 240ml - frasco VIDRO",
-    "descricaoOlfativa": ["floral", "frutal"],
+    "descricaoOlfativa": [
+      "floral",
+      "frutal"
+    ],
     "notas": "cassis, pera, maçã, violeta, ameixa, muguet, musk e pêssego branco",
     "modoUso": "Retirar o vedante da tampa, encaixar novamente a tampa no frasco e colocar todas as varetas. Evite derramar o líquido nas superfícies, poderá manchar. Caso isso ocorra, limpe imediatamente.",
-    "imagens": ["../img/imagens-catalogo/difusor-de-varetas-garbo-1.jpg", "../img/imagens-catalogo/difusor-de-varetas-garbo-2.jpg"]
+    "imagens": [
+      "../img/imagens-catalogo/difusor-de-varetas-garbo-1.jpg",
+      "../img/imagens-catalogo/difusor-de-varetas-garbo-2.jpg"
+    ]
   },
   {
     "id": "GAR04",
@@ -214,10 +328,16 @@
     "categoria": "Garbo",
     "preco": 92.00,
     "descricao": "Essência Concentrada Garbo 30ml – frasco VIDRO com gotejador",
-    "descricaoOlfativa": ["floral", "frutal"],
+    "descricaoOlfativa": [
+      "floral",
+      "frutal"
+    ],
     "notas": "cassis, pera, maçã, violeta, ameixa, muguet, musk e pêssego branco",
     "modoUso": "Acrescente água em seu difusor elétrico e/ou ultrassônico (conforme indicação do fabricante), pingue de 8 a 12 gotas e ligue. Não é necessário agitar. Para difusores de varetas, pingue de 10 a 15 gotas diretamente no frasco e insira as varetas. Vire as varetas a cada 2 dias para potencializar a fragrância. Não é óleo essencial.",
-    "imagens": ["../img/imagens-catalogo/essencia-garbo-1.jpg", "../img/imagens-catalogo/essencia-catalogo-2.jpg"]
+    "imagens": [
+      "../img/imagens-catalogo/essencia-garbo-1.jpg",
+      "../img/imagens-catalogo/essencia-catalogo-2.jpg"
+    ]
   },
   {
     "id": "GAR05",
@@ -225,10 +345,16 @@
     "categoria": "Garbo",
     "preco": 108.00,
     "descricao": "Sabonete Líquido Transparente Garbo 240ml - frasco VIDRO",
-    "descricaoOlfativa": ["floral", "frutal"],
+    "descricaoOlfativa": [
+      "floral",
+      "frutal"
+    ],
     "notas": "cassis, pera, maçã, violeta, ameixa, muguet, musk e pêssego branco",
     "modoUso": "Aplicar o sabonete sobre a pele, massagear até fazer espuma cremosa. Pode ser usado no banho e/ou para lavar mãos e rosto. Limpa e mantém o PH natural da pele.",
-    "imagens": ["../img/imagens-catalogo/sabonete-liquido-garbo-1.jpg", "../img/imagens-catalogo/sabonete-liquido-garbo-2.jpg"]
+    "imagens": [
+      "../img/imagens-catalogo/sabonete-liquido-garbo-1.jpg",
+      "../img/imagens-catalogo/sabonete-liquido-garbo-2.jpg"
+    ]
   },
   {
     "id": "HAV02",
@@ -236,21 +362,32 @@
     "categoria": "Havana",
     "preco": 120.00,
     "descricao": "Perfume de Ambiente / Home Spray Havana 300ml - frasco PET",
-    "descricaoOlfativa": ["cítrico", "amadeirado"],
+    "descricaoOlfativa": [
+      "cítrico",
+      "amadeirado"
+    ],
     "notas": "ervas do mediterrâneo e limão siciliano",
     "modoUso": "Aplicar sobre tecidos em geral (evitando couro e sintéticos), aproximadamente 30cm de distância, sem encharcar.",
-    "imagens": ["../img/imagens-catalogo/home-spray-havana-1.jpg"]
+    "imagens": [
+      "../img/imagens-catalogo/home-spray-havana-1.jpg"
+    ]
   },
   {
     "id": "HAV03",
     "nome": "Difusor de Varetas",
     "categoria": "Havana",
-    "preco": 212.00,
+    "preco": 222.00,
     "descricao": "Difusor de aromas com varetas Havana 350ml - frasco VIDRO",
-    "descricaoOlfativa": ["cítrico", "amadeirado"],
+    "descricaoOlfativa": [
+      "cítrico",
+      "amadeirado"
+    ],
     "notas": "ervas do mediterrâneo e limão siciliano",
     "modoUso": "Retirar o vedante da tampa, encaixar novamente a tampa no frasco e colocar todas as varetas. Evite derramar o líquido nas superfícies, poderá manchar. Caso isso ocorra, limpe imediatamente.",
-    "imagens": ["../img/imagens-catalogo/difusor-de-varetas-havana-1.jpg", "../img/imagens-catalogo/difusor-de-varetas-havana-2.jpg"]
+    "imagens": [
+      "../img/imagens-catalogo/difusor-de-varetas-havana-1.jpg",
+      "../img/imagens-catalogo/difusor-de-varetas-havana-2.jpg"
+    ]
   },
   {
     "id": "HAV04",
@@ -258,10 +395,16 @@
     "categoria": "Havana",
     "preco": 95.00,
     "descricao": "Essência Concentrada Havana 30ml – frasco VIDRO com gotejador",
-    "descricaoOlfativa": ["cítrico", "amadeirado"],
+    "descricaoOlfativa": [
+      "cítrico",
+      "amadeirado"
+    ],
     "notas": "ervas do mediterrâneo e limão siciliano",
     "modoUso": "Acrescente água em seu difusor elétrico e/ou ultrassônico (conforme indicação do fabricante), pingue de 8 a 12 gotas e ligue.",
-    "imagens": ["../img/imagens-catalogo/essencia-havana-1.jpg", "../img/imagens-catalogo/essencia-catalogo-2.jpg"]
+    "imagens": [
+      "../img/imagens-catalogo/essencia-havana-1.jpg",
+      "../img/imagens-catalogo/essencia-catalogo-2.jpg"
+    ]
   },
   {
     "id": "HAV05",
@@ -269,10 +412,16 @@
     "categoria": "Havana",
     "preco": 165.00,
     "descricao": "Sabonete Líquido Dourado Havana 350ml - frasco VIDRO",
-    "descricaoOlfativa": ["cítrico", "amadeirado"],
+    "descricaoOlfativa": [
+      "cítrico",
+      "amadeirado"
+    ],
     "notas": "ervas do mediterrâneo e limão siciliano",
     "modoUso": "Aplicar o sabonete sobre a pele, massagear até fazer espuma cremosa. Pode ser usado no banho e/ou para lavar mãos e rosto. Limpa e mantém o PH natural da pele.",
-    "imagens": ["../img/imagens-catalogo/sabonete-liquido-havana-1.jpg", "../img/imagens-catalogo/sabonete-liquido-havana-2.jpg"]
+    "imagens": [
+      "../img/imagens-catalogo/sabonete-liquido-havana-1.jpg",
+      "../img/imagens-catalogo/sabonete-liquido-havana-2.jpg"
+    ]
   },
   {
     "id": "HAV06",
@@ -280,10 +429,16 @@
     "categoria": "Havana",
     "preco": 140.00,
     "descricao": "Vela aromática Havana 170g",
-    "descricaoOlfativa": ["cítrico", "amadeirado"],
+    "descricaoOlfativa": [
+      "cítrico",
+      "amadeirado"
+    ],
     "notas": "ervas do mediterrâneo e limão siciliano",
     "modoUso": "Retire a tampa e acenda o pavio para que o perfume se dissipe pelo ambiente.",
-    "imagens": ["../img/imagens-catalogo/velas-aromaticas-havana-1.jpg", "../img/imagens-catalogo/velas-aromaticas-havana-2.jpg"]
+    "imagens": [
+      "../img/imagens-catalogo/velas-aromaticas-havana-1.jpg",
+      "../img/imagens-catalogo/velas-aromaticas-havana-2.jpg"
+    ]
   },
   {
     "id": "HAV28",
@@ -291,32 +446,50 @@
     "categoria": "Havana",
     "preco": 68.00,
     "descricao": "Cartão Bolacha confeccionado com papel especial para receber aroma + frasco home spray 60ml.",
-    "descricaoOlfativa": ["cítrico", "amadeirado"],
+    "descricaoOlfativa": [
+      "cítrico",
+      "amadeirado"
+    ],
     "notas": "ervas do mediterrâneo e limão siciliano",
     "modoUso": "Vaporizar o aroma no cartão e pendurá-lo no retrovisor ou onde desejar. O aroma não deve ser aplicado sobre o couro dos bancos e nem sobre qualquer outra superfície, como plásticos, sintéticos ou semelhantes.",
-    "imagens": ["../img/imagens-catalogo/kit-carro-havana-1.jpg", "../img/imagens-catalogo/kit-carro-havana-2.jpg"]
+    "imagens": [
+      "../img/imagens-catalogo/kit-carro-havana-1.jpg",
+      "../img/imagens-catalogo/kit-carro-havana-2.jpg"
+    ]
   },
   {
-  "id": "HOR02",
-  "nome": "Aromatizador",
-  "categoria": "Hortênsia",
-  "preco": 106.00,
-  "descricao": "Perfume de Ambiente / Home Spray Hortênsia 300ml - frasco PET",
-  "descricaoOlfativa": ["floral", "doce"],
-  "notas": "gerânio, peônia, violeta, hortênsia e musk",
-  "modoUso": "Aplicar sobre tecidos em geral (evitando couro e sintéticos), aproximadamente 30cm de distância, sem encharcar. ",
-  "imagens": ["../img/imagens-catalogo/home-spray-hortensia-1.jpg", "../img/imagens-catalogo/home-spray-hortensia-2.jpg"]
+    "id": "HOR02",
+    "nome": "Aromatizador",
+    "categoria": "Hortênsia",
+    "preco": 106.00,
+    "descricao": "Perfume de Ambiente / Home Spray Hortênsia 300ml - frasco PET",
+    "descricaoOlfativa": [
+      "floral",
+      "doce"
+    ],
+    "notas": "gerânio, peônia, violeta, hortênsia e musk",
+    "modoUso": "Aplicar sobre tecidos em geral (evitando couro e sintéticos), aproximadamente 30cm de distância, sem encharcar. ",
+    "imagens": [
+      "../img/imagens-catalogo/home-spray-hortensia-1.jpg",
+      "../img/imagens-catalogo/home-spray-hortensia-2.jpg"
+    ]
   },
   {
     "id": "HOR03",
     "nome": "Difusor de Varetas",
     "categoria": "Hortênsia",
-    "preco": 150.00,
+    "preco": 160.00,
     "descricao": "Difusor de aromas com varetas Hortênsia 250ml - frasco VIDRO",
-    "descricaoOlfativa": ["floral", "doce"],
+    "descricaoOlfativa": [
+      "floral",
+      "doce"
+    ],
     "notas": "gerânio, peônia, violeta, hortênsia e musk",
     "modoUso": "Retirar o vedante da tampa, encaixar novamente a tampa no frasco e colocar todas as varetas. Evite derramar o líquido nas superfícies, poderá manchar. Caso isso ocorra, limpe imediatamente.",
-    "imagens": ["../img/imagens-catalogo/difusor-de-varetas-hortensia-1.jpg", "../img/imagens-catalogo/difusor-de-varetas-hortensia-2.jpg"]
+    "imagens": [
+      "../img/imagens-catalogo/difusor-de-varetas-hortensia-1.jpg",
+      "../img/imagens-catalogo/difusor-de-varetas-hortensia-2.jpg"
+    ]
   },
   {
     "id": "HOR04",
@@ -324,10 +497,16 @@
     "categoria": "Hortênsia",
     "preco": 92.00,
     "descricao": "Essência Concentrada Hortênsia 30ml – frasco VIDRO com gotejador",
-    "descricaoOlfativa": ["floral", "doce"],
+    "descricaoOlfativa": [
+      "floral",
+      "doce"
+    ],
     "notas": "gerânio, peônia, violeta, hortênsia e musk",
     "modoUso": "Acrescente água em seu difusor elétrico e/ou ultrassônico (conforme indicação do fabricante), pingue de 8 a 12 gotas e ligue. Não é óleo essencial.",
-    "imagens": ["../img/imagens-catalogo/essencia-hortensia-1.jpg", "../img/imagens-catalogo/essencia-catalogo-2.jpg"]
+    "imagens": [
+      "../img/imagens-catalogo/essencia-hortensia-1.jpg",
+      "../img/imagens-catalogo/essencia-catalogo-2.jpg"
+    ]
   },
   {
     "id": "HOR05",
@@ -335,10 +514,16 @@
     "categoria": "Hortênsia",
     "preco": 96.00,
     "descricao": "Sabonete Líquido Transparente Hortênsia 250ml - frasco VIDRO",
-    "descricaoOlfativa": ["floral", "doce"],
+    "descricaoOlfativa": [
+      "floral",
+      "doce"
+    ],
     "notas": "gerânio, peônia, violeta, hortênsia e musk",
     "modoUso": "Aplicar o sabonete sobre a pele, massagear até fazer espuma cremosa. Pode ser usado no banho e/ou para lavar mãos e rosto. Limpa e mantém o PH natural da pele.",
-    "imagens": ["../img/imagens-catalogo/sabonete-liquido-hortensia-1.jpg", "../img/imagens-catalogo/sabonete-liquido-hortensia-2.jpg"]
+    "imagens": [
+      "../img/imagens-catalogo/sabonete-liquido-hortensia-1.jpg",
+      "../img/imagens-catalogo/sabonete-liquido-hortensia-2.jpg"
+    ]
   },
   {
     "id": "JDF02",
@@ -346,21 +531,33 @@
     "categoria": "Jardins da França",
     "preco": 120.00,
     "descricao": "Perfume de Ambiente / Home Spray Jardins da França 300ml - frasco PET",
-    "descricaoOlfativa": ["floral", "agreste"],
+    "descricaoOlfativa": [
+      "floral",
+      "agreste"
+    ],
     "notas": "lavanda, alecrim, gerânio, menta, cashmere, jasmim, almíscar e âmbar",
     "modoUso": "Aplicar sobre tecidos em geral (evitando couro e sintéticos), aproximadamente 30cm de distância, sem encharcar. ",
-    "imagens": ["../img/imagens-catalogo/home-spray-jardins-da-franca-1.jpg", "../img/imagens-catalogo/home-spray-jardins-da-franca-2.png"]
+    "imagens": [
+      "../img/imagens-catalogo/home-spray-jardins-da-franca-1.jpg",
+      "../img/imagens-catalogo/home-spray-jardins-da-franca-2.png"
+    ]
   },
   {
     "id": "JDF03",
     "nome": "Difusor de Varetas",
     "categoria": "Jardins da França",
-    "preco": 246.00,
+    "preco": 256.00,
     "descricao": "Difusor de aromas com varetas Jardins da França 350ml - frasco VIDRO",
-    "descricaoOlfativa": ["floral", "agreste"],
+    "descricaoOlfativa": [
+      "floral",
+      "agreste"
+    ],
     "notas": "lavanda, alecrim, gerânio, menta, cashmere, jasmim, almíscar e âmbar",
     "modoUso": "Retirar o vedante da tampa, encaixar novamente a tampa no frasco e colocar todas as varetas. Evite derramar o líquido nas superfícies, poderá manchar. Caso isso ocorra, limpe imediatamente.",
-    "imagens": ["../img/imagens-catalogo/difusor-de-varetas-jardins-da-franca-1.jpg", "../img/imagens-catalogo/difusor-de-varetas-jardins-da-franca-2.jpg"]
+    "imagens": [
+      "../img/imagens-catalogo/difusor-de-varetas-jardins-da-franca-1.jpg",
+      "../img/imagens-catalogo/difusor-de-varetas-jardins-da-franca-2.jpg"
+    ]
   },
   {
     "id": "JDF04",
@@ -368,10 +565,16 @@
     "categoria": "Jardins da França",
     "preco": 95.00,
     "descricao": "Essência Concentrada Jardins da França 30ml – frasco VIDRO com gotejador",
-    "descricaoOlfativa": ["floral", "agreste"],
+    "descricaoOlfativa": [
+      "floral",
+      "agreste"
+    ],
     "notas": "lavanda, alecrim, gerânio, menta, cashmere, jasmim, almíscar e âmbar",
     "modoUso": "Acrescente água em seu difusor elétrico e/ou ultrassônico (conforme indicação do fabricante), pingue de 8 a 12 gotas e ligue. Não é óleo essencial.",
-    "imagens": ["../img/imagens-catalogo/essencia-jardins-da-franca-1.jpg", "../img/imagens-catalogo/essencia-catalogo-2.jpg"]
+    "imagens": [
+      "../img/imagens-catalogo/essencia-jardins-da-franca-1.jpg",
+      "../img/imagens-catalogo/essencia-catalogo-2.jpg"
+    ]
   },
   {
     "id": "JDF05",
@@ -379,10 +582,16 @@
     "categoria": "Jardins da França",
     "preco": 126.00,
     "descricao": "Sabonete Líquido Dourado Jardins da França 350ml - frasco VIDRO",
-    "descricaoOlfativa": ["floral", "agreste"],
+    "descricaoOlfativa": [
+      "floral",
+      "agreste"
+    ],
     "notas": "lavanda, alecrim, gerânio, menta, cashmere, jasmim, almíscar e âmbar",
     "modoUso": "Aplicar o sabonete sobre a pele, massagear até fazer espuma cremosa. Pode ser usado no banho e/ou para lavar mãos e rosto. Limpa e mantém o PH natural da pele.",
-    "imagens": ["../img/imagens-catalogo/sabonete-liquido-jardins-da-franca-1.jpg", "../img/imagens-catalogo/sabonete-liquido-jardins-da-franca-2.jpg"]
+    "imagens": [
+      "../img/imagens-catalogo/sabonete-liquido-jardins-da-franca-1.jpg",
+      "../img/imagens-catalogo/sabonete-liquido-jardins-da-franca-2.jpg"
+    ]
   },
   {
     "id": "JDF06",
@@ -390,10 +599,16 @@
     "categoria": "Jardins da França",
     "preco": 140.00,
     "descricao": "Vela aromática Jardins da França 170g",
-    "descricaoOlfativa": ["floral", "agreste"],
+    "descricaoOlfativa": [
+      "floral",
+      "agreste"
+    ],
     "notas": "lavanda, alecrim, gerânio, menta, cashmere, jasmim, almíscar e âmbar",
     "modoUso": "Retire a tampa e acenda o pavio para que o perfume se dissipe pelo ambiente.",
-    "imagens": ["../img/imagens-catalogo/velas-aromaticas-jardins-da-franca-1.jpg", "../img/imagens-catalogo/velas-aromaticas-jardins-da-franca-2.jpg"]
+    "imagens": [
+      "../img/imagens-catalogo/velas-aromaticas-jardins-da-franca-1.jpg",
+      "../img/imagens-catalogo/velas-aromaticas-jardins-da-franca-2.jpg"
+    ]
   },
   {
     "id": "LIL02",
@@ -401,21 +616,33 @@
     "categoria": "Lilás",
     "preco": 120.00,
     "descricao": "Perfume de Ambiente / Home Spray Lilás 300ml - frasco PET",
-    "descricaoOlfativa": ["aromático", "fougère"],
+    "descricaoOlfativa": [
+      "aromático",
+      "fougère"
+    ],
     "notas": "limão, lavanda, bergamota, gerânio, estragão, rosa, patchouly, vetiver, cumaru e musk",
     "modoUso": "Aplicar sobre tecidos em geral (evitando couro e sintéticos), aproximadamente 30cm de distância, sem encharcar. ",
-    "imagens": ["../img/imagens-catalogo/home-spray-lilas-1.jpg", "../img/imagens-catalogo/home-spray-lilas-2.jpg"]
+    "imagens": [
+      "../img/imagens-catalogo/home-spray-lilas-1.jpg",
+      "../img/imagens-catalogo/home-spray-lilas-2.jpg"
+    ]
   },
   {
     "id": "LIL03",
     "nome": "Difusor de Varetas",
     "categoria": "Lilás",
-    "preco": 178.00,
+    "preco": 188.00,
     "descricao": "Difusor de aromas com varetas Lilás 200ml - frasco VIDRO",
-    "descricaoOlfativa": ["aromático", "fougère"],
+    "descricaoOlfativa": [
+      "aromático",
+      "fougère"
+    ],
     "notas": "limão, lavanda, bergamota, gerânio, estragão, rosa, patchouly, vetiver, cumaru e musk",
     "modoUso": "Retirar o vedante da tampa, encaixar novamente a tampa no frasco e colocar todas as varetas. Evite derramar o líquido nas superfícies, poderá manchar. Caso isso ocorra, limpe imediatamente.",
-    "imagens": ["../img/imagens-catalogo/difusor-de-varetas-lilas-1.jpg", "../img/imagens-catalogo/difusor-de-varetas-lilas-2.jpg"]
+    "imagens": [
+      "../img/imagens-catalogo/difusor-de-varetas-lilas-1.jpg",
+      "../img/imagens-catalogo/difusor-de-varetas-lilas-2.jpg"
+    ]
   },
   {
     "id": "LIL04",
@@ -423,10 +650,16 @@
     "categoria": "Lilás",
     "preco": 95.00,
     "descricao": "Essência Concentrada Lilás 30ml – frasco VIDRO com gotejador",
-    "descricaoOlfativa": ["aromático", "sfougère"],
+    "descricaoOlfativa": [
+      "aromático",
+      "sfougère"
+    ],
     "notas": "limão, lavanda, bergamota, gerânio, estragão, rosa, patchouly, vetiver, cumaru e musk",
     "modoUso": "Acrescente água em seu difusor elétrico e/ou ultrassônico (conforme indicação do fabricante), pingue de 8 a 12 gotas e ligue. Não é óleo essencial.",
-    "imagens": ["../img/imagens-catalogo/essencia-lilas-1.jpg", "../img/imagens-catalogo/essencia-catalogo-2.jpg"]
+    "imagens": [
+      "../img/imagens-catalogo/essencia-lilas-1.jpg",
+      "../img/imagens-catalogo/essencia-catalogo-2.jpg"
+    ]
   },
   {
     "id": "LIL28",
@@ -434,10 +667,15 @@
     "categoria": "Lilás",
     "preco": 68.00,
     "descricao": "Cartão Bolacha confeccionado com papel especial para receber aroma + frasco home spray 60ml.",
-    "descricaoOlfativa": ["aromático", "fougère"],
+    "descricaoOlfativa": [
+      "aromático",
+      "fougère"
+    ],
     "notas": "limão, lavanda, bergamota, gerânio, estragão, rosa, patchouly, vetiver, cumaru e musk",
     "modoUso": "Vaporizar o aroma no cartão e pendurá-lo no retrovisor ou onde desejar. O aroma não deve ser aplicado sobre o couro dos bancos e nem sobre qualquer outra superfície, como plásticos, sintéticos ou semelhantes.",
-    "imagens": ["../img/imagens-catalogo/kit-carro-havana-2.jpg"]
+    "imagens": [
+      "../img/imagens-catalogo/kit-carro-havana-2.jpg"
+    ]
   },
   {
     "id": "MCA02",
@@ -445,21 +683,33 @@
     "categoria": "Monte Carlo",
     "preco": 120.00,
     "descricao": "Perfume de Ambiente / Home Spray Monte Carlo 300ml - frasco PET",
-    "descricaoOlfativa": ["chypre", "madeira"],
+    "descricaoOlfativa": [
+      "chypre",
+      "madeira"
+    ],
     "notas": "tangerina, noz moscada, gerânio, patchouly, almíscar, vetiver e musgo de carvalho",
     "modoUso": "Aplicar sobre tecidos em geral (evitando couro e sintéticos), aproximadamente 30cm de distância, sem encharcar. ",
-    "imagens": ["../img/imagens-catalogo/home-spray-monte-carlo-1.jpg", "../img/imagens-catalogo/home-spray-monte-carlo-2.jpg"]
+    "imagens": [
+      "../img/imagens-catalogo/home-spray-monte-carlo-1.jpg",
+      "../img/imagens-catalogo/home-spray-monte-carlo-2.jpg"
+    ]
   },
   {
     "id": "MCA03",
     "nome": "Difusor de Varetas",
     "categoria": "Monte Carlo",
-    "preco": 222.00,
+    "preco": 232.00,
     "descricao": "Difusor de aromas com varetas Monte Carlo 350ml - frasco VIDRO",
-    "descricaoOlfativa": ["chypre", "madeira"],
+    "descricaoOlfativa": [
+      "chypre",
+      "madeira"
+    ],
     "notas": "tangerina, noz moscada, gerânio, patchouly, almíscar, vetiver e musgo de carvalho",
     "modoUso": "Retirar o vedante da tampa, encaixar novamente a tampa no frasco e colocar todas as varetas. Evite derramar o líquido nas superfícies, poderá manchar. Caso isso ocorra, limpe imediatamente.",
-    "imagens": ["../img/imagens-catalogo/difusor-de-varetas-monte-carlo-1.jpg", "../img/imagens-catalogo/difusor-de-varetas-monte-carlo-2.jpg"]
+    "imagens": [
+      "../img/imagens-catalogo/difusor-de-varetas-monte-carlo-1.jpg",
+      "../img/imagens-catalogo/difusor-de-varetas-monte-carlo-2.jpg"
+    ]
   },
   {
     "id": "MCA04",
@@ -467,10 +717,16 @@
     "categoria": "Monte Carlo",
     "preco": 95.00,
     "descricao": "Essência Concentrada Monte Carlo 30ml – frasco VIDRO com gotejador",
-    "descricaoOlfativa": ["chypre", "madeira"],
+    "descricaoOlfativa": [
+      "chypre",
+      "madeira"
+    ],
     "notas": "tangerina, noz moscada, gerânio, patchouly, almíscar, vetiver e musgo de carvalho",
     "modoUso": "Acrescente água em seu difusor elétrico e/ou ultrassônico (conforme indicação do fabricante), pingue de 8 a 12 gotas e ligue. Não é óleo essencial.",
-    "imagens": ["../img/imagens-catalogo/essencia-monte-carlo-1.jpg", "../img/imagens-catalogo/essencia-catalogo-2.jpg"]
+    "imagens": [
+      "../img/imagens-catalogo/essencia-monte-carlo-1.jpg",
+      "../img/imagens-catalogo/essencia-catalogo-2.jpg"
+    ]
   },
   {
     "id": "MCA28",
@@ -478,10 +734,15 @@
     "categoria": "Monte Carlo",
     "preco": 68.00,
     "descricao": "Cartão Bolacha confeccionado com papel especial para receber aroma + frasco home spray 60ml.",
-    "descricaoOlfativa": ["chypre", "madeira"],
+    "descricaoOlfativa": [
+      "chypre",
+      "madeira"
+    ],
     "notas": "tangerina, noz moscada, gerânio, patchouly, almíscar, vetiver e musgo de carvalho",
     "modoUso": "Vaporizar o aroma no cartão e pendurá-lo no retrovisor ou onde desejar. O aroma não deve ser aplicado sobre o couro dos bancos e nem sobre qualquer outra superfície, como plásticos, sintéticos ou semelhantes.",
-    "imagens": ["../img/imagens-catalogo/kit-carro-monte-carlo-1.jpg"]
+    "imagens": [
+      "../img/imagens-catalogo/kit-carro-monte-carlo-1.jpg"
+    ]
   },
   {
     "id": "PAT02",
@@ -489,20 +750,32 @@
     "categoria": "Patchouly",
     "preco": 106.00,
     "descricao": "Perfume de Ambiente / Home Spray Patchouly 300ml - frasco PET",
-    "descricaoOlfativa": ["amadeirado", "oriental"],
+    "descricaoOlfativa": [
+      "amadeirado",
+      "oriental"
+    ],
     "notas": "bergamota, lavanda, gerânio, cravo, muguet, cedro e patchouly",
     "modoUso": "Aplicar sobre tecidos em geral (evitando couro e sintéticos), aproximadamente 30cm de distância, sem encharcar. ",
-    "imagens": ["../img/imagens-catalogo/home-spray-patchouly-1.jpg", "../img/imagens-catalogo/home-spray-patchouly-2.jpg"]
+    "imagens": [
+      "../img/imagens-catalogo/home-spray-patchouly-1.jpg",
+      "../img/imagens-catalogo/home-spray-patchouly-2.jpg"
+    ]
   },
   {
     "id": "PAT03",
     "nome": "Difusor de Varetas",
     "categoria": "Patchouly",
-    "preco": 147.00,
+    "preco": 157.00,
     "descricao": "Difusor de aromas com varetas Patchouly 250ml - frasco VIDRO",
-    "descricaoOlfativa": ["amadeirado", "oriental"],
+    "descricaoOlfativa": [
+      "amadeirado",
+      "oriental"
+    ],
     "notas": "bergamota, lavanda, gerânio, cravo, muguet, cedro e patchouly",
     "modoUso": "Retirar o vedante da tampa, encaixar novamente a tampa no frasco e colocar todas as varetas. Evite derramar o líquido nas superfícies, poderá manchar. Caso isso ocorra, limpe imediatamente.",
-    "imagens": ["../img/imagens-catalogo/difusor-de-varetas-patchouly-1.jpg", "../img/imagens-catalogo/difusor-de-varetas-patchouly-2.jpg"]
+    "imagens": [
+      "../img/imagens-catalogo/difusor-de-varetas-patchouly-1.jpg",
+      "../img/imagens-catalogo/difusor-de-varetas-patchouly-2.jpg"
+    ]
   }
 ]

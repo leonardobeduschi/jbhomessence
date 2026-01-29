@@ -41,15 +41,15 @@ async function loadProducts() {
  */
 function renderCategoria(nomeCategoria) {
   const filtered = allProducts.filter(p => p.categoria === nomeCategoria);
-  
+
   grid.innerHTML = '';
-  
+
   if (filtered.length === 0) {
     grid.innerHTML = '<p class="no-products">Nenhum produto encontrado nesta categoria.</p>';
     resultsCount.textContent = '0 produtos encontrados';
     return;
   }
-  
+
   filtered.forEach(p => grid.appendChild(createCard(p)));
   resultsCount.textContent = `${filtered.length} produto${filtered.length !== 1 ? 's' : ''} encontrado${filtered.length !== 1 ? 's' : ''}`;
 }
@@ -68,12 +68,12 @@ function createCard(product) {
            alt="${product.nome}" 
            class="card-img main" 
            loading="lazy">
-      ${product.imagens[1] ? 
-        `<img src="${product.imagens[1]}" 
+      ${product.imagens[1] ?
+      `<img src="${product.imagens[1]}" 
               alt="${product.nome} - vista alternativa" 
               class="card-img hover" 
-              loading="lazy">` 
-        : ''}
+              loading="lazy">`
+      : ''}
     </div>
     <div class="card-body">
       <h3 class="card-title">${product.nome}</h3>
@@ -93,12 +93,12 @@ function createCard(product) {
 function openModal(product) {
   currentProduct = product;
   currentImageIndex = 0;
-  
+
   const whatsappMessage = encodeURIComponent(
     `Olá! Gostaria de fazer um pedido do produto: ${product.nome} - ${product.categoria}`
   );
   const whatsappLink = `https://wa.me/47997152830?text=${whatsappMessage}`;
-  
+
   modalContent.innerHTML = `
     <div class="modal-images-column">
       <div class="modal-main-image" onclick="openLightbox(0)">
@@ -131,9 +131,9 @@ function openModal(product) {
         <div class="modal-section">
           <h4>Descrição Olfativa</h4>
           <div class="modal-tags">
-            ${product.descricaoOlfativa.map(tag => 
-              `<span class="modal-tag">${tag}</span>`
-            ).join('')}
+            ${product.descricaoOlfativa.map(tag =>
+    `<span class="modal-tag">${tag}</span>`
+  ).join('')}
           </div>
         </div>
       ` : ''}
@@ -186,10 +186,10 @@ function openModal(product) {
 function changeModalImage(imgSrc, element, index) {
   const mainImg = document.getElementById('modal-main-img');
   if (!mainImg) return;
-  
+
   mainImg.src = imgSrc;
   currentImageIndex = index;
-  
+
   document.querySelectorAll('.modal-thumbnail').forEach(thumb => {
     thumb.classList.remove('active');
   });
@@ -211,13 +211,13 @@ function closeModal() {
  */
 function openLightbox(index) {
   if (!currentProduct || !currentProduct.imagens) return;
-  
+
   currentImageIndex = index;
-  
+
   const lightbox = document.createElement('div');
   lightbox.id = 'lightbox-overlay';
   lightbox.className = 'lightbox-overlay';
-  
+
   lightbox.innerHTML = `
     <button class="lightbox-close" onclick="closeLightbox()" aria-label="Fechar">×</button>
     ${currentProduct.imagens.length > 1 ? `
@@ -235,17 +235,17 @@ function openLightbox(index) {
       <div class="lightbox-counter">${index + 1} / ${currentProduct.imagens.length}</div>
     </div>
   `;
-  
+
   document.body.appendChild(lightbox);
   document.body.style.overflow = 'hidden';
-  
+
   // Fecha ao clicar fora da imagem
   lightbox.addEventListener('click', (e) => {
     if (e.target === lightbox) {
       closeLightbox();
     }
   });
-  
+
   // Animação de entrada
   setTimeout(() => lightbox.classList.add('active'), 10);
 }
@@ -256,7 +256,7 @@ function openLightbox(index) {
 function closeLightbox() {
   const lightbox = document.getElementById('lightbox-overlay');
   if (!lightbox) return;
-  
+
   lightbox.classList.remove('active');
   setTimeout(() => {
     lightbox.remove();
@@ -269,19 +269,19 @@ function closeLightbox() {
  */
 function navigateLightbox(direction) {
   if (!currentProduct || !currentProduct.imagens) return;
-  
+
   currentImageIndex += direction;
-  
+
   // Loop circular
   if (currentImageIndex < 0) {
     currentImageIndex = currentProduct.imagens.length - 1;
   } else if (currentImageIndex >= currentProduct.imagens.length) {
     currentImageIndex = 0;
   }
-  
+
   const lightboxImg = document.getElementById('lightbox-img');
   const counter = document.querySelector('.lightbox-counter');
-  
+
   if (lightboxImg) {
     lightboxImg.style.opacity = '0';
     setTimeout(() => {
@@ -318,7 +318,7 @@ document.addEventListener('keydown', (e) => {
     }
     return;
   }
-  
+
   // Modal
   if (e.key === 'Escape' && modalOverlay.classList.contains('active')) {
     closeModal();
@@ -329,9 +329,9 @@ document.addEventListener('keydown', (e) => {
 
 document.addEventListener('DOMContentLoaded', async () => {
   console.log('🚀 Inicializando catálogo...');
-  
+
   // Carrega produtos do JSON
   await loadProducts();
-  
+
   console.log('✅ Catálogo inicializado com sucesso!');
 });

@@ -1,47 +1,47 @@
 // Dados de exemplo
 const feedbacksData = [
     {
-            name: "Rogerio Quinto",
-            date: "12/09/2025",
-            rating: 5,
-            comment: "Um ótimo atendimento, do início ao fim, a equipe da JB foi muito atenciosa e prestaram um ótimo serviço. Usei os seus aromas no meu escritório, que por sinal fez muito sucesso com meus clientes.",
-            avatar: "img/testimonials/cliente-rogerio-quinto-depoimento.png"
-        },
-        {
-            name: "Lucas Henrique",
-            date: "29/09/2025",
-            rating: 5,
-            comment: "Simplesmente maravilhoso! Me ajudaram na escolha do presente e também comprei um kit com difusor de aromas e sabonete liquido muito cheiroso aqui pra casa",
-            avatar: "img/testimonials/cliente-lucas-henrique-depoimento.png"
-        },
-        {
-            name: "Betina Pezzini da Veiga",
-            date: "02/10/2025",
-            rating: 5,
-            comment: "Estava procurando aromatizadores e essências para usar aqui para casa e encontrei a JB. Os cheirinhos são maravilhosos e fixam bastante. Super indico!",
-            avatar: "img/testimonials/cliente-betina-pezzini-depoimento.png"
-        },
-        {
-            name: "Eduarda Schnaider",
-            date: "10/06/2025",
-            rating: 5,
-            comment: "Qualidade dos produtos são de outro mundo, a fixação é perfeita e o atendimento incrível, fui muito bem atendida, já comprei duas vezes e continuarei comprando!!!",
-            avatar: "img/testimonials/cliente-eduarda-schnaider-depoimento.png"
-        },
-	    {
-            name: "GIO",
-            date: "25/06/2025",
-            rating: 5,
-            comment: "Viajei de São Paulo até balneário e uma das maiores surpresas foi este loja, com um atendimento tão atencioso e delicado como os aromas que eles nos trazem. Nunca imaginei o tamanho da importância olfativa para diferentes ambientes até então.",
-            avatar: "img/testimonials/cliente-GIO-depoimento.png"
-        },
-	    {
-            name: "Emília wetter",
-            date: "10/06/2024",
-            rating: 5,
-            comment: "Produtos de qualidade impecável e atendimento excelente!",
-            avatar: "img/testimonials/cliente-emilia-wetter-depoimento.png"
-        }
+        name: "Rogerio Quinto",
+        date: "12/09/2025",
+        rating: 5,
+        comment: "Um ótimo atendimento, do início ao fim, a equipe da JB foi muito atenciosa e prestaram um ótimo serviço. Usei os seus aromas no meu escritório, que por sinal fez muito sucesso com meus clientes.",
+        avatar: "img/testimonials/cliente-rogerio-quinto-depoimento.png"
+    },
+    {
+        name: "Lucas Henrique",
+        date: "29/09/2025",
+        rating: 5,
+        comment: "Simplesmente maravilhoso! Me ajudaram na escolha do presente e também comprei um kit com difusor de aromas e sabonete liquido muito cheiroso aqui pra casa",
+        avatar: "img/testimonials/cliente-lucas-henrique-depoimento.png"
+    },
+    {
+        name: "Betina Pezzini da Veiga",
+        date: "02/10/2025",
+        rating: 5,
+        comment: "Estava procurando aromatizadores e essências para usar aqui para casa e encontrei a JB. Os cheirinhos são maravilhosos e fixam bastante. Super indico!",
+        avatar: "img/testimonials/cliente-betina-pezzini-depoimento.png"
+    },
+    {
+        name: "Eduarda Schnaider",
+        date: "10/06/2025",
+        rating: 5,
+        comment: "Qualidade dos produtos são de outro mundo, a fixação é perfeita e o atendimento incrível, fui muito bem atendida, já comprei duas vezes e continuarei comprando!!!",
+        avatar: "img/testimonials/cliente-eduarda-schnaider-depoimento.png"
+    },
+    {
+        name: "GIO",
+        date: "25/06/2025",
+        rating: 5,
+        comment: "Viajei de São Paulo até balneário e uma das maiores surpresas foi este loja, com um atendimento tão atencioso e delicado como os aromas que eles nos trazem. Nunca imaginei o tamanho da importância olfativa para diferentes ambientes até então.",
+        avatar: "img/testimonials/cliente-GIO-depoimento.png"
+    },
+    {
+        name: "Emília wetter",
+        date: "10/06/2024",
+        rating: 5,
+        comment: "Produtos de qualidade impecável e atendimento excelente!",
+        avatar: "img/testimonials/cliente-emilia-wetter-depoimento.png"
+    }
 ];
 
 // manter feedbacksData como você forneceu
@@ -51,7 +51,7 @@ class FeedbackCarousel {
     constructor() {
         this.currentIndex = 0;
         this.cardsPerView = this.getCardsPerView();
-        this.autoplayInterval = 3500;
+        this.autoplayInterval = 5000;
         this.autoplayTimer = null;
 
         // elementos serão atribuídos após render
@@ -96,7 +96,7 @@ class FeedbackCarousel {
                     </div>
                 </div>
                 <div class="stars">
-                    ${Array.from({length:5}).map((_,i)=> `<span class="star">${i < f.rating ? '★':'☆'}</span>`).join('')}
+                    ${Array.from({ length: 5 }).map((_, i) => `<span class="star">${i < f.rating ? '★' : '☆'}</span>`).join('')}
                 </div>
                 <div class="feedback-text">"${f.comment}"</div>
             </div>
@@ -229,13 +229,13 @@ class FeedbackCarousel {
             this.touch.startX = e.touches[0].clientX;
             // pausa autoplay enquanto arrasta
             this.stopAutoPlay();
-        }, {passive: true});
+        }, { passive: true });
 
         // touchmove -> apenas previne comportamento padrão se precisar
         track.addEventListener('touchmove', (e) => {
             if (!this.touch.isTouching) return;
             // não fazemos transform dinâmico aqui para simplificar; apenas aguardamos o fim do gesto
-        }, {passive: true});
+        }, { passive: true });
 
         // touchend
         track.addEventListener('touchend', (e) => {
@@ -266,7 +266,7 @@ class FeedbackCarousel {
             this.updateCarouselPosition();
             // reinicia autoplay após interação
             this.startAutoPlay();
-        }, {passive: true});
+        }, { passive: true });
     }
 }
 
