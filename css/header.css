@@ -1,7 +1,7 @@
 header {
-  background: 
+  background:
     linear-gradient(-45deg, rgba(107, 124, 110, 0.7), rgba(95, 75, 59, 0.7), rgba(142, 177, 153, 0.7), rgba(127, 100, 73, 0.7)),
-    url('../img/ui/banner-jb-home-essence-homepage-1.png') center/cover no-repeat;
+    url('../img/ui/banner-jb-home-essence-homepage-2.png') center/cover no-repeat;
   background-size: 400% 400%, cover;
   background-blend-mode: overlay;
   animation: gradient 40s ease infinite;
@@ -9,9 +9,11 @@ header {
   color: #ffffff;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end; /* Alterado para alinhar conteúdo na parte inferior */
+  justify-content: flex-end;
+  /* Alterado para alinhar conteúdo na parte inferior */
   align-items: center;
-  padding: 120px 20px 100px; /* Aumentei o padding inferior para os botões */
+  padding: 120px 20px 100px;
+  /* Aumentei o padding inferior para os botões */
   position: relative;
   overflow: hidden;
   padding-top: 100px;
@@ -24,7 +26,8 @@ header::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4); /* Aumentei a opacidade para melhor contraste */
+  background: rgba(0, 0, 0, 0.4);
+  /* Aumentei a opacidade para melhor contraste */
   z-index: 0;
 }
 
@@ -39,9 +42,11 @@ header.blog-header {
   0% {
     background-position: 0% 50%, center;
   }
+
   50% {
     background-position: 100% 50%, center;
   }
+
   100% {
     background-position: 0% 50%, center;
   }
@@ -53,7 +58,8 @@ header.blog-header {
   z-index: 1;
   width: 100%;
   max-width: 1200px;
-  padding-bottom: 0px; /* Espaço extra na parte inferior */
+  padding-bottom: 0px;
+  /* Espaço extra na parte inferior */
 }
 
 .header-buttons {
@@ -76,7 +82,8 @@ header.blog-header {
   border: 1.5px solid #000000;
   padding: 14px 32px;
   text-decoration: none;
-  border-radius: 0; /* Removido border-radius para ficar quadrado */
+  border-radius: 0;
+  /* Removido border-radius para ficar quadrado */
   transition: all 0.6s ease;
   position: relative;
   white-space: nowrap;
@@ -89,7 +96,8 @@ header.blog-header {
 
 /* Removido o efeito de gradiente anterior */
 .header-content a::before {
-  display: none; /* Removido o pseudo-elemento anterior */
+  display: none;
+  /* Removido o pseudo-elemento anterior */
 }
 
 .header-content a:hover {
@@ -108,17 +116,17 @@ header.blog-header {
     background-position: center center;
     justify-content: flex-end;
   }
-  
+
   .header-content {
     padding-bottom: 60px;
   }
-  
+
   .header-buttons {
     flex-direction: column;
     align-items: center;
     gap: 15px;
   }
-  
+
   .header-content a {
     width: 90%;
     max-width: 280px;
@@ -133,11 +141,11 @@ header.blog-header {
     min-height: 70vh;
     padding: 80px 15px 70px;
   }
-  
+
   .header-content {
     padding-bottom: 50px;
   }
-  
+
   .header-content a {
     width: 95%;
     max-width: 250px;
@@ -153,7 +161,7 @@ header.blog-header {
   header {
     background-size: 400% 400%, 100% 100%;
   }
-  
+
   .header-content a {
     padding: 16px 36px;
     font-size: 0.95rem;
@@ -176,32 +184,41 @@ section h5 {
   text-align: center;
 }
 
-section p, section li, section ol {
+section p,
+section li,
+section ol {
   max-width: 800px;
   margin: auto;
   text-align: center;
   font-size: 1.1rem;
 }
+
 /* Carousel styles moved to css/quem-somos.css to keep section-specific styles separated */
 
 /* Para tablets */
 @media (max-width: 768px) {
   .header-content h1 {
-    font-size: 1rem; /* Tamanho legível */
+    font-size: 1rem;
+    /* Tamanho legível */
     margin-bottom: 30px;
   }
+
   .header-content h2 {
-    font-size: 3.2rem; /* Reduzido mas ainda maior que h1 */
+    font-size: 3.2rem;
+    /* Reduzido mas ainda maior que h1 */
   }
 }
 
 /* Para celulares */
 @media (max-width: 480px) {
   .header-content h1 {
-    font-size: 1.1rem; /* Menor que h2 */
+    font-size: 1.1rem;
+    /* Menor que h2 */
     margin-bottom: 20px;
   }
+
   .header-content h2 {
-    font-size: 2.8rem; /* Maior que h1 */
+    font-size: 2.8rem;
+    /* Maior que h1 */
   }
 }
