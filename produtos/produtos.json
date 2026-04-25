@@ -1,9 +1,9 @@
-[
+﻿[
   {
     "id": "ABR01",
     "nome": "Água Perfumada",
     "categoria": "Abbraccio",
-    "preco": 97.00,
+    "preco": 97,
     "descricao": "Água Perfumada Abbraccio 500ml",
     "descricaoOlfativa": [
       "cítrico",
@@ -14,13 +14,14 @@
     "imagens": [
       "../img/imagens-catalogo/aguaperfumada-abbraccio-1.jpg",
       "../img/imagens-catalogo/aguaperfumada-abbraccio-2.jpg"
-    ]
+    ],
+    "disponivel": true
   },
   {
     "id": "ADB02",
-    "nome": "Aromatizador",
+    "nome": "Home Spray",
     "categoria": "Aroma do Bebê",
-    "preco": 106.00,
+    "preco": 106,
     "descricao": "Água Perfumada para Roupas Aroma do Bebê 300ml - frasco PET",
     "descricaoOlfativa": [
       "herbal",
@@ -31,13 +32,14 @@
     "imagens": [
       "../img/imagens-catalogo/home-spray-300ml-aroma-do-bebe-1.jpg",
       "../img/imagens-catalogo/home-spray-300ml-aroma-do-bebe-2.jpg"
-    ]
+    ],
+    "disponivel": true
   },
   {
     "id": "ADB03",
     "nome": "Difusor de Varetas",
     "categoria": "Aroma do Bebê",
-    "preco": 152.00,
+    "preco": 152,
     "descricao": "Difusor de aromas com varetas Aroma do Bebê 200ml - frasco VIDRO",
     "descricaoOlfativa": [
       "herbal",
@@ -48,13 +50,14 @@
     "imagens": [
       "../img/imagens-catalogo/difusor-de-varetas-aroma-do-bebe-1.jpg",
       "../img/imagens-catalogo/difusor-de-varetas-aroma-do-bebe-2.jpg"
-    ]
+    ],
+    "disponivel": true
   },
   {
     "id": "BAG02",
-    "nome": "Aromatizador",
+    "nome": "Home Spray",
     "categoria": "Bambu Garden",
-    "preco": 106.00,
+    "preco": 106,
     "descricao": "Perfume de Ambiente / Home Spray Bambu Garden 300ml - frasco PET",
     "descricaoOlfativa": [
       "floral",
@@ -65,13 +68,14 @@
     "imagens": [
       "../img/imagens-catalogo/home-spray-bambu-garden-1.jpg",
       "../img/imagens-catalogo/home-spray-bambu-garden-2.jpg"
-    ]
+    ],
+    "disponivel": true
   },
   {
     "id": "BAG03",
     "nome": "Difusor de Varetas",
     "categoria": "Bambu Garden",
-    "preco": 166.00,
+    "preco": 166,
     "descricao": "Difusor de aromas com varetas Bambu Garden 200ml - frasco VIDRO",
     "descricaoOlfativa": [
       "floral",
@@ -82,13 +86,14 @@
     "imagens": [
       "../img/imagens-catalogo/difusor-de-varetas-bambu-garden-1.jpg",
       "../img/imagens-catalogo/difusor-de-varetas-bambu-garden-2.jpg"
-    ]
+    ],
+    "disponivel": true
   },
   {
     "id": "BAG05",
     "nome": "Sabonete Líquido",
     "categoria": "Bambu Garden",
-    "preco": 96.00,
+    "preco": 96,
     "descricao": "Sabonete Líquido Transparente Bambu Garden 200ml",
     "descricaoOlfativa": [
       "floral",
@@ -99,14 +104,15 @@
     "imagens": [
       "../img/imagens-catalogo/sabonete-liquido-bambu-garden-1.jpg",
       "../img/imagens-catalogo/sabonete-liquido-bambu-garden-2.jpg"
-    ]
+    ],
+    "disponivel": true
   },
   {
     "id": "BAG04",
     "nome": "Essência",
     "categoria": "Bambu Garden",
-    "preco": 92.00,
-    "descricao": "Essência Concentrada Bambu Garden 30ml – frasco VIDRO com gotejador",
+    "preco": 92,
+    "descricao": "Essência Concentrada Bambu Garden 30ml ? frasco VIDRO com gotejador",
     "descricaoOlfativa": [
       "floral",
       "amadeirado"
@@ -116,13 +122,14 @@
     "imagens": [
       "../img/imagens-catalogo/essencia-bambu-garden-1.jpg",
       "../img/imagens-catalogo/essencia-catalogo-2.jpg"
-    ]
+    ],
+    "disponivel": true
   },
   {
     "id": "CAS02",
-    "nome": "Aromatizador",
+    "nome": "Home Spray",
     "categoria": "Capim Santo",
-    "preco": 106.00,
+    "preco": 106,
     "descricao": "Home Spray Capim Santo 300ml",
     "descricaoOlfativa": [
       "herbal",
@@ -133,13 +140,14 @@
     "imagens": [
       "../img/imagens-catalogo/home-spray-capim-santo-1.jpg",
       "../img/imagens-catalogo/home-spray-capim-santo-2.jpg"
-    ]
+    ],
+    "disponivel": true
   },
   {
     "id": "CAS03",
     "nome": "Difusor de Varetas",
     "categoria": "Capim Santo",
-    "preco": 159.00,
+    "preco": 159,
     "descricao": "Difusor de Varetas Capim Santo 200ml",
     "descricaoOlfativa": [
       "herbal",
@@ -150,13 +158,14 @@
     "imagens": [
       "../img/imagens-catalogo/difusor-de-varetas-capim-santo-1.jpg",
       "../img/imagens-catalogo/difusor-de-varetas-capim-santo-2.jpg"
-    ]
+    ],
+    "disponivel": true
   },
   {
     "id": "CAS05",
     "nome": "Sabonete Líquido",
     "categoria": "Capim Santo",
-    "preco": 96.00,
+    "preco": 96,
     "descricao": "Sabonete Líquido Capim Santo 200ml",
     "descricaoOlfativa": [
       "herbal",
@@ -167,14 +176,15 @@
     "imagens": [
       "../img/imagens-catalogo/sabonete-liquido-capim-santo-1.jpg",
       "../img/imagens-catalogo/sabonete-liquido-capim-santo-2.jpg"
-    ]
+    ],
+    "disponivel": false
   },
   {
     "id": "CAS04",
     "nome": "Essência",
     "categoria": "Capim Santo",
-    "preco": 92.00,
-    "descricao": "Essência Concentrada Capim Santo 30ml – frasco VIDRO com gotejador",
+    "preco": 92,
+    "descricao": "Essência Concentrada Capim Santo 30ml ? frasco VIDRO com gotejador",
     "descricaoOlfativa": [
       "herbal",
       "cítrico"
@@ -184,13 +194,14 @@
     "imagens": [
       "../img/imagens-catalogo/essencia-capim-santo-1.jpg",
       "../img/imagens-catalogo/essencia-catalogo-2.jpg"
-    ]
+    ],
+    "disponivel": true
   },
   {
     "id": "DIV02",
-    "nome": "Aromatizador",
+    "nome": "Home Spray",
     "categoria": "Divina Vanilla",
-    "preco": 112.00,
+    "preco": 112,
     "descricao": "Perfume de Ambiente / Home Spray Divina Vanilla 300ml - frasco PET",
     "descricaoOlfativa": [
       "oriental",
@@ -201,13 +212,14 @@
     "imagens": [
       "../img/imagens-catalogo/home-spray-divina-vanilla-1.jpg",
       "../img/imagens-catalogo/home-spray-divina-vanilla-2.jpg"
-    ]
+    ],
+    "disponivel": true
   },
   {
     "id": "DIV03",
     "nome": "Difusor de Varetas",
     "categoria": "Divina Vanilla",
-    "preco": 158.00,
+    "preco": 158,
     "descricao": "Difusor de Varetas Divina Vanilla",
     "descricaoOlfativa": [
       "oriental",
@@ -218,13 +230,14 @@
     "imagens": [
       "../img/imagens-catalogo/difusor-de-varetas-divina-vanilla-1.jpg",
       "../img/imagens-catalogo/difusor-de-varetas-divina-vanilla-2.jpg"
-    ]
+    ],
+    "disponivel": true
   },
   {
     "id": "ENC02",
-    "nome": "Aromatizador",
+    "nome": "Home Spray",
     "categoria": "Encontro",
-    "preco": 112.00,
+    "preco": 112,
     "descricao": "Perfume de Ambiente / Home Spray Encontro 300ml - frasco PET",
     "descricaoOlfativa": [
       "frutal",
@@ -235,13 +248,14 @@
     "imagens": [
       "../img/imagens-catalogo/home-spray-encontro-1.jpg",
       "../img/imagens-catalogo/home-spray-encontro-2.jpg"
-    ]
+    ],
+    "disponivel": true
   },
   {
     "id": "ENC03",
     "nome": "Difusor de Varetas",
     "categoria": "Encontro",
-    "preco": 188.00,
+    "preco": 188,
     "descricao": "Difusor de Varetas Encontro",
     "descricaoOlfativa": [
       "frutal",
@@ -252,14 +266,15 @@
     "imagens": [
       "../img/imagens-catalogo/difusor-de-varetas-encontro-1.jpg",
       "../img/imagens-catalogo/difusor-de-varetas-encontro-2.jpg"
-    ]
+    ],
+    "disponivel": true
   },
   {
     "id": "ENC04",
     "nome": "Essência",
     "categoria": "Encontro",
-    "preco": 92.00,
-    "descricao": "Essência Concentrada Encontro 30ml – frasco VIDRO com gotejador",
+    "preco": 92,
+    "descricao": "Essência Concentrada Encontro 30ml ? frasco VIDRO com gotejador",
     "descricaoOlfativa": [
       "frutal",
       "oriental"
@@ -269,13 +284,14 @@
     "imagens": [
       "../img/imagens-catalogo/essencia-encontro-1.jpg",
       "../img/imagens-catalogo/essencia-catalogo-2.jpg"
-    ]
+    ],
+    "disponivel": true
   },
   {
     "id": "ENC06",
     "nome": "Vela Aromática",
     "categoria": "Encontro",
-    "preco": 140.00,
+    "preco": 140,
     "descricao": "Vela Aromática Encontro 170g. Feita com óleo de coco",
     "descricaoOlfativa": [
       "frutal",
@@ -286,13 +302,14 @@
     "imagens": [
       "../img/imagens-catalogo/velas-aromaticas-encontro-1.jpg",
       "../img/imagens-catalogo/velas-aromaticas-encontro-2.jpg"
-    ]
+    ],
+    "disponivel": true
   },
   {
     "id": "GAR02",
-    "nome": "Aromatizador",
+    "nome": "Home Spray",
     "categoria": "Garbo",
-    "preco": 112.00,
+    "preco": 112,
     "descricao": "Perfume de Ambiente / Home Spray Garbo 300ml - frasco PET",
     "descricaoOlfativa": [
       "floral",
@@ -303,13 +320,14 @@
     "imagens": [
       "../img/imagens-catalogo/home-spray-garbo-1.jpg",
       "../img/imagens-catalogo/home-spray-garbo-2.jpg"
-    ]
+    ],
+    "disponivel": true
   },
   {
     "id": "GAR03",
     "nome": "Difusor de Varetas",
     "categoria": "Garbo",
-    "preco": 188.00,
+    "preco": 188,
     "descricao": "Difusor de aromas com varetas Garbo 240ml - frasco VIDRO",
     "descricaoOlfativa": [
       "floral",
@@ -320,14 +338,15 @@
     "imagens": [
       "../img/imagens-catalogo/difusor-de-varetas-garbo-1.jpg",
       "../img/imagens-catalogo/difusor-de-varetas-garbo-2.jpg"
-    ]
+    ],
+    "disponivel": true
   },
   {
     "id": "GAR04",
     "nome": "Essência",
     "categoria": "Garbo",
-    "preco": 92.00,
-    "descricao": "Essência Concentrada Garbo 30ml – frasco VIDRO com gotejador",
+    "preco": 92,
+    "descricao": "Essência Concentrada Garbo 30ml ? frasco VIDRO com gotejador",
     "descricaoOlfativa": [
       "floral",
       "frutal"
@@ -337,13 +356,14 @@
     "imagens": [
       "../img/imagens-catalogo/essencia-garbo-1.jpg",
       "../img/imagens-catalogo/essencia-catalogo-2.jpg"
-    ]
+    ],
+    "disponivel": true
   },
   {
     "id": "GAR05",
     "nome": "Sabonete Líquido",
     "categoria": "Garbo",
-    "preco": 108.00,
+    "preco": 108,
     "descricao": "Sabonete Líquido Transparente Garbo 240ml - frasco VIDRO",
     "descricaoOlfativa": [
       "floral",
@@ -354,13 +374,32 @@
     "imagens": [
       "../img/imagens-catalogo/sabonete-liquido-garbo-1.jpg",
       "../img/imagens-catalogo/sabonete-liquido-garbo-2.jpg"
-    ]
+    ],
+    "disponivel": true
+  },
+  {
+    "id": "GAR06",
+    "nome": "Vela Aromática",
+    "categoria": "Garbo",
+    "preco": 140,
+    "descricao": "Vela aromática Garbo 170g",
+    "descricaoOlfativa": [
+      "floral",
+      "frutal"
+    ],
+    "notas": "cassis, pera, maçã, violeta, ameixa, muguet, musk e pêssego branco",
+    "modoUso": "Retire a tampa e acenda o pavio para que o perfume se dissipe pelo ambiente.",
+    "imagens": [
+      "../img/imagens-catalogo/velas-aromaticas-garbo-1.png",
+      "../img/imagens-catalogo/velas-aromaticas-garbo-2.png"
+    ],
+    "disponivel": true
   },
   {
     "id": "HAV02",
-    "nome": "Aromatizador",
+    "nome": "Home Spray",
     "categoria": "Havana",
-    "preco": 120.00,
+    "preco": 120,
     "descricao": "Perfume de Ambiente / Home Spray Havana 300ml - frasco PET",
     "descricaoOlfativa": [
       "cítrico",
@@ -370,13 +409,14 @@
     "modoUso": "Aplicar sobre tecidos em geral (evitando couro e sintéticos), aproximadamente 30cm de distância, sem encharcar.",
     "imagens": [
       "../img/imagens-catalogo/home-spray-havana-1.jpg"
-    ]
+    ],
+    "disponivel": true
   },
   {
     "id": "HAV03",
     "nome": "Difusor de Varetas",
     "categoria": "Havana",
-    "preco": 222.00,
+    "preco": 222,
     "descricao": "Difusor de aromas com varetas Havana 350ml - frasco VIDRO",
     "descricaoOlfativa": [
       "cítrico",
@@ -387,14 +427,15 @@
     "imagens": [
       "../img/imagens-catalogo/difusor-de-varetas-havana-1.jpg",
       "../img/imagens-catalogo/difusor-de-varetas-havana-2.jpg"
-    ]
+    ],
+    "disponivel": true
   },
   {
     "id": "HAV04",
     "nome": "Essência",
     "categoria": "Havana",
-    "preco": 95.00,
-    "descricao": "Essência Concentrada Havana 30ml – frasco VIDRO com gotejador",
+    "preco": 95,
+    "descricao": "Essência Concentrada Havana 30ml ? frasco VIDRO com gotejador",
     "descricaoOlfativa": [
       "cítrico",
       "amadeirado"
@@ -404,13 +445,14 @@
     "imagens": [
       "../img/imagens-catalogo/essencia-havana-1.jpg",
       "../img/imagens-catalogo/essencia-catalogo-2.jpg"
-    ]
+    ],
+    "disponivel": true
   },
   {
     "id": "HAV05",
     "nome": "Sabonete Líquido",
     "categoria": "Havana",
-    "preco": 165.00,
+    "preco": 165,
     "descricao": "Sabonete Líquido Dourado Havana 350ml - frasco VIDRO",
     "descricaoOlfativa": [
       "cítrico",
@@ -421,13 +463,14 @@
     "imagens": [
       "../img/imagens-catalogo/sabonete-liquido-havana-1.jpg",
       "../img/imagens-catalogo/sabonete-liquido-havana-2.jpg"
-    ]
+    ],
+    "disponivel": true
   },
   {
     "id": "HAV06",
     "nome": "Vela Aromática",
     "categoria": "Havana",
-    "preco": 140.00,
+    "preco": 140,
     "descricao": "Vela aromática Havana 170g",
     "descricaoOlfativa": [
       "cítrico",
@@ -438,13 +481,14 @@
     "imagens": [
       "../img/imagens-catalogo/velas-aromaticas-havana-1.jpg",
       "../img/imagens-catalogo/velas-aromaticas-havana-2.jpg"
-    ]
+    ],
+    "disponivel": false
   },
   {
     "id": "HAV28",
     "nome": "Kit Carro",
     "categoria": "Havana",
-    "preco": 68.00,
+    "preco": 68,
     "descricao": "Cartão Bolacha confeccionado com papel especial para receber aroma + frasco home spray 60ml.",
     "descricaoOlfativa": [
       "cítrico",
@@ -455,13 +499,14 @@
     "imagens": [
       "../img/imagens-catalogo/kit-carro-havana-1.jpg",
       "../img/imagens-catalogo/kit-carro-havana-2.jpg"
-    ]
+    ],
+    "disponivel": false
   },
   {
     "id": "HOR02",
-    "nome": "Aromatizador",
+    "nome": "Home Spray",
     "categoria": "Hortênsia",
-    "preco": 106.00,
+    "preco": 106,
     "descricao": "Perfume de Ambiente / Home Spray Hortênsia 300ml - frasco PET",
     "descricaoOlfativa": [
       "floral",
@@ -472,13 +517,14 @@
     "imagens": [
       "../img/imagens-catalogo/home-spray-hortensia-1.jpg",
       "../img/imagens-catalogo/home-spray-hortensia-2.jpg"
-    ]
+    ],
+    "disponivel": true
   },
   {
     "id": "HOR03",
     "nome": "Difusor de Varetas",
     "categoria": "Hortênsia",
-    "preco": 160.00,
+    "preco": 160,
     "descricao": "Difusor de aromas com varetas Hortênsia 250ml - frasco VIDRO",
     "descricaoOlfativa": [
       "floral",
@@ -489,14 +535,15 @@
     "imagens": [
       "../img/imagens-catalogo/difusor-de-varetas-hortensia-1.jpg",
       "../img/imagens-catalogo/difusor-de-varetas-hortensia-2.jpg"
-    ]
+    ],
+    "disponivel": true
   },
   {
     "id": "HOR04",
     "nome": "Essência",
     "categoria": "Hortênsia",
-    "preco": 92.00,
-    "descricao": "Essência Concentrada Hortênsia 30ml – frasco VIDRO com gotejador",
+    "preco": 92,
+    "descricao": "Essência Concentrada Hortênsia 30ml ? frasco VIDRO com gotejador",
     "descricaoOlfativa": [
       "floral",
       "doce"
@@ -506,13 +553,14 @@
     "imagens": [
       "../img/imagens-catalogo/essencia-hortensia-1.jpg",
       "../img/imagens-catalogo/essencia-catalogo-2.jpg"
-    ]
+    ],
+    "disponivel": true
   },
   {
     "id": "HOR05",
     "nome": "Sabonete Líquido",
     "categoria": "Hortênsia",
-    "preco": 96.00,
+    "preco": 96,
     "descricao": "Sabonete Líquido Transparente Hortênsia 250ml - frasco VIDRO",
     "descricaoOlfativa": [
       "floral",
@@ -523,13 +571,14 @@
     "imagens": [
       "../img/imagens-catalogo/sabonete-liquido-hortensia-1.jpg",
       "../img/imagens-catalogo/sabonete-liquido-hortensia-2.jpg"
-    ]
+    ],
+    "disponivel": true
   },
   {
     "id": "JDF02",
-    "nome": "Aromatizador",
+    "nome": "Home Spray",
     "categoria": "Jardins da França",
-    "preco": 120.00,
+    "preco": 120,
     "descricao": "Perfume de Ambiente / Home Spray Jardins da França 300ml - frasco PET",
     "descricaoOlfativa": [
       "floral",
@@ -540,13 +589,14 @@
     "imagens": [
       "../img/imagens-catalogo/home-spray-jardins-da-franca-1.jpg",
       "../img/imagens-catalogo/home-spray-jardins-da-franca-2.png"
-    ]
+    ],
+    "disponivel": true
   },
   {
     "id": "JDF03",
     "nome": "Difusor de Varetas",
     "categoria": "Jardins da França",
-    "preco": 256.00,
+    "preco": 256,
     "descricao": "Difusor de aromas com varetas Jardins da França 350ml - frasco VIDRO",
     "descricaoOlfativa": [
       "floral",
@@ -557,14 +607,15 @@
     "imagens": [
       "../img/imagens-catalogo/difusor-de-varetas-jardins-da-franca-1.jpg",
       "../img/imagens-catalogo/difusor-de-varetas-jardins-da-franca-2.jpg"
-    ]
+    ],
+    "disponivel": true
   },
   {
     "id": "JDF04",
     "nome": "Essência",
     "categoria": "Jardins da França",
-    "preco": 95.00,
-    "descricao": "Essência Concentrada Jardins da França 30ml – frasco VIDRO com gotejador",
+    "preco": 95,
+    "descricao": "Essência Concentrada Jardins da França 30ml ? frasco VIDRO com gotejador",
     "descricaoOlfativa": [
       "floral",
       "agreste"
@@ -574,13 +625,14 @@
     "imagens": [
       "../img/imagens-catalogo/essencia-jardins-da-franca-1.jpg",
       "../img/imagens-catalogo/essencia-catalogo-2.jpg"
-    ]
+    ],
+    "disponivel": true
   },
   {
     "id": "JDF05",
     "nome": "Sabonete Líquido",
     "categoria": "Jardins da França",
-    "preco": 126.00,
+    "preco": 126,
     "descricao": "Sabonete Líquido Dourado Jardins da França 350ml - frasco VIDRO",
     "descricaoOlfativa": [
       "floral",
@@ -591,13 +643,14 @@
     "imagens": [
       "../img/imagens-catalogo/sabonete-liquido-jardins-da-franca-1.jpg",
       "../img/imagens-catalogo/sabonete-liquido-jardins-da-franca-2.jpg"
-    ]
+    ],
+    "disponivel": true
   },
   {
     "id": "JDF06",
     "nome": "Vela Aromática",
     "categoria": "Jardins da França",
-    "preco": 140.00,
+    "preco": 140,
     "descricao": "Vela aromática Jardins da França 170g",
     "descricaoOlfativa": [
       "floral",
@@ -608,13 +661,14 @@
     "imagens": [
       "../img/imagens-catalogo/velas-aromaticas-jardins-da-franca-1.jpg",
       "../img/imagens-catalogo/velas-aromaticas-jardins-da-franca-2.jpg"
-    ]
+    ],
+    "disponivel": true
   },
   {
     "id": "LIL02",
-    "nome": "Aromatizador",
+    "nome": "Home Spray",
     "categoria": "Lilás",
-    "preco": 120.00,
+    "preco": 120,
     "descricao": "Perfume de Ambiente / Home Spray Lilás 300ml - frasco PET",
     "descricaoOlfativa": [
       "aromático",
@@ -625,13 +679,14 @@
     "imagens": [
       "../img/imagens-catalogo/home-spray-lilas-1.jpg",
       "../img/imagens-catalogo/home-spray-lilas-2.jpg"
-    ]
+    ],
+    "disponivel": true
   },
   {
     "id": "LIL03",
     "nome": "Difusor de Varetas",
     "categoria": "Lilás",
-    "preco": 188.00,
+    "preco": 188,
     "descricao": "Difusor de aromas com varetas Lilás 200ml - frasco VIDRO",
     "descricaoOlfativa": [
       "aromático",
@@ -642,14 +697,33 @@
     "imagens": [
       "../img/imagens-catalogo/difusor-de-varetas-lilas-1.jpg",
       "../img/imagens-catalogo/difusor-de-varetas-lilas-2.jpg"
-    ]
+    ],
+    "disponivel": true
+  },
+  {
+    "id": "LIL05",
+    "nome": "Sabonete Líquido",
+    "categoria": "Lilás",
+    "preco": 108,
+    "descricao": "Sabonete Líquido Transparente Lilás 240ml - frasco VIDRO",
+    "descricaoOlfativa": [
+      "aromatico",
+      "fougère"
+    ],
+    "notas": "limão, lavanda, bergamota, gerânio, estragão, rosa, patchouly, vetiver, cumaru e musk",
+    "modoUso": "Aplicar o sabonete sobre a pele, massagear até fazer espuma cremosa. Pode ser usado no banho e/ou para lavar mãos e rosto. Limpa e mantém o PH natural da pele.",
+    "imagens": [
+      "../img/imagens-catalogo/sabonete-liquido-lilas-1.png",
+      "../img/imagens-catalogo/sabonete-liquido-lilas-2.png"
+    ],
+    "disponivel": true
   },
   {
     "id": "LIL04",
     "nome": "Essência",
     "categoria": "Lilás",
-    "preco": 95.00,
-    "descricao": "Essência Concentrada Lilás 30ml – frasco VIDRO com gotejador",
+    "preco": 95,
+    "descricao": "Essência Concentrada Lilás 30ml ? frasco VIDRO com gotejador",
     "descricaoOlfativa": [
       "aromático",
       "sfougère"
@@ -659,13 +733,14 @@
     "imagens": [
       "../img/imagens-catalogo/essencia-lilas-1.jpg",
       "../img/imagens-catalogo/essencia-catalogo-2.jpg"
-    ]
+    ],
+    "disponivel": true
   },
   {
     "id": "LIL28",
     "nome": "Kit Carro",
     "categoria": "Lilás",
-    "preco": 68.00,
+    "preco": 68,
     "descricao": "Cartão Bolacha confeccionado com papel especial para receber aroma + frasco home spray 60ml.",
     "descricaoOlfativa": [
       "aromático",
@@ -675,13 +750,14 @@
     "modoUso": "Vaporizar o aroma no cartão e pendurá-lo no retrovisor ou onde desejar. O aroma não deve ser aplicado sobre o couro dos bancos e nem sobre qualquer outra superfície, como plásticos, sintéticos ou semelhantes.",
     "imagens": [
       "../img/imagens-catalogo/kit-carro-havana-2.jpg"
-    ]
+    ],
+    "disponivel": true
   },
   {
     "id": "MCA02",
-    "nome": "Aromatizador",
+    "nome": "Home Spray",
     "categoria": "Monte Carlo",
-    "preco": 120.00,
+    "preco": 120,
     "descricao": "Perfume de Ambiente / Home Spray Monte Carlo 300ml - frasco PET",
     "descricaoOlfativa": [
       "chypre",
@@ -692,13 +768,14 @@
     "imagens": [
       "../img/imagens-catalogo/home-spray-monte-carlo-1.jpg",
       "../img/imagens-catalogo/home-spray-monte-carlo-2.jpg"
-    ]
+    ],
+    "disponivel": true
   },
   {
     "id": "MCA03",
     "nome": "Difusor de Varetas",
     "categoria": "Monte Carlo",
-    "preco": 232.00,
+    "preco": 232,
     "descricao": "Difusor de aromas com varetas Monte Carlo 350ml - frasco VIDRO",
     "descricaoOlfativa": [
       "chypre",
@@ -709,14 +786,15 @@
     "imagens": [
       "../img/imagens-catalogo/difusor-de-varetas-monte-carlo-1.jpg",
       "../img/imagens-catalogo/difusor-de-varetas-monte-carlo-2.jpg"
-    ]
+    ],
+    "disponivel": true
   },
   {
     "id": "MCA04",
     "nome": "Essência",
     "categoria": "Monte Carlo",
-    "preco": 95.00,
-    "descricao": "Essência Concentrada Monte Carlo 30ml – frasco VIDRO com gotejador",
+    "preco": 95,
+    "descricao": "Essência Concentrada Monte Carlo 30ml ? frasco VIDRO com gotejador",
     "descricaoOlfativa": [
       "chypre",
       "madeira"
@@ -726,13 +804,14 @@
     "imagens": [
       "../img/imagens-catalogo/essencia-monte-carlo-1.jpg",
       "../img/imagens-catalogo/essencia-catalogo-2.jpg"
-    ]
+    ],
+    "disponivel": true
   },
   {
     "id": "MCA28",
     "nome": "Kit Carro",
     "categoria": "Monte Carlo",
-    "preco": 68.00,
+    "preco": 68,
     "descricao": "Cartão Bolacha confeccionado com papel especial para receber aroma + frasco home spray 60ml.",
     "descricaoOlfativa": [
       "chypre",
@@ -742,13 +821,14 @@
     "modoUso": "Vaporizar o aroma no cartão e pendurá-lo no retrovisor ou onde desejar. O aroma não deve ser aplicado sobre o couro dos bancos e nem sobre qualquer outra superfície, como plásticos, sintéticos ou semelhantes.",
     "imagens": [
       "../img/imagens-catalogo/kit-carro-monte-carlo-1.jpg"
-    ]
+    ],
+    "disponivel": true
   },
   {
     "id": "PAT02",
-    "nome": "Aromatizador",
+    "nome": "Home Spray",
     "categoria": "Patchouly",
-    "preco": 106.00,
+    "preco": 106,
     "descricao": "Perfume de Ambiente / Home Spray Patchouly 300ml - frasco PET",
     "descricaoOlfativa": [
       "amadeirado",
@@ -759,13 +839,14 @@
     "imagens": [
       "../img/imagens-catalogo/home-spray-patchouly-1.jpg",
       "../img/imagens-catalogo/home-spray-patchouly-2.jpg"
-    ]
+    ],
+    "disponivel": true
   },
   {
     "id": "PAT03",
     "nome": "Difusor de Varetas",
     "categoria": "Patchouly",
-    "preco": 157.00,
+    "preco": 157,
     "descricao": "Difusor de aromas com varetas Patchouly 250ml - frasco VIDRO",
     "descricaoOlfativa": [
       "amadeirado",
@@ -776,6 +857,310 @@
     "imagens": [
       "../img/imagens-catalogo/difusor-de-varetas-patchouly-1.jpg",
       "../img/imagens-catalogo/difusor-de-varetas-patchouly-2.jpg"
-    ]
+    ],
+    "disponivel": true
+  },
+  {
+    "id": "KIT-VELA-DIFUSOR",
+    "nome": "Kit Vela + Difusor",
+    "categoria": "Kits",
+    "isKit": true,
+    "descricao": "Kit completo com Vela Aromática + Difusor de Varetas",
+    "modoUso": "Vela: Retire a tampa e acenda o pavio. Difusor: Retire o vedante e insira as varetas.",
+    "imagens": [
+      "../img/imagens-catalogo/kits/vela-difusor-jardins-da-franca-2.jpg",
+      "../img/imagens-catalogo/kits/vela-difusor-encontro-1.jpg"
+    ],
+    "variantes": [
+      {
+        "fragrancia": "Encontro",
+        "preco": 328,
+        "descricao": "Kit Vela Aromática (170g) + Difusor de Varetas (200ml) - Encontro",
+        "descricaoOlfativa": [
+          "frutal",
+          "oriental"
+        ],
+        "notas": "maçã, canela, laranja, cravo, pêssego, baunilha e musk",
+        "imagens": [
+          "../img/imagens-catalogo/kits/vela-difusor-encontro-1.jpg",
+          "../img/imagens-catalogo/kits/vela-difusor-encontro-2.jpg"
+        ]
+      },
+      {
+        "fragrancia": "Jardins da França",
+        "preco": 396,
+        "descricao": "Kit Vela Aromática (170g) + Difusor de Varetas (350ml) - Jardins da França",
+        "descricaoOlfativa": [
+          "floral",
+          "agreste"
+        ],
+        "notas": "lavanda, alecrim, gerânio, menta, cashmere, jasmim, almíscar e âmbar",
+        "imagens": [
+          "../img/imagens-catalogo/kits/vela-difusor-jardins-da-franca-1.jpg",
+          "../img/imagens-catalogo/kits/vela-difusor-jardins-da-franca-2.jpg"
+        ]
+      },
+      {
+        "fragrancia": "Havana",
+        "preco": 362,
+        "descricao": "Kit Vela Aromática (170g) + Difusor de Varetas (350ml) - Havana",
+        "descricaoOlfativa": [
+          "cítrico",
+          "amadeirado"
+        ],
+        "notas": "ervas do mediterrâneo e limão siciliano",
+        "imagens": [
+          "../img/imagens-catalogo/kits/vela-difusor-havana-1.jpg"
+        ]
+      },
+      {
+        "fragrancia": "Lilás",
+        "preco": 276,
+        "descricao": "Kit Vela Aromática (100g) + Difusor de Varetas (250ml) - Lilás",
+        "descricaoOlfativa": [
+          "aromatico",
+          "fougére"
+        ],
+        "notas": "lilás, lavanda, gerânio, cravo, muguet, cedro e patchouly",
+        "imagens": [
+          "../img/imagens-catalogo/kits/vela-difusor-lilas-1.jpg",
+          "../img/imagens-catalogo/kits/vela-difusor-lilas-2.jpg"
+        ]
+      }
+    ],
+    "disponivel": true
+  },
+  {
+    "id": "KIT-DIFUSOR-SABONETE",
+    "nome": "Kit Difusor + Sabonete Líquido",
+    "categoria": "Kits",
+    "isKit": true,
+    "descricao": "Kit completo com Difusor de Varetas + Sabonete Líquido",
+    "modoUso": "Difusor: Retire o vedante e insira as varetas. Sabonete: Aplicar sobre a pele e massagear.",
+    "imagens": [
+      "../img/imagens-catalogo/kits/sabonete-liquido-difusor-garbo-1.jpg",
+      "../img/imagens-catalogo/kits/sabonete-liquido-difusor-jardins-da-franca-2.jpg"
+    ],
+    "variantes": [
+      {
+        "fragrancia": "Havana",
+        "preco": 387,
+        "descricao": "Kit Difusor de Varetas (350ml) + Sabonete Líquido (350ml) - Havana",
+        "descricaoOlfativa": [
+          "cítrico",
+          "amadeirado"
+        ],
+        "notas": "ervas do mediterrâneo e limão siciliano",
+        "imagens": [
+          "../img/imagens-catalogo/kits/sabonete-liquido-difusor-havana-1.jpg",
+          "../img/imagens-catalogo/kits/sabonete-liquido-difusor-havana-2.jpg"
+        ]
+      },
+      {
+        "fragrancia": "Jardins da França",
+        "preco": 382,
+        "descricao": "Kit Difusor de Varetas (350ml) + Sabonete Líquido (350ml) - Jardins da França",
+        "descricaoOlfativa": [
+          "floral",
+          "agreste"
+        ],
+        "notas": "lavanda, alecrim, gerânio, menta, cashmere, jasmim, almíscar e âmbar",
+        "imagens": [
+          "../img/imagens-catalogo/kits/sabonete-liquido-difusor-jardins-da-franca-1.jpg",
+          "../img/imagens-catalogo/kits/sabonete-liquido-difusor-jardins-da-franca-2.jpg"
+        ]
+      },
+      {
+        "fragrancia": "Garbo",
+        "preco": 296,
+        "descricao": "Kit Difusor de Varetas (240ml) + Sabonete Líquido (240ml) - Garbo",
+        "descricaoOlfativa": [
+          "floral",
+          "frutal"
+        ],
+        "notas": "cassis, pera, maçã, violeta, ameixa, muguet, musk e pêssego branco",
+        "imagens": [
+          "../img/imagens-catalogo/kits/sabonete-liquido-difusor-garbo-1.jpg",
+          "../img/imagens-catalogo/kits/sabonete-liquido-difusor-garbo-2.jpg"
+        ]
+      },
+      {
+        "fragrancia": "Hortênsia",
+        "preco": 256,
+        "descricao": "Kit Difusor de Varetas (250ml) + Sabonete Líquido (250ml) - Hortênsia",
+        "descricaoOlfativa": [
+          "floral",
+          "doce"
+        ],
+        "notas": "gerânio, peônia, violeta, hortênsia e musk",
+        "imagens": [
+          "../img/imagens-catalogo/kits/sabonete-liquido-difusor-hortensia-1.jpg",
+          "../img/imagens-catalogo/kits/sabonete-liquido-difusor-hortensia-2.jpg"
+        ]
+      },
+      {
+        "fragrancia": "Lavanda Inglesa",
+        "preco": 256,
+        "descricao": "Kit Difusor de Varetas (250ml) + Sabonete Líquido (250ml) - Lavanda Inglesa",
+        "descricaoOlfativa": [
+          "herbal",
+          "floral"
+        ],
+        "notas": "lavanda inglesa pura",
+        "imagens": [
+          "../img/imagens-catalogo/kits/sabonete-liquido-difusor-lavanda-inglesa-1.jpg",
+          "../img/imagens-catalogo/kits/sabonete-liquido-difusor-lavanda-inglesa-2.jpg"
+        ]
+      },
+      {
+        "fragrancia": "Bambu Garden",
+        "preco": 262,
+        "descricao": "Kit Difusor de Varetas (200ml) + Sabonete Líquido (200ml) - Bambu Garden",
+        "descricaoOlfativa": [
+          "floral",
+          "amadeirado"
+        ],
+        "notas": "bergamota, pomelo, jasmim, cedro, gerânio, musk, vetiver e âmbar",
+        "imagens": [
+          "../img/imagens-catalogo/kits/sabonete-liquido-difusor-bambu-garden-1.jpg",
+          "../img/imagens-catalogo/kits/sabonete-liquido-difusor-bambu-garden-2.jpg"
+        ]
+      }
+    ],
+    "disponivel": true
+  },
+  {
+    "id": "KIT-ESSENCIA-DIFUSOR",
+    "nome": "Kit Essência + Difusor",
+    "categoria": "Kits",
+    "isKit": true,
+    "descricao": "Kit completo com Essência Concentrada + Difusor de Varetas vazio (reutilizável)",
+    "modoUso": "Pingue de 10 a 15 gotas de essência no difusor vazio e insira as varetas. Vire as varetas a cada 2 dias.",
+    "variantes": [
+      {
+        "fragrancia": "Encontro",
+        "preco": 280,
+        "descricao": "Kit Essência (30ml) + Difusor vazio reutilizável - Encontro",
+        "descricaoOlfativa": [
+          "frutal",
+          "oriental"
+        ],
+        "notas": "maçã, canela, laranja, cravo, pêssego, baunilha e musk",
+        "imagens": [
+          "../img/imagens-catalogo/essencia-encontro-1.jpg",
+          "../img/imagens-catalogo/difusor-de-varetas-encontro-2.jpg"
+        ]
+      },
+      {
+        "fragrancia": "Jardins da França",
+        "preco": 283,
+        "descricao": "Kit Essência (30ml) + Difusor vazio reutilizável - Jardins da França",
+        "descricaoOlfativa": [
+          "floral",
+          "agreste"
+        ],
+        "notas": "lavanda, alecrim, gerânio, menta, cashmere, jasmim, almíscar e âmbar",
+        "imagens": [
+          "../img/imagens-catalogo/essencia-jardins-da-franca-1.jpg",
+          "../img/imagens-catalogo/difusor-de-varetas-jardins-da-franca-2.jpg"
+        ]
+      },
+      {
+        "fragrancia": "Havana",
+        "preco": 283,
+        "descricao": "Kit Essência (30ml) + Difusor vazio reutilizável - Havana",
+        "descricaoOlfativa": [
+          "cítrico",
+          "amadeirado"
+        ],
+        "notas": "ervas do mediterrâneo e limão siciliano",
+        "imagens": [
+          "../img/imagens-catalogo/essencia-havana-1.jpg",
+          "../img/imagens-catalogo/difusor-de-varetas-havana-2.jpg"
+        ]
+      },
+      {
+        "fragrancia": "Garbo",
+        "preco": 280,
+        "descricao": "Kit Essência (30ml) + Difusor vazio reutilizável - Garbo",
+        "descricaoOlfativa": [
+          "floral",
+          "frutal"
+        ],
+        "notas": "cassis, pera, maçã, violeta, ameixa, muguet, musk e pêssego branco",
+        "imagens": [
+          "../img/imagens-catalogo/essencia-garbo-1.jpg",
+          "../img/imagens-catalogo/difusor-de-varetas-garbo-2.jpg"
+        ]
+      },
+      {
+        "fragrancia": "Bambu Garden",
+        "preco": 280,
+        "descricao": "Kit Essência (30ml) + Difusor vazio reutilizável - Bambu Garden",
+        "descricaoOlfativa": [
+          "floral",
+          "amadeirado"
+        ],
+        "notas": "bergamota, pomelo, jasmim, cedro, gerânio, musk, vetiver e âmbar",
+        "imagens": [
+          "../img/imagens-catalogo/essencia-bambu-garden-1.jpg",
+          "../img/imagens-catalogo/difusor-de-varetas-bambu-garden-2.jpg"
+        ]
+      }
+    ],
+    "disponivel": true
+  },
+  {
+    "id": "KIT-ESSENCIAS-VELAS",
+    "nome": "Kit Essências + Velas",
+    "categoria": "Kits",
+    "isKit": true,
+    "descricao": "Kit completo com Essência Concentrada + Vela Aromática",
+    "modoUso": "Essência: Use em difusores elétricos (8-12 gotas). Vela: Retire a tampa e acenda o pavio.",
+    "variantes": [
+      {
+        "fragrancia": "Encontro",
+        "preco": 232,
+        "descricao": "Kit Essência (30ml) + Vela Aromática (170g) - Encontro",
+        "descricaoOlfativa": [
+          "frutal",
+          "oriental"
+        ],
+        "notas": "maçã, canela, laranja, cravo, pêssego, baunilha e musk",
+        "imagens": [
+          "../img/imagens-catalogo/essencia-encontro-1.jpg",
+          "../img/imagens-catalogo/velas-aromaticas-encontro-1.jpg"
+        ]
+      },
+      {
+        "fragrancia": "Jardins da França",
+        "preco": 235,
+        "descricao": "Kit Essência (30ml) + Vela Aromática (170g) - Jardins da França",
+        "descricaoOlfativa": [
+          "floral",
+          "agreste"
+        ],
+        "notas": "lavanda, alecrim, gerânio, menta, cashmere, jasmim, almíscar e âmbar",
+        "imagens": [
+          "../img/imagens-catalogo/essencia-jardins-da-franca-1.jpg",
+          "../img/imagens-catalogo/velas-aromaticas-jardins-da-franca-1.jpg"
+        ]
+      },
+      {
+        "fragrancia": "Havana",
+        "preco": 235,
+        "descricao": "Kit Essência (30ml) + Vela Aromática (170g) - Havana",
+        "descricaoOlfativa": [
+          "cítrico",
+          "amadeirado"
+        ],
+        "notas": "ervas do mediterrâneo e limão siciliano",
+        "imagens": [
+          "../img/imagens-catalogo/essencia-havana-1.jpg",
+          "../img/imagens-catalogo/velas-aromaticas-havana-1.jpg"
+        ]
+      }
+    ],
+    "disponivel": true
   }
 ]

@@ -2,31 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://jbhomessence.com.br/</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-04-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://jbhomessence.com.br/sobre</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://jbhomessence.com.br/servicos</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://jbhomessence.com.br/contato</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jbhomessence.com.br/blog/</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-04-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -201,6 +201,36 @@
   <url>
     <loc>https://jbhomessence.com.br/blog/posts/por-que-meu-difusor-varetas-nao-exala.html</loc>
     <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jbhomessence.com.br/blog/posts/onde-comprar-aromatizador-ambientes-balneario-camboriu.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jbhomessence.com.br/blog/posts/aromatizacao-para-condominios-beneficios-solucoes.html</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jbhomessence.com.br/blog/posts/varetas-madeira-fibra-difusor-aromas.html</loc>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jbhomessence.com.br/blog/posts/como-aromatizar-banheiro-lavabo-guia.html</loc>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jbhomessence.com.br/blog/posts/kits-presente-dia-das-maes-balneario-camboriu.html</loc>
+    <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

@@ -4,6 +4,7 @@
 // ========== VARIÁVEIS GLOBAIS ==========
 let allProducts = [];
 let currentProduct = null;
+let currentImages = [];
 let currentImageIndex = 0;
 
 // ========== ELEMENTOS DO DOM ==========
@@ -58,8 +59,9 @@ function renderCategoria(nomeCategoria) {
  * Cria card de produto
  */
 function createCard(product) {
+  const isAvailable = product.disponivel !== false;
   const card = document.createElement('div');
-  card.className = 'card';
+  card.className = isAvailable ? 'card' : 'card unavailable';
   card.dataset.id = product.id;
 
   card.innerHTML = `
@@ -81,7 +83,14 @@ function createCard(product) {
     </div>
   `;
 
-  card.addEventListener('click', () => openModal(product));
+  card.addEventListener('click', () => {
+    if (!isAvailable) {
+      alert('Este produto está indisponível no momento.');
+      return;
+    }
+
+    openModal(product);
+  });
   return card;
 }
 
@@ -92,7 +101,14 @@ function createCard(product) {
  */
 function openModal(product) {
   currentProduct = product;
+  currentImages = product.imagens;
   currentImageIndex = 0;
+
+  // Se for kit, exibe modal especial com seletor de fragrâncias
+  if (product.isKit && product.variantes && product.variantes.length > 0) {
+    openKitModal(product);
+    return;
+  }
 
   const whatsappMessage = encodeURIComponent(
     `Olá! Gostaria de fazer um pedido do produto: ${product.nome} - ${product.categoria}`
@@ -101,7 +117,7 @@ function openModal(product) {
 
   modalContent.innerHTML = `
     <div class="modal-images-column">
-      <div class="modal-main-image" onclick="openLightbox(0)">
+      <div class="modal-main-image" onclick="openLightbox()">
         <img src="${product.imagens[0]}" 
              alt="${product.nome}" 
              id="modal-main-img" 
@@ -180,6 +196,133 @@ function openModal(product) {
   document.body.style.overflow = 'hidden';
   modalClose.focus();
 }
+
+/**
+ * Abre modal especial para kits com seletor de fragrâncias
+ */
+function openKitModal(product) {
+  // Começa com a primeira variante
+  let currentVariantIndex = 0;
+  let currentVariant = product.variantes[currentVariantIndex];
+
+  function renderKitModal() {
+    currentVariant = product.variantes[currentVariantIndex];
+    currentImages = currentVariant.imagens;
+    currentImageIndex = 0;
+
+    const whatsappMessage = encodeURIComponent(
+      `Olá! Gostaria de fazer um pedido do produto: ${product.nome} - ${currentVariant.fragrancia}`
+    );
+    const whatsappLink = `https://wa.me/47997152830?text=${whatsappMessage}`;
+
+    modalContent.innerHTML = `
+      <div class="modal-images-column">
+        <div class="modal-main-image" onclick="openLightbox()">
+          <img src="${currentVariant.imagens[0]}" 
+               alt="${product.nome} - ${currentVariant.fragrancia}" 
+               id="modal-main-img" 
+               style="cursor: zoom-in;">
+        </div>
+        ${currentVariant.imagens.length > 1 ? `
+          <div class="modal-thumbnails">
+            ${currentVariant.imagens.map((img, index) => `
+              <div class="modal-thumbnail ${index === 0 ? 'active' : ''}" 
+                   onclick="changeModalImage('${img}', this, ${index})">
+                <img src="${img}" alt="${product.nome} - vista ${index + 1}">
+              </div>
+            `).join('')}
+          </div>
+        ` : ''}
+      </div>
+      
+      <div class="modal-info-column">
+        <h2 class="modal-title">${product.nome}</h2>
+        
+        <!-- Seletor de Fragrâncias -->
+        <div class="kit-fragrance-selector">
+          <h4>Escolha sua fragrância:</h4>
+          <div class="fragrance-options">
+            ${product.variantes.map((v, i) => `
+              <button class="fragrance-btn ${i === currentVariantIndex ? 'active' : ''}" 
+                      data-index="${i}">
+                ${v.fragrancia}
+              </button>
+            `).join('')}
+          </div>
+        </div>
+        
+        <div class="modal-price">${formatPrice(currentVariant.preco)}</div>
+        
+        <div class="modal-description">
+          <p>${currentVariant.descricao}</p>
+        </div>
+        
+        ${currentVariant.descricaoOlfativa && currentVariant.descricaoOlfativa.length > 0 ? `
+          <div class="modal-section">
+            <h4>Descrição Olfativa</h4>
+            <div class="modal-tags">
+              ${currentVariant.descricaoOlfativa.map(tag =>
+      `<span class="modal-tag">${tag}</span>`
+    ).join('')}
+            </div>
+          </div>
+        ` : ''}
+        
+        ${currentVariant.notas ? `
+          <div class="modal-section">
+            <h4>Notas</h4>
+            <div class="modal-info-item">
+              <p>${currentVariant.notas}</p>
+            </div>
+          </div>
+        ` : ''}
+        
+        ${product.modoUso ? `
+          <div class="modal-section">
+            <h4>Modo de Uso</h4>
+            <div class="modal-info-item">
+              <p>${product.modoUso}</p>
+            </div>
+          </div>
+        ` : ''}
+        
+        <div class="modal-section">
+          <h4>Categoria</h4>
+          <div class="modal-category">
+            <span class="modal-category-badge">${product.categoria}</span>
+          </div>
+        </div>
+        
+        <div class="whatsapp-button">
+          <a href="${whatsappLink}" target="_blank" rel="noopener">
+            <i class="fab fa-whatsapp"></i>
+            <span>Fazer pedido pelo WhatsApp</span>
+          </a>
+        </div>
+        
+        <div class="delivery-info">
+          <p>Entregamos apenas para Balneário Camboriú (SC) e região no momento.</p>
+        </div>
+      </div>
+    `;
+
+    // Adiciona event listeners aos botões de fragrância
+    const fragranceBtns = modalContent.querySelectorAll('.fragrance-btn');
+    fragranceBtns.forEach(btn => {
+      btn.addEventListener('click', function () {
+        currentVariantIndex = parseInt(this.getAttribute('data-index'));
+        renderKitModal();
+      });
+    });
+  }
+
+  // Renderiza modal inicial
+  renderKitModal();
+
+  modalOverlay.classList.add('active');
+  document.body.style.overflow = 'hidden';
+  modalClose.focus();
+}
 /**
  * Troca a imagem principal do modal
  */
@@ -210,9 +353,13 @@ function closeModal() {
  * Abre lightbox com imagem em tamanho grande
  */
 function openLightbox(index) {
-  if (!currentProduct || !currentProduct.imagens) return;
+  if (!currentProduct || !currentImages || currentImages.length === 0) return;
 
-  currentImageIndex = index;
+  if (typeof index !== 'number') {
+    index = currentImageIndex;
+  } else {
+    currentImageIndex = index;
+  }
 
   const lightbox = document.createElement('div');
   lightbox.id = 'lightbox-overlay';
@@ -220,7 +367,7 @@ function openLightbox(index) {
 
   lightbox.innerHTML = `
     <button class="lightbox-close" onclick="closeLightbox()" aria-label="Fechar">×</button>
-    ${currentProduct.imagens.length > 1 ? `
+    ${currentImages.length > 1 ? `
       <button class="lightbox-nav lightbox-prev" onclick="navigateLightbox(-1)" aria-label="Anterior">
         <i class="fas fa-chevron-left"></i>
       </button>
@@ -229,10 +376,10 @@ function openLightbox(index) {
       </button>
     ` : ''}
     <div class="lightbox-content">
-      <img src="${currentProduct.imagens[index]}" 
+      <img src="${currentImages[index]}" 
            alt="${currentProduct.nome}" 
            id="lightbox-img">
-      <div class="lightbox-counter">${index + 1} / ${currentProduct.imagens.length}</div>
+      <div class="lightbox-counter">${index + 1} / ${currentImages.length}</div>
     </div>
   `;
 
@@ -268,14 +415,14 @@ function closeLightbox() {
  * Navega entre imagens no lightbox
  */
 function navigateLightbox(direction) {
-  if (!currentProduct || !currentProduct.imagens) return;
+  if (!currentProduct || !currentImages || currentImages.length === 0) return;
 
   currentImageIndex += direction;
 
   // Loop circular
   if (currentImageIndex < 0) {
-    currentImageIndex = currentProduct.imagens.length - 1;
-  } else if (currentImageIndex >= currentProduct.imagens.length) {
+    currentImageIndex = currentImages.length - 1;
+  } else if (currentImageIndex >= currentImages.length) {
     currentImageIndex = 0;
   }
 
@@ -285,10 +432,10 @@ function navigateLightbox(direction) {
   if (lightboxImg) {
     lightboxImg.style.opacity = '0';
     setTimeout(() => {
-      lightboxImg.src = currentProduct.imagens[currentImageIndex];
+      lightboxImg.src = currentImages[currentImageIndex];
       lightboxImg.style.opacity = '1';
       if (counter) {
-        counter.textContent = `${currentImageIndex + 1} / ${currentProduct.imagens.length}`;
+        counter.textContent = `${currentImageIndex + 1} / ${currentImages.length}`;
       }
     }, 200);
   }

@@ -26,10 +26,10 @@ const fragranciasDescricoes = {
     notas: "bergamota, pomelo, capim limão, gengibre, violeta, fresia, musk e sândalo",
     inspiracao: "Inspirada em um dia de verão no campo, com brisa fresca e sol vibrante. Bergamota e pomelo abrem com energia cítrica, capim-limão e gengibre explodem em frescor picante, violeta e freesia trazem flores delicadas, e musk envolve em aconchego. Celebra leveza, feminilidade e movimento sutil ao entardecer.",
     beneficios: [
-    "Energizante e revitalizante para o dia",
-    "Desperta os sentidos com frescor cítrico",
-    "Equilibra energia com suavidade floral",
-    "Cria sensação de liberdade e elegância romântica"
+      "Energizante e revitalizante para o dia",
+      "Desperta os sentidos com frescor cítrico",
+      "Equilibra energia com suavidade floral",
+      "Cria sensação de liberdade e elegância romântica"
     ],
     palavrasChave: ["Energia vibrante", "Movimento sutil", "Elegância romântica", "Aconchego", "Campo florido", "Explosão dos sentidos", "Celebração"]
   },
@@ -268,7 +268,7 @@ function getProductsByCategory(categoryName) {
 
 function getProductsByTipo(tipoSlug) {
   const tipoNomeMap = {
-    'aromatizador': 'Aromatizador',
+    'home-spray': 'Home Spray',
     'difusor-varetas': 'Difusor de Varetas',
     'sabonete-liquido': 'Sabonete Líquido',
     'essencias': 'Essência',
@@ -276,11 +276,11 @@ function getProductsByTipo(tipoSlug) {
     'aromatizador-carro': 'Kit Carro',
     'agua-perfumada': 'Água Perfumada'
   };
-  
+
   const nomeBusca = tipoNomeMap[tipoSlug];
   if (!nomeBusca) return [];
-  
-  return categoryPageProducts.filter(prod => 
+
+  return categoryPageProducts.filter(prod =>
     prod.nome.toLowerCase().includes(nomeBusca.toLowerCase())
   );
 }
@@ -293,7 +293,7 @@ function atualizarMetaTags(categoriaSlug, tipoSlug) {
     if (fragrancia) {
       // Atualiza título
       document.title = `${fragrancia.nome} - JB Home Essence | Perfumaria de Ambientes em Balneário Camboriú`;
-      
+
       // Atualiza ou cria meta description
       let metaDesc = document.querySelector('meta[name="description"]');
       if (!metaDesc) {
@@ -311,7 +311,7 @@ function atualizarMetaTags(categoriaSlug, tipoSlug) {
         document.head.appendChild(metaKeywords);
       }
       metaKeywords.content = `${fragrancia.nome}, fragrância ${fragrancia.familiaOlfativa}, aromatizador, difusor de varetas, perfume de ambiente, Balneário Camboriú, JB Home Essence`;
-      
+
       // Open Graph tags
       let ogTitle = document.querySelector('meta[property="og:title"]');
       if (!ogTitle) {
@@ -320,7 +320,7 @@ function atualizarMetaTags(categoriaSlug, tipoSlug) {
         document.head.appendChild(ogTitle);
       }
       ogTitle.content = `${fragrancia.nome} - JB Home Essence`;
-      
+
       let ogDesc = document.querySelector('meta[property="og:description"]');
       if (!ogDesc) {
         ogDesc = document.createElement('meta');
@@ -341,7 +341,7 @@ function atualizarMetaTags(categoriaSlug, tipoSlug) {
 
 function exibirModalSobre(slugFragrancia) {
   const fragrancia = fragranciasDescricoes[slugFragrancia];
-  
+
   if (!fragrancia) {
     console.warn('Descrição não encontrada para:', slugFragrancia);
     return;
@@ -360,7 +360,7 @@ function exibirModalSobre(slugFragrancia) {
   const modal = document.createElement('div');
   modal.id = 'modal-sobre-fragrancia';
   modal.className = 'modal-sobre-overlay';
-  
+
   modal.innerHTML = `
     <div class="modal-sobre-container">
       <button class="modal-sobre-close" aria-label="Fechar">&times;</button>
@@ -419,7 +419,7 @@ function exibirModalSobre(slugFragrancia) {
   // Event listeners para fechar
   const btnClose = modal.querySelector('.modal-sobre-close');
   btnClose.addEventListener('click', fecharModalSobre);
-  
+
   modal.addEventListener('click', (e) => {
     if (e.target === modal) fecharModalSobre();
   });
@@ -445,7 +445,7 @@ function fecharModalSobre() {
 
 function adicionarBotaoSobre() {
   const categoriaSlug = getQueryParam('categoria');
-  
+
   if (!categoriaSlug || !isPaginaFragrancia()) {
     return; // Não adiciona botão se não for página de fragrância
   }
@@ -463,9 +463,9 @@ function adicionarBotaoSobre() {
     <i class="fas fa-info-circle"></i>
     <span>Sobre esta fragrância</span>
   `;
-  
+
   btnSobre.addEventListener('click', () => exibirModalSobre(categoriaSlug));
-  
+
   // Insere após a descrição
   const description = categoryHeader.querySelector('#category-description');
   if (description) {
@@ -482,8 +482,9 @@ function formatPrice(price) {
 }
 
 function createCard(product) {
+  const isAvailable = product.disponivel !== false;
   const card = document.createElement('div');
-  card.className = 'card';
+  card.className = isAvailable ? 'card' : 'card unavailable';
   card.dataset.id = product.id;
 
   const price = formatPrice(product.preco);
@@ -502,6 +503,11 @@ function createCard(product) {
   `;
 
   card.addEventListener('click', () => {
+    if (!isAvailable) {
+      alert('Este produto está indisponível no momento.');
+      return;
+    }
+
     if (typeof window.openModal === 'function') {
       window.openModal(product);
     } else if (typeof openModal === 'function') {
@@ -518,7 +524,7 @@ function loadMoreProducts() {
   if (!grid) return;
 
   const remainingProducts = currentProducts.slice(displayedCount, displayedCount + PRODUCTS_PER_LOAD);
-  
+
   remainingProducts.forEach(product => {
     grid.appendChild(createCard(product));
   });
@@ -543,7 +549,7 @@ function updateResultsCount() {
   if (resultsCount) {
     const total = currentProducts.length;
     const showing = Math.min(displayedCount, total);
-    
+
     if (showing < total) {
       resultsCount.textContent = `Mostrando ${showing} de ${total} produtos`;
     } else {
@@ -643,7 +649,7 @@ async function initCategoryPage() {
   // Busca por categoria (fragrância)
   if (categoriaSlug) {
     const category = getCategoryBySlug(categoriaSlug);
-    
+
     if (!category) {
       showError(`A categoria "${categoriaSlug}" não existe.`);
       return;
@@ -656,7 +662,7 @@ async function initCategoryPage() {
   // Busca por tipo de produto
   else if (tipoSlug) {
     const tipo = getTipoBySlug(tipoSlug);
-    
+
     if (!tipo) {
       showError(`O tipo "${tipoSlug}" não existe.`);
       return;
@@ -669,10 +675,10 @@ async function initCategoryPage() {
 
   // Atualiza página
   document.title = `${title} - JB Home Essence`;
-  
+
   const titleElement = document.getElementById('category-title');
   const descriptionElement = document.getElementById('category-description');
-  
+
   if (titleElement) titleElement.textContent = title;
   if (descriptionElement) descriptionElement.textContent = description;
 
@@ -690,7 +696,7 @@ function showError(message) {
   const titleElement = document.getElementById('category-title');
   const descriptionElement = document.getElementById('category-description');
   const grid = document.getElementById('products-grid');
-  
+
   if (titleElement) titleElement.textContent = 'Erro';
   if (descriptionElement) descriptionElement.textContent = '';
   if (grid) grid.innerHTML = `<p class="error-message">${message}</p>`;
