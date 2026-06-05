@@ -1,0 +1,20 @@
+# Dependências
+node_modules/
+cms/node_modules/
+
+# Sanity build
+cms/dist/
+cms/.sanity/
+
+# Variáveis de ambiente
+.env
+.env.local
+.env.production
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
