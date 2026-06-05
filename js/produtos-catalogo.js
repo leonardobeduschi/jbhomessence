@@ -1,4 +1,4 @@
-// produtos-catalogo.js - Catálogo simplificado por categorias
+﻿// produtos-catalogo.js - Catálogo simplificado por categorias
 // Nova arquitetura: páginas estáticas por categoria, sem filtros dinâmicos, JSON externo
 
 // ========== VARIÁVEIS GLOBAIS ==========
@@ -27,7 +27,7 @@ async function loadProducts() {
     const response = await fetch('../produtos/produtos.json');
     if (!response.ok) throw new Error('Erro ao carregar produtos');
     allProducts = await response.json();
-    console.log(`✓ ${allProducts.length} produtos carregados`);
+    console.log(`✔ ${allProducts.length} produtos carregados`);
   } catch (error) {
     console.error('Erro ao carregar produtos:', error);
     allProducts = [];
@@ -66,7 +66,7 @@ function createCard(product) {
 
   card.innerHTML = `
     <div class="card-img-container">
-      <img src="${product.imagens[0] || '../img/placeholder.jpg'}" 
+      <img src="${product.imagens[0] || '../img/placeholder.webp'}" 
            alt="${product.nome}" 
            class="card-img main" 
            loading="lazy">
@@ -480,5 +480,5 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Carrega produtos do JSON
   await loadProducts();
 
-  console.log('✅ Catálogo inicializado com sucesso!');
+  console.log('✔ Catálogo inicializado com sucesso!');
 });

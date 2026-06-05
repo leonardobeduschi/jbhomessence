@@ -354,7 +354,7 @@ function exibirModalSobre(slugFragrancia) {
   }
 
   // Gera o caminho da imagem da fragrância (nova pasta: sobre)
-  const imagemFragrancia = `../img/fragrancias/sobre/fragrancia-${slugFragrancia}-jb-home-essence.png`;
+  const imagemFragrancia = `../img/fragrancias/sobre/fragrancia-${slugFragrancia}-jb-home-essence.webp`;
 
   // Cria o modal
   const modal = document.createElement('div');
@@ -367,7 +367,7 @@ function exibirModalSobre(slugFragrancia) {
       
       <div class="modal-sobre-content">
         <div class="modal-sobre-header">
-          <img src="${imagemFragrancia}" alt="${fragrancia.nome}" onerror="this.src='../img/placeholder.png'">
+          <img src="${imagemFragrancia}" alt="${fragrancia.nome}" onerror="this.src='../img/placeholder.webp'">
         </div>
 
         <div class="modal-sobre-body">
@@ -488,7 +488,7 @@ function createCard(product) {
   card.dataset.id = product.id;
 
   const price = formatPrice(product.preco);
-  const mainImage = product.imagens?.[0] || '../img/placeholder.jpg';
+  const mainImage = product.imagens?.[0] || '../img/placeholder.webp';
   const hoverImage = product.imagens?.[1] || mainImage;
 
   card.innerHTML = `
@@ -722,3 +722,4 @@ if (document.readyState === 'loading') {
 } else {
   initCategoryPage();
 }
+

@@ -1,9 +1,9 @@
 [
   {
-    "id": "aromatizador",
-    "nome": "Aromatizador",
-    "slug": "aromatizador",
-    "descricao": "Aromatizadores de ambiente em spray"
+    "id": "home-spray",
+    "nome": "Home Spray",
+    "slug": "home-spray",
+    "descricao": "Home Spray / Perfume de Ambiente"
   },
   {
     "id": "difusor-varetas",

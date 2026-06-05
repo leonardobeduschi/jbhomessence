@@ -1,0 +1,167 @@
+/* kits-modal.css - Estilos para seletor de fragrâncias em modais de kits */
+
+/* ========== Seletor de Fragrâncias ========== */
+.kit-fragrance-selector {
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 12px;
+    border: 1px solid #dee2e6;
+}
+
+.kit-fragrance-selector h4 {
+    margin: 0 0 1rem 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #495057;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Container dos botões */
+.fragrance-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+/* Botões de fragrância */
+.fragrance-btn {
+    flex: 1 1 auto;
+    min-width: 120px;
+    padding: 0.75rem 1.25rem;
+
+    /* Estilo */
+    background: white;
+    color: #495057;
+    border: 2px solid #dee2e6;
+    border-radius: 8px;
+
+    /* Tipografia */
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-align: center;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    /* Remove estilos padrão de botão */
+    outline: none;
+}
+
+/* Hover */
+.fragrance-btn:hover {
+    background: #f8f9fa;
+    border-color: var(--verde, #4a7c59);
+    color: var(--verde, #4a7c59);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Active (selecionado) */
+.fragrance-btn.active {
+    background: linear-gradient(135deg, var(--verde, #4a7c59) 0%, #3d6448 100%);
+    border-color: var(--verde, #4a7c59);
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(74, 124, 89, 0.3);
+}
+
+.fragrance-btn.active:hover {
+    background: linear-gradient(135deg, #3d6448 0%, var(--verde, #4a7c59) 100%);
+    transform: translateY(-1px);
+}
+
+/* Focus para acessibilidade */
+.fragrance-btn:focus {
+    outline: 2px solid var(--verde, #4a7c59);
+    outline-offset: 2px;
+}
+
+/* ========== Animações para transição de conteúdo ========== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-images-column img {
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-price,
+.modal-description,
+.modal-tags,
+.modal-info-item {
+    animation: fadeIn 0.2s ease;
+}
+
+/* ========== Responsividade ========== */
+
+/* Tablets */
+@media (max-width: 768px) {
+    .kit-fragrance-selector {
+        padding: 1.25rem;
+    }
+
+    .fragrance-options {
+        gap: 0.6rem;
+    }
+
+    .fragrance-btn {
+        min-width: 100px;
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .kit-fragrance-selector {
+        padding: 1rem;
+        margin: 1rem 0;
+    }
+
+    .kit-fragrance-selector h4 {
+        font-size: 0.9rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .fragrance-options {
+        gap: 0.5rem;
+    }
+
+    .fragrance-btn {
+        flex: 1 1 100%;
+        min-width: unset;
+        padding: 0.65rem 0.85rem;
+        font-size: 0.8rem;
+    }
+
+    /* Garante que os botões sejam facilmente tocáveis */
+    .fragrance-btn {
+        min-height: 44px;
+        /* Tamanho mínimo recomendado para touch */
+    }
+}
+
+/* Tablets em modo landscape */
+@media (min-width: 481px) and (max-width: 768px) {
+    .fragrance-btn {
+        flex: 0 1 calc(50% - 0.3rem);
+    }
+}
+
+/* Desktop maior */
+@media (min-width: 1200px) {
+    .fragrance-btn {
+        min-width: 140px;
+        padding: 0.85rem 1.5rem;
+    }
+}

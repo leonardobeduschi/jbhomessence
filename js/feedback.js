@@ -1,46 +1,46 @@
-// Dados de exemplo
+﻿// Dados de exemplo
 const feedbacksData = [
     {
         name: "Rogerio Quinto",
         date: "12/09/2025",
         rating: 5,
-        comment: "Um ótimo atendimento, do início ao fim, a equipe da JB foi muito atenciosa e prestaram um ótimo serviço. Usei os seus aromas no meu escritório, que por sinal fez muito sucesso com meus clientes.",
-        avatar: "img/testimonials/cliente-rogerio-quinto-depoimento.png"
+        comment: "Um ótimo atendimento, do início ao fim, a equipe da JB foi muito atenciosa e prestou um ótimo serviço. Usei os seus aromas no meu escritório, que por sinal fez muito sucesso com meus clientes.",
+        avatar: "img/testimonials/cliente-rogerio-quinto-depoimento.webp"
     },
     {
         name: "Lucas Henrique",
         date: "29/09/2025",
         rating: 5,
-        comment: "Simplesmente maravilhoso! Me ajudaram na escolha do presente e também comprei um kit com difusor de aromas e sabonete liquido muito cheiroso aqui pra casa",
-        avatar: "img/testimonials/cliente-lucas-henrique-depoimento.png"
+        comment: "Simplesmente maravilhoso! Me ajudaram na escolha do presente e também comprei um kit com difusor de aromas e sabonete líquido muito cheiroso aqui pra casa",
+        avatar: "img/testimonials/cliente-lucas-henrique-depoimento.webp"
     },
     {
         name: "Betina Pezzini da Veiga",
         date: "02/10/2025",
         rating: 5,
         comment: "Estava procurando aromatizadores e essências para usar aqui para casa e encontrei a JB. Os cheirinhos são maravilhosos e fixam bastante. Super indico!",
-        avatar: "img/testimonials/cliente-betina-pezzini-depoimento.png"
+        avatar: "img/testimonials/cliente-betina-pezzini-depoimento.webp"
     },
     {
         name: "Eduarda Schnaider",
         date: "10/06/2025",
         rating: 5,
         comment: "Qualidade dos produtos são de outro mundo, a fixação é perfeita e o atendimento incrível, fui muito bem atendida, já comprei duas vezes e continuarei comprando!!!",
-        avatar: "img/testimonials/cliente-eduarda-schnaider-depoimento.png"
+        avatar: "img/testimonials/cliente-eduarda-schnaider-depoimento.webp"
     },
     {
         name: "GIO",
         date: "25/06/2025",
         rating: 5,
-        comment: "Viajei de São Paulo até balneário e uma das maiores surpresas foi este loja, com um atendimento tão atencioso e delicado como os aromas que eles nos trazem. Nunca imaginei o tamanho da importância olfativa para diferentes ambientes até então.",
-        avatar: "img/testimonials/cliente-GIO-depoimento.png"
+        comment: "Viajei de São Paulo até Balneário e uma das maiores surpresas foi esta loja, com um atendimento tão atencioso e delicado como os aromas que eles nos trazem. Nunca imaginei o tamanho da importância olfativa para diferentes ambientes até então.",
+        avatar: "img/testimonials/cliente-GIO-depoimento.webp"
     },
     {
-        name: "Emília wetter",
+        name: "Emília Wetter",
         date: "10/06/2024",
         rating: 5,
-        comment: "Produtos de qualidade impecável e atendimento excelente!",
-        avatar: "img/testimonials/cliente-emilia-wetter-depoimento.png"
+        comment: "Produtos de qualidade impecÃ¡vel e atendimento excelente!",
+        avatar: "img/testimonials/cliente-emilia-wetter-depoimento.webp"
     }
 ];
 
@@ -86,29 +86,29 @@ class FeedbackCarousel {
         this.track.innerHTML = feedbacksData.map((f, i) => `
             <div class="feedback-card" data-index="${i}">
                 <div class="feedback-icon">
-                    <img src="img/testimonials/google-reviews-logo.png" alt="Google" class="google-icon">
+                    <img src="img/testimonials/google-reviews-logo.webp" alt="Google" class="google-icon">
                 </div>
                 <div class="feedback-header">
-                    <img src="${f.avatar || 'img/avatar-anonimo.png'}" alt="Foto de ${f.name}" class="client-avatar" onerror="this.src='img/avatar-anonimo.png'">
+                    <img src="${f.avatar || 'img/avatar-anonimo.webp'}" alt="Foto de ${f.name}" class="client-avatar" onerror="this.src='img/avatar-anonimo.webp'">
                     <div class="client-info">
                         <div class="client-name">${f.name}</div>
                         <div class="feedback-date">${f.date}</div>
                     </div>
                 </div>
-                <div class="stars">
+                    <div class="stars">
                     ${Array.from({ length: 5 }).map((_, i) => `<span class="star">${i < f.rating ? '★' : '☆'}</span>`).join('')}
                 </div>
                 <div class="feedback-text">"${f.comment}"</div>
             </div>
         `).join('');
 
-        // atualizar referências e medidas
+        // atualizar referÃªncias e medidas
         this.cards = Array.from(this.track.querySelectorAll('.feedback-card'));
         this.total = this.cards.length;
         // garante cardsPerView <= total
         this.cardsPerView = Math.min(this.getCardsPerView(), Math.max(1, this.total));
 
-        // pequena pausa para garantir que estilos foram aplicados e offsets calculáveis
+        // pequena pausa para garantir que estilos foram aplicados e offsets calculÃ¡veis
         requestAnimationFrame(() => {
             this.calculateMeasurements();
             this.currentIndex = 0;
@@ -117,7 +117,7 @@ class FeedbackCarousel {
     }
 
     calculateMeasurements() {
-        // referências
+        // referÃªncias
         this.carousel = document.querySelector('.feedback-carousel');
         this.track = document.getElementById('google-feedbacks');
 
@@ -125,52 +125,52 @@ class FeedbackCarousel {
         const computedGap = getComputedStyle(this.track).gap;
         this.gap = computedGap ? parseFloat(computedGap) : 0;
 
-        // largura do card (assume todos têm mesma largura)
+        // largura do card (assume todos tÃªm mesma largura)
         this.cardWidth = this.cards[0] ? this.cards[0].offsetWidth : 0;
     }
 
-    // centraliza o bloco visível de cards conforme cardsPerView e currentIndex
+    // centraliza o bloco visÃ­vel de cards conforme cardsPerView e currentIndex
     updateCarouselPosition(noTransition = false) {
         if (!this.track) return;
         this.cardsPerView = Math.min(this.getCardsPerView(), Math.max(1, this.total));
         this.calculateMeasurements();
 
-        // largura do bloco visível (N cards + gaps entre eles)
+        // largura do bloco visÃ­vel (N cards + gaps entre eles)
         const visibleWidth = (this.cardWidth * this.cardsPerView) + (Math.max(0, this.cardsPerView - 1) * this.gap);
         const carouselWidth = this.carousel ? this.carousel.clientWidth : visibleWidth;
 
-        // deslocamento para centralizar o bloco visível dentro do container
+        // deslocamento para centralizar o bloco visÃ­vel dentro do container
         const leftOffset = (carouselWidth - visibleWidth) / 2;
 
-        // index máximo válido para não deixar espaço vazio (quando não queremos wrap dentro da posição)
+        // index mÃ¡ximo vÃ¡lido para nÃ£o deixar espaÃ§o vazio (quando nÃ£o queremos wrap dentro da posiÃ§Ã£o)
         const maxStartIndex = Math.max(0, this.total - this.cardsPerView);
 
-        // se o index atualmente está além do último bloco, volta para 0 (deduzido para comportamento de loop)
+        // se o index atualmente estÃ¡ alÃ©m do Ãºltimo bloco, volta para 0 (deduzido para comportamento de loop)
         if (this.currentIndex > maxStartIndex) {
             // permitimos currentIndex = 0 quando chegamos no final (loop)
-            // só para exibir corretamente; o autoplay/lógica de next já cuida do wrap
+            // sÃ³ para exibir corretamente; o autoplay/lÃ³gica de next jÃ¡ cuida do wrap
             this.currentIndex = this.currentIndex > maxStartIndex ? 0 : this.currentIndex;
         }
 
-        // cálculo em px: deslocar pela largura do item + gap vezes currentIndex, e ajustar leftOffset
+        // cÃ¡lculo em px: deslocar pela largura do item + gap vezes currentIndex, e ajustar leftOffset
         const translateX = -(this.currentIndex * (this.cardWidth + this.gap)) + leftOffset;
 
-        // aplica transformação
+        // aplica transformaÃ§Ã£o
         if (noTransition) {
             this.track.style.transition = 'none';
         } else {
             this.track.style.transition = 'transform 0.45s cubic-bezier(.22,.9,.31,1)';
         }
         this.track.style.transform = `translateX(${translateX}px)`;
-        // depois de aplicar sem transição, restaura transição padrão
+        // depois de aplicar sem transiÃ§Ã£o, restaura transiÃ§Ã£o padrÃ£o
         if (noTransition) {
-            // forçar reflow e restaurar
+            // forÃ§ar reflow e restaurar
             void this.track.offsetWidth;
             this.track.style.transition = 'transform 0.45s cubic-bezier(.22,.9,.31,1)';
         }
     }
 
-    // avança um "grupo" — para desktop: Avança em blocos naturais mantendo centralização.
+    // avanÃ§a um "grupo" â€” para desktop: AvanÃ§a em blocos naturais mantendo centralizaÃ§Ã£o.
     next() {
         const maxStartIndex = Math.max(0, this.total - this.cardsPerView);
         if (this.currentIndex < maxStartIndex) {
@@ -209,9 +209,9 @@ class FeedbackCarousel {
 
     attachResize() {
         window.addEventListener('resize', () => {
-            // atualiza cardsPerView e medições e reposiciona (sem animação brusca)
+            // atualiza cardsPerView e mediÃ§Ãµes e reposiciona (sem animaÃ§Ã£o brusca)
             this.cardsPerView = Math.min(this.getCardsPerView(), Math.max(1, this.total));
-            // recalcula medidas e reposiciona sem transição para não causar animação estranha no resize
+            // recalcula medidas e reposiciona sem transiÃ§Ã£o para nÃ£o causar animaÃ§Ã£o estranha no resize
             this.calculateMeasurements();
             this.updateCarouselPosition(true);
         });
@@ -231,10 +231,10 @@ class FeedbackCarousel {
             this.stopAutoPlay();
         }, { passive: true });
 
-        // touchmove -> apenas previne comportamento padrão se precisar
+        // touchmove -> apenas previne comportamento padrÃ£o se precisar
         track.addEventListener('touchmove', (e) => {
             if (!this.touch.isTouching) return;
-            // não fazemos transform dinâmico aqui para simplificar; apenas aguardamos o fim do gesto
+            // nÃ£o fazemos transform dinÃ¢mico aqui para simplificar; apenas aguardamos o fim do gesto
         }, { passive: true });
 
         // touchend
@@ -243,11 +243,11 @@ class FeedbackCarousel {
             this.touch.isTouching = false;
             const endX = e.changedTouches[0].clientX;
             const diff = endX - this.touch.startX;
-            const threshold = 50; // px mínimo para considerar swipe
+            const threshold = 50; // px mÃ­nimo para considerar swipe
 
             if (diff < -threshold) {
-                // swipe para a esquerda -> próximo
-                // usamos wrap com modulo: avança e se ultrapassar volta ao início
+                // swipe para a esquerda -> prÃ³ximo
+                // usamos wrap com modulo: avanÃ§a e se ultrapassar volta ao inÃ­cio
                 const maxStartIndex = Math.max(0, this.total - this.cardsPerView);
                 if (this.currentIndex < maxStartIndex) {
                     this.currentIndex++;
@@ -264,7 +264,7 @@ class FeedbackCarousel {
                 }
             }
             this.updateCarouselPosition();
-            // reinicia autoplay após interação
+            // reinicia autoplay apÃ³s interaÃ§Ã£o
             this.startAutoPlay();
         }, { passive: true });
     }

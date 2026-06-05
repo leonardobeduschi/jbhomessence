@@ -7,7 +7,7 @@ const fragrances = [
 ];
 
 const tipos = [
-  'aromatizador', 'difusor-varetas', 'sabonete-liquido', 
+  'home-spray', 'difusor-varetas', 'sabonete-liquido', 
   'essencias', 'vela-aromatica', 'aromatizador-carro', 'agua-perfumada'
 ];
 

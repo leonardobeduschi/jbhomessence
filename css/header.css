@@ -1,7 +1,7 @@
-header {
+﻿header {
   background:
     linear-gradient(-45deg, rgba(107, 124, 110, 0.7), rgba(95, 75, 59, 0.7), rgba(142, 177, 153, 0.7), rgba(127, 100, 73, 0.7)),
-    url('../img/ui/banner-jb-home-essence-homepage-2.png') center/cover no-repeat;
+    url('../img/ui/banner-jb-home-essence-homepage-2.webp') center/cover no-repeat;
   background-size: 400% 400%, cover;
   background-blend-mode: overlay;
   animation: gradient 40s ease infinite;
@@ -10,10 +10,10 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  /* Alterado para alinhar conteúdo na parte inferior */
+  /* Alterado para alinhar conteÃºdo na parte inferior */
   align-items: center;
   padding: 120px 20px 100px;
-  /* Aumentei o padding inferior para os botões */
+  /* Aumentei o padding inferior para os botÃµes */
   position: relative;
   overflow: hidden;
   padding-top: 100px;
@@ -59,7 +59,7 @@ header.blog-header {
   width: 100%;
   max-width: 1200px;
   padding-bottom: 0px;
-  /* Espaço extra na parte inferior */
+  /* EspaÃ§o extra na parte inferior */
 }
 
 .header-buttons {
@@ -108,7 +108,7 @@ header.blog-header {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsividade para dispositivos móveis */
+/* Responsividade para dispositivos mÃ³veis */
 @media (max-width: 768px) {
   header {
     min-height: 80vh;
@@ -199,7 +199,7 @@ section ol {
 @media (max-width: 768px) {
   .header-content h1 {
     font-size: 1rem;
-    /* Tamanho legível */
+    /* Tamanho legÃ­vel */
     margin-bottom: 30px;
   }
 

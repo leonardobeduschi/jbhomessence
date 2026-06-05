@@ -12,8 +12,8 @@
     "notas": "bergamota, pomelo, capim limão, gengibre, violeta, fresia, musk e sândalo.",
     "modoUso": "Mova a trava até a posição OPEN e aplique a uma distância aproximada de 20cm. borrife em roupas no varal, em peças retiradas recentemente da secadora ou em roupas secas antes de serem guardadas. Aplique na hora de passar ou em peças dentro de gavetas/armários.",
     "imagens": [
-      "../img/imagens-catalogo/aguaperfumada-abbraccio-1.jpg",
-      "../img/imagens-catalogo/aguaperfumada-abbraccio-2.jpg"
+      "../img/imagens-catalogo/aguaperfumada-abbraccio-1.webp",
+      "../img/imagens-catalogo/aguaperfumada-abbraccio-2.webp"
     ],
     "disponivel": true
   },
@@ -30,8 +30,8 @@
     "notas": "lavandin, gerânio, rosas, eucalipto, baunilha e musk",
     "modoUso": "Aplicar sobre tecidos em geral (evitando couro e sintéticos), aproximadamente 30cm de distância, sem encharcar. Especialmente para roupas de cama e toalhas de banho.",
     "imagens": [
-      "../img/imagens-catalogo/home-spray-300ml-aroma-do-bebe-1.jpg",
-      "../img/imagens-catalogo/home-spray-300ml-aroma-do-bebe-2.jpg"
+      "../img/imagens-catalogo/home-spray-300ml-aroma-do-bebe-1.webp",
+      "../img/imagens-catalogo/home-spray-300ml-aroma-do-bebe-2.webp"
     ],
     "disponivel": true
   },
@@ -48,8 +48,8 @@
     "notas": "lavandin, gerânio, rosas, eucalipto, baunilha e musk",
     "modoUso": "Retirar o vedante da tampa, encaixar novamente a tampa no frasco e colocar todas as varetas. Evite derramar o líquido nas superfícies, poderá manchar. Caso isso ocorra, limpe imediatamente.",
     "imagens": [
-      "../img/imagens-catalogo/difusor-de-varetas-aroma-do-bebe-1.jpg",
-      "../img/imagens-catalogo/difusor-de-varetas-aroma-do-bebe-2.jpg"
+      "../img/imagens-catalogo/difusor-de-varetas-aroma-do-bebe-1.webp",
+      "../img/imagens-catalogo/difusor-de-varetas-aroma-do-bebe-2.webp"
     ],
     "disponivel": true
   },
@@ -66,8 +66,8 @@
     "notas": "bergamota, pomelo, jasmim, cedro, gerânio, musk, vetiver e âmbar",
     "modoUso": "Aplicar sobre tecidos em geral (evitando couro e sintéticos), aproximadamente 30cm de distância, sem encharcar.",
     "imagens": [
-      "../img/imagens-catalogo/home-spray-bambu-garden-1.jpg",
-      "../img/imagens-catalogo/home-spray-bambu-garden-2.jpg"
+      "../img/imagens-catalogo/home-spray-bambu-garden-1.webp",
+      "../img/imagens-catalogo/home-spray-bambu-garden-2.webp"
     ],
     "disponivel": true
   },
@@ -84,8 +84,8 @@
     "notas": "bergamota, pomelo, jasmim, cedro, gerânio, musk, vetiver e âmbar",
     "modoUso": "Retirar o vedante da tampa, encaixar novamente a tampa no frasco e colocar todas as varetas. Evite derramar o líquido nas superfícies, poderá manchar. Caso isso ocorra, limpe imediatamente.",
     "imagens": [
-      "../img/imagens-catalogo/difusor-de-varetas-bambu-garden-1.jpg",
-      "../img/imagens-catalogo/difusor-de-varetas-bambu-garden-2.jpg"
+      "../img/imagens-catalogo/difusor-de-varetas-bambu-garden-1.webp",
+      "../img/imagens-catalogo/difusor-de-varetas-bambu-garden-2.webp"
     ],
     "disponivel": true
   },
@@ -102,8 +102,8 @@
     "notas": "bergamota, pomelo, jasmim, cedro, gerânio, musk, vetiver e âmbar",
     "modoUso": "Aplicar o sabonete sobre a pele, massagear até fazer espuma cremosa. Pode ser usado no banho e/ou para lavar mãos e rosto. Limpa e mantém o PH natural da pele.",
     "imagens": [
-      "../img/imagens-catalogo/sabonete-liquido-bambu-garden-1.jpg",
-      "../img/imagens-catalogo/sabonete-liquido-bambu-garden-2.jpg"
+      "../img/imagens-catalogo/sabonete-liquido-bambu-garden-1.webp",
+      "../img/imagens-catalogo/sabonete-liquido-bambu-garden-2.webp"
     ],
     "disponivel": true
   },
@@ -120,8 +120,8 @@
     "notas": "bergamota, pomelo, jasmim, cedro, gerânio, musk, vetiver e âmbar",
     "modoUso": "Acrescente água em seu difusor elétrico e/ou ultrassônico (conforme indicação do fabricante), pingue de 8 a 12 gotas e ligue. Não é necessário agitar. Para difusores de varetas, pingue de 10 a 15 gotas diretamente no frasco e insira as varetas. Vire as varetas a cada 2 dias para potencializar a fragrância. Não é óleo essencial.",
     "imagens": [
-      "../img/imagens-catalogo/essencia-bambu-garden-1.jpg",
-      "../img/imagens-catalogo/essencia-catalogo-2.jpg"
+      "../img/imagens-catalogo/essencia-bambu-garden-1.webp",
+      "../img/imagens-catalogo/essencia-catalogo-2.webp"
     ],
     "disponivel": true
   },
@@ -138,8 +138,8 @@
     "notas": "capim-limão, gengibre, hortelã",
     "modoUso": "Aplicar sobre tecidos em geral",
     "imagens": [
-      "../img/imagens-catalogo/home-spray-capim-santo-1.jpg",
-      "../img/imagens-catalogo/home-spray-capim-santo-2.jpg"
+      "../img/imagens-catalogo/home-spray-capim-santo-1.webp",
+      "../img/imagens-catalogo/home-spray-capim-santo-2.webp"
     ],
     "disponivel": true
   },
@@ -156,8 +156,8 @@
     "notas": "capim-limão, gengibre, hortelã",
     "modoUso": "Retirar o vedante e colocar as varetas",
     "imagens": [
-      "../img/imagens-catalogo/difusor-de-varetas-capim-santo-1.jpg",
-      "../img/imagens-catalogo/difusor-de-varetas-capim-santo-2.jpg"
+      "../img/imagens-catalogo/difusor-de-varetas-capim-santo-1.webp",
+      "../img/imagens-catalogo/difusor-de-varetas-capim-santo-2.webp"
     ],
     "disponivel": true
   },
@@ -174,8 +174,8 @@
     "notas": "capim-limão, gengibre, hortelã",
     "modoUso": "Aplicar nas mãos e corpo",
     "imagens": [
-      "../img/imagens-catalogo/sabonete-liquido-capim-santo-1.jpg",
-      "../img/imagens-catalogo/sabonete-liquido-capim-santo-2.jpg"
+      "../img/imagens-catalogo/sabonete-liquido-capim-santo-1.webp",
+      "../img/imagens-catalogo/sabonete-liquido-capim-santo-2.webp"
     ],
     "disponivel": false
   },
@@ -192,8 +192,8 @@
     "notas": "capim-limão, gengibre, hortelã",
     "modoUso": "Acrescente água em seu difusor elétrico e/ou ultrassônico (conforme indicação do fabricante), pingue de 8 a 12 gotas e ligue. Não é óleo essencial.",
     "imagens": [
-      "../img/imagens-catalogo/essencia-capim-santo-1.jpg",
-      "../img/imagens-catalogo/essencia-catalogo-2.jpg"
+      "../img/imagens-catalogo/essencia-capim-santo-1.webp",
+      "../img/imagens-catalogo/essencia-catalogo-2.webp"
     ],
     "disponivel": true
   },
@@ -210,8 +210,8 @@
     "notas": "baunilha, musk e âmbar",
     "modoUso": "Aplicar sobre tecidos em geral (evitando couro e sintéticos), aproximadamente 30cm de distância, sem encharcar. ",
     "imagens": [
-      "../img/imagens-catalogo/home-spray-divina-vanilla-1.jpg",
-      "../img/imagens-catalogo/home-spray-divina-vanilla-2.jpg"
+      "../img/imagens-catalogo/home-spray-divina-vanilla-1.webp",
+      "../img/imagens-catalogo/home-spray-divina-vanilla-2.webp"
     ],
     "disponivel": true
   },
@@ -228,8 +228,8 @@
     "notas": "baunilha, musk e âmbar",
     "modoUso": "Retirar o vedante da tampa, encaixar novamente a tampa no frasco e colocar todas as varetas. Evite derramar o líquido nas superfícies, poderá manchar. Caso isso ocorra, limpe imediatamente.",
     "imagens": [
-      "../img/imagens-catalogo/difusor-de-varetas-divina-vanilla-1.jpg",
-      "../img/imagens-catalogo/difusor-de-varetas-divina-vanilla-2.jpg"
+      "../img/imagens-catalogo/difusor-de-varetas-divina-vanilla-1.webp",
+      "../img/imagens-catalogo/difusor-de-varetas-divina-vanilla-2.webp"
     ],
     "disponivel": true
   },
@@ -246,8 +246,8 @@
     "notas": "maçã, canela, laranja, cravo, pêssego, baunilha e musk",
     "modoUso": "Aplicar sobre tecidos em geral (evitando couro e sintéticos), aproximadamente 30cm de distância, sem encharcar. ",
     "imagens": [
-      "../img/imagens-catalogo/home-spray-encontro-1.jpg",
-      "../img/imagens-catalogo/home-spray-encontro-2.jpg"
+      "../img/imagens-catalogo/home-spray-encontro-1.webp",
+      "../img/imagens-catalogo/home-spray-encontro-2.webp"
     ],
     "disponivel": true
   },
@@ -264,8 +264,8 @@
     "notas": "maçã, canela, laranja, cravo, pêssego, baunilha e musk",
     "modoUso": "Retirar o vedante da tampa, encaixar novamente a tampa no frasco e colocar todas as varetas. Evite derramar o líquido nas superfícies, poderá manchar. Caso isso ocorra, limpe imediatamente.",
     "imagens": [
-      "../img/imagens-catalogo/difusor-de-varetas-encontro-1.jpg",
-      "../img/imagens-catalogo/difusor-de-varetas-encontro-2.jpg"
+      "../img/imagens-catalogo/difusor-de-varetas-encontro-1.webp",
+      "../img/imagens-catalogo/difusor-de-varetas-encontro-2.webp"
     ],
     "disponivel": true
   },
@@ -282,8 +282,8 @@
     "notas": "maçã, canela, laranja, cravo, pêssego, baunilha e musk",
     "modoUso": "Modo de uso: acrescente água em seu difusor elétrico e/ou ultrassônico (conforme indicação do fabricante), pingue de 8 a 12 gotas e ligue. Não é óleo essencial.",
     "imagens": [
-      "../img/imagens-catalogo/essencia-encontro-1.jpg",
-      "../img/imagens-catalogo/essencia-catalogo-2.jpg"
+      "../img/imagens-catalogo/essencia-encontro-1.webp",
+      "../img/imagens-catalogo/essencia-catalogo-2.webp"
     ],
     "disponivel": true
   },
@@ -300,8 +300,8 @@
     "notas": "maçã, canela, laranja, cravo, pêssego, baunilha e musk",
     "modoUso": "Retire a tampa e acenda o pavio para que o perfume se dissipe pelo ambiente.",
     "imagens": [
-      "../img/imagens-catalogo/velas-aromaticas-encontro-1.jpg",
-      "../img/imagens-catalogo/velas-aromaticas-encontro-2.jpg"
+      "../img/imagens-catalogo/velas-aromaticas-encontro-1.webp",
+      "../img/imagens-catalogo/velas-aromaticas-encontro-2.webp"
     ],
     "disponivel": true
   },
@@ -318,8 +318,8 @@
     "notas": "cassis, pera, maçã, violeta, ameixa, muguet, musk e pêssego branco",
     "modoUso": "Aplicar sobre tecidos em geral (evitando couro e sintéticos), aproximadamente 30cm de distância, sem encharcar. ",
     "imagens": [
-      "../img/imagens-catalogo/home-spray-garbo-1.jpg",
-      "../img/imagens-catalogo/home-spray-garbo-2.jpg"
+      "../img/imagens-catalogo/home-spray-garbo-1.webp",
+      "../img/imagens-catalogo/home-spray-garbo-2.webp"
     ],
     "disponivel": true
   },
@@ -336,8 +336,8 @@
     "notas": "cassis, pera, maçã, violeta, ameixa, muguet, musk e pêssego branco",
     "modoUso": "Retirar o vedante da tampa, encaixar novamente a tampa no frasco e colocar todas as varetas. Evite derramar o líquido nas superfícies, poderá manchar. Caso isso ocorra, limpe imediatamente.",
     "imagens": [
-      "../img/imagens-catalogo/difusor-de-varetas-garbo-1.jpg",
-      "../img/imagens-catalogo/difusor-de-varetas-garbo-2.jpg"
+      "../img/imagens-catalogo/difusor-de-varetas-garbo-1.webp",
+      "../img/imagens-catalogo/difusor-de-varetas-garbo-2.webp"
     ],
     "disponivel": true
   },
@@ -354,8 +354,8 @@
     "notas": "cassis, pera, maçã, violeta, ameixa, muguet, musk e pêssego branco",
     "modoUso": "Acrescente água em seu difusor elétrico e/ou ultrassônico (conforme indicação do fabricante), pingue de 8 a 12 gotas e ligue. Não é necessário agitar. Para difusores de varetas, pingue de 10 a 15 gotas diretamente no frasco e insira as varetas. Vire as varetas a cada 2 dias para potencializar a fragrância. Não é óleo essencial.",
     "imagens": [
-      "../img/imagens-catalogo/essencia-garbo-1.jpg",
-      "../img/imagens-catalogo/essencia-catalogo-2.jpg"
+      "../img/imagens-catalogo/essencia-garbo-1.webp",
+      "../img/imagens-catalogo/essencia-catalogo-2.webp"
     ],
     "disponivel": true
   },
@@ -372,8 +372,8 @@
     "notas": "cassis, pera, maçã, violeta, ameixa, muguet, musk e pêssego branco",
     "modoUso": "Aplicar o sabonete sobre a pele, massagear até fazer espuma cremosa. Pode ser usado no banho e/ou para lavar mãos e rosto. Limpa e mantém o PH natural da pele.",
     "imagens": [
-      "../img/imagens-catalogo/sabonete-liquido-garbo-1.jpg",
-      "../img/imagens-catalogo/sabonete-liquido-garbo-2.jpg"
+      "../img/imagens-catalogo/sabonete-liquido-garbo-1.webp",
+      "../img/imagens-catalogo/sabonete-liquido-garbo-2.webp"
     ],
     "disponivel": true
   },
@@ -390,8 +390,8 @@
     "notas": "cassis, pera, maçã, violeta, ameixa, muguet, musk e pêssego branco",
     "modoUso": "Retire a tampa e acenda o pavio para que o perfume se dissipe pelo ambiente.",
     "imagens": [
-      "../img/imagens-catalogo/velas-aromaticas-garbo-1.png",
-      "../img/imagens-catalogo/velas-aromaticas-garbo-2.png"
+      "../img/imagens-catalogo/velas-aromaticas-garbo-1.webp",
+      "../img/imagens-catalogo/velas-aromaticas-garbo-2.webp"
     ],
     "disponivel": true
   },
@@ -408,7 +408,7 @@
     "notas": "ervas do mediterrâneo e limão siciliano",
     "modoUso": "Aplicar sobre tecidos em geral (evitando couro e sintéticos), aproximadamente 30cm de distância, sem encharcar.",
     "imagens": [
-      "../img/imagens-catalogo/home-spray-havana-1.jpg"
+      "../img/imagens-catalogo/home-spray-havana-1.webp"
     ],
     "disponivel": true
   },
@@ -425,8 +425,8 @@
     "notas": "ervas do mediterrâneo e limão siciliano",
     "modoUso": "Retirar o vedante da tampa, encaixar novamente a tampa no frasco e colocar todas as varetas. Evite derramar o líquido nas superfícies, poderá manchar. Caso isso ocorra, limpe imediatamente.",
     "imagens": [
-      "../img/imagens-catalogo/difusor-de-varetas-havana-1.jpg",
-      "../img/imagens-catalogo/difusor-de-varetas-havana-2.jpg"
+      "../img/imagens-catalogo/difusor-de-varetas-havana-1.webp",
+      "../img/imagens-catalogo/difusor-de-varetas-havana-2.webp"
     ],
     "disponivel": true
   },
@@ -443,8 +443,8 @@
     "notas": "ervas do mediterrâneo e limão siciliano",
     "modoUso": "Acrescente água em seu difusor elétrico e/ou ultrassônico (conforme indicação do fabricante), pingue de 8 a 12 gotas e ligue.",
     "imagens": [
-      "../img/imagens-catalogo/essencia-havana-1.jpg",
-      "../img/imagens-catalogo/essencia-catalogo-2.jpg"
+      "../img/imagens-catalogo/essencia-havana-1.webp",
+      "../img/imagens-catalogo/essencia-catalogo-2.webp"
     ],
     "disponivel": true
   },
@@ -461,8 +461,8 @@
     "notas": "ervas do mediterrâneo e limão siciliano",
     "modoUso": "Aplicar o sabonete sobre a pele, massagear até fazer espuma cremosa. Pode ser usado no banho e/ou para lavar mãos e rosto. Limpa e mantém o PH natural da pele.",
     "imagens": [
-      "../img/imagens-catalogo/sabonete-liquido-havana-1.jpg",
-      "../img/imagens-catalogo/sabonete-liquido-havana-2.jpg"
+      "../img/imagens-catalogo/sabonete-liquido-havana-1.webp",
+      "../img/imagens-catalogo/sabonete-liquido-havana-2.webp"
     ],
     "disponivel": true
   },
@@ -479,8 +479,8 @@
     "notas": "ervas do mediterrâneo e limão siciliano",
     "modoUso": "Retire a tampa e acenda o pavio para que o perfume se dissipe pelo ambiente.",
     "imagens": [
-      "../img/imagens-catalogo/velas-aromaticas-havana-1.jpg",
-      "../img/imagens-catalogo/velas-aromaticas-havana-2.jpg"
+      "../img/imagens-catalogo/velas-aromaticas-havana-1.webp",
+      "../img/imagens-catalogo/velas-aromaticas-havana-2.webp"
     ],
     "disponivel": false
   },
@@ -497,8 +497,8 @@
     "notas": "ervas do mediterrâneo e limão siciliano",
     "modoUso": "Vaporizar o aroma no cartão e pendurá-lo no retrovisor ou onde desejar. O aroma não deve ser aplicado sobre o couro dos bancos e nem sobre qualquer outra superfície, como plásticos, sintéticos ou semelhantes.",
     "imagens": [
-      "../img/imagens-catalogo/kit-carro-havana-1.jpg",
-      "../img/imagens-catalogo/kit-carro-havana-2.jpg"
+      "../img/imagens-catalogo/kit-carro-havana-1.webp",
+      "../img/imagens-catalogo/kit-carro-havana-2.webp"
     ],
     "disponivel": false
   },
@@ -515,8 +515,8 @@
     "notas": "gerânio, peônia, violeta, hortênsia e musk",
     "modoUso": "Aplicar sobre tecidos em geral (evitando couro e sintéticos), aproximadamente 30cm de distância, sem encharcar. ",
     "imagens": [
-      "../img/imagens-catalogo/home-spray-hortensia-1.jpg",
-      "../img/imagens-catalogo/home-spray-hortensia-2.jpg"
+      "../img/imagens-catalogo/home-spray-hortensia-1.webp",
+      "../img/imagens-catalogo/home-spray-hortensia-2.webp"
     ],
     "disponivel": true
   },
@@ -533,8 +533,8 @@
     "notas": "gerânio, peônia, violeta, hortênsia e musk",
     "modoUso": "Retirar o vedante da tampa, encaixar novamente a tampa no frasco e colocar todas as varetas. Evite derramar o líquido nas superfícies, poderá manchar. Caso isso ocorra, limpe imediatamente.",
     "imagens": [
-      "../img/imagens-catalogo/difusor-de-varetas-hortensia-1.jpg",
-      "../img/imagens-catalogo/difusor-de-varetas-hortensia-2.jpg"
+      "../img/imagens-catalogo/difusor-de-varetas-hortensia-1.webp",
+      "../img/imagens-catalogo/difusor-de-varetas-hortensia-2.webp"
     ],
     "disponivel": true
   },
@@ -551,8 +551,8 @@
     "notas": "gerânio, peônia, violeta, hortênsia e musk",
     "modoUso": "Acrescente água em seu difusor elétrico e/ou ultrassônico (conforme indicação do fabricante), pingue de 8 a 12 gotas e ligue. Não é óleo essencial.",
     "imagens": [
-      "../img/imagens-catalogo/essencia-hortensia-1.jpg",
-      "../img/imagens-catalogo/essencia-catalogo-2.jpg"
+      "../img/imagens-catalogo/essencia-hortensia-1.webp",
+      "../img/imagens-catalogo/essencia-catalogo-2.webp"
     ],
     "disponivel": true
   },
@@ -569,8 +569,8 @@
     "notas": "gerânio, peônia, violeta, hortênsia e musk",
     "modoUso": "Aplicar o sabonete sobre a pele, massagear até fazer espuma cremosa. Pode ser usado no banho e/ou para lavar mãos e rosto. Limpa e mantém o PH natural da pele.",
     "imagens": [
-      "../img/imagens-catalogo/sabonete-liquido-hortensia-1.jpg",
-      "../img/imagens-catalogo/sabonete-liquido-hortensia-2.jpg"
+      "../img/imagens-catalogo/sabonete-liquido-hortensia-1.webp",
+      "../img/imagens-catalogo/sabonete-liquido-hortensia-2.webp"
     ],
     "disponivel": true
   },
@@ -587,8 +587,8 @@
     "notas": "lavanda, alecrim, gerânio, menta, cashmere, jasmim, almíscar e âmbar",
     "modoUso": "Aplicar sobre tecidos em geral (evitando couro e sintéticos), aproximadamente 30cm de distância, sem encharcar. ",
     "imagens": [
-      "../img/imagens-catalogo/home-spray-jardins-da-franca-1.jpg",
-      "../img/imagens-catalogo/home-spray-jardins-da-franca-2.png"
+      "../img/imagens-catalogo/home-spray-jardins-da-franca-1.webp",
+      "../img/imagens-catalogo/home-spray-jardins-da-franca-2.webp"
     ],
     "disponivel": true
   },
@@ -605,8 +605,8 @@
     "notas": "lavanda, alecrim, gerânio, menta, cashmere, jasmim, almíscar e âmbar",
     "modoUso": "Retirar o vedante da tampa, encaixar novamente a tampa no frasco e colocar todas as varetas. Evite derramar o líquido nas superfícies, poderá manchar. Caso isso ocorra, limpe imediatamente.",
     "imagens": [
-      "../img/imagens-catalogo/difusor-de-varetas-jardins-da-franca-1.jpg",
-      "../img/imagens-catalogo/difusor-de-varetas-jardins-da-franca-2.jpg"
+      "../img/imagens-catalogo/difusor-de-varetas-jardins-da-franca-1.webp",
+      "../img/imagens-catalogo/difusor-de-varetas-jardins-da-franca-2.webp"
     ],
     "disponivel": true
   },
@@ -623,8 +623,8 @@
     "notas": "lavanda, alecrim, gerânio, menta, cashmere, jasmim, almíscar e âmbar",
     "modoUso": "Acrescente água em seu difusor elétrico e/ou ultrassônico (conforme indicação do fabricante), pingue de 8 a 12 gotas e ligue. Não é óleo essencial.",
     "imagens": [
-      "../img/imagens-catalogo/essencia-jardins-da-franca-1.jpg",
-      "../img/imagens-catalogo/essencia-catalogo-2.jpg"
+      "../img/imagens-catalogo/essencia-jardins-da-franca-1.webp",
+      "../img/imagens-catalogo/essencia-catalogo-2.webp"
     ],
     "disponivel": true
   },
@@ -641,8 +641,8 @@
     "notas": "lavanda, alecrim, gerânio, menta, cashmere, jasmim, almíscar e âmbar",
     "modoUso": "Aplicar o sabonete sobre a pele, massagear até fazer espuma cremosa. Pode ser usado no banho e/ou para lavar mãos e rosto. Limpa e mantém o PH natural da pele.",
     "imagens": [
-      "../img/imagens-catalogo/sabonete-liquido-jardins-da-franca-1.jpg",
-      "../img/imagens-catalogo/sabonete-liquido-jardins-da-franca-2.jpg"
+      "../img/imagens-catalogo/sabonete-liquido-jardins-da-franca-1.webp",
+      "../img/imagens-catalogo/sabonete-liquido-jardins-da-franca-2.webp"
     ],
     "disponivel": true
   },
@@ -659,8 +659,8 @@
     "notas": "lavanda, alecrim, gerânio, menta, cashmere, jasmim, almíscar e âmbar",
     "modoUso": "Retire a tampa e acenda o pavio para que o perfume se dissipe pelo ambiente.",
     "imagens": [
-      "../img/imagens-catalogo/velas-aromaticas-jardins-da-franca-1.jpg",
-      "../img/imagens-catalogo/velas-aromaticas-jardins-da-franca-2.jpg"
+      "../img/imagens-catalogo/velas-aromaticas-jardins-da-franca-1.webp",
+      "../img/imagens-catalogo/velas-aromaticas-jardins-da-franca-2.webp"
     ],
     "disponivel": true
   },
@@ -677,8 +677,8 @@
     "notas": "limão, lavanda, bergamota, gerânio, estragão, rosa, patchouly, vetiver, cumaru e musk",
     "modoUso": "Aplicar sobre tecidos em geral (evitando couro e sintéticos), aproximadamente 30cm de distância, sem encharcar. ",
     "imagens": [
-      "../img/imagens-catalogo/home-spray-lilas-1.jpg",
-      "../img/imagens-catalogo/home-spray-lilas-2.jpg"
+      "../img/imagens-catalogo/home-spray-lilas-1.webp",
+      "../img/imagens-catalogo/home-spray-lilas-2.webp"
     ],
     "disponivel": true
   },
@@ -695,8 +695,8 @@
     "notas": "limão, lavanda, bergamota, gerânio, estragão, rosa, patchouly, vetiver, cumaru e musk",
     "modoUso": "Retirar o vedante da tampa, encaixar novamente a tampa no frasco e colocar todas as varetas. Evite derramar o líquido nas superfícies, poderá manchar. Caso isso ocorra, limpe imediatamente.",
     "imagens": [
-      "../img/imagens-catalogo/difusor-de-varetas-lilas-1.jpg",
-      "../img/imagens-catalogo/difusor-de-varetas-lilas-2.jpg"
+      "../img/imagens-catalogo/difusor-de-varetas-lilas-1.webp",
+      "../img/imagens-catalogo/difusor-de-varetas-lilas-2.webp"
     ],
     "disponivel": true
   },
@@ -713,8 +713,8 @@
     "notas": "limão, lavanda, bergamota, gerânio, estragão, rosa, patchouly, vetiver, cumaru e musk",
     "modoUso": "Aplicar o sabonete sobre a pele, massagear até fazer espuma cremosa. Pode ser usado no banho e/ou para lavar mãos e rosto. Limpa e mantém o PH natural da pele.",
     "imagens": [
-      "../img/imagens-catalogo/sabonete-liquido-lilas-1.png",
-      "../img/imagens-catalogo/sabonete-liquido-lilas-2.png"
+      "../img/imagens-catalogo/sabonete-liquido-lilas-1.webp",
+      "../img/imagens-catalogo/sabonete-liquido-lilas-2.webp"
     ],
     "disponivel": true
   },
@@ -731,8 +731,8 @@
     "notas": "limão, lavanda, bergamota, gerânio, estragão, rosa, patchouly, vetiver, cumaru e musk",
     "modoUso": "Acrescente água em seu difusor elétrico e/ou ultrassônico (conforme indicação do fabricante), pingue de 8 a 12 gotas e ligue. Não é óleo essencial.",
     "imagens": [
-      "../img/imagens-catalogo/essencia-lilas-1.jpg",
-      "../img/imagens-catalogo/essencia-catalogo-2.jpg"
+      "../img/imagens-catalogo/essencia-lilas-1.webp",
+      "../img/imagens-catalogo/essencia-catalogo-2.webp"
     ],
     "disponivel": true
   },
@@ -749,7 +749,7 @@
     "notas": "limão, lavanda, bergamota, gerânio, estragão, rosa, patchouly, vetiver, cumaru e musk",
     "modoUso": "Vaporizar o aroma no cartão e pendurá-lo no retrovisor ou onde desejar. O aroma não deve ser aplicado sobre o couro dos bancos e nem sobre qualquer outra superfície, como plásticos, sintéticos ou semelhantes.",
     "imagens": [
-      "../img/imagens-catalogo/kit-carro-havana-2.jpg"
+      "../img/imagens-catalogo/kit-carro-havana-2.webp"
     ],
     "disponivel": true
   },
@@ -766,8 +766,8 @@
     "notas": "tangerina, noz moscada, gerânio, patchouly, almíscar, vetiver e musgo de carvalho",
     "modoUso": "Aplicar sobre tecidos em geral (evitando couro e sintéticos), aproximadamente 30cm de distância, sem encharcar. ",
     "imagens": [
-      "../img/imagens-catalogo/home-spray-monte-carlo-1.jpg",
-      "../img/imagens-catalogo/home-spray-monte-carlo-2.jpg"
+      "../img/imagens-catalogo/home-spray-monte-carlo-1.webp",
+      "../img/imagens-catalogo/home-spray-monte-carlo-2.webp"
     ],
     "disponivel": true
   },
@@ -784,8 +784,8 @@
     "notas": "tangerina, noz moscada, gerânio, patchouly, almíscar, vetiver e musgo de carvalho",
     "modoUso": "Retirar o vedante da tampa, encaixar novamente a tampa no frasco e colocar todas as varetas. Evite derramar o líquido nas superfícies, poderá manchar. Caso isso ocorra, limpe imediatamente.",
     "imagens": [
-      "../img/imagens-catalogo/difusor-de-varetas-monte-carlo-1.jpg",
-      "../img/imagens-catalogo/difusor-de-varetas-monte-carlo-2.jpg"
+      "../img/imagens-catalogo/difusor-de-varetas-monte-carlo-1.webp",
+      "../img/imagens-catalogo/difusor-de-varetas-monte-carlo-2.webp"
     ],
     "disponivel": true
   },
@@ -802,8 +802,8 @@
     "notas": "tangerina, noz moscada, gerânio, patchouly, almíscar, vetiver e musgo de carvalho",
     "modoUso": "Acrescente água em seu difusor elétrico e/ou ultrassônico (conforme indicação do fabricante), pingue de 8 a 12 gotas e ligue. Não é óleo essencial.",
     "imagens": [
-      "../img/imagens-catalogo/essencia-monte-carlo-1.jpg",
-      "../img/imagens-catalogo/essencia-catalogo-2.jpg"
+      "../img/imagens-catalogo/essencia-monte-carlo-1.webp",
+      "../img/imagens-catalogo/essencia-catalogo-2.webp"
     ],
     "disponivel": true
   },
@@ -820,7 +820,7 @@
     "notas": "tangerina, noz moscada, gerânio, patchouly, almíscar, vetiver e musgo de carvalho",
     "modoUso": "Vaporizar o aroma no cartão e pendurá-lo no retrovisor ou onde desejar. O aroma não deve ser aplicado sobre o couro dos bancos e nem sobre qualquer outra superfície, como plásticos, sintéticos ou semelhantes.",
     "imagens": [
-      "../img/imagens-catalogo/kit-carro-monte-carlo-1.jpg"
+      "../img/imagens-catalogo/kit-carro-monte-carlo-1.webp"
     ],
     "disponivel": true
   },
@@ -837,8 +837,8 @@
     "notas": "bergamota, lavanda, gerânio, cravo, muguet, cedro e patchouly",
     "modoUso": "Aplicar sobre tecidos em geral (evitando couro e sintéticos), aproximadamente 30cm de distância, sem encharcar. ",
     "imagens": [
-      "../img/imagens-catalogo/home-spray-patchouly-1.jpg",
-      "../img/imagens-catalogo/home-spray-patchouly-2.jpg"
+      "../img/imagens-catalogo/home-spray-patchouly-1.webp",
+      "../img/imagens-catalogo/home-spray-patchouly-2.webp"
     ],
     "disponivel": true
   },
@@ -855,311 +855,8 @@
     "notas": "bergamota, lavanda, gerânio, cravo, muguet, cedro e patchouly",
     "modoUso": "Retirar o vedante da tampa, encaixar novamente a tampa no frasco e colocar todas as varetas. Evite derramar o líquido nas superfícies, poderá manchar. Caso isso ocorra, limpe imediatamente.",
     "imagens": [
-      "../img/imagens-catalogo/difusor-de-varetas-patchouly-1.jpg",
-      "../img/imagens-catalogo/difusor-de-varetas-patchouly-2.jpg"
-    ],
-    "disponivel": true
-  },
-  {
-    "id": "KIT-VELA-DIFUSOR",
-    "nome": "Kit Vela + Difusor",
-    "categoria": "Kits",
-    "isKit": true,
-    "descricao": "Kit completo com Vela Aromática + Difusor de Varetas",
-    "modoUso": "Vela: Retire a tampa e acenda o pavio. Difusor: Retire o vedante e insira as varetas.",
-    "imagens": [
-      "../img/imagens-catalogo/kits/vela-difusor-jardins-da-franca-2.jpg",
-      "../img/imagens-catalogo/kits/vela-difusor-encontro-1.jpg"
-    ],
-    "variantes": [
-      {
-        "fragrancia": "Encontro",
-        "preco": 328,
-        "descricao": "Kit Vela Aromática (170g) + Difusor de Varetas (200ml) - Encontro",
-        "descricaoOlfativa": [
-          "frutal",
-          "oriental"
-        ],
-        "notas": "maçã, canela, laranja, cravo, pêssego, baunilha e musk",
-        "imagens": [
-          "../img/imagens-catalogo/kits/vela-difusor-encontro-1.jpg",
-          "../img/imagens-catalogo/kits/vela-difusor-encontro-2.jpg"
-        ]
-      },
-      {
-        "fragrancia": "Jardins da França",
-        "preco": 396,
-        "descricao": "Kit Vela Aromática (170g) + Difusor de Varetas (350ml) - Jardins da França",
-        "descricaoOlfativa": [
-          "floral",
-          "agreste"
-        ],
-        "notas": "lavanda, alecrim, gerânio, menta, cashmere, jasmim, almíscar e âmbar",
-        "imagens": [
-          "../img/imagens-catalogo/kits/vela-difusor-jardins-da-franca-1.jpg",
-          "../img/imagens-catalogo/kits/vela-difusor-jardins-da-franca-2.jpg"
-        ]
-      },
-      {
-        "fragrancia": "Havana",
-        "preco": 362,
-        "descricao": "Kit Vela Aromática (170g) + Difusor de Varetas (350ml) - Havana",
-        "descricaoOlfativa": [
-          "cítrico",
-          "amadeirado"
-        ],
-        "notas": "ervas do mediterrâneo e limão siciliano",
-        "imagens": [
-          "../img/imagens-catalogo/kits/vela-difusor-havana-1.jpg"
-        ]
-      },
-      {
-        "fragrancia": "Lilás",
-        "preco": 276,
-        "descricao": "Kit Vela Aromática (100g) + Difusor de Varetas (250ml) - Lilás",
-        "descricaoOlfativa": [
-          "aromatico",
-          "fougére"
-        ],
-        "notas": "lilás, lavanda, gerânio, cravo, muguet, cedro e patchouly",
-        "imagens": [
-          "../img/imagens-catalogo/kits/vela-difusor-lilas-1.jpg",
-          "../img/imagens-catalogo/kits/vela-difusor-lilas-2.jpg"
-        ]
-      }
-    ],
-    "disponivel": true
-  },
-  {
-    "id": "KIT-DIFUSOR-SABONETE",
-    "nome": "Kit Difusor + Sabonete Líquido",
-    "categoria": "Kits",
-    "isKit": true,
-    "descricao": "Kit completo com Difusor de Varetas + Sabonete Líquido",
-    "modoUso": "Difusor: Retire o vedante e insira as varetas. Sabonete: Aplicar sobre a pele e massagear.",
-    "imagens": [
-      "../img/imagens-catalogo/kits/sabonete-liquido-difusor-garbo-1.jpg",
-      "../img/imagens-catalogo/kits/sabonete-liquido-difusor-jardins-da-franca-2.jpg"
-    ],
-    "variantes": [
-      {
-        "fragrancia": "Havana",
-        "preco": 387,
-        "descricao": "Kit Difusor de Varetas (350ml) + Sabonete Líquido (350ml) - Havana",
-        "descricaoOlfativa": [
-          "cítrico",
-          "amadeirado"
-        ],
-        "notas": "ervas do mediterrâneo e limão siciliano",
-        "imagens": [
-          "../img/imagens-catalogo/kits/sabonete-liquido-difusor-havana-1.jpg",
-          "../img/imagens-catalogo/kits/sabonete-liquido-difusor-havana-2.jpg"
-        ]
-      },
-      {
-        "fragrancia": "Jardins da França",
-        "preco": 382,
-        "descricao": "Kit Difusor de Varetas (350ml) + Sabonete Líquido (350ml) - Jardins da França",
-        "descricaoOlfativa": [
-          "floral",
-          "agreste"
-        ],
-        "notas": "lavanda, alecrim, gerânio, menta, cashmere, jasmim, almíscar e âmbar",
-        "imagens": [
-          "../img/imagens-catalogo/kits/sabonete-liquido-difusor-jardins-da-franca-1.jpg",
-          "../img/imagens-catalogo/kits/sabonete-liquido-difusor-jardins-da-franca-2.jpg"
-        ]
-      },
-      {
-        "fragrancia": "Garbo",
-        "preco": 296,
-        "descricao": "Kit Difusor de Varetas (240ml) + Sabonete Líquido (240ml) - Garbo",
-        "descricaoOlfativa": [
-          "floral",
-          "frutal"
-        ],
-        "notas": "cassis, pera, maçã, violeta, ameixa, muguet, musk e pêssego branco",
-        "imagens": [
-          "../img/imagens-catalogo/kits/sabonete-liquido-difusor-garbo-1.jpg",
-          "../img/imagens-catalogo/kits/sabonete-liquido-difusor-garbo-2.jpg"
-        ]
-      },
-      {
-        "fragrancia": "Hortênsia",
-        "preco": 256,
-        "descricao": "Kit Difusor de Varetas (250ml) + Sabonete Líquido (250ml) - Hortênsia",
-        "descricaoOlfativa": [
-          "floral",
-          "doce"
-        ],
-        "notas": "gerânio, peônia, violeta, hortênsia e musk",
-        "imagens": [
-          "../img/imagens-catalogo/kits/sabonete-liquido-difusor-hortensia-1.jpg",
-          "../img/imagens-catalogo/kits/sabonete-liquido-difusor-hortensia-2.jpg"
-        ]
-      },
-      {
-        "fragrancia": "Lavanda Inglesa",
-        "preco": 256,
-        "descricao": "Kit Difusor de Varetas (250ml) + Sabonete Líquido (250ml) - Lavanda Inglesa",
-        "descricaoOlfativa": [
-          "herbal",
-          "floral"
-        ],
-        "notas": "lavanda inglesa pura",
-        "imagens": [
-          "../img/imagens-catalogo/kits/sabonete-liquido-difusor-lavanda-inglesa-1.jpg",
-          "../img/imagens-catalogo/kits/sabonete-liquido-difusor-lavanda-inglesa-2.jpg"
-        ]
-      },
-      {
-        "fragrancia": "Bambu Garden",
-        "preco": 262,
-        "descricao": "Kit Difusor de Varetas (200ml) + Sabonete Líquido (200ml) - Bambu Garden",
-        "descricaoOlfativa": [
-          "floral",
-          "amadeirado"
-        ],
-        "notas": "bergamota, pomelo, jasmim, cedro, gerânio, musk, vetiver e âmbar",
-        "imagens": [
-          "../img/imagens-catalogo/kits/sabonete-liquido-difusor-bambu-garden-1.jpg",
-          "../img/imagens-catalogo/kits/sabonete-liquido-difusor-bambu-garden-2.jpg"
-        ]
-      }
-    ],
-    "disponivel": true
-  },
-  {
-    "id": "KIT-ESSENCIA-DIFUSOR",
-    "nome": "Kit Essência + Difusor",
-    "categoria": "Kits",
-    "isKit": true,
-    "descricao": "Kit completo com Essência Concentrada + Difusor de Varetas vazio (reutilizável)",
-    "modoUso": "Pingue de 10 a 15 gotas de essência no difusor vazio e insira as varetas. Vire as varetas a cada 2 dias.",
-    "variantes": [
-      {
-        "fragrancia": "Encontro",
-        "preco": 280,
-        "descricao": "Kit Essência (30ml) + Difusor vazio reutilizável - Encontro",
-        "descricaoOlfativa": [
-          "frutal",
-          "oriental"
-        ],
-        "notas": "maçã, canela, laranja, cravo, pêssego, baunilha e musk",
-        "imagens": [
-          "../img/imagens-catalogo/essencia-encontro-1.jpg",
-          "../img/imagens-catalogo/difusor-de-varetas-encontro-2.jpg"
-        ]
-      },
-      {
-        "fragrancia": "Jardins da França",
-        "preco": 283,
-        "descricao": "Kit Essência (30ml) + Difusor vazio reutilizável - Jardins da França",
-        "descricaoOlfativa": [
-          "floral",
-          "agreste"
-        ],
-        "notas": "lavanda, alecrim, gerânio, menta, cashmere, jasmim, almíscar e âmbar",
-        "imagens": [
-          "../img/imagens-catalogo/essencia-jardins-da-franca-1.jpg",
-          "../img/imagens-catalogo/difusor-de-varetas-jardins-da-franca-2.jpg"
-        ]
-      },
-      {
-        "fragrancia": "Havana",
-        "preco": 283,
-        "descricao": "Kit Essência (30ml) + Difusor vazio reutilizável - Havana",
-        "descricaoOlfativa": [
-          "cítrico",
-          "amadeirado"
-        ],
-        "notas": "ervas do mediterrâneo e limão siciliano",
-        "imagens": [
-          "../img/imagens-catalogo/essencia-havana-1.jpg",
-          "../img/imagens-catalogo/difusor-de-varetas-havana-2.jpg"
-        ]
-      },
-      {
-        "fragrancia": "Garbo",
-        "preco": 280,
-        "descricao": "Kit Essência (30ml) + Difusor vazio reutilizável - Garbo",
-        "descricaoOlfativa": [
-          "floral",
-          "frutal"
-        ],
-        "notas": "cassis, pera, maçã, violeta, ameixa, muguet, musk e pêssego branco",
-        "imagens": [
-          "../img/imagens-catalogo/essencia-garbo-1.jpg",
-          "../img/imagens-catalogo/difusor-de-varetas-garbo-2.jpg"
-        ]
-      },
-      {
-        "fragrancia": "Bambu Garden",
-        "preco": 280,
-        "descricao": "Kit Essência (30ml) + Difusor vazio reutilizável - Bambu Garden",
-        "descricaoOlfativa": [
-          "floral",
-          "amadeirado"
-        ],
-        "notas": "bergamota, pomelo, jasmim, cedro, gerânio, musk, vetiver e âmbar",
-        "imagens": [
-          "../img/imagens-catalogo/essencia-bambu-garden-1.jpg",
-          "../img/imagens-catalogo/difusor-de-varetas-bambu-garden-2.jpg"
-        ]
-      }
-    ],
-    "disponivel": true
-  },
-  {
-    "id": "KIT-ESSENCIAS-VELAS",
-    "nome": "Kit Essências + Velas",
-    "categoria": "Kits",
-    "isKit": true,
-    "descricao": "Kit completo com Essência Concentrada + Vela Aromática",
-    "modoUso": "Essência: Use em difusores elétricos (8-12 gotas). Vela: Retire a tampa e acenda o pavio.",
-    "variantes": [
-      {
-        "fragrancia": "Encontro",
-        "preco": 232,
-        "descricao": "Kit Essência (30ml) + Vela Aromática (170g) - Encontro",
-        "descricaoOlfativa": [
-          "frutal",
-          "oriental"
-        ],
-        "notas": "maçã, canela, laranja, cravo, pêssego, baunilha e musk",
-        "imagens": [
-          "../img/imagens-catalogo/essencia-encontro-1.jpg",
-          "../img/imagens-catalogo/velas-aromaticas-encontro-1.jpg"
-        ]
-      },
-      {
-        "fragrancia": "Jardins da França",
-        "preco": 235,
-        "descricao": "Kit Essência (30ml) + Vela Aromática (170g) - Jardins da França",
-        "descricaoOlfativa": [
-          "floral",
-          "agreste"
-        ],
-        "notas": "lavanda, alecrim, gerânio, menta, cashmere, jasmim, almíscar e âmbar",
-        "imagens": [
-          "../img/imagens-catalogo/essencia-jardins-da-franca-1.jpg",
-          "../img/imagens-catalogo/velas-aromaticas-jardins-da-franca-1.jpg"
-        ]
-      },
-      {
-        "fragrancia": "Havana",
-        "preco": 235,
-        "descricao": "Kit Essência (30ml) + Vela Aromática (170g) - Havana",
-        "descricaoOlfativa": [
-          "cítrico",
-          "amadeirado"
-        ],
-        "notas": "ervas do mediterrâneo e limão siciliano",
-        "imagens": [
-          "../img/imagens-catalogo/essencia-havana-1.jpg",
-          "../img/imagens-catalogo/velas-aromaticas-havana-1.jpg"
-        ]
-      }
+      "../img/imagens-catalogo/difusor-de-varetas-patchouly-1.webp",
+      "../img/imagens-catalogo/difusor-de-varetas-patchouly-2.webp"
     ],
     "disponivel": true
   }

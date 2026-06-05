@@ -1,4 +1,4 @@
-const fs = require('fs');
+﻿const fs = require('fs');
 const path = require('path');
 
 // ============================================
@@ -18,6 +18,17 @@ const CONFIG = {
   robotsOutputPath: '../robots.txt'
 };
 
+// Resolver caminhos relativos para o diretório do script (garante funcionamento mesmo quando executado por caminho absoluto)
+const baseDir = __dirname;
+CONFIG.postsJsonPath = path.resolve(baseDir, CONFIG.postsJsonPath);
+CONFIG.templatePath = path.resolve(baseDir, CONFIG.templatePath);
+CONFIG.indexTemplatePath = path.resolve(baseDir, CONFIG.indexTemplatePath);
+CONFIG.outputDir = path.resolve(baseDir, CONFIG.outputDir);
+CONFIG.indexOutputPath = path.resolve(baseDir, CONFIG.indexOutputPath);
+// sitemap e robots ficam um diretório acima do blog por design
+CONFIG.sitemapOutputPath = path.resolve(baseDir, CONFIG.sitemapOutputPath);
+CONFIG.robotsOutputPath = path.resolve(baseDir, CONFIG.robotsOutputPath);
+
 // ============================================
 // FUNÇÕES AUXILIARES
 // ============================================
@@ -26,7 +37,7 @@ function ensureDirectoryExists(dirPath) {
   const absolutePath = path.resolve(dirPath);
   if (!fs.existsSync(absolutePath)) {
     fs.mkdirSync(absolutePath, { recursive: true });
-    console.log(`✓ Diretório criado: ${absolutePath}`);
+    console.log(`✔ Diretório criado: ${absolutePath}`);
   }
 }
 
@@ -94,7 +105,7 @@ function generateJsonLd(post) {
       "name": CONFIG.siteName,
       "logo": {
         "@type": "ImageObject",
-        "url": `${CONFIG.siteUrl}/img/brand/jb-home-essence-logo-green.png`
+        "url": `${CONFIG.siteUrl}/img/brand/jb-home-essence-logo-green.webp`
       }
     },
     "url": `${CONFIG.blogBaseUrl}/posts/${post.id}.html`,
@@ -262,25 +273,25 @@ Sitemap: ${CONFIG.siteBaseUrl}/sitemap.xml`;
 // ============================================
 function generateBlog() {
   console.log('🚀 Iniciando geração do blog estático...\n');
-  console.log(`📂 Diretório atual: ${process.cwd()}\n`);
+  console.log(`ℹ Diretório atual: ${process.cwd()}\n`);
 
   // 1. Ler posts.json
-  console.log('📖 Lendo posts.json...');
+  console.log('🔎 Lendo posts.json...');
   const postsData = fs.readFileSync(CONFIG.postsJsonPath, 'utf8');
   const posts = JSON.parse(postsData);
-  console.log(`✓ ${posts.length} posts encontrados\n`);
+  console.log(`✔ ${posts.length} posts encontrados\n`);
 
   // 2. Ler templates
-  console.log('📄 Lendo templates...');
+  console.log('📂 Lendo templates...');
   const postTemplate = fs.readFileSync(CONFIG.templatePath, 'utf8');
-  console.log('✓ Template de posts carregado');
+  console.log('✔ Template de posts carregado');
   
   let indexTemplate;
   try {
     indexTemplate = fs.readFileSync(CONFIG.indexTemplatePath, 'utf8');
-    console.log('✓ Template de index carregado\n');
+    console.log('✔ Template de index carregado\n');
   } catch (error) {
-    console.log('⚠️  index-template.html não encontrado, pulando geração do index\n');
+    console.log('⚠️ index-template.html não encontrado, pulando geração do index\n');
   }
 
   // 3. Criar diretório de posts
@@ -289,25 +300,25 @@ function generateBlog() {
   console.log('');
 
   // 4. Gerar páginas HTML dos posts
-  console.log('⚙️  Gerando páginas HTML dos posts...');
+  console.log('✍️ Gerando páginas HTML dos posts...');
   posts.forEach((post, index) => {
     const html = generatePostHtml(post, posts, postTemplate);
     const outputPath = path.join(CONFIG.outputDir, `${post.id}.html`);
     saveFile(outputPath, html);
     console.log(`  ${index + 1}. ${post.id}.html`);
   });
-  console.log('✓ Todas as páginas dos posts geradas\n');
+  console.log('✔ Todas as páginas dos posts geradas\n');
 
   // 5. Gerar index.html (NOVO)
   if (indexTemplate) {
-    console.log('📝 Gerando index.html com links estáticos...');
+    console.log('📄 Gerando index.html com links estáticos...');
     const indexHtml = generateIndexHtml(posts, indexTemplate);
     saveFile(CONFIG.indexOutputPath, indexHtml);
-    console.log('✓ index.html gerado\n');
+    console.log('✔ index.html gerado\n');
   }
 
   // 6. Gerar sitemap.xml
-  console.log('🗺️  Gerando sitemap.xml...');
+  console.log('🌐 Gerando sitemap.xml...');
   const sitemap = generateSitemap(posts);
   const sitemapPath = saveFile(CONFIG.sitemapOutputPath, sitemap);
   console.log('');
@@ -319,19 +330,19 @@ function generateBlog() {
   console.log('');
 
   // 8. Resumo final
-  console.log('╔═══════════════════════════════════════╗');
-  console.log('✅ GERAÇÃO CONCLUÍDA COM SUCESSO!');
-  console.log('╚═══════════════════════════════════════╝');
-  console.log(`📊 Total de posts gerados: ${posts.length}`);
-  console.log(`📂 Pasta dos posts: ${path.resolve(CONFIG.outputDir)}/`);
-  console.log(`📝 Index gerado: ${path.resolve(CONFIG.indexOutputPath)}`);
-  console.log(`🗺️  Sitemap: ${sitemapPath}`);
+  console.log('--------------------------------------------------');
+  console.log('✔ GERAÇÃO CONCLUÍDA COM SUCESSO!');
+  console.log('--------------------------------------------------');
+  console.log(`✔ Total de posts gerados: ${posts.length}`);
+  console.log(`📁 Pasta dos posts: ${path.resolve(CONFIG.outputDir)}/`);
+  if (indexTemplate) console.log(`📄 Index gerado: ${path.resolve(CONFIG.indexOutputPath)}`);
+  console.log(`🌐 Sitemap: ${sitemapPath}`);
   console.log(`🤖 Robots.txt: ${robotsPath}`);
-  console.log(`🌐 URLs públicas:`);
+  console.log('🔗 URLs públicas:');
   console.log(`   - Blog: ${CONFIG.blogBaseUrl}/`);
   console.log(`   - Sitemap: ${CONFIG.siteBaseUrl}/sitemap.xml`);
   console.log(`   - Robots: ${CONFIG.siteBaseUrl}/robots.txt`);
-  console.log('╚═══════════════════════════════════════╝\n');
+  console.log('\n');
 }
 
 // ============================================

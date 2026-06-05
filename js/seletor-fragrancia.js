@@ -1,4 +1,4 @@
-/* Seletor de Fragrância - VERSÃO 2.1 CORRIGIDA */
+﻿/* Seletor de Fragrância - VERSÃO 2.1 CORRIGIDA */
 (function(){
   'use strict';
 
@@ -362,8 +362,8 @@
     let alternativasHTML = '';
     if (essenciaDados.alternativas?.length > 0) {
       alternativasHTML = `
-        <div class="alternativas-section">
-          <h4><i class="fas fa-heart"></i> Você também pode gostar:</h4>
+          <div class="alternativas-section">
+            <h4><i class="fas fa-heart"></i> Você também pode gostar:</h4>
           <div class="alternativas-grid">
             ${essenciaDados.alternativas.map(alt => `
               <a href="/produtos/categoria.html?categoria=${alt.slug}" class="alternativa-card" target="_blank">
@@ -391,7 +391,7 @@
 
         <div class="essencia-card">
           <div class="essencia-imagem">
-            <img src="img/fragrancias/fragrancia-${essenciaDados.slug}-jb-home-essence.jpg" 
+            <img src="img/fragrancias/fragrancia-${essenciaDados.slug}-jb-home-essence.webp" 
                  alt="${essenciaNome}">
             <div class="imagem-shine"></div>
           </div>
@@ -439,7 +439,7 @@
             <i class="fas fa-shopping-bag"></i>
             <span>Ver Catálogo</span>
           </a>
-          <a href="https://wa.me/47997152830?text=Olá!%20Descobri%20minha%20fragrância%20ideal:%20${essenciaNome}" 
+          <a href="https://wa.me/47997152830?text=Ol%C3%A1!%20Descobri%20minha%20fragr%C3%A2ncia%20ideal:%20${essenciaNome}" 
              class="btn-whatsapp" target="_blank">
             <i class="fab fa-whatsapp"></i>
             <span>Falar no WhatsApp</span>

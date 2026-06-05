@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Perguntas Frequentes sobre produtos e serviços da JB Home Essence - Perfumaria de Ambientes">
+    <title>FAQ - JB Home Essence | Perguntas Frequentes</title>
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/core.css">
+    <link rel="stylesheet" href="css/faq.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+
+    <!-- Favicon padrão -->
+    <link rel="icon" type="img/favicons/jb-home-essence-favicon-32x32.webp href="/logo.webp>
+
+    <!-- Favicon para navegadores da Apple -->
+    <link rel="apple-touch-icon" href="img/favicons/jb-home-essence-favicon-32x32.webp>
+
+    <!-- Open Graph (usado pelo Google, WhatsApp, etc.) -->
+    <meta property="og:image" content="https://jbhomessence.com.br/logo.webp>
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
+
+    <!-- Schema.org (ajuda o Google a entender a marca) -->
+    <meta itemprop="image" content="https://jbhomessence.com.br/logo.webp>
+
+    <!-- Ícones -->
+    <link rel="icon" href="img/favicons/jb-home-essence-favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <a href="https://wa.me/47997152830?text=Olá!%20Gostaria%20de%20conhecer%20as%20fragrâncias" class="float"
+        target="_blank">
+        <i class="fa fa-whatsapp my-float"></i>
+    </a>
+</head>
+
+<body>
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/47997152830?text=Olá!%20Gostaria%20de%20conhecer%20as%20fragrâncias" class="float"
+        target="_blank">
+        <i class="fa fa-whatsapp my-float"></i>
+    </a>
+
+    <!-- Navbar -->
+    <div class="navbar navbar-static">
+        <div class="navbar-container">
+            <!-- Logo centralizado (desktop) / Centralizada (mobile) -->
+            <div class="logo">
+                <a href="../index.html#inicio">
+                    <!-- Logo verde/preta (sempre visível na versão static) -->
+                    <img src="../img/brand/jb-home-essence-logo-green.webp alt="Logo JB Home Essence"
+                        class="logo-img logo-black">
+                </a>
+                <div class="logo-text">
+                    <a href="../index.html" class="nome-empresa">JB HOME ESSENCE</a>
+                    <h1 class="logo-slogan">Perfumaria de ambientes em Balneário Camboriú (SC)</h1>
+                </div>
+            </div>
+
+            <!-- Toggle do menu mobile (visível apenas em telas pequenas) -->
+            <div class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <!-- Links de navegação -->
+            <nav class="nav-links" id="navMenu">
+
+                <a href="../index.html">Home</a>
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle">
+                        Produtos
+                        <span class="dropdown-arrow">▼</span>
+                    </a>
+                    <div class="dropdown-menu" id="produtosDropdown"></div>
+                </div>
+                <!-- Dropdown de Fragrâncias -->
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle">
+                        Fragrâncias
+                        <span class="dropdown-arrow">▼</span>
+                    </a>
+                    <div class="dropdown-menu" id="fragranciasDropdown">
+                        <!-- Categorias serão carregadas aqui dinamicamente via JS -->
+                    </div>
+                </div>
+
+                <a href="../blog/index.html">Blog</a>
+                <a href="#rodape">Contato</a>
+            </nav>
+        </div>
+    </div>
+
+    <div class="faq-container">
+        <header class="faq-header">
+            <div class="header-content">
+                <h1>Perguntas Frequentes</h1>
+                <p class="subtitle">Tire suas dúvidas sobre nossos produtos e serviços</p>
+            </div>
+        </header>
+
+        <main class="faq-main">
+            <!-- Categorias de FAQ -->
+            <div class="faq-categories">
+                <button class="category-btn active" data-category="all">Todas</button>
+                <button class="category-btn" data-category="produtos">Produtos</button>
+                <button class="category-btn" data-category="compra">Compra e Entrega</button>
+                <button class="category-btn" data-category="uso">Uso e Manutenção</button>
+                <button class="category-btn" data-category="personalizacao">Personalização</button>
+            </div>
+
+            <!-- Barra de Busca -->
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Busque sua dúvida aqui..."
+                    aria-label="Buscar perguntas">
+                <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                </svg>
+            </div>
+
+            <!-- Lista de Perguntas e Respostas -->
+            <div class="faq-list">
+                <!-- PRODUTOS -->
+                <div class="faq-item" data-category="produtos">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Quais produtos a JB Home Essence oferece?</span>
+                        <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Oferecemos uma linha completa de produtos para aromatização de ambientes, incluindo:</p>
+                        <ul>
+                            <li>Aromatizadores de ambiente</li>
+                            <li>Difusores de varetas</li>
+                            <li>Velas aromáticas</li>
+                            <li>Sabonetes líquidos perfumados</li>
+                            <li>Essências concentradas</li>
+                            <li>Aromatizadores para carro</li>
+                            <li>Kits personalizados</li>
+                        </ul>
+                        <p>Todos os produtos são desenvolvidos com fragrâncias exclusivas e alta qualidade.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="produtos">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>As fragrâncias são desenvolvidas pela JB Home Essence?</span>
+                        <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim! Trabalhamos com uma curadoria especial de fragrâncias que proporcionam experiências
+                            olfativas únicas. Nossas essências são cuidadosamente selecionadas para criar ambientes
+                            acolhedores, sofisticados e memoráveis.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="produtos">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Qual a durabilidade dos produtos?</span>
+                        <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>A durabilidade varia conforme o produto e o ambiente:</p>
+                        <ul>
+                            <li><strong>Difusores de varetas:</strong> 60 a 90 dias em ambientes de até 20m²</li>
+                            <li><strong>Aromatizadores:</strong> 30 a 45 dias com uso moderado</li>
+                            <li><strong>Velas aromáticas:</strong> Aproximadamente 40 horas de queima</li>
+                            <li><strong>Aromatizador para carro:</strong> 30 a 45 dias</li>
+                        </ul>
+                        <p>A durabilidade pode variar de acordo com a ventilação, temperatura e tamanho do ambiente.</p>
+                    </div>
+                </div>
+
+                <!-- COMPRA E ENTREGA -->
+                <div class="faq-item" data-category="compra">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Como posso fazer meu pedido?</span>
+                        <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Você pode fazer seu pedido de forma simples e rápida:</p>
+                        <ul>
+                            <li>Entre em contato pelo WhatsApp</li>
+                            <li>Envie mensagem pelo Instagram @jbhomessence</li>
+                            <li>Envie e-mail para jbhomessence@gmail.com</li>
+                        </ul>
+                        <p>Nossa equipe terá prazer em atendê-lo e ajudar na escolha das melhores fragrâncias para você!
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="compra">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Vocês fazem entregas em Balneário Camboriú?</span>
+                        <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim! Fazemos entregas em Balneário Camboriú e região. Entre em contato conosco para verificar
+                            a disponibilidade de entrega na sua localidade e conhecer as condições especiais.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="compra">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Qual é o prazo de entrega?</span>
+                        <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>O prazo de entrega varia conforme a localização e disponibilidade dos produtos. Para
+                            Balneário Camboriú e região, geralmente entregamos em até 48 horas úteis. Consulte-nos para
+                            informações mais precisas sobre seu pedido.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="compra">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Quais são as formas de pagamento?</span>
+                        <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Aceitamos diversas formas de pagamento para sua comodidade: PIX, cartões de crédito e débito,
+                            e transferência bancária. Entre em contato para conhecer todas as opções disponíveis.</p>
+                    </div>
+                </div>
+
+                <!-- USO E MANUTENÇÃO -->
+                <div class="faq-item" data-category="uso">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Como usar o difusor de varetas corretamente?</span>
+                        <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Siga estes passos para melhor aproveitamento:</p>
+                        <ol>
+                            <li>Retire a tampa do frasco e coloque as varetas</li>
+                            <li>Aguarde algumas horas para as varetas absorverem o produto</li>
+                            <li>Inverta as varetas semanalmente para renovar a fragrância</li>
+                            <li>Quanto mais varetas, mais intensa será a fragrância</li>
+                            <li>Posicione em local arejado, longe de luz solar direta</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="uso">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Como escolher a fragrância ideal para meu ambiente?</span>
+                        <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>A escolha da fragrância depende do ambiente e do efeito desejado:</p>
+                        <ul>
+                            <li><strong>Ambientes relaxantes:</strong> Lavanda, flor de laranjeira, vanilla</li>
+                            <li><strong>Ambientes energizantes:</strong> Cítricos, capim-limão, menta</li>
+                            <li><strong>Ambientes sofisticados:</strong> Âmbar, madeiras nobres, especiarias</li>
+                            <li><strong>Ambientes acolhedores:</strong> Baunilha, canela, frutas vermelhas</li>
+                        </ul>
+                        <p>Utilize nosso seletor de fragrâncias no site ou entre em contato para uma consultoria
+                            personalizada!</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="uso">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Posso usar os produtos em ambientes com crianças e pets?</span>
+                        <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim, nossos produtos podem ser utilizados em ambientes com crianças e pets. Recomendamos:</p>
+                        <ul>
+                            <li>Manter os produtos em locais elevados e fora do alcance</li>
+                            <li>Garantir boa ventilação do ambiente</li>
+                            <li>Começar com fragrâncias mais suaves</li>
+                            <li>Observar se há alguma reação de sensibilidade</li>
+                        </ul>
+                        <p>Em caso de dúvidas, consulte-nos para recomendações específicas.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="uso">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Como fazer a manutenção dos produtos?</span>
+                        <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Para melhor desempenho e durabilidade:</p>
+                        <ul>
+                            <li><strong>Difusores:</strong> Inverta as varetas semanalmente</li>
+                            <li><strong>Aromatizadores:</strong> Agite levemente antes de cada uso</li>
+                            <li><strong>Velas:</strong> Apare o pavio antes de acender (0,5cm) e deixe derreter
+                                completamente a superfície</li>
+                            <li>Mantenha os frascos bem fechados quando não estiverem em uso</li>
+                            <li>Armazene em local fresco e ao abrigo da luz solar</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- PERSONALIZAÇÃO -->
+                <div class="faq-item" data-category="personalizacao">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Vocês fazem kits personalizados?</span>
+                        <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim! Criamos kits personalizados para diversas ocasões:</p>
+                        <ul>
+                            <li>Presentes corporativos</li>
+                            <li>Brindes para eventos</li>
+                            <li>Lembranças de casamento e festas</li>
+                            <li>Kits para clientes especiais</li>
+                            <li>Projetos empresariais</li>
+                        </ul>
+                        <p>Entre em contato para desenvolvermos um kit exclusivo de acordo com suas necessidades!</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="personalizacao">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>É possível criar uma fragrância exclusiva para minha empresa?</span>
+                        <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim! Desenvolvemos fragrâncias assinatura para empresas que desejam criar uma identidade
+                            olfativa única. Essa é uma excelente forma de:</p>
+                        <ul>
+                            <li>Fortalecer a identidade da marca</li>
+                            <li>Criar memórias afetivas nos clientes</li>
+                            <li>Diferenciar-se da concorrência</li>
+                            <li>Proporcionar experiências sensoriais marcantes</li>
+                        </ul>
+                        <p>Consulte-nos para conhecer as opções de marketing olfativo para seu negócio.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="personalizacao">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Atendem condomínios e empresas?</span>
+                        <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim! Temos experiência no atendimento de diversos segmentos:</p>
+                        <ul>
+                            <li>Condomínios residenciais e comerciais</li>
+                            <li>Escritórios e coworkings</li>
+                            <li>Clínicas e consultórios</li>
+                            <li>Imobiliárias</li>
+                            <li>Lojas e estabelecimentos comerciais</li>
+                            <li>Hotéis e pousadas</li>
+                        </ul>
+                        <p>Oferecemos condições especiais para compras corporativas e contratos de fornecimento
+                            contínuo.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mensagem quando não há resultados -->
+            <div class="no-results" style="display: none;">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                </svg>
+                <h3>Nenhuma pergunta encontrada</h3>
+                <p>Não encontramos resultados para sua busca. Tente outras palavras-chave ou entre em contato conosco.
+                </p>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="rodape" id="rodape">
+        <div class="container">
+            <div class="rodape-grid">
+                <!-- Logo e Sobre -->
+                <div class="rodape-info">
+                    <img src="../img/brand/jb-home-essence-logo-green.webp alt="Logo JB Home Essence"
+                        class="rodape-logo">
+                    <p class="mini-bio">Perfumaria de ambientes em Balneário Camboriú.</p>
+                </div>
+
+                <!-- Links Rápidos -->
+                <div class="rodape-secao">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="../index.html">Início</a></li>
+                        <li><a href="../index.html#produtos">Produtos</a></li>
+                        <li><a href="../index.html#quem-somos">Sobre</a></li>
+                        <li><a href="../index.html#contato">Contato</a></li>
+                        <li><a href="../blog/index.html">Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contato -->
+                <div class="rodape-secao">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li><a href="https://wa.me/47997152830" target="_blank"><i class="fab fa-whatsapp"></i>
+                                WhatsApp</a></li>
+                        <li><a href="https://instagram.com/jbhomessence" target="_blank"><i
+                                    class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="mailto:jbhomessence@gmail.com"><i class="fas fa-envelope"></i> E-mail</a></li>
+                    </ul>
+                </div>
+
+                <!-- Localização -->
+                <div class="rodape-secao rodape-endereco">
+                    <h4>Localização</h4>
+                    <p><i class="fas fa-map-marker-alt" style="color: var(--verde); margin-right: 8px;"></i>Balneário
+                        Camboriú – SC</p>
+                </div>
+            </div>
+
+            <!-- Rodapé inferior -->
+            <div class="rodape-bottom">
+                <div class="rodape-direitos">
+                    <p>© 2025 JB Home Essence. Todos os direitos reservados.</p>
+                </div>
+                <div class="rodape-links-legais">
+                    <a href="faq.html">Perguntas Frequentes</a>
+                    <a href="../politica-de-privacidade.html">Política de Privacidade</a>
+                    <a href="../termos-de-uso.html">Termos de Uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/faq.js"></script>
+    <script src="js/navbar.js"></script>
+</body>
+
+</html>
