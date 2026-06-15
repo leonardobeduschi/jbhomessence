@@ -188,18 +188,51 @@ function generatePostHtml(post, allPosts, template) {
 }
 
 // ============================================
-// NOVA FUNÇÃO: GERAR INDEX.HTML COM LINKS ESTÁTICOS
+// FUNÇÃO: GERAR INDEX.HTML COM SEÇÕES POR CATEGORIA
 // ============================================
-function generateStaticPostCards(posts) {
-  // Ordenar por data (mais recentes primeiro)
-  const sortedPosts = [...posts].sort((a, b) => {
-    const dateA = new Date(a.date.split('-').reverse().join('-'));
-    const dateB = new Date(b.date.split('-').reverse().join('-'));
-    return dateB - dateA;
+
+// Ordem de exibição das categorias na página do blog (mesma ordem usada em blog.js)
+const CATEGORY_ORDER = [
+  'Guia de Aromatização',
+  'Fundamentos',
+  'Famílias Olfativas',
+  'Dicas de Aromatização',
+  'Aromatização Profissional',
+  'Onde Comprar e Presentes'
+];
+
+// Quantidade de cards visíveis por categoria antes de clicar em "Ver mais"
+const INITIAL_VISIBLE_CARDS = 3;
+
+function parsePostDate(dateStr) {
+  return new Date(dateStr.split('-').reverse().join('-'));
+}
+
+function groupPostsByCategory(posts) {
+  const groups = new Map();
+  posts.forEach(post => {
+    const category = post.category || 'Outros';
+    if (!groups.has(category)) groups.set(category, []);
+    groups.get(category).push(post);
   });
 
-  return sortedPosts.map(post => `
-        <div class="blog-card">
+  groups.forEach(list => list.sort((a, b) => parsePostDate(b.date) - parsePostDate(a.date)));
+
+  const knownCategories = CATEGORY_ORDER.filter(category => groups.has(category));
+  const otherCategories = [...groups.keys()]
+    .filter(category => !CATEGORY_ORDER.includes(category))
+    .sort((a, b) => parsePostDate(groups.get(b)[0].date) - parsePostDate(groups.get(a)[0].date));
+
+  return [...knownCategories, ...otherCategories].map(category => ({
+    category,
+    posts: groups.get(category)
+  }));
+}
+
+function generateCardHtml(post, index) {
+  const extraClass = index >= INITIAL_VISIBLE_CARDS ? ' extra-card' : '';
+  return `
+        <div class="blog-card${extraClass}">
           <a href="posts/${post.id}.html" style="text-decoration: none; color: inherit;">
             <div class="card-wrapper">
               <figure>
@@ -212,7 +245,29 @@ function generateStaticPostCards(posts) {
               </div>
             </div>
           </a>
-        </div>`).join('\n');
+        </div>`;
+}
+
+function generateStaticPostCards(posts) {
+  const groups = groupPostsByCategory(posts);
+
+  return groups.map(({ category, posts: categoryPosts }) => {
+    const cardsHtml = categoryPosts.map((post, index) => generateCardHtml(post, index)).join('');
+    const verMaisHtml = categoryPosts.length > INITIAL_VISIBLE_CARDS ? `
+      <div class="ver-mais-container">
+        <button type="button" class="ver-mais-btn" onclick="toggleVerMais(this)">
+          <span class="ver-mais-label">Ver mais</span>
+          <span class="ver-mais-icon">&#9662;</span>
+        </button>
+      </div>` : '';
+
+    return `
+      <div class="blog-category-section">
+        <h2 class="blog-category-title">${category}</h2>
+        <div class="blog-cards-grid">${cardsHtml}
+        </div>${verMaisHtml}
+      </div>`;
+  }).join('\n');
 }
 
 function generateIndexHtml(posts, template) {
@@ -348,10 +403,19 @@ function generateBlog() {
 // ============================================
 // EXECUTAR
 // ============================================
-try {
-  generateBlog();
-} catch (error) {
-  console.error('❌ ERRO:', error.message);
-  console.error(error.stack);
-  process.exit(1);
+if (require.main === module) {
+  try {
+    generateBlog();
+  } catch (error) {
+    console.error('❌ ERRO:', error.message);
+    console.error(error.stack);
+    process.exit(1);
+  }
 }
+
+module.exports = {
+  CONFIG,
+  generateBlog,
+  generateStaticPostCards,
+  generateIndexHtml
+};

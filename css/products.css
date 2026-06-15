@@ -47,11 +47,27 @@
     height: 460px;
     overflow: hidden;
     cursor: default;
-    transition: transform 6.5s cubic-bezier(0.12, 0.8, 0.32, 1);
+    will-change: transform, opacity;
+    transition: transform 1.2s cubic-bezier(0.12, 0.8, 0.32, 1);
 }
 
 .produto-card:hover {
     transform: scale(1.04);
+}
+
+/* Animação de entrada dos cards ao rolar a página */
+.produto-card--entrance {
+    opacity: 0;
+    translate: 0 20px;
+    transition:
+        opacity 0.6s ease var(--reveal-delay, 0s),
+        translate 0.6s ease var(--reveal-delay, 0s),
+        transform 1.2s cubic-bezier(0.12, 0.8, 0.32, 1);
+}
+
+.produto-card--entrance.produto-card--visible {
+    opacity: 1;
+    translate: 0 0;
 }
 
 .produto-imagem {
@@ -67,7 +83,8 @@
     height: 100%;
     object-fit: cover;
     object-position: center;
-    transition: transform 7.2s cubic-bezier(0.12, 0.8, 0.32, 1);
+    will-change: transform;
+    transition: transform 1.4s cubic-bezier(0.12, 0.8, 0.32, 1);
 }
 
 .produto-card:hover .produto-imagem img {

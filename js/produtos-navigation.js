@@ -44,8 +44,8 @@ const observerOptions = {
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      entry.target.style.opacity = '1';
-      entry.target.style.transform = 'translateY(0)';
+      entry.target.classList.add('produto-card--visible');
+      observer.unobserve(entry.target);
     }
   });
 }, observerOptions);
@@ -53,9 +53,8 @@ const observer = new IntersectionObserver((entries) => {
 document.addEventListener('DOMContentLoaded', () => {
   const cards = document.querySelectorAll('.produto-card');
   cards.forEach((card, index) => {
-    card.style.opacity = '0';
-    card.style.transform = 'translateY(20px)';
-    card.style.transition = `opacity 0.5s ease ${index * 0.1}s, transform 0.5s ease ${index * 0.1}s`;
+    card.style.setProperty('--reveal-delay', `${index * 0.08}s`);
+    card.classList.add('produto-card--entrance');
     observer.observe(card);
   });
 });
