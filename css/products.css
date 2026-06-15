@@ -19,15 +19,22 @@
     margin-bottom: 100px;
 }
 
-/* PRODUTO EM DESTAQUE NO DESKTOP (inalterado) */
+/* LINHA DE DESTAQUE (Refis + Kits) - ocupa a linha inteira, dividida em 2 colunas */
+.produtos-destaque-row {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 40px;
+}
+
+/* PRODUTOS EM DESTAQUE NO DESKTOP (inalterado) */
 @media (min-width: 769px) {
-    .produto-card[data-produto="kit-premium"] {
-        grid-column: 1 / -1;
+    .produtos-destaque-row .produto-card {
         max-width: 100%;
         height: 350px;
     }
-    
-    .produto-card[data-produto="kit-premium"] .produto-imagem img {
+
+    .produtos-destaque-row .produto-imagem img {
         object-fit: cover;
         width: 100%;
         height: 100%;
@@ -45,6 +52,14 @@
 
 .produto-card:hover {
     transform: scale(1.04);
+}
+
+.produto-imagem {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .produto-imagem img {
@@ -124,9 +139,15 @@
         width: calc(50% - 5px); /* 2 colunas com espaço entre */
     }
 
-    /* Remove a propriedade order do kit-premium para que fique na posição original */
-    .produto-card[data-produto="kit-premium"] {
-        order: unset;
+    /* Linha de destaque (Refis + Kits) dividida em 2 colunas, igual aos demais cards */
+    .produtos-destaque-row {
+        display: flex;
+        gap: 12px 10px;
+        width: 100%;
+    }
+
+    .produtos-destaque-row .produto-card {
+        width: calc(50% - 5px);
     }
 
     /* Hover sutil */
@@ -144,27 +165,6 @@
     }
     
     .mobile-img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
-    }
-
-    /* Kit Personalizados no mobile: ocupa largura total (100%) - ÚLTIMO CARD */
-    .produto-card[data-produto="kit-premium"] {
-        width: 100% !important; /* Força 100% de largura */
-        height: 180px; /* Reduzida para quase 50% (era 260px, agora 180px) */
-        margin: 12px 0 0 0 !important; /* Margem apenas no topo */
-        /* Não precisa de order, ficará na posição natural (último) */
-    }
-
-    /* Usa a imagem grande (desktop) no kit-premium no mobile */
-    .produto-card[data-produto="kit-premium"] .desktop-img {
-        display: none;
-    }
-    
-    .produto-card[data-produto="kit-premium"] .mobile-img {
         display: block;
         width: 100%;
         height: 100%;
@@ -208,13 +208,5 @@
         background: transparent;
         color: #fff;
         border-color: #fff;
-    }
-
-    /* Ajuste específico para o título do kit-premium */
-    .produto-card[data-produto="kit-premium"] .produto-conteudo h2 {
-        font-size: 0.7rem; /* Um pouco menor para caber melhor */
-        letter-spacing: 1.8px;
-        padding: 6px 14px;
-        bottom: 10px;
     }
 }

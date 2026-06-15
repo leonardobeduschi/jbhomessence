@@ -96,6 +96,7 @@ function formatarData(dateStr) {
 
 // ---- EXPORT ------------------------------------------------
 window.sanityClient = {
+  sanityFetch,
   getProdutosDestaque,
   getProdutosPorCategoria,
   getDepoimentosAtivos,

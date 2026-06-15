@@ -71,6 +71,7 @@ class FeedbackCarousel {
     }
 
     init() {
+        if (!this.track) return;
         this.renderFeedbacks();
         this.attachResize();
         this.startAutoPlay();

@@ -40,5 +40,11 @@
     "nome": "Água Perfumada",
     "slug": "agua-perfumada",
     "descricao": "Água perfumada para roupas"
+  },
+  {
+    "id": "refil",
+    "nome": "Refil",
+    "slug": "refil",
+    "descricao": "Refis para Home Spray, Difusores e Sabonetes Líquidos"
   }
 ]

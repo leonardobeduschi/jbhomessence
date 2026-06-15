@@ -147,7 +147,7 @@
     "id": "CAS03",
     "nome": "Difusor de Varetas",
     "categoria": "Capim Santo",
-    "preco": 159,
+    "preco": 170,
     "descricao": "Difusor de Varetas Capim Santo 200ml",
     "descricaoOlfativa": [
       "herbal",
@@ -857,6 +857,244 @@
     "imagens": [
       "../img/imagens-catalogo/difusor-de-varetas-patchouly-1.webp",
       "../img/imagens-catalogo/difusor-de-varetas-patchouly-2.webp"
+    ],
+    "disponivel": true
+  },
+  {
+    "id": "REFBAGHS",
+    "nome": "Refil Home Spray",
+    "categoria": "Bambu Garden",
+    "preco": 277,
+    "descricao": "Refil Home Spray Bambu Garden 300ml - refil de reposição",
+    "descricaoOlfativa": [
+      "floral",
+      "amadeirado"
+    ],
+    "notas": "bergamota, pomelo, jasmim, cedro, gerânio, musk, vetiver e âmbar",
+    "modoUso": "Refil para reposição do frasco de Home Spray Bambu Garden 300ml. Abra a tampa do frasco original (vazio), despeje o conteúdo deste refil e recoloque a válvula/gatilho. Aplicar sobre tecidos em geral (evitando couro e sintéticos), aproximadamente 30cm de distância, sem encharcar.",
+    "imagens": [
+      "../img/imagens-catalogo/refil-home-spray-bambu-garden.webp"
+    ],
+    "disponivel": true
+  },
+  {
+    "id": "REFBAGDF",
+    "nome": "Refil Difusor de Varetas",
+    "categoria": "Bambu Garden",
+    "preco": 205,
+    "descricao": "Refil Difusor de Varetas Bambu Garden 200ml - refil de reposição",
+    "descricaoOlfativa": [
+      "floral",
+      "amadeirado"
+    ],
+    "notas": "bergamota, pomelo, jasmim, cedro, gerânio, musk, vetiver e âmbar",
+    "modoUso": "Refil para reposição do Difusor de Varetas Bambu Garden 200ml. Retire as varetas e o vedante do frasco original, despeje o conteúdo deste refil, recoloque o vedante e as varetas. Vire as varetas a cada 2 dias para potencializar a fragrância.",
+    "imagens": [
+      "../img/imagens-catalogo/refil-difusor-de-varetas-bambu-garden.webp"
+    ],
+    "disponivel": true
+  },
+  {
+    "id": "REFENCHS",
+    "nome": "Refil Home Spray",
+    "categoria": "Encontro",
+    "preco": 285,
+    "descricao": "Refil Home Spray Encontro 300ml - refil de reposição",
+    "descricaoOlfativa": [
+      "frutal",
+      "oriental"
+    ],
+    "notas": "maçã, canela, laranja, cravo, pêssego, baunilha e musk",
+    "modoUso": "Refil para reposição do frasco de Home Spray Encontro 300ml. Abra a tampa do frasco original (vazio), despeje o conteúdo deste refil e recoloque a válvula/gatilho. Aplicar sobre tecidos em geral (evitando couro e sintéticos), aproximadamente 30cm de distância, sem encharcar.",
+    "imagens": [
+      "../img/imagens-catalogo/refil-home-spray-encontro.webp"
+    ],
+    "disponivel": true
+  },
+  {
+    "id": "REFENCDF",
+    "nome": "Refil Difusor de Varetas",
+    "categoria": "Encontro",
+    "preco": 190,
+    "descricao": "Refil Difusor de Varetas Encontro 200ml - refil de reposição",
+    "descricaoOlfativa": [
+      "frutal",
+      "oriental"
+    ],
+    "notas": "maçã, canela, laranja, cravo, pêssego, baunilha e musk",
+    "modoUso": "Refil para reposição do Difusor de Varetas Encontro 200ml. Retire as varetas e o vedante do frasco original, despeje o conteúdo deste refil, recoloque o vedante e as varetas. Vire as varetas a cada 2 dias para potencializar a fragrância.",
+    "imagens": [
+      "../img/imagens-catalogo/refil-difusor-de-varetas-encontro.webp"
+    ],
+    "disponivel": false
+  },
+  {
+    "id": "REFGARHS",
+    "nome": "Refil Home Spray",
+    "categoria": "Garbo",
+    "preco": 274,
+    "descricao": "Refil Home Spray Garbo 300ml - refil de reposição",
+    "descricaoOlfativa": [
+      "floral",
+      "frutal"
+    ],
+    "notas": "cassis, pera, maçã, violeta, ameixa, muguet, musk e pêssego branco",
+    "modoUso": "Refil para reposição do frasco de Home Spray Garbo 300ml. Abra a tampa do frasco original (vazio), despeje o conteúdo deste refil e recoloque a válvula/gatilho. Aplicar sobre tecidos em geral (evitando couro e sintéticos), aproximadamente 30cm de distância, sem encharcar.",
+    "imagens": [
+      "../img/imagens-catalogo/refil-home-spray-garbo.webp"
+    ],
+    "disponivel": true
+  },
+  {
+    "id": "REFGARDF",
+    "nome": "Refil Difusor de Varetas",
+    "categoria": "Garbo",
+    "preco": 189,
+    "descricao": "Refil Difusor de Varetas Garbo 240ml - refil de reposição",
+    "descricaoOlfativa": [
+      "floral",
+      "frutal"
+    ],
+    "notas": "cassis, pera, maçã, violeta, ameixa, muguet, musk e pêssego branco",
+    "modoUso": "Refil para reposição do Difusor de Varetas Garbo 240ml. Retire as varetas e o vedante do frasco original, despeje o conteúdo deste refil, recoloque o vedante e as varetas. Vire as varetas a cada 2 dias para potencializar a fragrância.",
+    "imagens": [
+      "../img/imagens-catalogo/refil-difusor-de-varetas-garbo.webp"
+    ],
+    "disponivel": true
+  },
+  {
+    "id": "REFHAVDF",
+    "nome": "Refil Difusor de Varetas",
+    "categoria": "Havana",
+    "preco": 210,
+    "descricao": "Refil Difusor de Varetas Havana 350ml - refil de reposição",
+    "descricaoOlfativa": [
+      "cítrico",
+      "amadeirado"
+    ],
+    "notas": "ervas do mediterrâneo e limão siciliano",
+    "modoUso": "Refil para reposição do Difusor de Varetas Havana 350ml. Retire as varetas e o vedante do frasco original, despeje o conteúdo deste refil, recoloque o vedante e as varetas. Vire as varetas a cada 2 dias para potencializar a fragrância.",
+    "imagens": [
+      "../img/imagens-catalogo/refil-difusor-de-varetas-havana.webp"
+    ],
+    "disponivel": true
+  },
+  {
+    "id": "REFHAVSL",
+    "nome": "Refil Sabonete Líquido",
+    "categoria": "Havana",
+    "preco": 112,
+    "descricao": "Refil Sabonete Líquido Havana 350ml - refil de reposição",
+    "descricaoOlfativa": [
+      "cítrico",
+      "amadeirado"
+    ],
+    "notas": "ervas do mediterrâneo e limão siciliano",
+    "modoUso": "Refil para reposição do Sabonete Líquido Havana 350ml. Abra o frasco original (vazio) e despeje o conteúdo deste refil. Aplicar sobre a pele, massagear até fazer espuma cremosa.",
+    "imagens": [
+      "../img/imagens-catalogo/refil-sabonete-liquido-havana.webp"
+    ],
+    "disponivel": true
+  },
+  {
+    "id": "REFHAVHS",
+    "nome": "Refil Home Spray",
+    "categoria": "Havana",
+    "preco": 325,
+    "descricao": "Refil Home Spray Havana 300ml - refil de reposição",
+    "descricaoOlfativa": [
+      "cítrico",
+      "amadeirado"
+    ],
+    "notas": "ervas do mediterrâneo e limão siciliano",
+    "modoUso": "Refil para reposição do frasco de Home Spray Havana 300ml. Abra a tampa do frasco original (vazio), despeje o conteúdo deste refil e recoloque a válvula/gatilho. Aplicar sobre tecidos em geral (evitando couro e sintéticos), aproximadamente 30cm de distância, sem encharcar.",
+    "imagens": [
+      "../img/imagens-catalogo/refil-home-spray-havana.webp"
+    ],
+    "disponivel": true
+  },
+  {
+    "id": "REFJDFHS",
+    "nome": "Refil Home Spray",
+    "categoria": "Jardins da França",
+    "preco": 324,
+    "descricao": "Refil Home Spray Jardins da França 300ml - refil de reposição",
+    "descricaoOlfativa": [
+      "floral",
+      "agreste"
+    ],
+    "notas": "lavanda, alecrim, gerânio, menta, cashmere, jasmim, almíscar e âmbar",
+    "modoUso": "Refil para reposição do frasco de Home Spray Jardins da França 300ml. Abra a tampa do frasco original (vazio), despeje o conteúdo deste refil e recoloque a válvula/gatilho. Aplicar sobre tecidos em geral (evitando couro e sintéticos), aproximadamente 30cm de distância, sem encharcar.",
+    "imagens": [
+      "../img/imagens-catalogo/refil-home-spray-jardins-da-franca.webp"
+    ],
+    "disponivel": true
+  },
+  {
+    "id": "REFJDFDF",
+    "nome": "Refil Difusor de Varetas",
+    "categoria": "Jardins da França",
+    "preco": 210,
+    "descricao": "Refil Difusor de Varetas Jardins da França 350ml - refil de reposição",
+    "descricaoOlfativa": [
+      "floral",
+      "agreste"
+    ],
+    "notas": "lavanda, alecrim, gerânio, menta, cashmere, jasmim, almíscar e âmbar",
+    "modoUso": "Refil para reposição do Difusor de Varetas Jardins da França 350ml. Retire as varetas e o vedante do frasco original, despeje o conteúdo deste refil, recoloque o vedante e as varetas. Vire as varetas a cada 2 dias para potencializar a fragrância.",
+    "imagens": [
+      "../img/imagens-catalogo/refil-difusor-de-varetas-jardins-da-franca.webp"
+    ],
+    "disponivel": true
+  },
+  {
+    "id": "REFJDFSL",
+    "nome": "Refil Sabonete Líquido",
+    "categoria": "Jardins da França",
+    "preco": 110,
+    "descricao": "Refil Sabonete Líquido Jardins da França 350ml - refil de reposição",
+    "descricaoOlfativa": [
+      "floral",
+      "agreste"
+    ],
+    "notas": "lavanda, alecrim, gerânio, menta, cashmere, jasmim, almíscar e âmbar",
+    "modoUso": "Refil para reposição do Sabonete Líquido Jardins da França 350ml. Abra o frasco original (vazio) e despeje o conteúdo deste refil. Aplicar sobre a pele, massagear até fazer espuma cremosa.",
+    "imagens": [
+      "../img/imagens-catalogo/refil-sabonete-liquido-jardins-da-franca.webp"
+    ],
+    "disponivel": true
+  },
+  {
+    "id": "REFLILDF",
+    "nome": "Refil Difusor de Varetas",
+    "categoria": "Lilás",
+    "preco": 210,
+    "descricao": "Refil Difusor de Varetas Lilás 200ml - refil de reposição",
+    "descricaoOlfativa": [
+      "aromático",
+      "fougère"
+    ],
+    "notas": "limão, lavanda, bergamota, gerânio, estragão, rosa, patchouly, vetiver, cumaru e musk",
+    "modoUso": "Refil para reposição do Difusor de Varetas Lilás 200ml. Retire as varetas e o vedante do frasco original, despeje o conteúdo deste refil, recoloque o vedante e as varetas. Vire as varetas a cada 2 dias para potencializar a fragrância.",
+    "imagens": [
+      "../img/imagens-catalogo/refil-difusor-de-varetas-lilas.webp"
+    ],
+    "disponivel": true
+  },
+  {
+    "id": "REFLILSL",
+    "nome": "Refil Sabonete Líquido",
+    "categoria": "Lilás",
+    "preco": 95,
+    "descricao": "Refil Sabonete Líquido Lilás 240ml - refil de reposição",
+    "descricaoOlfativa": [
+      "aromático",
+      "fougère"
+    ],
+    "notas": "limão, lavanda, bergamota, gerânio, estragão, rosa, patchouly, vetiver, cumaru e musk",
+    "modoUso": "Refil para reposição do Sabonete Líquido Lilás 240ml. Abra o frasco original (vazio) e despeje o conteúdo deste refil. Aplicar sobre a pele, massagear até fazer espuma cremosa.",
+    "imagens": [
+      "../img/imagens-catalogo/refil-sabonete-liquido-lilas.webp"
     ],
     "disponivel": true
   }

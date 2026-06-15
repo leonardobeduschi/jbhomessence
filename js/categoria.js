@@ -274,7 +274,8 @@ function getProductsByTipo(tipoSlug) {
     'essencias': 'Essência',
     'vela-aromatica': 'Vela Aromática',
     'aromatizador-carro': 'Kit Carro',
-    'agua-perfumada': 'Água Perfumada'
+    'agua-perfumada': 'Água Perfumada',
+    'refil': 'Refil'
   };
 
   const nomeBusca = tipoNomeMap[tipoSlug];
