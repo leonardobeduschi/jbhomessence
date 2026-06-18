@@ -909,7 +909,7 @@
     "imagens": [
       "../img/imagens-catalogo/refil-home-spray-encontro.webp"
     ],
-    "disponivel": true
+    "disponivel": false
   },
   {
     "id": "REFENCDF",
@@ -960,7 +960,7 @@
     "imagens": [
       "../img/imagens-catalogo/refil-difusor-de-varetas-garbo.webp"
     ],
-    "disponivel": true
+    "disponivel": false
   },
   {
     "id": "REFHAVDF",
@@ -1079,7 +1079,7 @@
     "imagens": [
       "../img/imagens-catalogo/refil-difusor-de-varetas-lilas.webp"
     ],
-    "disponivel": true
+    "disponivel": false
   },
   {
     "id": "REFLILSL",
