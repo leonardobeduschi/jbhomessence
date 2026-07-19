@@ -25,7 +25,7 @@ async function loadFragranciasDropdown() {
         }
         
         dropdown.innerHTML = categorias.map(cat => `
-            <a href="/produtos/categoria.html?categoria=${cat.slug}" class="dropdown-item">
+            <a href="/produtos/fragrancia/${cat.slug}/" class="dropdown-item">
                 ${cat.nome}
             </a>
         `).join('');
@@ -53,7 +53,7 @@ async function loadProdutosDropdown() {
         }
         
         dropdown.innerHTML = tipos.map(tipo => `
-            <a href="/produtos/categoria.html?tipo=${tipo.slug}" class="dropdown-item">
+            <a href="/produtos/tipo/${tipo.slug}/" class="dropdown-item">
                 ${tipo.nome}
             </a>
         `).join('');

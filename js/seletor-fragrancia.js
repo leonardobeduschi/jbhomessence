@@ -366,7 +366,7 @@
             <h4><i class="fas fa-heart"></i> Você também pode gostar:</h4>
           <div class="alternativas-grid">
             ${essenciaDados.alternativas.map(alt => `
-              <a href="/produtos/categoria.html?categoria=${alt.slug}" class="alternativa-card" target="_blank">
+              <a href="/produtos/fragrancia/${alt.slug}/" class="alternativa-card" target="_blank">
                 <i class="fas fa-spa"></i>
                 <span>${alt.nome}</span>
               </a>
@@ -435,11 +435,11 @@
         ${alternativasHTML}
 
         <div class="acoes-resultado">
-          <a href="/produtos/categoria.html?categoria=${essenciaDados.slug}" class="btn-catalogo" target="_blank">
+          <a href="/produtos/fragrancia/${essenciaDados.slug}/" class="btn-catalogo" target="_blank">
             <i class="fas fa-shopping-bag"></i>
             <span>Ver Catálogo</span>
           </a>
-          <a href="https://wa.me/47997152830?text=Ol%C3%A1!%20Descobri%20minha%20fragr%C3%A2ncia%20ideal:%20${essenciaNome}" 
+          <a href="https://wa.me/5547997152830?text=Ol%C3%A1!%20Descobri%20minha%20fragr%C3%A2ncia%20ideal:%20${essenciaNome}" 
              class="btn-whatsapp" target="_blank">
             <i class="fab fa-whatsapp"></i>
             <span>Falar no WhatsApp</span>

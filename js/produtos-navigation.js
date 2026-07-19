@@ -26,10 +26,10 @@ document.addEventListener('DOMContentLoaded', function() {
       
       if (tipoProduto === 'kit-premium') {
         // Para kits, pode redirecionar para WhatsApp ou página específica
-        window.open('https://wa.me/47997152830?text=Olá!%20Gostaria%20de%20conhecer%20os%20kits%20personalizados', '_blank');
+        window.open('https://wa.me/5547997152830?text=Olá!%20Gostaria%20de%20conhecer%20os%20kits%20personalizados', '_blank');
       } else {
         // Redireciona para página de catálogo com filtro por tipo
-        window.location.href = `produtos/categoria.html?tipo=${tipoProduto}`;
+        window.location.href = `produtos/tipo/${tipoProduto}/`;
       }
     });
   });

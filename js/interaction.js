@@ -33,3 +33,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Navbar logic moved to js/navbar.js
 // Do not add navbar-related code here
+
+// ======================
+// Blog: botão "Ver mais" (expande cards extras dentro de cada categoria)
+// ======================
+function toggleVerMais(btn) {
+    const section = btn.closest('.blog-category-section');
+    const grid = section.querySelector('.blog-cards-grid');
+    const expanded = grid.classList.toggle('expanded');
+    btn.classList.toggle('expanded', expanded);
+    btn.querySelector('.ver-mais-label').textContent = expanded ? 'Ver menos' : 'Ver mais';
+}
+window.toggleVerMais = toggleVerMais;

@@ -113,7 +113,7 @@ function openModal(product) {
   const whatsappMessage = encodeURIComponent(
     `Olá! Gostaria de fazer um pedido do produto: ${product.nome} - ${product.categoria}`
   );
-  const whatsappLink = `https://wa.me/47997152830?text=${whatsappMessage}`;
+  const whatsappLink = `https://wa.me/5547997152830?text=${whatsappMessage}`;
 
   modalContent.innerHTML = `
     <div class="modal-images-column">
@@ -213,7 +213,7 @@ function openKitModal(product) {
     const whatsappMessage = encodeURIComponent(
       `Olá! Gostaria de fazer um pedido do produto: ${product.nome} - ${currentVariant.fragrancia}`
     );
-    const whatsappLink = `https://wa.me/47997152830?text=${whatsappMessage}`;
+    const whatsappLink = `https://wa.me/5547997152830?text=${whatsappMessage}`;
 
     modalContent.innerHTML = `
       <div class="modal-images-column">

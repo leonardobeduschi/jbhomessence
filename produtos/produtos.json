@@ -482,7 +482,7 @@
       "../img/imagens-catalogo/velas-aromaticas-havana-1.webp",
       "../img/imagens-catalogo/velas-aromaticas-havana-2.webp"
     ],
-    "disponivel": false
+    "disponivel": true
   },
   {
     "id": "HAV28",
@@ -575,6 +575,42 @@
     "disponivel": true
   },
   {
+    "id": "JDI02",
+    "nome": "Home Spray",
+    "categoria": "Jardim de Inverno",
+    "preco": 120,
+    "descricao": "Perfume de Ambiente / Home Spray Jardim de Inverno 300ml - frasco PET",
+    "descricaoOlfativa": [
+      "floral",
+      "herbal"
+    ],
+    "notas": "grapefruit, tangerina, laranja, freesia, lírio, cardamomo, vetiver, musk e cedro",
+    "modoUso": "Aplicar sobre tecidos em geral (evitando couro e sintéticos), aproximadamente 30cm de distância, sem encharcar.",
+    "imagens": [
+      "../img/imagens-catalogo/home-spray-jardim-de-inverno-1.webp",
+      "../img/imagens-catalogo/home-spray-jardim-de-inverno-2.webp"
+    ],
+    "disponivel": true
+  },
+  {
+    "id": "JDI03",
+    "nome": "Difusor de Varetas",
+    "categoria": "Jardim de Inverno",
+    "preco": 199,
+    "descricao": "Difusor de aromas com varetas Jardim de Inverno 200ml - frasco VIDRO",
+    "descricaoOlfativa": [
+      "floral",
+      "herbal"
+    ],
+    "notas": "grapefruit, tangerina, laranja, freesia, lírio, cardamomo, vetiver, musk e cedro",
+    "modoUso": "Retirar o vedante da tampa, encaixar novamente a tampa no frasco e colocar todas as varetas. Evite derramar o líquido nas superfícies, poderá manchar. Caso isso ocorra, limpe imediatamente.",
+    "imagens": [
+      "../img/imagens-catalogo/difusor-de-varetas-jardim-de-inverno-1.webp",
+      "../img/imagens-catalogo/difusor-de-varetas-jardim-de-inverno-2.webp"
+    ],
+    "disponivel": true
+  },
+  {
     "id": "JDF02",
     "nome": "Home Spray",
     "categoria": "Jardins da França",
@@ -662,7 +698,7 @@
       "../img/imagens-catalogo/velas-aromaticas-jardins-da-franca-1.webp",
       "../img/imagens-catalogo/velas-aromaticas-jardins-da-franca-2.webp"
     ],
-    "disponivel": true
+    "disponivel": false
   },
   {
     "id": "LIL02",
@@ -858,7 +894,7 @@
       "../img/imagens-catalogo/difusor-de-varetas-patchouly-1.webp",
       "../img/imagens-catalogo/difusor-de-varetas-patchouly-2.webp"
     ],
-    "disponivel": true
+    "disponivel": false
   },
   {
     "id": "REFBAGHS",
@@ -960,7 +996,7 @@
     "imagens": [
       "../img/imagens-catalogo/refil-difusor-de-varetas-garbo.webp"
     ],
-    "disponivel": false
+    "disponivel": true
   },
   {
     "id": "REFHAVDF",
@@ -1079,7 +1115,7 @@
     "imagens": [
       "../img/imagens-catalogo/refil-difusor-de-varetas-lilas.webp"
     ],
-    "disponivel": false
+    "disponivel": true
   },
   {
     "id": "REFLILSL",

@@ -6,6 +6,8 @@ const path = require('path');
 // ============================================
 const CONFIG = {
   postsJsonPath: './posts.json',
+  categoriasJsonPath: '../produtos/categorias.json',
+  produtosBaseUrl: 'https://jbhomessence.com.br/produtos',
   templatePath: './post-template.html',
   indexTemplatePath: './index-template.html', // NOVO
   outputDir: './posts',
@@ -28,6 +30,7 @@ CONFIG.indexOutputPath = path.resolve(baseDir, CONFIG.indexOutputPath);
 // sitemap e robots ficam um diretório acima do blog por design
 CONFIG.sitemapOutputPath = path.resolve(baseDir, CONFIG.sitemapOutputPath);
 CONFIG.robotsOutputPath = path.resolve(baseDir, CONFIG.robotsOutputPath);
+CONFIG.categoriasJsonPath = path.resolve(baseDir, CONFIG.categoriasJsonPath);
 
 // ============================================
 // FUNÇÕES AUXILIARES
@@ -128,6 +131,23 @@ ${JSON.stringify(schema, null, 2)}
 </script>`;
 }
 
+function generateBreadcrumbJsonLd(post) {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Início", "item": `${CONFIG.siteUrl}/` },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": `${CONFIG.blogBaseUrl}/` },
+      { "@type": "ListItem", "position": 3, "name": post.category || "Blog", "item": `${CONFIG.blogBaseUrl}/#${(post.category || '').toLowerCase()}` },
+      { "@type": "ListItem", "position": 4, "name": post.title, "item": `${CONFIG.blogBaseUrl}/posts/${post.id}.html` }
+    ]
+  };
+
+  return `<script type="application/ld+json">
+${JSON.stringify(schema, null, 2)}
+</script>`;
+}
+
 function generateTagsHtml(tags) {
   if (!tags || !Array.isArray(tags) || tags.length === 0) {
     return '';
@@ -166,11 +186,51 @@ function generateRelatedPostsHtml(allPosts, currentPost) {
   `).join('\n');
 }
 
-function generatePostHtml(post, allPosts, template) {
+// Remove um <h2> inicial que apenas repete o título do post (evita H1 duplicado como H2 no corpo do artigo)
+function stripDuplicateLeadingHeading(content, title) {
+  const normalize = (s) => s.toLowerCase().replace(/[^a-z0-9]/g, '');
+  const match = content.match(/^\s*<h2[^>]*>(.*?)<\/h2>\s*/i);
+  if (match && normalize(match[1]) === normalize(title)) {
+    return content.slice(match[0].length);
+  }
+  return content;
+}
+
+// Bloco "Produtos relacionados" a partir do campo opcional post.relatedCategorias (slugs de fragrâncias em categorias.json)
+function generateProdutosRelacionadosHtml(post, categorias) {
+  if (!post.relatedCategorias || !Array.isArray(post.relatedCategorias) || post.relatedCategorias.length === 0) {
+    return '';
+  }
+
+  const cards = post.relatedCategorias
+    .map((slug) => categorias.find((c) => c.slug === slug))
+    .filter(Boolean)
+    .map((categoria) => `
+      <a href="${CONFIG.produtosBaseUrl}/fragrancia/${categoria.slug}/" class="blog-card" style="text-decoration:none;color:inherit;">
+        <div class="card-body">
+          <h3>${categoria.nome}</h3>
+          <p class="excerpt">${categoria.descricao}</p>
+        </div>
+      </a>`)
+    .join('\n');
+
+  if (!cards) return '';
+
+  return `<section class="related-posts">
+        <h2>Produtos Relacionados</h2>
+        <div class="blog-cards">
+          ${cards}
+        </div>
+      </section>`;
+}
+
+function generatePostHtml(post, allPosts, template, categorias) {
   const metaTags = generateMetaTags(post);
-  const jsonLd = generateJsonLd(post);
+  const jsonLd = generateJsonLd(post) + '\n' + generateBreadcrumbJsonLd(post);
   const tagsHtml = generateTagsHtml(post.tags);
   const relatedPostsHtml = generateRelatedPostsHtml(allPosts, post);
+  const postContent = stripDuplicateLeadingHeading(post.content, post.title);
+  const produtosRelacionadosHtml = generateProdutosRelacionadosHtml(post, categorias);
 
   let html = template
     .replace('{{META_TAGS}}', metaTags)
@@ -180,9 +240,10 @@ function generatePostHtml(post, allPosts, template) {
     .replace('{{POST_CATEGORY}}', post.category)
     .replace('{{POST_IMAGE}}', post.image || '')
     .replace('{{POST_IMAGE_ALT}}', post.title)
-    .replace('{{POST_CONTENT}}', post.content)
+    .replace('{{POST_CONTENT}}', postContent)
     .replace('{{POST_TAGS}}', tagsHtml)
-    .replace('{{RELATED_POSTS}}', relatedPostsHtml);
+    .replace('{{RELATED_POSTS}}', relatedPostsHtml)
+    .replace('{{PRODUTOS_RELACIONADOS}}', produtosRelacionadosHtml);
 
   return html;
 }
@@ -191,16 +252,6 @@ function generatePostHtml(post, allPosts, template) {
 // FUNÇÃO: GERAR INDEX.HTML COM SEÇÕES POR CATEGORIA
 // ============================================
 
-// Ordem de exibição das categorias na página do blog (mesma ordem usada em blog.js)
-const CATEGORY_ORDER = [
-  'Guia de Aromatização',
-  'Fundamentos',
-  'Famílias Olfativas',
-  'Dicas de Aromatização',
-  'Aromatização Profissional',
-  'Onde Comprar e Presentes'
-];
-
 // Quantidade de cards visíveis por categoria antes de clicar em "Ver mais"
 const INITIAL_VISIBLE_CARDS = 3;
 
@@ -208,6 +259,7 @@ function parsePostDate(dateStr) {
   return new Date(dateStr.split('-').reverse().join('-'));
 }
 
+// Categorias são ordenadas pela data do post mais recente de cada uma (mais recente primeiro)
 function groupPostsByCategory(posts) {
   const groups = new Map();
   posts.forEach(post => {
@@ -218,12 +270,10 @@ function groupPostsByCategory(posts) {
 
   groups.forEach(list => list.sort((a, b) => parsePostDate(b.date) - parsePostDate(a.date)));
 
-  const knownCategories = CATEGORY_ORDER.filter(category => groups.has(category));
-  const otherCategories = [...groups.keys()]
-    .filter(category => !CATEGORY_ORDER.includes(category))
+  const orderedCategories = [...groups.keys()]
     .sort((a, b) => parsePostDate(groups.get(b)[0].date) - parsePostDate(groups.get(a)[0].date));
 
-  return [...knownCategories, ...otherCategories].map(category => ({
+  return orderedCategories.map(category => ({
     category,
     posts: groups.get(category)
   }));
@@ -284,9 +334,6 @@ function generateIndexHtml(posts, template) {
 function generateSitemap(posts) {
   const mainPages = [
     { url: `${CONFIG.siteBaseUrl}/`, priority: '1.0', changefreq: 'weekly' },
-    { url: `${CONFIG.siteBaseUrl}/sobre`, priority: '0.8', changefreq: 'monthly' },
-    { url: `${CONFIG.siteBaseUrl}/servicos`, priority: '0.8', changefreq: 'monthly' },
-    { url: `${CONFIG.siteBaseUrl}/contato`, priority: '0.7', changefreq: 'monthly' },
     { url: `${CONFIG.blogBaseUrl}/`, priority: '0.9', changefreq: 'weekly' }
   ];
 
@@ -336,6 +383,13 @@ function generateBlog() {
   const posts = JSON.parse(postsData);
   console.log(`✔ ${posts.length} posts encontrados\n`);
 
+  let categorias = [];
+  try {
+    categorias = JSON.parse(fs.readFileSync(CONFIG.categoriasJsonPath, 'utf8').replace(/^﻿/, ''));
+  } catch (error) {
+    console.log('⚠️ categorias.json não encontrado, pulando linkagem com produtos\n');
+  }
+
   // 2. Ler templates
   console.log('📂 Lendo templates...');
   const postTemplate = fs.readFileSync(CONFIG.templatePath, 'utf8');
@@ -357,7 +411,7 @@ function generateBlog() {
   // 4. Gerar páginas HTML dos posts
   console.log('✍️ Gerando páginas HTML dos posts...');
   posts.forEach((post, index) => {
-    const html = generatePostHtml(post, posts, postTemplate);
+    const html = generatePostHtml(post, posts, postTemplate, categorias);
     const outputPath = path.join(CONFIG.outputDir, `${post.id}.html`);
     saveFile(outputPath, html);
     console.log(`  ${index + 1}. ${post.id}.html`);
